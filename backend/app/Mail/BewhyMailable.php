@@ -10,13 +10,12 @@ use Illuminate\Queue\SerializesModels;
 
 class BewhyMailable extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable;
 
-    public $details;
+    use SerializesModels;
 
-    public function __construct($details)
+    public function __construct(public $details)
     {
-        $this->details = $details;
     }
 
     public function build()

@@ -39,11 +39,11 @@ class EmailController extends Controller
 
             return redirect()->back()
                 ->with('success', 'Mensagem Enviada!');
-        } catch (Exception $e) {
+        } catch (Exception $exception) {
             // Handle the exception
             return redirect()->back()
                 ->with('error', 'Algo aconteceu, último dado:')
-                ->with('exception', $e->getMessage());
+                ->with('exception', $exception->getMessage());
         }
     }
 }

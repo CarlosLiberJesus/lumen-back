@@ -34,11 +34,11 @@ class NewsLetterUserController extends Controller
             NewsletterUser::create($validatedData);
 
             return redirect()->back()->with('success', 'Obrigado pelo pré registo! Novidades virão.');
-        } catch (Exception $e) {
+        } catch (Exception $exception) {
             // Handle the exception
             return redirect()->back()
                 ->with('error', 'Algo aconteceu, último dado:')
-                ->with('exception', $e->getMessage());
+                ->with('exception', $exception->getMessage());
         }
     }
 }

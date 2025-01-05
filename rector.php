@@ -8,15 +8,17 @@ use Rector\Set\ValueObject\SetList;
 
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths([
-        __DIR__ . '/backend',
+        __DIR__.'/backend',
     ]);
 
     // Exclude vendor directory and specific files
     $rectorConfig->skip([
-        __DIR__ . '/backend/vendor/*',
+        __DIR__.'/backend/vendor/*',
         // __DIR__ . '/backend/resources/views/*.php',
-        __DIR__ . '/backend/storage/*',
-        __DIR__ . '/backend/bootstrap/cache/*',
+        __DIR__.'/backend/storage/*',
+        __DIR__.'/backend/bootstrap/cache/*',
+        __DIR__.'/backend/_ide_*',
+        __DIR__.'/backend/.phpstorm.meta.php',
     ]);
 
     $rectorConfig->sets([
@@ -25,6 +27,9 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::TYPE_DECLARATION,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
+        SetList::EARLY_RETURN,
+        SetList::PRIVATIZATION,
+        SetList::STRICT_BOOLEANS,
         LevelSetList::UP_TO_PHP_82,
     ]);
 

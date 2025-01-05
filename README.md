@@ -46,26 +46,8 @@ The inner folder, might seem redundant, but can be use as dev-ops safe-guards an
    php artisan key:generate
    ```
 
-## Server Start
+## Log History
 
 - Dec 15, 2024 - First phpinfo();
 - Dec 23, 2024 - Laravel v11.36.1 (PHP v8.4.1) Native
-
-## Switch Dev
-
-- Dec 23, 2024 - Already cache config issues
-
-## Cheat Codes
-
-- Start the server:
-  ```sh
-  php -S localhost:5100 -t public/
-  ```
-
-## Running Tests
-
-To run tests, use the following command:
-
-```sh
-    php artisan test
-```
+- Jan 04, 2025 - Newsletter Test Page

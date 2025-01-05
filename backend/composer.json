@@ -47,15 +47,10 @@
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "@php artisan ide-helper:generate",
-            "@php artisan ide-helper:meta",
-            "@php artisan ide-helper:models --nowrite"
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
         ],
         "post-install-cmd": [
-            "@php artisan ide-helper:generate",
-            "@php artisan ide-helper:meta",
-            "@php artisan ide-helper:models --nowrite"
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -73,7 +68,17 @@
         "rector-fix": "rector",
         "rector-preview": "rector --dry-run",
         "rector-ci": "rector --dry-run --no-progress-bar",
-        "duster": "duster fix && duster lint"
+        "duster": "duster fix && duster lint",
+        "post-update-cmd-dev": [
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:models --nowrite"
+        ],
+        "post-install-cmd-dev": [
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:models --nowrite"
+        ]
     },
     "extra": {
         "laravel": {

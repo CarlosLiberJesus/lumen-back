@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row justify-content-center" data-aos="zoom-out">
                 <div class="col-xl-7 col-lg-9 text-center">
-                    <h1>BewhyOrg API Layer</h1>
+                    <h2>BewhyOrg API Layer</h2>
                     <p>O <b>código</b> liberta... <i>Programa-mos</i> uma cidadania reforçada</p>
                 </div>
             </div>

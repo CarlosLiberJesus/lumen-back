@@ -6,7 +6,7 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="zoom-in" data-aos-delay="100">
             <h2>Newsletter</h2>
-            <p>Todas as grandes viagens começam com um paço. Este é o nosso...</p>
+            <p>Todas as grandes viagens começam com um passo. Este é o nosso...</p>
         </div><!-- End Section Title -->
 
         <div class="container ">

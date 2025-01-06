@@ -91,12 +91,12 @@
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-about mb-3">
-                    <a href="#" class="logo d-flex align-items-center">
+                    <h1 href="#" class="logo d-flex align-items-center">
                         <!-- Uncomment the line below if you also wish to use an image logo -->
                         <!-- <img src="assets/img/logo.png" alt=""> -->
                         <span class="inspiration-regular logo2-1">Be</span>
                         <span class="zilla-slab-highlight-bold logo2-2">Why</span>
-                    </a>
+                    </h1>
                     <p>Este projecto almeja criar uma nova <i>visão</i> na acção da cidadania. Um projecto que nasceu de
                         uma necessidade, que tem mutado com a participação dos seus membros, e seus resultados ainda se
                         evidenciam.</p>

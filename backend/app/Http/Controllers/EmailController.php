@@ -37,12 +37,12 @@ class EmailController extends Controller
 
             $details = [
                 'title' => $validatedData['fe_subject'],
-                'body' => $validatedData['fe_name'].',<br /><br />'.$validatedData['fe_message'],
+                'body' => $validatedData['fe_name'] . ',<br /><br />' . $validatedData['fe_message'],
                 'url' => 'https://api.bewhy.org',
             ];
             $mail = new BewhyMailable($details);
             $mail->replyTo($validatedData['fe_email']);
-            Mail::to(config('mail.username'))->send($mail);
+            Mail::to(config('mail.mailers.smtp.username'))->send($mail);
 
             return redirect()->back()
                 ->with('success', 'Mensagem Enviada!');

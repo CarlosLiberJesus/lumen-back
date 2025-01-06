@@ -52,7 +52,11 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{ url(config('app.url')) }}" class="active">Ínicio</a></li>
+                    <li><a href="{{ url(config('app.url')) }}"
+                            class="{{ Request::is('/') ? 'active' : '' }}">Ínicio</a></li>
+                    <li><a href="{{ url('/newsletter') }}"
+                            class="{{ Request::is('newsletter') ? 'active' : '' }}">Pré-Registo</a></li>
+
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -66,18 +70,17 @@
                 <h6 class="alert-heading mb-0 me-5">{{ session('success') }}</h6>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            {{ session()->forget('success') }}
         @endif
 
         @if (session('error'))
             <div class="alert alert-danger alert-dismissible fade show alert-position" role="alert">
-                <p>{{ session('error') }}</p>
-                <hr>
-                <p class="mb-0">{{ session('exception') }}</p>
+                <h6 class="alert-heading mb-0 me-5">{{ session('error') }}</h6>
+                @if (session('exception'))
+                    <hr>
+                    <p class="mb-0">{{ session('exception') }}</p>
+                @endif
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            {{ session()->forget('error') }}
-            {{ session()->forget('expection') }}
         @endif
 
         @yield('content')
@@ -87,7 +90,7 @@
 
         <div class="container footer-top">
             <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-about">
+                <div class="col-lg-5 col-md-12 footer-about mb-3">
                     <a href="#" class="logo d-flex align-items-center">
                         <!-- Uncomment the line below if you also wish to use an image logo -->
                         <!-- <img src="assets/img/logo.png" alt=""> -->
@@ -107,29 +110,53 @@
                 </div>
 
                 <div class="col-lg-7 col-12 footer-links contact">
-                    <h4>Contacte-nos</h4>
-                    <form action="{{ url('/email/home') }}" method="POST" class="php-email-form"
+                    <h3>Contacte-nos</h3>
+                    <form action="{{ route('email.from.footer') }}" method="POST" class="php-email-form"
                         data-aos="flip-up" data-aos-delay="200">
                         @csrf
                         <div class="row gy-4">
 
                             <div class="col-md-6">
-                                <input type="text" name="name" class="form-control" placeholder="Nome"
-                                    autocomplete="name" required="">
+                                <input type="text" class="form-control @error('fe_name') is-invalid @enderror"
+                                    placeholder="Nome" autocomplete="name" required="" name="fe_name"
+                                    value="{{ old('fe_name') }}">
+                                @error('fe_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 ">
-                                <input type="email" class="form-control" name="email" placeholder="email"
-                                    autocomplete="email" required="">
+                                <input type="email" class="form-control @error('fe_email') is-invalid @enderror"
+                                    name="fe_email" placeholder="email" autocomplete="email" required=""
+                                    value="{{ old('fe_email') }}">
+                                @error('fe_email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="subject" placeholder="Assunto"
-                                    required="">
+                                <input type="text" class="form-control @error('subject') is-invalid @enderror"
+                                    name="fe_subject" placeholder="Assunto" required=""
+                                    value="{{ old('fe_subject') }}">
+                                @error('fe_subject')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-md-12">
-                                <textarea class="form-control" name="message" rows="6" placeholder="Messagem" required=""></textarea>
+                                <textarea class="form-control @error('fe_message') is-invalid @enderror" name="fe_message" rows="6"
+                                    placeholder="Messagem" required="">{{ old('fe_message') }}</textarea>
+                                @error('fe_message')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-md-12 text-center">
@@ -176,3 +203,6 @@
 </body>
 
 </html>
+{{ session()->forget('success') }}
+{{ session()->forget('error') }}
+{{ session()->forget('expection') }}

@@ -20,18 +20,36 @@
                         <div class="row gy-4">
                             <div class="col-md-12">
                                 <label for="name">Nome:</label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Nome"
-                                    required="" autocomplete="name">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                    name="name" id="name" placeholder="Nome" required="" autocomplete="name"
+                                    value="{{ old('name') }}">
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-6 ">
                                 <label for="email">Email:</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="email"
-                                    required="" autocomplete="email">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                    name="email" id="email" placeholder="email" required="" autocomplete="email"
+                                    value="{{ old('email') }}">
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label for="phone">Telefone (opcional):</label>
-                                <input type="text" id="phone" name="phone" class="form-control"
-                                    placeholder="xxx xxx xxx" autocomplete="phone">
+                                <input type="text" id="phone" name="phone"
+                                    class="form-control @error('phone') is-invalid @enderror" placeholder="xxx xxx xxx"
+                                    autocomplete="phone" value="{{ old('phone') }}">
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-12 text-center">
                                 <button type="submit">Enviar Subscrição</button>

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\PersonalAccessToken;
 use Laravel\Sanctum\Sanctum;
 
@@ -22,17 +23,17 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Sanctum::usePersonalAccessTokenModel(PersonalAccessToken::class);
-        //$this->configureModels();
+        $this->configureModels();
     }
 
     /**
      * Configure the models.
-     *
-     * @todo perceber porque dá erro
      */
-    // private function configureModels(): void
-    // {
-    //     Model::shouldBeStrict(!$this->app->isProduction());
-    // }
+    private function configureModels(): void
+    {
+        Model::shouldBeStrict();
+
+        Model::unguard();
+    }
 
 }

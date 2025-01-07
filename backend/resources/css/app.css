@@ -2088,3 +2088,9 @@ section,
 .alert-position .btn-close {
     font-size: smaller;
 }
+.main-title h2 {
+    font-size: 50pt;
+}
+.main-title p {
+    font-size: 20pt;
+}

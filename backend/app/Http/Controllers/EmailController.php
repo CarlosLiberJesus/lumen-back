@@ -49,7 +49,9 @@ class EmailController extends Controller
         } catch (Exception $exception) {
             return redirect()->back()
                 ->with('error', 'Algo aconteceu, último dado:')
-                ->with('exception', $exception->getMessage());
+                ->with('exception', $exception->getMessage())
+                ->withErrors($validator)
+                ->withInput();
         }
     }
 }

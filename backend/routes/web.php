@@ -10,6 +10,4 @@ Route::get('newsletter', [NewsLetterUserController::class, 'newsletter']);
 Route::post('newsletter', [NewsLetterUserController::class, 'submitNewsletter'])->name('form.subscribe.newsletter');
 Route::post('email/footer', [EmailController::class, 'templateFooterEmail'])->name('email.from.footer');
 
-Route::fallback(function () {
-    return response()->view('web.errors.404', [], 404);
-});
+Route::fallback(fn () => response()->view('web.errors.404', [], 404));

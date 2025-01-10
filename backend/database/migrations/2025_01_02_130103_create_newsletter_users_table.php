@@ -15,7 +15,6 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('hash')->unique()->index()->comment('uuid para unsubscribe');
             $table->timestamps();
-
         });
     }
 

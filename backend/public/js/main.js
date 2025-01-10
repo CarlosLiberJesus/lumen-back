@@ -19,8 +19,9 @@
             !selectHeader.classList.contains("scroll-up-sticky") &&
             !selectHeader.classList.contains("sticky-top") &&
             !selectHeader.classList.contains("fixed-top")
-        )
+        ) {
             return;
+        }
         window.scrollY > 100
             ? selectBody.classList.add("scrolled")
             : selectBody.classList.remove("scrolled");
@@ -237,9 +238,13 @@
 
     function navmenuScrollspy() {
         navmenulinks.forEach((navmenulink) => {
-            if (!navmenulink.hash) return;
+            if (!navmenulink.hash) {
+                return;
+            }
             let section = document.querySelector(navmenulink.hash);
-            if (!section) return;
+            if (!section) {
+                return;
+            }
             let position = window.scrollY + 200;
             if (
                 position >= section.offsetTop &&

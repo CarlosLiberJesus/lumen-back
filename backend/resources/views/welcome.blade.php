@@ -20,8 +20,8 @@
                     <div class="icon-box">
                         <div class="icon"><i class="bi bi-person-arms-up"></i></div>
                         <h4 class="title"><a href="">CRM</a></h4>
-                        <p class="description">União de activitas políticos portugueses, de vários espetros partidários,
-                            constribuindo uma base de conhecimento colectiva.</p>
+                        <p class="description">União de activistas políticos portugueses, de vários espetros partidários,
+                            construindo uma base de conhecimento colectiva.</p>
                     </div>
                 </div><!--End Icon Box -->
 
@@ -38,7 +38,7 @@
                     <div class="icon-box">
                         <div class="icon"><i class="bi bi-file-spreadsheet"></i></div>
                         <h4 class="title"><a href="">Orçamentação</a></h4>
-                        <p class="description">Centralizar e escrutinar orçamentamentos públicos, utilizando ferramentas
+                        <p class="description">Centralizar e escrutinar orçamentos públicos, utilizando ferramentas
                             profissionais para análise e apresentação de dados.</p>
                     </div>
                 </div><!--End Icon Box -->
@@ -47,7 +47,7 @@
                     <div class="icon-box">
                         <div class="icon"><i class="bi bi-command"></i></div>
                         <h4 class="title"><a href="">Petições Públicas</a></h4>
-                        <p class="description">Desenvolver confiança, e apresentar nova alternativa às instuitioções
+                        <p class="description">Desenvolver confiança, e apresentar nova alternativa às instituições
                             existentes, criando mais transparência na informação pública</p>
                     </div>
                 </div><!--End Icon Box -->

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Sanctum\PersonalAccessToken;
 use Laravel\Sanctum\Sanctum;
@@ -24,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Sanctum::usePersonalAccessTokenModel(PersonalAccessToken::class);
         $this->configureModels();
+        $this->configureCommands();
     }
 
     /**
@@ -34,5 +36,12 @@ class AppServiceProvider extends ServiceProvider
         Model::shouldBeStrict();
 
         Model::unguard();
+    }
+
+    private function configureCommands(): void
+    {
+        DB::prohibitDestructiveCommands(
+            $this->app->environment('production')
+        );
     }
 }

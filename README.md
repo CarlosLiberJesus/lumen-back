@@ -7,9 +7,12 @@ The inner folder, might seem redundant, but can be use as dev-ops safe-guards an
 
 ## Requirements
 
+- composer v2.8.4
 - PHP v8.4.1
 - Composer v2.8.4
 - Laravel framework ^11
+- node: v18.20.5
+- npm: 10.8.2
 
 ## Possible upgrades for blade:
 
@@ -28,22 +31,33 @@ The inner folder, might seem redundant, but can be use as dev-ops safe-guards an
    ```sh
    git clone https://github.com/CarlosLiberJesus/lumen-back.git
    ```
-   - Note: You'll need your on artisan file
-2. Navigate to the project directory:
+   - Note: You'll need your on artisan file @ ./lumen-back/backend/
+2. Navigate to the dev-only project directory:
    ```sh
    cd lumen-back
    ```
 3. Install dependencies:
    ```sh
+   npm i
+   npx husky start
+   ```
+4. Navigate to the project directory and install precedencies:
+   ```sh
+   cd backend
    composer install
    ```
-4. Copy the example environment file and modify it according to your environment:
+5. Finishing to validade env & remember the artisan file:
    ```sh
    cp .env.example .env
    ```
-5. Generate an application key:
+6. link ./resources/css/style.css to /public
    ```sh
-   php artisan key:generate
+   ln -s ./resources/css ./backend/public/css
+   ```
+7. Dont forget to run migrations:
+   ```sh
+   php artisan migrate
+   ...
    ```
 
 ## Log History

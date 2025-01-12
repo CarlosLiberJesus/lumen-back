@@ -53,7 +53,7 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="{{ url(config('app.url')) }}"
-                            class="{{ Request::is('/') ? 'active' : '' }}">Ínicio</a></li>
+                            class="{{ Request::is('/') ? 'active' : '' }}">Inicio</a></li>
                     <li><a href="{{ url('/newsletter') }}"
                             class="{{ Request::is('newsletter') ? 'active' : '' }}">Pré-Registo</a></li>
 

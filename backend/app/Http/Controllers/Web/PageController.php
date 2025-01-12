@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
-    public function wellcome()
+    public function welcome()
     {
-        return view('wellcome');
+        return view('welcome');
     }
 }

@@ -6,6 +6,7 @@
     "lint:php": "find backend/ -type f -name '*.php' -not -path 'backend/vendor/*' | xargs ./backend/vendor/bin/phpcbf --standard=PSR12 && find backend/ -type f -name '*.php' -not -path 'backend/vendor/*' | xargs ./backend/vendor/bin/duster fix && find backend/ -type f -name '*.php' -not -path 'backend/vendor/*' | xargs ./backend/vendor/bin/duster lint && find backend/ -type f -name '*.php' -not -path 'backend/vendor/*' | xargs ./backend/vendor/bin/rector process"
   },
   "devDependencies": {
+    "@cspell/dict-pt-pt": "^3.0.4",
     "husky": "^8.0.0",
     "lint-staged": "^12.5.0",
     "prettier": "^2.8.0"

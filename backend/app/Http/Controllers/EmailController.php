@@ -33,7 +33,7 @@ final class EmailController extends Controller
         try {
             $validatedData = $validator->validated();
 
-            if (! $validatedData['fe_subject']) {
+            if (!$validatedData['fe_subject']) {
                 $validatedData['fe_subject'] = 'Default Assunto';
             }
 

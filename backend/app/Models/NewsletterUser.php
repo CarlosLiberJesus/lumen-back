@@ -1,12 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class NewsletterUser extends Model
+final class NewsletterUser extends Model
 {
-    protected $table = 'newsletter_users';
-
-    protected $fillable = ['name', 'email', 'phone', 'hash'];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var list<string>
+     */
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'token',
+    ];
 }

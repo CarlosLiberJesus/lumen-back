@@ -1,23 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\NewsletterUser;
-use Exception;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
-class NewsLetterUserController extends Controller
+final class NewsLetterUserController extends Controller
 {
     //
-    public function newsletter()
+    public function newsletter(): View
     {
         return view('web.newsletter.newsletter');
     }
 
-    public function submitNewsletter(Request $request)
+    public function submitNewsletter(Request $request): RedirectResponse
     {
         // Validate the incoming request
         $validator = Validator::make($request->all(), [
@@ -33,19 +36,14 @@ class NewsLetterUserController extends Controller
                 ->withInput();
         }
 
-        try {
-            $validatedData = $validator->validated();
-            $validatedData['hash'] = Str::uuid();
+        // Create a new newsletter user
+        NewsletterUser::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'token' => Str::random(60),
+        ]);
 
-            // Attempt to create the newsletter entry
-            NewsletterUser::create($validatedData);
-
-            return redirect()->back()->with('success', 'Obrigado pelo pré registo! Novidades virão.');
-        } catch (Exception $exception) {
-            // Handle the exception
-            return redirect()->back()
-                ->with('error', 'Algo aconteceu, última ocorrência:')
-                ->with('exception', $exception->getMessage());
-        }
+        return redirect()->back()->with('success', 'Inscrição realizada com sucesso!');
     }
 }

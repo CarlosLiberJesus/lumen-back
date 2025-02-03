@@ -10,23 +10,24 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^11.31",
-        "laravel/sanctum": "^4.0",
-        "laravel/tinker": "^2.9"
+        "laravel/framework": "^11.37",
+        "laravel/sanctum": "^4.0.7",
+        "laravel/tinker": "^2.10"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "^3.3",
-        "fakerphp/faker": "^1.23",
-        "laravel/pail": "^1.1",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.26",
-        "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.1",
-        "pestphp/pest": "^3.7",
+        "barryvdh/laravel-ide-helper": "^3.5.3",
+        "fakerphp/faker": "^1.24.1",
+        "larastan/larastan": "^3.0.2",
+        "laravel/pail": "^1.2.1",
+        "laravel/pint": "^1.19",
+        "laravel/sail": "^1.39.1",
+        "mockery/mockery": "^1.6.12",
+        "nunomaduro/collision": "^8.5",
+        "pestphp/pest": "^3.7.1",
         "pestphp/pest-plugin-laravel": "^3.0",
-        "phpunit/phpunit": "^11.0.1",
-        "rector/rector": "^2.0",
-        "squizlabs/php_codesniffer": "^3.11",
+        "phpunit/phpunit": "^11.5.1",
+        "rector/rector": "^2.0.6",
+        "squizlabs/php_codesniffer": "^3.11.2",
         "tightenco/duster": "^3.1"
     },
     "autoload": {
@@ -65,10 +66,17 @@
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
         ],
-        "cs-fix": "pint",
-        "rector-fix": "rector",
-        "rector-preview": "rector --dry-run",
-        "rector-ci": "rector --dry-run --no-progress-bar",
+        "lint": "pint",
+        "test:style": "pint --test",
+        "test:unit": "pest --parallel",
+        "test:types": "phpstan",
+        "test:reactor": "./vendor/bin/rector --config=../rector.php --dry-run",
+        "test": [
+            "@test:unit",
+            "@test:reactor",
+            "@test:style",
+            "@test:types"
+        ],
         "duster": "duster fix && duster lint",
         "post-update-cmd-dev": [
             "@php artisan ide-helper:generate",

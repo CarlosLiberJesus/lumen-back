@@ -1,14 +1,14 @@
 version: "0.2"
 language: en,pt_PT
 ignorePaths:
-  - node_modules/** # Ignore node_modules folder
-  - vendor/** # Ignore vendor folder
-  - dist/** # Ignore dist folder
-  - build/** # Ignore build folder
-  - .git/** # Ignore .git folder
-  - .vscode/** # Ignore .vscode folder
-  - -husky/** # Ignore .husky folder
-  - backend/vendor/** # Ignore backend folder
+  - node_modules/**
+  - vendor/**
+  - dist/**
+  - build/**
+  - .git/**
+  - .vscode/**
+  - -husky/**
+  - backend/vendor/**
 dictionaryDefinitions:
   - name: en_US
     path: ./dictionaries/en_US.txt
@@ -17,13 +17,15 @@ dictionaryDefinitions:
 dictionaries:
   - en_US
   - pt_PT
-words: []
+words:
+  - laravel
 ignoreWords: []
-import: ["node_modules/@cspell/dict-pt-pt/cspell-ext.json"]
+import:
+  - node_modules/@cspell/dict-pt-pt/cspell-ext.json
 overrides:
   - filename: "**/*.blade.php"
     language: en,pt_PT
     ignoreRegExpList:
-      - "/<[^>]*>/g" # Ignore HTML tags
-      - "/{{[^}]*}}/g" # Ignore Blade directives
-      - "/@[^\\s]+/g" # Ignore Blade directives
+      - /<[^>]*>/g
+      - /{{[^}]*}}/g
+      - /@[^\s]+/g

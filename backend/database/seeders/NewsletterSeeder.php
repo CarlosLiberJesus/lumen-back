@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Models\Status;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
-class NewsletterSeeder extends Seeder
+final class NewsletterSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -13,16 +13,7 @@ final class Status extends Model
      *
      * @var string
      */
-    protected $table = 'statuses';
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'params' => 'array',
-    ];
+    protected $table = 'cidadaos';
 
     /**
      * The attributes that are mass assignable.
@@ -31,9 +22,12 @@ final class Status extends Model
      */
     protected $fillable = [
         'uuid',
-        'name',
-        'type',
-        'params',
-        'description',
+        'nome',
+        'data_nascimento',
+        'nif',
+        'cc',
+        'cc_aux',
+        'seg_social',
+        'n_saude',
     ];
 }

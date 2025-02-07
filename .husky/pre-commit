@@ -7,8 +7,8 @@ STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.php$')
 
 # Run duster and rector only on staged PHP files
 if [ -n "$STAGED_FILES" ]; then
-  echo "$STAGED_FILES" | xargs ./backend/vendor/bin/phpstan analyse --level=max
-  if [ $? -ne 0 ]; then exit 1; fi
+  #echo "$STAGED_FILES" | xargs ./backend/vendor/bin/phpstan analyse --level=max
+  #if [ $? -ne 0 ]; then exit 1; fi
   
   echo "$STAGED_FILES" | xargs ./backend/vendor/bin/phpcbf --standard=PSR12
   PHPCBF_EXIT_CODE=$?

@@ -1,0 +1,19 @@
+nav[aria-label="main-nav"] {
+    background-color: white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Dark mode styles */
+html[data-bs-theme="dark"] {
+    nav[aria-label="main-nav"] {
+        background-color: black;
+    }
+    main {
+        section > .col-md-8 {
+            background-color: black;
+        }
+    }
+}

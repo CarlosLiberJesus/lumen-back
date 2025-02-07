@@ -11,6 +11,12 @@ final class PageController extends Controller
 {
     public function welcome(): View
     {
-        return view('welcome');
+        $breadcrumbs = [
+            ['url' => '#', 'label' => 'Ínicio'],
+        ];
+
+        $title = 'Api BeWhyOrg';
+
+        return view('welcome', ['breadcrumbs' => $breadcrumbs, 'title' => $title]);
     }
 }

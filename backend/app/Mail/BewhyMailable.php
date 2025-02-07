@@ -16,7 +16,7 @@ final class BewhyMailable extends Mailable
     use SerializesModels;
 
     /**
-     * @param array<string, mixed> $details
+     * @param  array<string, mixed>  $details
      */
     public function __construct(public array $details)
     {

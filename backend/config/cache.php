@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Support\Str;
 
 return [
@@ -103,6 +105,6 @@ return [
     |
     */
 
-    'prefix' => (string) env('CACHE_PREFIX', (string) Str::slug(env('APP_NAME', 'laravel'), '_') . '_cache_'),
+    'prefix' => (string) env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_cache_'),
 
 ];

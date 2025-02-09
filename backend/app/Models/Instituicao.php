@@ -85,12 +85,22 @@ final class Instituicao extends Model
     }
 
     /**
-     * Instituicao has many Dados.
+     * Instituicao has one Dados.
      *
      * @return HasOne<InstituicaoDados, $this>
      */
     public function dados(): HasOne
     {
         return $this->hasOne(InstituicaoDados::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituicao has many Contactos.
+     *
+     * @return HasMany<InstituicaoContacto, $this>
+     */
+    public function contactos(): HasMany
+    {
+        return $this->hasMany(InstituicaoContacto::class, 'instituicao_id');
     }
 }

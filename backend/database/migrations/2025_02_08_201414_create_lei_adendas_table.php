@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('republicas', function (Blueprint $table): void {
+        Schema::create('lei_adendas', function (Blueprint $table): void {
             $table->id();
-            $table->uuid('uuid')->unique();
-            $table->string('nome', 100);
-            $table->smallInteger('ano_inicio');
-            $table->smallInteger('ano_fim')->nullable();
-            $table->string('link')->nullable();
+            $table->unsignedBigInteger('lei_original_id');
+            $table->unsignedBigInteger('lei_adenda_id');
             $table->timestamps();
+
+            $table->foreign('lei_original_id')->references('id')->on('leis');
+            $table->foreign('lei_adenda_id')->references('id')->on('leis');
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('republicas');
+        Schema::dropIfExists('lei_adendas');
     }
 };

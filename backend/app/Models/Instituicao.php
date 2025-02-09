@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 final class Instituicao extends Model
 {
@@ -71,5 +72,25 @@ final class Instituicao extends Model
     public function medias(): HasMany
     {
         return $this->hasMany(InstituicaoMedia::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituicao has many Moradas.
+     *
+     * @return HasMany<InstituicaoMorada, $this>
+     */
+    public function moradas(): HasMany
+    {
+        return $this->hasMany(InstituicaoMorada::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituicao has many Dados.
+     *
+     * @return HasOne<InstituicaoDados, $this>
+     */
+    public function dados(): HasOne
+    {
+        return $this->hasOne(InstituicaoDados::class, 'instituicao_id');
     }
 }

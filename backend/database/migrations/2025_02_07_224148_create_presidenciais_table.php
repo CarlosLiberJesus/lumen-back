@@ -15,9 +15,8 @@ return new class extends Migration
     {
         Schema::create('presidenciais', function (Blueprint $table): void {
             $table->id();
-            $table->id();
             $table->uuid('uuid')->unique();
-            $table->unsignedSmallInteger('republica_id');
+            $table->unsignedBigInteger('republica_id');
             $table->date('eleicoes')->nullable();
             $table->date('posse');
             $table->date('termino')->nullable();

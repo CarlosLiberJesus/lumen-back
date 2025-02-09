@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 final class DiarioRepublicaPublicacao extends Model
 {
@@ -30,15 +31,6 @@ final class DiarioRepublicaPublicacao extends Model
     ];
 
     /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'publicacao' => 'date',
-    ];
-
-    /**
      * Get the diario republica that owns the publicacao.
      *
      * @return BelongsTo<DiarioRepublica, $this>
@@ -46,5 +38,15 @@ final class DiarioRepublicaPublicacao extends Model
     public function diarioRepublica(): BelongsTo
     {
         return $this->belongsTo(DiarioRepublica::class, 'diario_republica_id');
+    }
+
+    /**
+     * Get the leis for the diario republica publicacao.
+     *
+     * @return HasMany<DiarioRepublicaPublicacaoLei, $this>
+     */
+    public function leis(): HasMany
+    {
+        return $this->hasMany(DiarioRepublicaPublicacaoLei::class, 'diario_republica_publicacao_id');
     }
 }

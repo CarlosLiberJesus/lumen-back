@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('cidadao_medias', function (Blueprint $table): void {
             $table->id();
+            $table->string('uuid')->unique()->index();
+            $table->string('nome')->nullable();
             $table->unsignedBigInteger('cidadao_id');
             $table->unsignedBigInteger('media_type_id');
             $table->string('path');

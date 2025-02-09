@@ -16,7 +16,6 @@ if [ -n "$STAGED_FILES" ]; then
   # If phpcbf fixed all issues (exit code 0), continue with the commit
   if [ $PHPCBF_EXIT_CODE -eq 0 ]; then
       echo "All issues fixed by phpcbf. Proceeding with commit."
-      exit 0
   fi
 
   # If phpcbf found issues that it couldn't fix (exit code 1), stop the commit

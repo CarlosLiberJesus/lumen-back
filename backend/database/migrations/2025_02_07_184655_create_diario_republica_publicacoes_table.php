@@ -18,7 +18,6 @@ return new class extends Migration
             $table->uuid('uuid')->unique()->index();
             $table->string('nome');
             $table->string('url');
-            $table->date('publicacao')->unique();
             $table->unsignedBigInteger('diario_republica_id');
             $table->timestamps();
 

@@ -23,7 +23,7 @@ final class GeografiaSeeder extends Seeder
         $aveiro = Distrito::create(['uuid' => Str::uuid(), 'name' => 'Aveiro']);
         $beja = Distrito::create(['uuid' => Str::uuid(), 'name' => 'Beja']);
         $braga = Distrito::create(['uuid' => Str::uuid(), 'name' => 'Braga']);
-        $braganca = Distrito::create(['uuid' => Str::uuid(), 'name' => 'Brangança']);
+        $braganca = Distrito::create(['uuid' => Str::uuid(), 'name' => 'Bragança']);
         $castelo = Distrito::create(['uuid' => Str::uuid(), 'name' => 'Castelo Branco']);
         $coimbra = Distrito::create(['uuid' => Str::uuid(), 'name' => 'Coimbra']);
         $evora = Distrito::create(['uuid' => Str::uuid(), 'name' => 'Évora']);

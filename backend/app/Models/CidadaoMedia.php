@@ -23,6 +23,8 @@ final class CidadaoMedia extends Model
      */
     protected $fillable = [
         'cidadao_id',
+        'uuid',
+        'name',
         'media_type_id',
         'path',
         'src',

@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lei_adendas_create', function (Blueprint $table): void {
+        Schema::create('instituicao_dados', function (Blueprint $table): void {
             $table->id();
-            $table->unsignedBigInteger('lei_original_id');
-            $table->unsignedBigInteger('lei_adenda_id');
+            $table->double('nif')->unique()->nullable();
+            $table->text('certidao_permanente')->nullable();
+            $table->unsignedBigInteger('instituicao_id');
             $table->timestamps();
-
-            $table->foreign('lei_original_id')->references('id')->on('leis');
-            $table->foreign('lei_adenda_id')->references('id')->on('leis');
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lei_adendas_create');
+        Schema::dropIfExists('instituicao_dados');
     }
 };

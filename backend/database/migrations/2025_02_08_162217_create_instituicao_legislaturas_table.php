@@ -15,8 +15,12 @@ return new class extends Migration
     {
         Schema::create('instituicao_legislaturas', function (Blueprint $table): void {
             $table->id();
+            $table->uuid('uuid')->unique()->index();
+            $table->string('nome')->nullable();
             $table->unsignedBigInteger('instituicao_id');
             $table->unsignedBigInteger('legislatura_id');
+            $table->date('data_inicio')->nullable();
+            $table->date('data_fim')->nullable();
             $table->timestamps();
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');

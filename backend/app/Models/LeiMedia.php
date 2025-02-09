@@ -23,6 +23,7 @@ final class LeiMedia extends Model
      */
     protected $fillable = [
         'uuid',
+        'name',
         'lei_id',
         'media_type_id',
         'path',

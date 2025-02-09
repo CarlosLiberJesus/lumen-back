@@ -41,10 +41,10 @@ final class UserRole extends Model
     /**
      * Get the cargo that owns the user role.
      *
-     * @return BelongsTo<Cargo, $this>
+     * @return BelongsTo<RoleCargo, $this>
      */
     public function cargo(): BelongsTo
     {
-        return $this->belongsTo(Cargo::class, 'cargo_id');
+        return $this->belongsTo(RoleCargo::class, 'cargo_id');
     }
 }

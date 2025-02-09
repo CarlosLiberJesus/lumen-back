@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class InstituicaoCargo extends Model
+final class InstituicaoDados extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'instituicao_cargos';
+    protected $table = 'instituicao_dados';
 
     /**
      * The attributes that are mass assignable.
@@ -22,12 +22,13 @@ final class InstituicaoCargo extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'cargo',
+        'nif',
+        'certidao_permanente',
         'instituicao_id',
     ];
 
     /**
-     * Get the instituicao that owns the cargo.
+     * Get the instituicao that owns the dado.
      *
      * @return BelongsTo<Instituicao, $this>
      */

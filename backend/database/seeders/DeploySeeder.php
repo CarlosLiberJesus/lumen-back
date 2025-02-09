@@ -21,6 +21,7 @@ final class DeploySeeder extends Seeder
         $this->call(StatusSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(MediaTypesSeeder::class);
+        $this->call(ContactoTiposSeeder::class);
 
         User::create(['uuid' => Str::uuid(), 'name' => 'Operadores', 'status_id' => 1, 'rgpd' => true, 'email' => 'deployuser@bewhy.org', 'password' => Hash::make('1234')]);
         UserRole::create(['user_id' => 1, 'role_id' => 1]);
@@ -29,5 +30,6 @@ final class DeploySeeder extends Seeder
         $this->call(PresidenciaisSeeder::class);
         $this->call(LegislaturaSeeder::class);
         $this->call(InstituicaoSeeder::class);
+        $this->call(LeisSeeder::class);
     }
 }

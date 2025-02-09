@@ -15,16 +15,20 @@ return new class extends Migration
     {
         Schema::create('leis', function (Blueprint $table): void {
             $table->id();
-            $table->string('nome');
-            $table->unsignedBigInteger('diario_republica_publicacao_id');
-            $table->unsignedBigInteger('instituicao_legislatura_id');
+            $table->uuid('uuid')->unique()->index();
+            $table->string('codigo')->unique();
+            $table->string('nome_completo');
+            $table->unsignedBigInteger('instituicao_legislatura_id')->nullable();
+            $table->unsignedBigInteger('instituicao_id')->nullable();
+            $table->string('proponente')->nullable();
             $table->text('sumario')->nullable();
             $table->string('texto')->nullable();
-            $table->string('url');
+            $table->boolean('em_vigor')->default(true);
+            $table->date('data_toggle')->nullable();
             $table->timestamps();
 
-            $table->foreign('diario_republica_publicacao_id')->references('id')->on('diario_republica_publicacoes');
             $table->foreign('instituicao_legislatura_id')->references('id')->on('instituicao_legislaturas');
+            $table->foreign('instituicao_id')->references('id')->on('instituicoes');
         });
     }
 

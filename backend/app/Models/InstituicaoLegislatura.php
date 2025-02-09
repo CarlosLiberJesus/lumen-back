@@ -22,8 +22,22 @@ final class InstituicaoLegislatura extends Model
      * @var list<string>
      */
     protected $fillable = [
+        'uuid',
+        'nome',
         'instituicao_id',
         'legislatura_id',
+        'data_inicio',
+        'data_fim',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'data_inicio' => 'date',
+        'data_fim' => 'date',
     ];
 
     /**

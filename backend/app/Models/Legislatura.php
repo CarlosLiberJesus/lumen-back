@@ -41,7 +41,6 @@ final class Legislatura extends Model
         'eleicoes' => 'date',
         'formacao' => 'date',
         'dissolucao' => 'date',
-
     ];
 
     /**

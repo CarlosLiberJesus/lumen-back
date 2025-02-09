@@ -53,10 +53,10 @@ final class CidadaoCargo extends Model
     /**
      * Get the cargo that owns the cidadao cargo.
      *
-     * @return BelongsTo<Cargo, $this>
+     * @return BelongsTo<InstituicaoCargo, $this>
      */
     public function cargo(): BelongsTo
     {
-        return $this->belongsTo(Cargo::class, 'cargo_id');
+        return $this->belongsTo(InstituicaoCargo::class, 'cargo_id');
     }
 }

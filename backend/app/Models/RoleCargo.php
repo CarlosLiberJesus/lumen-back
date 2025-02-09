@@ -5,18 +5,18 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class Role extends Model
+final class RoleCargo extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'roles';
+    protected $table = 'role_cargos';
 
-    protected $fillable = ['uuid', 'code', 'name', 'params', 'description'];
+    protected $fillable = ['uuid', 'code', 'name', 'params', 'description', 'role_id'];
 
     /**
      * The attributes that should be cast to native types.
@@ -28,12 +28,12 @@ final class Role extends Model
     ];
 
     /**
-     * Get the possible cargos for the role.
+     * Get the adenda lei that owns the adenda.
      *
-     * @return HasMany<RoleCargo, $this>
+     * @return BelongsTo<Role, $this>
      */
-    public function cargos(): HasMany
+    public function role(): BelongsTo
     {
-        return $this->hasMany(RoleCargo::class, 'role_id');
+        return $this->belongsTo(Role::class, 'role_id');
     }
 }

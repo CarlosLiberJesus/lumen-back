@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('legislaturas', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('nome', 10);
+            $table->string('nome');
             $table->char('code', 6);
-            $table->unsignedSmallInteger('republica_id');
+            $table->unsignedBigInteger('republica_id');
             $table->date('eleicoes')->nullable();
             $table->date('formacao');
             $table->date('dissolucao')->nullable();

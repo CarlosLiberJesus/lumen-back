@@ -25,7 +25,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('cidadao_id')->references('id')->on('cidadaos');
-            $table->foreign('cargo_id')->references('id')->on('cargos');
+            $table->foreign('cargo_id')->references('id')->on('instituicao_cargos');
         });
     }
 

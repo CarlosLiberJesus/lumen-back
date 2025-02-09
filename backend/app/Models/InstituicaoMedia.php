@@ -23,6 +23,8 @@ final class InstituicaoMedia extends Model
      */
     protected $fillable = [
         'instituicao_id',
+        'uuid',
+        'name',
         'media_type_id',
         'path',
         'src',

@@ -14,7 +14,7 @@ final class LeiAdenda extends Model
      *
      * @var string
      */
-    protected $table = 'lei_adendas_create';
+    protected $table = 'lei_adendas';
 
     /**
      * The attributes that are mass assignable.

@@ -23,22 +23,35 @@ final class Lei extends Model
      * @var list<string>
      */
     protected $fillable = [
+        'uuid',
         'nome',
-        'diario_republica_publicacao_id',
+        'codigo',
         'instituicao_legislatura_id',
+        'instituicao_id',
+        'proponente',
         'sumario',
         'texto',
-        'url',
+        'em_vigor',
+        'data_toggle',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'data_toggle' => 'date',
     ];
 
     /**
      * Get the diario republica publicacao that owns the lei.
      *
-     * @return BelongsTo<DiarioRepublicaPublicacao, $this>
+     * @return BelongsTo<DiarioRepublicaPublicacaoLei, $this>
      */
     public function diarioRepublicaPublicacao(): BelongsTo
     {
-        return $this->belongsTo(DiarioRepublicaPublicacao::class, 'diario_republica_publicacao_id');
+        return $this->belongsTo(DiarioRepublicaPublicacaoLei::class, 'lei_id');
     }
 
     /**
@@ -49,6 +62,16 @@ final class Lei extends Model
     public function instituicaoLegislatura(): BelongsTo
     {
         return $this->belongsTo(InstituicaoLegislatura::class, 'instituicao_legislatura_id');
+    }
+
+    /**
+     * Get the instituicao legislatura that owns the lei.
+     *
+     * @return BelongsTo<Instituicao, $this>
+     */
+    public function instituicao(): BelongsTo
+    {
+        return $this->belongsTo(Instituicao::class, 'instituicao_id');
     }
 
     /**

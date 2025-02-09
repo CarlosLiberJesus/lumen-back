@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('contacto_tipos', function (Blueprint $table): void {
             $table->id();
-            $table->string('name', 100);
+            $table->string('nome', 100);
             $table->text('description')->nullable();
             $table->json('params')->nullable();
             $table->timestamps();

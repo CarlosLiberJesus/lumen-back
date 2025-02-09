@@ -10,19 +10,22 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('cargos', function (Blueprint $table): void {
+        Schema::create('role_cargos', function (Blueprint $table): void {
             $table->id();
             $table->string('uuid')->unique()->index();
             $table->string('code', 50)->unique()->index();
             $table->string('name', 100);
             $table->text('description')->nullable();
             $table->json('params')->nullable();
+            $table->unsignedBigInteger('role_id');
             $table->timestamps();
+
+            $table->foreign('role_id')->references('id')->on('roles');
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('cargos');
+        Schema::dropIfExists('role_cargos');
     }
 };

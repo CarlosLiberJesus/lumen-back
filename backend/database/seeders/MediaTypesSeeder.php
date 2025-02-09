@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Seeders;
 
+use App\Models\MediaType;
 use Illuminate\Database\Seeder;
 
 final class MediaTypesSeeder extends Seeder

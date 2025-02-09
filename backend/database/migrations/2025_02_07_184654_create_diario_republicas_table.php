@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->unique()->index();
             $table->string('nome');
-            $table->string('url');
             $table->date('publicacao')->unique();
             $table->timestamps();
         });

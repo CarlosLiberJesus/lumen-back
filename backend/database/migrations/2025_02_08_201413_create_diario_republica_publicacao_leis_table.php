@@ -13,18 +13,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lei_medias', function (Blueprint $table): void {
+        Schema::create('diario_republica_publicacao_leis', function (Blueprint $table): void {
             $table->id();
-            $table->string('uuid')->unique()->index();
-            $table->string('nome')->nullable();
+            $table->unsignedBigInteger('dr_publicacao_id');
             $table->unsignedBigInteger('lei_id');
-            $table->unsignedBigInteger('media_type_id');
-            $table->string('path')->nullable();
-            $table->string('url')->nullable();
+            $table->string('url');
+            $table->string('paginas');
             $table->timestamps();
 
+            $table->foreign('dr_publicacao_id')->references('id')->on('diario_republica_publicacoes');
             $table->foreign('lei_id')->references('id')->on('leis');
-            $table->foreign('media_type_id')->references('id')->on('media_types');
         });
     }
 
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lei_medias');
+        Schema::dropIfExists('diario_republica_publicacao_leis');
     }
 };

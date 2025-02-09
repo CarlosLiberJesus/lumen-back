@@ -13,18 +13,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('instituicao_medias', function (Blueprint $table): void {
+        Schema::create('instituicao_moradas', function (Blueprint $table): void {
             $table->id();
-            $table->string('uuid')->unique()->index();
-            $table->string('nome')->nullable();
             $table->unsignedBigInteger('instituicao_id');
-            $table->unsignedBigInteger('media_type_id');
-            $table->string('path');
-            $table->string('src')->nullable();
+            $table->string('morada', 100);
+            $table->string('codigo_postal', 10)->nullable();
+            $table->string('localidade', 100)->nullable();
+            $table->unsignedBigInteger('concelho_id')->nullable();
             $table->timestamps();
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');
-            $table->foreign('media_type_id')->references('id')->on('media_types');
+            $table->foreign('concelho_id')->references('id')->on('concelhos');
         });
     }
 
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('instituicao_medias');
+        Schema::dropIfExists('instituicao_moradas');
     }
 };

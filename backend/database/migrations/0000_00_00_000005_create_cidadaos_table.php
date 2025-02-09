@@ -15,16 +15,11 @@ return new class extends Migration
             $table->uuid('uuid')->unique();
             $table->string('nome');
             $table->date('data_nascimento')->nullable();
-            $table->double('nif')->unique()->nullable();
-            $table->double('cc')->unique()->nullable();
-            $table->char('cc_aux', 5)->nullable();
-            $table->double('seg_social')->unique()->nullable();
-            $table->double('n_saude')->unique()->nullable();
+            $table->date('data_falecimento')->nullable();
             $table->unsignedBigInteger('freguesia_id')->nullable();
             $table->timestamps();
 
             $table->foreign('freguesia_id')->references('id')->on('freguesias');
-
         });
     }
 

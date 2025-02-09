@@ -6,7 +6,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 final class UserRole extends Model
 {
@@ -32,11 +31,11 @@ final class UserRole extends Model
     /**
      * Get the roles for the user role.
      *
-     * @return HasMany<Role, $this>
+     * @return BelongsTo<Role, $this>
      */
-    public function roles(): HasMany
+    public function role(): BelongsTo
     {
-        return $this->hasMany(Role::class, 'role_id');
+        return $this->belongsTo(Role::class, 'role_id');
     }
 
     /**

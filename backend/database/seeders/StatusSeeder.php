@@ -8,7 +8,7 @@ use App\Models\Status;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
-final class NewsletterSeeder extends Seeder
+final class StatusSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,45 +19,55 @@ final class NewsletterSeeder extends Seeder
             'uuid' => Str::uuid(),
             'type' => 'users',
             'name' => 'Activo',
-            'color' => json_encode([
-                'hex' => '#17c653',
-                'bootstrap' => 'success',
+            'params' => json_encode([
+                'color' => [
+                    'hex' => '#17c653',
+                    'bootstrap' => 'success',
+                ],
             ]),
         ]);
         Status::create([
             'uuid' => Str::uuid(),
             'type' => 'users',
             'name' => 'Registado',
-            'color' => json_encode([
-                'hex' => '#f6c000',
-                'bootstrap' => 'warning',
+            'params' => json_encode([
+                'color' => [
+                    'hex' => '#f6c000',
+                    'bootstrap' => 'warning',
+                ],
             ]),
         ]);
         Status::create([
             'uuid' => Str::uuid(),
             'type' => 'users',
             'name' => 'Suspenso',
-            'color' => json_encode([
-                'hex' => '#f8285a',
-                'bootstrap' => 'danger',
+            'params' => json_encode([
+                'color' => [
+                    'hex' => '#f8285a',
+                    'bootstrap' => 'danger',
+                ],
             ]),
         ]);
         Status::create([
             'uuid' => Str::uuid(),
             'type' => 'users',
             'name' => 'Inactivo',
-            'color' => json_encode([
-                'hex' => '#f9f9f9',
-                'bootstrap' => 'secondary',
+            'params' => json_encode([
+                'color' => [
+                    'hex' => '#f9f9f9',
+                    'bootstrap' => 'secondary',
+                ],
             ]),
         ]);
         Status::create([
             'uuid' => Str::uuid(),
             'type' => 'users',
             'name' => 'Apagado',
-            'color' => json_encode([
-                'hex' => '#1e2129',
-                'bootstrap' => 'dark',
+            'params' => json_encode([
+                'color' => [
+                    'hex' => '#1e2129',
+                    'bootstrap' => 'dark',
+                ],
             ]),
         ]);
     }

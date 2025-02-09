@@ -9,7 +9,7 @@ use Illuminate\Contracts\View\View;
 
 final class DashboardController extends Controller
 {
-    public function welcome(): View
+    public function dashboard(): View
     {
         $breadcrumbs = [
             ['url' => '#', 'label' => 'Ínicio'],

@@ -10,7 +10,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-final class LoginController extends Controller
+final class WebLoginController extends Controller
 {
     public function loginPane(): View
     {
@@ -30,13 +30,37 @@ final class LoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
+            $user = Auth::user();
 
-            return redirect()->intended('dashboard');
+            if ($user && $user->roles->contains('role_id', 1)) {
+                $request->session()->regenerate();
+
+                return redirect()->intended('dashboard');
+            }
+
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+
+            return back()->withErrors([
+                'email' => 'Não é suposto entrar onde não se sabe.',
+            ]);
+
         }
 
         return back()->withErrors([
             'email' => 'Os dados fornecidos não permitem continuar.',
         ]);
+    }
+
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

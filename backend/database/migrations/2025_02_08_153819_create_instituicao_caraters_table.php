@@ -8,19 +8,24 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::create('districtos', function (Blueprint $table): void {
+        Schema::create('instituicao_caraters', function (Blueprint $table): void {
             $table->id();
-            $table->string('uuid')->unique()->index();
-            $table->string('name', 100);
-            $table->json('descriptions')->nullable();
+            $table->uuid('uuid')->unique()->index();
+            $table->string('tipo');
             $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('districtos');
+        Schema::dropIfExists('instituicao_caraters');
     }
 };

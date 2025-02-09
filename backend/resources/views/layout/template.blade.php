@@ -63,8 +63,7 @@
                     <hr class="d-lg-none text-gray-700">
                     <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
                         <li class="nav-item col-6 col-lg-auto">
-                            <a class="nav-link py-2 px-0 px-lg-2" href="#"
-                                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
+                            <a class="nav-link py-2 px-0 px-lg-2" href="#">Docs</a>
                         </li>
 
                     </ul>
@@ -101,20 +100,31 @@
                                 <small class="d-lg-none ms-2">Tema</small>
                             </a>
                         </li>
-                        @php
-                            $appEnv = env('APP_ENV');
-                            if ($appEnv === 'local') {
-                                echo '<li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
                             <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-gray-700"></div>
                             <hr class="d-lg-none my-2 text-gray-700">
                         </li>
-                        <li class="nav-item col-6 col-lg-auto cursor-pointer">
-                            <a class="nav-link py-2 px-0 px-lg-2" href="/login"><i class="bi bi-person-bounding-box"></i>
-                                <small class="d-lg-none ms-2">Login</small>
-                            </a>
-                        </li>';
-                            }
-                        @endphp
+                        @auth
+
+                            <li class="nav-item col-6 col-lg-auto cursor-pointer">
+                                <a class="nav-link py-2 px-0 px-lg-2" href="{{ route('web.logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    <small class="d-lg-none ms-2">Logout</small>
+                                </a>
+                                <form id="logout-form" action="{{ route('web.logout') }}" method="POST"
+                                    class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        @else
+                            <li class="nav-item col-6 col-lg-auto cursor-pointer">
+                                <a class="nav-link py-2 px-0 px-lg-2" href="{{ route('web.login') }}">
+                                    <i class="bi bi-person-bounding-box"></i>
+                                    <small class="d-lg-none ms-2">Login</small>
+                                </a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </div>

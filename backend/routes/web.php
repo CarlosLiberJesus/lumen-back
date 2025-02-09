@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\Auth\Web\LoginController;
+use App\Http\Controllers\Auth\Web\WebLoginController;
 use App\Http\Controllers\Web\PageController;
 // use App\Http\Controllers\EmailController;
 // use App\Http\Controllers\Web\Public\NewsLetterUserController;
@@ -14,8 +14,9 @@ Route::get('/', [PageController::class, 'welcome']);
 // Route::post('newsletter', [NewsLetterUserController::class, 'submitNewsletter'])->name('form.subscribe.newsletter');
 // Route::post('email/footer', [EmailController::class, 'templateFooterEmail'])->name('email.from.footer');
 
-Route::get('login', [LoginController::class, 'loginPane']);
-Route::post('login', [LoginController::class, 'login'])->name('web.login');
+Route::get('login', [WebLoginController::class, 'loginPane'])->name('login');
+Route::post('login', [WebLoginController::class, 'login'])->name('web.login');
+Route::post('logout', [WebLoginController::class, 'logout'])->name('web.logout');
 
 Route::middleware(['auth'])->group(function (): void {
     Route::get('dashboard', [DashboardController::class, 'dashboard']);

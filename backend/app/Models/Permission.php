@@ -16,7 +16,7 @@ final class Permission extends Model
      */
     protected $table = 'permissions';
 
-    protected $fillable = ['uuid', 'code', 'params', 'description'];
+    protected $fillable = ['uuid', 'code', 'name', 'params', 'description'];
 
     /**
      * The attributes that should be cast to native types.

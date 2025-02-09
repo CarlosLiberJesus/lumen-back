@@ -10,19 +10,17 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('roles', function (Blueprint $table): void {
+        Schema::create('distritos', function (Blueprint $table): void {
             $table->id();
             $table->string('uuid')->unique()->index();
-            $table->string('code', 10)->unique()->index();
             $table->string('name', 100);
-            $table->text('description')->nullable();
-            $table->json('params')->nullable();
+            $table->json('descriptions')->nullable();
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('distritos');
     }
 };

@@ -30,7 +30,7 @@ final class CleanHtmlFromFile extends Command
         $filePath = $this->argument('file');
         $fullPath = base_path($filePath);
 
-        if (! file_exists($fullPath)) {
+        if (!file_exists($fullPath)) {
             $this->error('File not found: ' . $fullPath);
 
             return 1;

@@ -10,22 +10,19 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('instituicao_dados', function (Blueprint $table): void {
+        Schema::create('instituicao_leis', function (Blueprint $table) {
             $table->id();
-            $table->double('nif')->unique()->nullable();
-            $table->text('certidao_permanente')->nullable();
             $table->unsignedBigInteger('instituicao_id');
-            $table->string('duracao_mandato')->nullable();
-            $table->text('membros')->nullable();
-            $table->string('membros_parlamento')->nullable();
+            $table->unsignedBigInteger('lei_id');
             $table->timestamps();
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');
+            $table->foreign('lei_id')->references('id')->on('leis');
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('instituicao_dados');
+        Schema::dropIfExists('instituicao_leis');
     }
 };

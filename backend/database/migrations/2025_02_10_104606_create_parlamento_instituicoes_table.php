@@ -10,22 +10,20 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('instituicao_dados', function (Blueprint $table): void {
+        Schema::create('parlamento_instituicoes', function (Blueprint $table) {
             $table->id();
-            $table->double('nif')->unique()->nullable();
-            $table->text('certidao_permanente')->nullable();
             $table->unsignedBigInteger('instituicao_id');
-            $table->string('duracao_mandato')->nullable();
-            $table->text('membros')->nullable();
-            $table->string('membros_parlamento')->nullable();
+            $table->unsignedBigInteger('legislatura_id');
+
             $table->timestamps();
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');
+            $table->foreign('legislatura_id')->references('id')->on('legislaturas');
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('instituicao_dados');
+        Schema::dropIfExists('parlamento_instituicoes');
     }
 };

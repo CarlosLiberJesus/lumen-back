@@ -103,4 +103,24 @@ final class Instituicao extends Model
     {
         return $this->hasMany(InstituicaoContacto::class, 'instituicao_id');
     }
+
+    /**
+     * Instituicao changes with Legislatura.
+     *
+     * @return HasMany<ParlamentoInstituicao, $this>
+     */
+    public function parlamentoInstituicoes(): HasMany
+    {
+        return $this->hasMany(ParlamentoInstituicao::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituição sobre legislação.
+     *
+     * @return HasMany<InstituicaoLei, $this>
+     */
+    public function leis(): HasMany
+    {
+        return $this->hasMany(InstituicaoLei::class, 'instituicao_id');
+    }
 }

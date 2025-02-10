@@ -25,6 +25,9 @@ final class InstituicaoDados extends Model
         'nif',
         'certidao_permanente',
         'instituicao_id',
+        'duracao_mandato',
+        'membros',
+        'membros_parlamento',
     ];
 
     /**

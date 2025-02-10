@@ -8,22 +8,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('instituicao_caraters', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique()->index();
             $table->string('tipo');
+            $table->text('descricao');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('instituicao_caraters');

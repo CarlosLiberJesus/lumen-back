@@ -24,6 +24,7 @@ final class InstituicaoCarater extends Model
     protected $fillable = [
         'uuid',
         'tipo',
+        'descricao',
     ];
 
     /**

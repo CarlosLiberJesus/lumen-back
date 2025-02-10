@@ -22,7 +22,9 @@ final class InstituicaoSeeder extends Seeder
         InstituicaoCarater::create(['uuid' => Str::uuid(), 'tipo' => 'Legislativo']);
         InstituicaoCarater::create(['uuid' => Str::uuid(), 'tipo' => 'Executivo']);
         InstituicaoCarater::create(['uuid' => Str::uuid(), 'tipo' => 'Judicial']);
-        InstituicaoCarater::create(['uuid' => Str::uuid(), 'tipo' => 'Independente']);
+        InstituicaoCarater::create(['uuid' => Str::uuid(), 'tipo' => 'Independente', 'descricao' => 'São estabelecidas para operar autonomamente do governo e da Assembleia da República. Têm funções de fiscalização, regulação ou supervisão, garantindo imparcialidade e objetividade']);
+        InstituicaoCarater::create(['uuid' => Str::uuid(), 'tipo' => 'Externo', 'descricao' => 'São organizações que interagem com a Assembleia da República, mas que não fazem parte da sua estrutura interna. Incluem agências governamentais, instituições públicas (como universidades) e organizações internacionais.']);
+        InstituicaoCarater::create(['uuid' => Str::uuid(), 'tipo' => 'Partido']);
 
         Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Presidência da República', 'instituicao_carater_id' => 1]);
 

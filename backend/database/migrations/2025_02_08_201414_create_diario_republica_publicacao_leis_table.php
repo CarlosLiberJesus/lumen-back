@@ -14,7 +14,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('dr_publicacao_id');
             $table->unsignedBigInteger('lei_id');
-            $table->string('url');
+            $table->text('src')->nullable()->comment('Web link');
             $table->string('paginas');
             $table->timestamps();
 

@@ -25,7 +25,7 @@ final class DiarioRepublicaPublicacao extends Model
     protected $fillable = [
         'uuid',
         'nome',
-        'url',
+        'src',
         'publicacao',
         'diario_republica_id',
     ];

@@ -8,16 +8,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('instituicao_contactos', function (Blueprint $table): void {
             $table->id();
             $table->unsignedBigInteger('instituicao_id');
             $table->unsignedBigInteger('contacto_tipo_id');
-            $table->string('contacto');
+            $table->text('contacto');
             $table->timestamps();
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');
@@ -25,9 +22,6 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('instituicao_contactos');

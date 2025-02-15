@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class InstituicaoDados extends Model
+final class LeiEmissor extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'instituicao_dados';
+    protected $table = 'lei_emissores';
 
     /**
      * The attributes that are mass assignable.
@@ -22,19 +22,18 @@ final class InstituicaoDados extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'nif',
-        'certidao_permanente',
-        'instituicao_id',
-        'descricao',
+        'lei_id',
+        'emissor_tipo',
+        'emissor_id',
     ];
 
     /**
-     * Get the instituicao that owns the dado.
+     * Get the lei that owns the emissor.
      *
-     * @return BelongsTo<Instituicao, $this>
+     * @return BelongsTo<Lei, $this>
      */
-    public function instituicao(): BelongsTo
+    public function lei(): BelongsTo
     {
-        return $this->belongsTo(Instituicao::class, 'instituicao_id');
+        return $this->belongsTo(Lei::class, 'lei_id');
     }
 }

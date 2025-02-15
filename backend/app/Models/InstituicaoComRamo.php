@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class InstituicaoMedia extends Model
+final class InstituicaoComRamo extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'instituicao_medias';
+    protected $table = 'instituicao_com_ramos';
 
     /**
      * The attributes that are mass assignable.
@@ -23,15 +23,11 @@ final class InstituicaoMedia extends Model
      */
     protected $fillable = [
         'instituicao_id',
-        'uuid',
-        'name',
-        'media_type_id',
-        'path',
-        'src',
+        'instituicao_ramo_id',
     ];
 
     /**
-     * Get the instituicao that owns the media.
+     * Get the instituicao that owns the instituicao com ramo.
      *
      * @return BelongsTo<Instituicao, $this>
      */
@@ -41,12 +37,12 @@ final class InstituicaoMedia extends Model
     }
 
     /**
-     * Get the media type that owns the media.
+     * Get the instituicao ramo that owns the instituicao com ramo.
      *
-     * @return BelongsTo<MediaType, $this>
+     * @return BelongsTo<InstituicaoRamo, $this>
      */
-    public function mediaType(): BelongsTo
+    public function instituicaoRamo(): BelongsTo
     {
-        return $this->belongsTo(MediaType::class, 'media_type_id');
+        return $this->belongsTo(InstituicaoRamo::class, 'instituicao_ramo_id');
     }
 }

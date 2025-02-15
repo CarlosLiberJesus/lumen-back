@@ -16,9 +16,7 @@ final class AppServiceProvider extends ServiceProvider
     /**
      * Register any application services.
      */
-    public function register(): void
-    {
-    }
+    public function register(): void {}
 
     /**
      * Bootstrap any application services.
@@ -35,7 +33,7 @@ final class AppServiceProvider extends ServiceProvider
      */
     private function configureModels(): void
     {
-        Model::shouldBeStrict(! $this->app->environment('production'));
+        Model::shouldBeStrict(!$this->app->environment('production'));
 
         Model::unguard();
     }

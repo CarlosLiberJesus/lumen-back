@@ -3,3 +3,4 @@
 /node_modules
 pre-check.sh
 local_lumen.session.sql
+/python/venv

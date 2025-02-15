@@ -26,11 +26,10 @@ final class Lei extends Model
         'uuid',
         'nome',
         'codigo',
-        'instituicao_legislatura_id',
-        'instituicao_id',
         'proponente',
         'sumario',
         'texto',
+        'path',
         'em_vigor',
         'data_toggle',
     ];
@@ -55,26 +54,7 @@ final class Lei extends Model
     }
 
     /**
-     * Get the instituicao legislatura that owns the lei.
-     *
-     * @return BelongsTo<InstituicaoLegislatura, $this>
-     */
-    public function instituicaoLegislatura(): BelongsTo
-    {
-        return $this->belongsTo(InstituicaoLegislatura::class, 'instituicao_legislatura_id');
-    }
-
-    /**
-     * Get the instituicao legislatura that owns the lei.
-     *
-     * @return BelongsTo<Instituicao, $this>
-     */
-    public function instituicao(): BelongsTo
-    {
-        return $this->belongsTo(Instituicao::class, 'instituicao_id');
-    }
-
-    /**
+     * TODO: Pensar se está bem, e a função reversa
      * Get the adendas for the lei.
      *
      * @return HasMany<LeiAdenda, $this>
@@ -87,10 +67,20 @@ final class Lei extends Model
     /**
      * Lei has many Medias.
      *
-     * @return HasMany<LeiMedia, $this>
+     * @return HasMany<LeiAnexo, $this>
      */
-    public function medias(): HasMany
+    public function anexos(): HasMany
     {
-        return $this->hasMany(LeiMedia::class, 'cidadao_id');
+        return $this->hasMany(LeiAnexo::class, 'cidadao_id');
+    }
+
+    /**
+     * Get the lei emissores for the lei.
+     *
+     * @return HasMany<LeiEmissor, $this>
+     */
+    public function emissores(): HasMany
+    {
+        return $this->hasMany(LeiEmissor::class, 'lei_id');
     }
 }

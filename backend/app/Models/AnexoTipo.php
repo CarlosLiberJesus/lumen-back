@@ -6,14 +6,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-final class MediaType extends Model
+final class AnexoTipo extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'media_types';
+    protected $table = 'anexo_tipos';
 
     /**
      * The attributes that are mass assignable.
@@ -23,5 +23,15 @@ final class MediaType extends Model
     protected $fillable = [
         'type',
         'description',
+        'params',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'params' => 'array',
     ];
 }

@@ -7,7 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class LeiMedia extends Model
+final class LeiAnexo extends Model
 {
     /**
      * The table associated with the model.
@@ -25,7 +25,7 @@ final class LeiMedia extends Model
         'uuid',
         'name',
         'lei_id',
-        'media_type_id',
+        'anexo_tipo_id',
         'path',
         'url',
     ];
@@ -43,10 +43,10 @@ final class LeiMedia extends Model
     /**
      * Get the media that owns the lei media.
      *
-     * @return BelongsTo<MediaType, $this>
+     * @return BelongsTo<AnexoTipo, $this>
      */
-    public function mediaType(): BelongsTo
+    public function anexoTipo(): BelongsTo
     {
-        return $this->belongsTo(MediaType::class, 'media_id');
+        return $this->belongsTo(AnexoTipo::class, 'anexo_tipo_id');
     }
 }

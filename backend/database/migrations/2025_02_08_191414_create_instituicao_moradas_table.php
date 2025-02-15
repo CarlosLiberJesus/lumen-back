@@ -13,7 +13,7 @@ return new class extends Migration
         Schema::create('instituicao_moradas', function (Blueprint $table): void {
             $table->id();
             $table->unsignedBigInteger('instituicao_id');
-            $table->string('morada', 100);
+            $table->text('morada');
             $table->string('codigo_postal', 10)->nullable();
             $table->string('localidade', 100)->nullable();
             $table->unsignedBigInteger('concelho_id')->nullable();

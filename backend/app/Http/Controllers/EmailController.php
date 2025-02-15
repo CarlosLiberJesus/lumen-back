@@ -32,7 +32,7 @@ final class EmailController extends Controller
         try {
             $validatedData = $validator->validated();
 
-            if (! $validatedData['fe_subject']) {
+            if (!$validatedData['fe_subject']) {
                 $validatedData['fe_subject'] = 'Default Assunto';
             }
 
@@ -52,7 +52,7 @@ final class EmailController extends Controller
 
             return redirect()->back()->with('success', 'Email enviado com sucesso!');
         } catch (Exception $exception) {
-            return redirect()->back()->with('error', 'Erro ao enviar email: ' . $exception->getMessage());
+            return redirect()->back()->with('error', 'Erro ao enviar email: '.$exception->getMessage());
         }
     }
 }

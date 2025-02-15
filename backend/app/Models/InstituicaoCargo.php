@@ -23,6 +23,7 @@ final class InstituicaoCargo extends Model
      */
     protected $fillable = [
         'cargo',
+        'uuid',
         'instituicao_id',
     ];
 

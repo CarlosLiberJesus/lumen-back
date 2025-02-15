@@ -13,6 +13,7 @@ The inner folder, might seem redundant, but can be use as dev-ops safe-guards an
 - Laravel framework ^11
 - node: v18.20.5
 - npm: 10.8.2
+- python 3.12
 
 ## Possible upgrades for blade:
 
@@ -60,8 +61,22 @@ The inner folder, might seem redundant, but can be use as dev-ops safe-guards an
    ...
    ```
 
+## Python Scripts
+
+Some scripts iniside python
+
+```sh
+cd python
+python3 -m venv venv
+source venv/bin/activate
+
+pip install PyMuPDF
+python extract_text.py   # Edit the paths to file first
+```
+
 ## Log History
 
 - Dec 15, 2024 - First phpinfo();
 - Dec 23, 2024 - Laravel v11.36.1 (PHP v8.4.1) Native
 - Jan 04, 2025 - Newsletter Test Page
+- Fev 10, 2025 - Including Python

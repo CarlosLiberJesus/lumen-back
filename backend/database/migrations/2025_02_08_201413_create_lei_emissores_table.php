@@ -10,19 +10,19 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('instituicao_leis', function (Blueprint $table) {
+        Schema::create('lei_emissores', function (Blueprint $table): void {
             $table->id();
-            $table->unsignedBigInteger('instituicao_id');
             $table->unsignedBigInteger('lei_id');
+            $table->enum('emissor_tipo', ['instituicao', 'instituicao_legislatura', 'cidadao']);
+            $table->unsignedBigInteger('emissor_id');
             $table->timestamps();
 
-            $table->foreign('instituicao_id')->references('id')->on('instituicoes');
             $table->foreign('lei_id')->references('id')->on('leis');
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('instituicao_leis');
+        Schema::dropIfExists('lei_emissores');
     }
 };

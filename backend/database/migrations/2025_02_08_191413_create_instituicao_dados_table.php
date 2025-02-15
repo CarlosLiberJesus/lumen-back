@@ -15,9 +15,13 @@ return new class extends Migration
             $table->double('nif')->unique()->nullable();
             $table->text('certidao_permanente')->nullable();
             $table->unsignedBigInteger('instituicao_id');
-            $table->string('duracao_mandato')->nullable();
-            $table->text('membros')->nullable();
-            $table->string('membros_parlamento')->nullable();
+            $table->longText('descricao')->nullable();
+            /**
+             * TODO: temos de um fast way do board members... talvez metodo count() no model para cargos
+             * $table->string('duracao_mandato')->nullable();
+             * $table->text('membros')->nullable()->comment('TODO: no parlamento.pt temo');
+             * $table->string('membros_parlamento')->nullable();
+             */
             $table->timestamps();
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');

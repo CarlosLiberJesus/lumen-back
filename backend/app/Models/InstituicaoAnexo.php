@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class InstituicaoDados extends Model
+final class InstituicaoAnexo extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'instituicao_dados';
+    protected $table = 'instituicao_anexos';
 
     /**
      * The attributes that are mass assignable.
@@ -22,19 +22,31 @@ final class InstituicaoDados extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'nif',
-        'certidao_permanente',
         'instituicao_id',
-        'descricao',
+        'uuid',
+        'name',
+        'anexo_tipo_id',
+        'path',
+        'src',
     ];
 
     /**
-     * Get the instituicao that owns the dado.
+     * Get the instituicao that owns the media.
      *
      * @return BelongsTo<Instituicao, $this>
      */
     public function instituicao(): BelongsTo
     {
         return $this->belongsTo(Instituicao::class, 'instituicao_id');
+    }
+
+    /**
+     * Get the media that owns the lei media.
+     *
+     * @return BelongsTo<AnexoTipo, $this>
+     */
+    public function anexoTipo(): BelongsTo
+    {
+        return $this->belongsTo(AnexoTipo::class, 'anexo_tipo_id');
     }
 }

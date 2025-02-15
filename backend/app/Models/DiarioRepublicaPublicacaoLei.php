@@ -24,7 +24,7 @@ final class DiarioRepublicaPublicacaoLei extends Model
     protected $fillable = [
         'diario_republica_publicacao_id',
         'lei_id',
-        'url',
+        'src',
         'paginas',
     ];
 

@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-final class InstituicaoCarater extends Model
+final class InstituicaoRamo extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'instituicao_caraters';
+    protected $table = 'instituicao_ramos';
 
     /**
      * The attributes that are mass assignable.
@@ -34,6 +34,6 @@ final class InstituicaoCarater extends Model
      */
     public function instituicoes(): HasMany
     {
-        return $this->hasMany(Instituicao::class, 'instituicao_carater_id');
+        return $this->hasMany(Instituicao::class, 'instituicao_ramo_id');
     }
 }

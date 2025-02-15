@@ -30,8 +30,8 @@ final class CleanHtmlFromFile extends Command
         $filePath = $this->argument('file');
         $fullPath = base_path($filePath);
 
-        if (! file_exists($fullPath)) {
-            $this->error('File not found: ' . $fullPath);
+        if (!file_exists($fullPath)) {
+            $this->error('File not found: '.$fullPath);
 
             return 1;
         }
@@ -41,7 +41,7 @@ final class CleanHtmlFromFile extends Command
 
         // Strip HTML tags
         if ($content === false) {
-            $this->error('Failed to read file content: ' . $fullPath);
+            $this->error('Failed to read file content: '.$fullPath);
 
             return 1;
         }
@@ -51,7 +51,7 @@ final class CleanHtmlFromFile extends Command
         // Save the cleaned content back to the same file
         file_put_contents($fullPath, $cleanedContent);
 
-        $this->info('Cleaned content saved to: ' . $fullPath);
+        $this->info('Cleaned content saved to: '.$fullPath);
 
         return 0;
     }

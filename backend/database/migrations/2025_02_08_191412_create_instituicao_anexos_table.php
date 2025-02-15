@@ -10,23 +10,23 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('cidadao_medias', function (Blueprint $table): void {
+        Schema::create('instituicao_anexos', function (Blueprint $table): void {
             $table->id();
             $table->string('uuid')->unique()->index();
             $table->string('nome')->nullable();
-            $table->unsignedBigInteger('cidadao_id');
-            $table->unsignedBigInteger('media_type_id');
+            $table->unsignedBigInteger('instituicao_id');
+            $table->unsignedBigInteger('anexo_tipo_id');
             $table->string('path');
             $table->string('src')->nullable();
             $table->timestamps();
 
-            $table->foreign('cidadao_id')->references('id')->on('cidadaos');
-            $table->foreign('media_type_id')->references('id')->on('media_types');
+            $table->foreign('instituicao_id')->references('id')->on('instituicoes');
+            $table->foreign('anexo_tipo_id')->references('id')->on('anexo_tipos');
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('cidadao_medias');
+        Schema::dropIfExists('instituicao_anexos');
     }
 };

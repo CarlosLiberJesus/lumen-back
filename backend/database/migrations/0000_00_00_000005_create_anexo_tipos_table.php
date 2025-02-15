@@ -10,17 +10,17 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('instituicao_caraters', function (Blueprint $table): void {
+        Schema::create('anexo_tipos', function (Blueprint $table): void {
             $table->id();
-            $table->uuid('uuid')->unique()->index();
-            $table->string('tipo');
-            $table->text('descricao');
+            $table->string('tipo', 100);
+            $table->string('description');
+            $table->json('params')->nullable();
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('instituicao_caraters');
+        Schema::dropIfExists('anexo_tipos');
     }
 };

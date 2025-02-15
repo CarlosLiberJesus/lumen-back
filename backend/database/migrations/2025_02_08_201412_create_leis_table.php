@@ -15,17 +15,13 @@ return new class extends Migration
             $table->uuid('uuid')->unique()->index();
             $table->string('codigo')->unique();
             $table->string('nome_completo');
-            $table->unsignedBigInteger('instituicao_legislatura_id')->nullable();
-            $table->unsignedBigInteger('instituicao_id')->nullable();
-            $table->string('proponente')->nullable();
-            $table->text('sumario')->nullable();
-            $table->string('texto')->nullable();
+            $table->string('proponente')->nullable()->comment('Caso não se conheça o emissor fica a string extraída');
+            $table->text('sumario')->nullable()->comment('Resumo da lei, extraido da web');
+            $table->longText('texto')->nullable()->comment('Texto da lei, extraido da web');
+            $table->longText('path')->nullable()->comment('Caminho para path o ficheiro da lei');
             $table->boolean('em_vigor')->default(true);
-            $table->date('data_toggle')->nullable();
+            $table->date('data_toggle')->nullable()->comment('Leis começam activas, mas mudam para inactivas quando são revogadas ou substituídas');
             $table->timestamps();
-
-            $table->foreign('instituicao_legislatura_id')->references('id')->on('instituicao_legislaturas');
-            $table->foreign('instituicao_id')->references('id')->on('instituicoes');
         });
     }
 

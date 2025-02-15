@@ -12,23 +12,26 @@ if [ -n "$STAGED_FILES" ]; then
   
   #echo "$STAGED_FILES" | xargs ./backend/vendor/bin/phpcbf --standard=PSR12
   #PHPCBF_EXIT_CODE=$?
-  PHPCBF_EXIT_CODE=0
+
   # If phpcbf fixed all issues (exit code 0), continue with the commit
-  if [ $PHPCBF_EXIT_CODE -eq 0 ]; then
-      echo "All issues fixed by phpcbf. Proceeding with commit."
-  fi
+  #if [ $PHPCBF_EXIT_CODE -eq 0 ]; then
+  #    echo "All issues fixed by phpcbf. Proceeding with commit."
+  #fi
 
   # If phpcbf found issues that it couldn't fix (exit code 1), stop the commit
-  if [ $PHPCBF_EXIT_CODE -eq 1 ]; then
-      echo "phpcbf found issues that it couldn't fix. Stopping commit."
-      exit 1
-  fi
+  #if [ $PHPCBF_EXIT_CODE -eq 1 ]; then
+  #    echo "phpcbf found issues that it couldn't fix. Stopping commit."
+  #    exit 1
+  #fi
 
   # If phpcbf encountered an error (exit code 2 or higher), stop the commit
-  if [ $PHPCBF_EXIT_CODE -ge 2 ]; then
-      echo "phpcbf encountered an error. Stopping commit."
-      exit 1
-  fi
+  #if [ $PHPCBF_EXIT_CODE -ge 2 ]; then
+  #    echo "phpcbf encountered an error. Stopping commit."
+  #    exit 1
+  #fi
+
+  echo "$STAGED_FILES" | xargs ./backend/vendor/bin/rector process
+  if [ $? -ne 0 ]; then exit 1; fi
 
   echo "$STAGED_FILES" | xargs ./backend/vendor/bin/duster fix
   if [ $? -ne 0 ]; then exit 1; fi
@@ -36,8 +39,7 @@ if [ -n "$STAGED_FILES" ]; then
   echo "$STAGED_FILES" | xargs ./backend/vendor/bin/duster lint
   if [ $? -ne 0 ]; then exit 1; fi
 
-  echo "$STAGED_FILES" | xargs ./backend/vendor/bin/rector process
-  if [ $? -ne 0 ]; then exit 1; fi
+  
 fi
 
 # Run lint-staged for js|json files

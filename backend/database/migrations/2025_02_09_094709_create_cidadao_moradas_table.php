@@ -8,15 +8,12 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('cidadao_moradas', function (Blueprint $table): void {
             $table->id();
             $table->unsignedBigInteger('cidadao_id');
-            $table->string('morada', 100);
+            $table->text('morada');
             $table->string('codigo_postal', 10)->nullable();
             $table->string('localidade', 100)->nullable();
             $table->unsignedBigInteger('concelho_id')->nullable();
@@ -27,9 +24,6 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('cidadao_moradas');

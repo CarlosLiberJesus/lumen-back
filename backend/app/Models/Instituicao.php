@@ -26,22 +26,23 @@ final class Instituicao extends Model
      */
     protected $fillable = [
         'uuid',
-        'instituicao_carater_id',
+        'instituicao_ramo_id',
+        'republica_id',
         'nome',
         'sigla',
-        'link',
-        'descricao',
+        'sinopse',
         'responde_instituicao_id',
+        'entidade_juridicas_id',
     ];
 
     /**
      * Get the instituicao carater that owns the instituicao.
      *
-     * @return BelongsTo<InstituicaoCarater, $this>
+     * @return BelongsTo<InstituicaoRamo, $this>
      */
-    public function instituicaoCarater(): BelongsTo
+    public function instituicaoRamo(): BelongsTo
     {
-        return $this->belongsTo(InstituicaoCarater::class, 'instituicao_carater_id');
+        return $this->belongsTo(InstituicaoRamo::class, 'instituicao_ramo_id');
     }
 
     /**
@@ -67,11 +68,11 @@ final class Instituicao extends Model
     /**
      * Instituicao has many Medias.
      *
-     * @return HasMany<InstituicaoMedia, $this>
+     * @return HasMany<InstituicaoAnexo, $this>
      */
-    public function medias(): HasMany
+    public function anexos(): HasMany
     {
-        return $this->hasMany(InstituicaoMedia::class, 'instituicao_id');
+        return $this->hasMany(InstituicaoAnexo::class, 'instituicao_id');
     }
 
     /**
@@ -105,22 +106,32 @@ final class Instituicao extends Model
     }
 
     /**
-     * Instituicao changes with Legislatura.
+     * Instituicao HasOne EntidadeJuridica.
      *
-     * @return HasMany<ParlamentoInstituicao, $this>
+     * @return HasOne<EntidadeJuridica, $this>
      */
-    public function parlamentoInstituicoes(): HasMany
+    public function entidadeJuridica(): HasOne
     {
-        return $this->hasMany(ParlamentoInstituicao::class, 'instituicao_id');
+        return $this->hasOne(EntidadeJuridica::class, 'id', 'entidade_juridicas_id');
     }
 
     /**
-     * Instituição sobre legislação.
+     * Instituicao BelongsTo Republica.
      *
-     * @return HasMany<InstituicaoLei, $this>
+     * @return BelongsTo<Republica, $this>
      */
-    public function leis(): HasMany
+    public function republica(): BelongsTo
     {
-        return $this->hasMany(InstituicaoLei::class, 'instituicao_id');
+        return $this->belongsTo(Republica::class, 'republica_id');
+    }
+
+    /**
+     * Instituicao has many InstituicaoRamos.
+     *
+     * @return HasMany<InstituicaoComRamo, $this>
+     */
+    public function ramos(): HasMany
+    {
+        return $this->hasMany(InstituicaoComRamo::class, 'instituicao_id');
     }
 }

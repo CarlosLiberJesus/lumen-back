@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class CidadaoMedia extends Model
+final class CidadaoAnexo extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'cidadao_medias';
+    protected $table = 'cidadao_anexos';
 
     /**
      * The attributes that are mass assignable.
@@ -25,7 +25,7 @@ final class CidadaoMedia extends Model
         'cidadao_id',
         'uuid',
         'name',
-        'media_type_id',
+        'anexo_tipo_id',
         'path',
         'src',
     ];
@@ -41,12 +41,12 @@ final class CidadaoMedia extends Model
     }
 
     /**
-     * Get the media type that owns the media.
+     * Get the media that owns the lei media.
      *
-     * @return BelongsTo<MediaType, $this>
+     * @return BelongsTo<AnexoTipo, $this>
      */
-    public function mediaType(): BelongsTo
+    public function anexoTipo(): BelongsTo
     {
-        return $this->belongsTo(MediaType::class, 'media_type_id');
+        return $this->belongsTo(AnexoTipo::class, 'anexo_tipo_id');
     }
 }

@@ -19,5 +19,31 @@ final class ContactoTiposSeeder extends Seeder
         ContactoTipo::create(['nome' => 'Telefone']);
         ContactoTipo::create(['nome' => 'Redes Sociais']);
         ContactoTipo::create(['nome' => 'Fax']);
+        ContactoTipo::create(['nome' => 'X', 'description' => 'Redes Sociais',
+            'params' => json_encode([
+                'background' => [
+                    'hex' => '#000000',
+                    'bootstrap' => 'black',
+                ],
+                'color' => [
+                    'hex' => '#FFFFFF',
+                    'bootstrap' => 'white',
+                ],
+                'icon' => 'fa fa-x',
+            ]),
+        ]);
+        ContactoTipo::create(['nome' => 'Facebook', 'description' => 'Facebook',
+            'params' => json_encode([
+                'background' => [
+                    'hex' => '#3b5998',
+                    'bootstrap' => 'facebook',
+                ],
+                'color' => [
+                    'hex' => '#FFFFFF',
+                    'bootstrap' => 'white',
+                ],
+                'icon' => 'fa fa-facebook',
+            ]),
+        ]);
     }
 }

@@ -14,7 +14,7 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->unique()->index();
             $table->string('nome');
-            $table->string('url');
+            $table->text('src')->nullable()->comment('Web link');
             $table->unsignedBigInteger('diario_republica_id');
             $table->timestamps();
 

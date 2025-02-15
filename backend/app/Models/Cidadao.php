@@ -27,6 +27,7 @@ final class Cidadao extends Model
         'uuid',
         'nome',
         'data_nascimento',
+        'data_falecimento',
         'freguesia_id',
     ];
 
@@ -73,11 +74,11 @@ final class Cidadao extends Model
     /**
      * Cidadao has many Medias.
      *
-     * @return HasMany<CidadaoMedia, $this>
+     * @return HasMany<CidadaoAnexo, $this>
      */
-    public function medias(): HasMany
+    public function anexos(): HasMany
     {
-        return $this->hasMany(CidadaoMedia::class, 'cidadao_id');
+        return $this->hasMany(CidadaoAnexo::class, 'cidadao_id');
     }
 
     /**

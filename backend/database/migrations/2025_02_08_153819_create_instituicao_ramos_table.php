@@ -8,24 +8,19 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('media_types', function (Blueprint $table): void {
+        Schema::create('instituicao_ramos', function (Blueprint $table): void {
             $table->id();
-            $table->string('type');
-            $table->string('description');
+            $table->uuid('uuid')->unique()->index();
+            $table->string('tipo');
+            $table->text('descricao');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('media_types');
+        Schema::dropIfExists('instituicao_ramos');
     }
 };

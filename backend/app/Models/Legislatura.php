@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 final class Legislatura extends Model
 {
@@ -51,5 +52,15 @@ final class Legislatura extends Model
     public function republica(): BelongsTo
     {
         return $this->belongsTo(Republica::class, 'republica_id');
+    }
+
+    /**
+     * Legislatura has many Anexos.
+     *
+     * @return HasMany<InstituicaoAnexo, $this>
+     */
+    public function anexos(): HasMany
+    {
+        return $this->hasMany(InstituicaoAnexo::class, 'legislatura_id');
     }
 }

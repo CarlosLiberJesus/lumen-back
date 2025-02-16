@@ -24,7 +24,7 @@ final class CidadaoAnexo extends Model
     protected $fillable = [
         'cidadao_id',
         'uuid',
-        'name',
+        'nome',
         'anexo_tipo_id',
         'path',
         'src',

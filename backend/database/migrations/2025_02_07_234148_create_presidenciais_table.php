@@ -22,6 +22,8 @@ return new class extends Migration
 
             $table->foreign('republica_id')->references('id')->on('republicas');
         });
+        DB::statement("ALTER TABLE presidenciais COMMENT = 'Representa os ciclos das eleições de Presidente da Republica Republica. Vai funcionar excelente para a actualidade pós 1974, republicas.id = 4, talvez pós 1910, republicas.id > 2.'");
+
     }
 
     public function down(): void

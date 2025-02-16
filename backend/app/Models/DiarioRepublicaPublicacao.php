@@ -28,10 +28,11 @@ final class DiarioRepublicaPublicacao extends Model
         'src',
         'publicacao',
         'diario_republica_id',
+        'serie_id',
     ];
 
     /**
-     * Get the diario republica that owns the publicacao.
+     * Get the diario republica that owns the publicação.
      *
      * @return BelongsTo<DiarioRepublica, $this>
      */
@@ -48,5 +49,15 @@ final class DiarioRepublicaPublicacao extends Model
     public function leis(): HasMany
     {
         return $this->hasMany(DiarioRepublicaPublicacaoLei::class, 'diario_republica_publicacao_id');
+    }
+
+    /**
+     * Cada publicacao pertence a uma série.
+     *
+     * @return BelongsTo<DiarioRepublicaSerie, $this>
+     */
+    public function freguesia(): BelongsTo
+    {
+        return $this->belongsTo(DiarioRepublicaSerie::class, 'serie_id');
     }
 }

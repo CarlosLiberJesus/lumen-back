@@ -20,7 +20,7 @@ return new class extends Migration
             $table->longText('texto')->nullable()->comment('Texto da lei, extraido da web');
             $table->longText('path')->nullable()->comment('Caminho para path o ficheiro da lei');
             $table->boolean('em_vigor')->default(true);
-            $table->date('data_toggle')->nullable()->comment('Leis começam activas, mas mudam para inactivas quando são revogadas ou substituídas');
+            $table->date('data_toggle')->nullable()->comment('Leis começam activas, mas mudam para outros quando são revogadas ou substituídas');
             $table->timestamps();
         });
     }

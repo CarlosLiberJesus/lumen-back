@@ -26,7 +26,7 @@ final class Republica extends Model
         'nome',
         'ano_inicio',
         'ano_fim',
-        'link',
+        'sinopse',
     ];
 
     /**
@@ -47,5 +47,15 @@ final class Republica extends Model
     public function instituicoes(): HasMany
     {
         return $this->hasMany(Instituicao::class, 'republica_id');
+    }
+
+    /**
+     * Republica has many Anexos.
+     *
+     * @return HasMany<RepublicaAnexo, $this>
+     */
+    public function anexos(): HasMany
+    {
+        return $this->hasMany(RepublicaAnexo::class, 'republica_id');
     }
 }

@@ -13,11 +13,11 @@ return new class extends Migration
         Schema::create('lei_anexos', function (Blueprint $table): void {
             $table->id();
             $table->string('uuid')->unique()->index();
-            $table->string('nome')->nullable();
+            $table->string('nome');
             $table->unsignedBigInteger('lei_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path')->nullable();
-            $table->string('url')->nullable();
+            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
+            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
             $table->timestamps();
 
             $table->foreign('lei_id')->references('id')->on('leis');

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->date('publicacao')->unique();
             $table->timestamps();
         });
+
+        DB::statement("ALTER TABLE diario_republicas COMMENT = 'Tabela que aceita uma data unica para publicação. 1 Diário da republica pode ter vários diario_republicas_publicacoes. Exemplo nome: Diário da República n.º 32/2025'");
     }
 
     public function down(): void

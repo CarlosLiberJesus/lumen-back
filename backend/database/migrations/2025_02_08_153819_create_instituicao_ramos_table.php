@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text('descricao');
             $table->timestamps();
         });
+
+        DB::statement("ALTER TABLE instituicao_ramos COMMENT = 'Odeio o Nome desta tabela, é uum conceito teorico, que vai ajudar a filtrar as instituições. Inicialmente para mapear o ramo legislativo | executivo | judicial mas a complexidade de ONGs também vai entrar em conta.'");
     }
 
     public function down(): void

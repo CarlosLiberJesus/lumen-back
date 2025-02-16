@@ -66,7 +66,7 @@ final class Instituicao extends Model
     }
 
     /**
-     * Instituicao has many Medias.
+     * Instituicao has many Anexos.
      *
      * @return HasMany<InstituicaoAnexo, $this>
      */
@@ -133,5 +133,57 @@ final class Instituicao extends Model
     public function ramos(): HasMany
     {
         return $this->hasMany(InstituicaoComRamo::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituicao has many Nacionalidades.
+     *
+     * @return HasMany<InstituicaoNacionalidade, $this>
+     */
+    public function nacionalidades(): HasMany
+    {
+        return $this->hasMany(InstituicaoNacionalidade::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituicao has many Leis.
+     * Direitos e deveres da instituicao.
+     *
+     * @return HasMany<InstituicaoLei, $this>
+     */
+    public function leis(): HasMany
+    {
+        return $this->hasMany(InstituicaoLei::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituicao has many Cargos.
+     * Vai gerar cargos para a instituicao.
+     *
+     * @return HasMany<InstituicaoCargo, $this>
+     */
+    public function cargos(): HasMany
+    {
+        return $this->hasMany(InstituicaoCargo::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituicao has many Relaçoes.
+     *
+     * @return HasMany<InstituicaoRelacao, $this>
+     */
+    public function relacoesInstitucionais(): HasMany
+    {
+        return $this->hasMany(InstituicaoRelacao::class, 'instituicao_id');
+    }
+
+    /**
+     * Instituicao has many Relaçoes.
+     *
+     * @return HasMany<InstituicaoRelacao, $this>
+     */
+    public function relacoesCidadao(): HasMany
+    {
+        return $this->hasMany(InstituicaoRelacao::class, 'com_cidadao_id');
     }
 }

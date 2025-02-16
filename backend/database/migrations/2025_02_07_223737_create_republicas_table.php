@@ -16,9 +16,12 @@ return new class extends Migration
             $table->string('nome', 100);
             $table->smallInteger('ano_inicio');
             $table->smallInteger('ano_fim')->nullable();
-            $table->string('link')->nullable();
+            $table->longText('sinopse')->nullable();
             $table->timestamps();
         });
+
+        DB::statement("ALTER TABLE republicas COMMENT = 'Representa os grandes ciclos históricos desde a Monarquia Constitucional até à atualidade. Exemplo: Primeira República, Estado Novo, Terceira República, etc.'");
+
     }
 
     public function down(): void

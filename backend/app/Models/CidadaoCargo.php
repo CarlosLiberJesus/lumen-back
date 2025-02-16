@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 final class CidadaoCargo extends Model
 {
@@ -27,7 +28,7 @@ final class CidadaoCargo extends Model
         'inicio',
         'fim',
         'src',
-        'observacoes',
+        'sinopse',
     ];
 
     /**
@@ -58,5 +59,15 @@ final class CidadaoCargo extends Model
     public function cargo(): BelongsTo
     {
         return $this->belongsTo(InstituicaoCargo::class, 'cargo_id');
+    }
+
+    /**
+     * CidadaoCargo has many Anexos.
+     *
+     * @return HasMany<CidadaoCargoAnexo, $this>
+     */
+    public function anexos(): HasMany
+    {
+        return $this->hasMany(CidadaoCargoAnexo::class, 'cidadao_id');
     }
 }

@@ -49,4 +49,14 @@ final class Concelho extends Model
     {
         return $this->hasMany(Freguesia::class, 'concelho_id');
     }
+
+    /**
+     * Concelho has many Anexos.
+     *
+     * @return HasMany<ConcelhoAnexo, $this>
+     */
+    public function anexos(): HasMany
+    {
+        return $this->hasMany(ConcelhoAnexo::class, 'cidadao_id');
+    }
 }

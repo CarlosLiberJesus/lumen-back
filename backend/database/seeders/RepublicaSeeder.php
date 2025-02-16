@@ -18,6 +18,6 @@ final class RepublicaSeeder extends Seeder
         Republica::create(['uuid' => Str::uuid(), 'nome' => 'Monarquia Constitucional', 'ano_inicio' => 1834, 'ano_fim' => 1910]);
         Republica::create(['uuid' => Str::uuid(), 'nome' => 'Primeira República', 'ano_inicio' => 1910, 'ano_fim' => 1926]);
         Republica::create(['uuid' => Str::uuid(), 'nome' => 'Segunda República', 'ano_inicio' => 1926, 'ano_fim' => 1974]);
-        Republica::create(['uuid' => Str::uuid(), 'nome' => 'Terceira República', 'ano_inicio' => 1974, 'link' => 'https://www.parlamento.pt/Parlamento/Paginas/dias-democracia-art4.aspx#n3']);
+        Republica::create(['uuid' => Str::uuid(), 'nome' => 'Terceira República', 'ano_inicio' => 1974]);
     }
 }

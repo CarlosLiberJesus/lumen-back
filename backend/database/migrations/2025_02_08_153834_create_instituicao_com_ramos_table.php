@@ -19,6 +19,9 @@ return new class extends Migration
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');
             $table->foreign('instituicao_ramo_id')->references('id')->on('instituicao_ramos');
         });
+
+        DB::statement("ALTER TABLE instituicao_com_ramos COMMENT = 'Talvez este conceito Abstract seja interessante para extender legislativo | executivo | judicial mas ter grandes conceitos, como Cultura, Saude, Educação, etc.'");
+
     }
 
     public function down(): void

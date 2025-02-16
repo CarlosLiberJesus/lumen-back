@@ -18,12 +18,14 @@ return new class extends Migration
             $table->date('inicio');
             $table->date('fim')->nullable();
             $table->text('src')->nullable();
-            $table->text('observacoes')->nullable();
+            $table->text('sinopse')->nullable();
             $table->timestamps();
 
             $table->foreign('cidadao_id')->references('id')->on('cidadaos');
             $table->foreign('cargo_id')->references('id')->on('instituicao_cargos');
         });
+
+        DB::statement("ALTER TABLE cidadao_cargos COMMENT = 'Tabela super importante, que mapeará a carreira de um cidadão, com os cargos que ocupou, em que legislatura, etc.'");
     }
 
     public function down(): void

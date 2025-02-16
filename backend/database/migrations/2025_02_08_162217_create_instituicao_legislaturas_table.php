@@ -18,11 +18,15 @@ return new class extends Migration
             $table->unsignedBigInteger('legislatura_id');
             $table->date('data_inicio')->nullable();
             $table->date('data_fim')->nullable();
+            $table->text('sinopse')->nullable();
             $table->timestamps();
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');
             $table->foreign('legislatura_id')->references('id')->on('legislaturas');
         });
+
+        DB::statement("ALTER TABLE instituicao_legislaturas COMMENT = 'Conceito que desmultiplica uma instituição tipo Governo, para um governo especifico, formado devido às eleições de 2023, por exemplo.'");
+
     }
 
     public function down(): void

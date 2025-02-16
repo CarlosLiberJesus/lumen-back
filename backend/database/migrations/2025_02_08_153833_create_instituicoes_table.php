@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('sinopse')->nullable();
             $table->unsignedBigInteger('responde_instituicao_id')->nullable();
             $table->unsignedBigInteger('entidade_juridica_id')->nullable();
+            $table->boolean('nacional')->default(true)->comment('Queria fazer isto, Vamos a ver que OGNs é que vão aparecer');
             $table->timestamps();
 
             $table->foreign('instituicao_ramo_id')->references('id')->on('instituicao_ramos');

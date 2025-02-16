@@ -29,6 +29,16 @@ final class Cidadao extends Model
         'data_nascimento',
         'data_falecimento',
         'freguesia_id',
+        'nacional',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'nacional' => 'boolean',
     ];
 
     /**
@@ -72,7 +82,7 @@ final class Cidadao extends Model
     }
 
     /**
-     * Cidadao has many Medias.
+     * Cidadao has many Anexos.
      *
      * @return HasMany<CidadaoAnexo, $this>
      */
@@ -89,5 +99,35 @@ final class Cidadao extends Model
     public function cargos(): HasMany
     {
         return $this->hasMany(CidadaoCargo::class, 'cidadao_id');
+    }
+
+    /**
+     * Cidadao has many Relacoes Pessoais.
+     *
+     * @return HasMany<CidadaoRelacao, $this>
+     */
+    public function relacoesPessoais(): HasMany
+    {
+        return $this->hasMany(CidadaoRelacao::class, 'cidadao_id');
+    }
+
+    /**
+     * Cidadao has many Relacoes Profissionais.
+     *
+     * @return HasMany<InstituicaoRelacao, $this>
+     */
+    public function relacoesProfissionais(): HasMany
+    {
+        return $this->hasMany(InstituicaoRelacao::class, 'com_cidadao_id');
+    }
+
+    /**
+     * Cidadao can have nacional:true - only portuguese - or many.
+     *
+     * @return HasMany<Nacionalidade, $this>
+     */
+    public function nacionalidades(): HasMany
+    {
+        return $this->hasMany(Nacionalidade::class, 'cidadao_id');
     }
 }

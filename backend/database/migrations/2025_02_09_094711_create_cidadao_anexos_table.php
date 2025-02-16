@@ -13,16 +13,19 @@ return new class extends Migration
         Schema::create('cidadao_anexos', function (Blueprint $table): void {
             $table->id();
             $table->string('uuid')->unique()->index();
-            $table->string('nome')->nullable();
+            $table->string('nome');
             $table->unsignedBigInteger('cidadao_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path');
-            $table->string('src')->nullable();
+            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
+            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
             $table->timestamps();
 
             $table->foreign('cidadao_id')->references('id')->on('cidadaos');
             $table->foreign('anexo_tipo_id')->references('id')->on('anexo_tipos');
         });
+
+        DB::statement("ALTER TABLE cidadao_anexos COMMENT = 'Documentos genéricos para o cidadão, como imagens ou outros links interessantes. não esquecer que deverá ser na tabela cidadao_cargo_anexos que teremos a maioria dos documentos, que são os que são específicos para cada cargo'");
+
     }
 
     public function down(): void

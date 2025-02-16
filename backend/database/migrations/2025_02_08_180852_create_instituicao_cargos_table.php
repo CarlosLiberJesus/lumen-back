@@ -19,6 +19,9 @@ return new class extends Migration
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');
         });
+
+        DB::statement("ALTER TABLE instituicao_cargos COMMENT = 'Um Presidente da República é um cargo da instituição Presidencia da República, um Primeiro Ministro é um cargo da instituição Governo, um Presidente da Assembleia da Republica é um cargo da instituição Assembleia da Republica, etc.'");
+
     }
 
     public function down(): void

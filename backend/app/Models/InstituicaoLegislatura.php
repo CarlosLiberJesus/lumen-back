@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 final class InstituicaoLegislatura extends Model
 {
@@ -28,6 +29,7 @@ final class InstituicaoLegislatura extends Model
         'legislatura_id',
         'data_inicio',
         'data_fim',
+        'sinopse',
     ];
 
     /**
@@ -58,5 +60,25 @@ final class InstituicaoLegislatura extends Model
     public function legislatura(): BelongsTo
     {
         return $this->belongsTo(Legislatura::class, 'legislatura_id');
+    }
+
+    /**
+     * InstituicaoLegislatura has many Anexos.
+     *
+     * @return HasMany<InstituicaoLegislaturaAnexo, $this>
+     */
+    public function anexos(): HasMany
+    {
+        return $this->hasMany(InstituicaoLegislaturaAnexo::class, 'instituicao_legislatura_id');
+    }
+
+    /**
+     * InstituicaoLei representa direitos e deveres.
+     *
+     * @return HasMany<InstituicaoLei, $this>
+     */
+    public function leis(): HasMany
+    {
+        return $this->hasMany(InstituicaoLei::class, 'instituicao_legislatura_id');
     }
 }

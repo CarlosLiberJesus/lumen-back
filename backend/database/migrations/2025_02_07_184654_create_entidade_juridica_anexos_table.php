@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('entidade_juridica_anexos', function (Blueprint $table): void {
@@ -30,9 +27,6 @@ return new class extends Migration
         DB::statement("ALTER TABLE entidade_juridica_anexos COMMENT = 'Atalhar as nossas procuras, lançar links externos de interesse, imagens, etc';");
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('entidade_juridica_anexos');

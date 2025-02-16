@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('instituicao_cargo_leis', function (Blueprint $table): void {
@@ -28,9 +25,6 @@ return new class extends Migration
         DB::statement("ALTER TABLE instituicao_cargo_leis COMMENT = 'As instituições criam cargos, mas os cargos devem existir dentro de uma autorização legal. Tabela para associar leis que rondam os direitos e deveres dos cargos.'");
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('instituicao_cargo_leis');

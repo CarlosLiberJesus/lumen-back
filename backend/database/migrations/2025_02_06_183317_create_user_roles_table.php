@@ -21,6 +21,8 @@ return new class extends Migration
             $table->foreign('cargo_id')->references('id')->on('role_cargos');
             $table->timestamps();
         });
+        DB::statement("ALTER TABLE user_roles COMMENT = 'Maneira preferida de permissões, o role dá em bloco. Pode ter cargo extensível no role'");
+
     }
 
     public function down(): void

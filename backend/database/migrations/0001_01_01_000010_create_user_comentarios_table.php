@@ -12,10 +12,13 @@ return new class extends Migration
     {
         Schema::create('user_comentarios', function (Blueprint $table): void {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->enum('em', ['users', 'instituicoes', 'cidadaos', 'cidadao_cargos', 'instituicao_legislaturas', 'instituicao_presidenciais']);
             $table->unsignedBigInteger('comentario_id');
             $table->text('comentario');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
 
         DB::statement("ALTER TABLE user_comentarios COMMENT = 'Users com permissoes podem deixar comentários em vários objectos|tabelas. por em é a tabela, comentario_id o value da tabela';");

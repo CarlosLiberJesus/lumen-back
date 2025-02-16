@@ -26,7 +26,6 @@ final class Instituicao extends Model
      */
     protected $fillable = [
         'uuid',
-        'instituicao_ramo_id',
         'republica_id',
         'nome',
         'sigla',
@@ -38,11 +37,11 @@ final class Instituicao extends Model
     /**
      * Get the instituicao carater that owns the instituicao.
      *
-     * @return BelongsTo<InstituicaoRamo, $this>
+     * @return HasMany<InstituicaoComRamo, $this>
      */
-    public function instituicaoRamo(): BelongsTo
+    public function instituicaoRamos(): HasMany
     {
-        return $this->belongsTo(InstituicaoRamo::class, 'instituicao_ramo_id');
+        return $this->hasMany(InstituicaoComRamo::class, 'instituicao_id');
     }
 
     /**

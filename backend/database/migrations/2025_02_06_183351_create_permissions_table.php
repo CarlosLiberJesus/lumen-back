@@ -19,6 +19,8 @@ return new class extends Migration
             $table->json('params')->nullable();
             $table->timestamps();
         });
+        DB::statement("ALTER TABLE permissions COMMENT = 'Unidade base de permissão.'");
+
     }
 
     public function down(): void

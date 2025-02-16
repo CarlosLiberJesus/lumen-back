@@ -19,6 +19,9 @@ return new class extends Migration
 
             $table->foreign('lei_id')->references('id')->on('leis');
         });
+
+        DB::statement("ALTER TABLE lei_emissores COMMENT = 'Única tabela para saber emissores; todas as outras tabelas *_leis são direitos e responsabilidade do tópico.'");
+
     }
 
     public function down(): void

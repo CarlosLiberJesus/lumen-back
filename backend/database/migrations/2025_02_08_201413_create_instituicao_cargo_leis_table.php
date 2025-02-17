@@ -12,8 +12,6 @@ return new class extends Migration
     {
         Schema::create('instituicao_cargo_leis', function (Blueprint $table): void {
             $table->id();
-            $table->string('uuid')->unique()->index();
-            $table->string('nome');
             $table->unsignedBigInteger('instituicao_cargo_id');
             $table->unsignedBigInteger('lei_id');
             $table->timestamps();

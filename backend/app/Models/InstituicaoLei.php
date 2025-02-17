@@ -22,8 +22,6 @@ final class InstituicaoLei extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'uuid',
-        'nome',
         'instituicao_id',
         'lei_id',
     ];

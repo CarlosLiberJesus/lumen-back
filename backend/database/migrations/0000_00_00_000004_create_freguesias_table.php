@@ -14,14 +14,19 @@ return new class extends Migration
             $table->id();
             $table->string('uuid')->unique()->index();
             $table->string('name', 100);
-            $table->json('descriptions')->nullable();
+            $table->text('sinopse')->nullable();
             $table->unsignedBigInteger('distrito_id');
             $table->unsignedBigInteger('concelho_id');
+            $table->unsignedBigInteger('freguesia_tipo_id');
             $table->timestamps();
 
-            $table->foreign('distrito_id')->references('id')->on('distritos')->onDelete('cascade');
-            $table->foreign('concelho_id')->references('id')->on('concelhos')->onDelete('cascade');
+            $table->foreign('distrito_id')->references('id')->on('distritos');
+            $table->foreign('concelho_id')->references('id')->on('concelhos');
+            $table->foreign('freguesia_tipo_id')->references('id')->on('freguesia_tipos');
         });
+
+        DB::statement("COMMENT ON TABLE freguesias IS 'Reflete a organização territorial mais básica';");
+
     }
 
     public function down(): void

@@ -30,8 +30,10 @@ final class Lei extends Model
         'sumario',
         'texto',
         'path',
+        'src',
         'em_vigor',
         'data_toggle',
+        'lei_tipo_id',
     ];
 
     /**
@@ -82,5 +84,25 @@ final class Lei extends Model
     public function emissores(): HasMany
     {
         return $this->hasMany(LeiEmissor::class, 'lei_id');
+    }
+
+    /**
+     * Get the lei tipo that owns the lei.
+     *
+     * @return BelongsTo<LeiTipo, $this>
+     */
+    public function leiTipo(): BelongsTo
+    {
+        return $this->belongsTo(LeiTipo::class, 'lei_tipo_id');
+    }
+
+    /**
+     * Get the lei parte that owns the lei.
+     *
+     * @return BelongsTo<LeiParte, $this>
+     */
+    public function leiParte(): BelongsTo
+    {
+        return $this->belongsTo(LeiParte::class, 'lei_parte_id');
     }
 }

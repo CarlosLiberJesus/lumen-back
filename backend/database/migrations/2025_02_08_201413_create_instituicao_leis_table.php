@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('lei_id')->references('id')->on('leis');
         });
 
-        DB::statement("ALTER TABLE instituicao_leis COMMENT = 'Tabela que mapeará os direitos e deveres de uma instituição, com base nas leis que a regem.'");
+        DB::statement("COMMENT ON TABLE instituicao_leis IS 'Tabela que mapeará os direitos e deveres de uma instituição, com base nas leis que a regem.'");
 
     }
 

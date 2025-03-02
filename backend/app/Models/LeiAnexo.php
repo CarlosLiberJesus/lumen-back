@@ -26,8 +26,7 @@ final class LeiAnexo extends Model
         'name',
         'lei_id',
         'anexo_tipo_id',
-        'path',
-        'url',
+        'anexo',
     ];
 
     /**

@@ -28,6 +28,7 @@ final class Cidadao extends Model
         'nome',
         'data_nascimento',
         'data_falecimento',
+        'genero',
         'freguesia_id',
         'nacional',
     ];

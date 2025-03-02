@@ -15,8 +15,7 @@ return new class extends Migration
             $table->string('nome');
             $table->unsignedBigInteger('instituicao_legislatura_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
-            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
+            $table->string('anexo', 255)->comment('Ex: O URL do anexo');
             $table->timestamps();
 
             $table->foreign('instituicao_legislatura_id', 'fk_legislatura_id')
@@ -25,7 +24,7 @@ return new class extends Migration
                 ->references('id')->on('anexo_tipos');
         });
 
-        DB::statement("ALTER TABLE instituicao_legislatura_anexos COMMENT = 'Durante os ciclos legislativos, a instituição tem uma nova versão pós formação de orgãos e gera informação'");
+        DB::statement("COMMENT ON TABLE instituicao_legislatura_anexos IS 'Durante os ciclos legislativos, a instituição tem uma nova versão pós formação de orgãos e gera informação'");
 
     }
 

@@ -17,6 +17,7 @@ final class DeploySeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(FreguesiaTiposSeeder::class);
         $this->call(GeografiaSeeder::class);
         $this->call(NacionalidadesSeeder::class);
         $this->call(StatusSeeder::class);
@@ -33,7 +34,9 @@ final class DeploySeeder extends Seeder
         $this->call(RepublicaSeeder::class);
         $this->call(PresidenciaisSeeder::class);
         $this->call(LegislaturaSeeder::class);
-        $this->call(InstituicaoRamosSeeder::class);
+        $this->call(InstituicaoTiposSeeder::class);
+        $this->call(LeiTiposSeeder::class);
+        $this->call(LeiPartesSeeder::class);
         $this->call(DiarioRepublicaSeriesSeeder::class);
         // $this->call(DiarioRepublicaGlossariosSeeder::class);
         // $this->call(InstituicaoSeeder::class);

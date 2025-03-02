@@ -14,12 +14,11 @@ final class ContactoTiposSeeder extends Seeder
      */
     public function run(): void
     {
-        ContactoTipo::create(['nome' => 'Website']);
-        ContactoTipo::create(['nome' => 'Email']);
-        ContactoTipo::create(['nome' => 'Telefone']);
-        ContactoTipo::create(['nome' => 'Redes Sociais']);
-        ContactoTipo::create(['nome' => 'Fax']);
-        ContactoTipo::create(['nome' => 'X', 'description' => 'Redes Sociais',
+        ContactoTipo::create(['tipo' => 'Website']);
+        ContactoTipo::create(['tipo' => 'Email']);
+        ContactoTipo::create(['tipo' => 'Telefone']);
+        ContactoTipo::create(['tipo' => 'Fax']);
+        ContactoTipo::create(['tipo' => 'X', 'description' => 'Redes Sociais',
             'params' => json_encode([
                 'background' => [
                     'hex' => '#000000',
@@ -32,7 +31,7 @@ final class ContactoTiposSeeder extends Seeder
                 'icon' => 'fa fa-x',
             ]),
         ]);
-        ContactoTipo::create(['nome' => 'Facebook', 'description' => 'Facebook',
+        ContactoTipo::create(['tipo' => 'Facebook', 'description' => 'Facebook',
             'params' => json_encode([
                 'background' => [
                     'hex' => '#3b5998',

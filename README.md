@@ -61,9 +61,14 @@ The inner folder, might seem redundant, but can be use as dev-ops safe-guards an
    ...
    ```
 
+### php script
+
+- php artisan iseed relacao_tipos --exclude=created_at,updated_at
+- todo: não já há um artisan:task ?
+
 ## Python Scripts
 
-Some scripts iniside python
+Some scripts inside python
 
 ```sh
 cd python

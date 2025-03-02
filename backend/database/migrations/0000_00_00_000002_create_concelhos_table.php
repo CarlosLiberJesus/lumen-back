@@ -14,12 +14,15 @@ return new class extends Migration
             $table->id();
             $table->string('uuid')->unique()->index();
             $table->string('name', 100);
-            $table->json('descriptions')->nullable();
+            $table->text('sinopse')->nullable();
             $table->unsignedBigInteger('distrito_id');
             $table->timestamps();
 
             $table->foreign('distrito_id')->references('id')->on('distritos');
         });
+
+        DB::statement("COMMENT ON TABLE concelhos IS 'Reflete a organização territorial a nível de municipio.';");
+
     }
 
     public function down(): void

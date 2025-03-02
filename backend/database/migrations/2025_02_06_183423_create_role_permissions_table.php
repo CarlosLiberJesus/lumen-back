@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('permission_id')->references('id')->on('permissions');
             $table->timestamps();
         });
-        DB::statement("ALTER TABLE role_permissions COMMENT = 'Associa permissões me bloco por role.'");
+        DB::statement("COMMENT ON TABLE role_permissions IS 'Associa permissões me bloco por role.'");
 
     }
 

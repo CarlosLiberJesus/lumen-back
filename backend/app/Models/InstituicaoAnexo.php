@@ -26,8 +26,7 @@ final class InstituicaoAnexo extends Model
         'uuid',
         'name',
         'anexo_tipo_id',
-        'path',
-        'src',
+        'anexo',
     ];
 
     /**

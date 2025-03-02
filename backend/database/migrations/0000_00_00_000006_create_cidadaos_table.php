@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nome');
             $table->date('data_nascimento')->nullable();
             $table->date('data_falecimento')->nullable();
+            $table->char('genero', 1)->nullable();
             $table->unsignedBigInteger('freguesia_id')->nullable();
             $table->boolean('nacional')->default(true)->comment('Não queria fazer isto, mas é necessário para até atribuições de medalhas da Republica. Está no Dre...');
             $table->timestamps();

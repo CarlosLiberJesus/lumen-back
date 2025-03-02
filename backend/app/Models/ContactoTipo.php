@@ -20,7 +20,7 @@ final class ContactoTipo extends Model
      *
      * @var list<string>
      */
-    protected $fillable = ['nome', 'params', 'description'];
+    protected $fillable = ['tipo', 'params', 'description'];
 
     /**
      * The attributes that should be cast to native types.

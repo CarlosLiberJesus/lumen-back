@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-final class InstituicaoRamo extends Model
+final class LeiParte extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'instituicao_ramos';
+    protected $table = 'lei_partes';
 
     /**
      * The attributes that are mass assignable.
@@ -23,17 +23,18 @@ final class InstituicaoRamo extends Model
      */
     protected $fillable = [
         'uuid',
-        'tipo',
-        'descricao',
+        'codigo',
+        'parte',
+        'sinopse',
     ];
 
     /**
-     * Get the instituicoes for the instituicao carater.
+     * Get the leis for the lei carater.
      *
-     * @return HasMany<Instituicao, $this>
+     * @return HasMany<Lei, $this>
      */
-    public function instituicoes(): HasMany
+    public function leis(): HasMany
     {
-        return $this->hasMany(Instituicao::class, 'instituicao_ramo_id');
+        return $this->hasMany(Lei::class, 'lei_parte_id');
     }
 }

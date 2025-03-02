@@ -25,7 +25,19 @@ final class InstituicaoDados extends Model
         'nif',
         'certidao_permanente',
         'instituicao_id',
-        'descricao',
+        'sinopse',
+        'fundacao',
+        'dissolução',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'fundacao' => 'date',
+        'dissolução' => 'date',
     ];
 
     /**

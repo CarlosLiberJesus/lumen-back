@@ -22,6 +22,6 @@ final class RelacaoTipo extends Model
      */
     protected $fillable = [
         'entre',
-        'nome',
+        'tipo',
     ];
 }

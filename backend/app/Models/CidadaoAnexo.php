@@ -26,8 +26,7 @@ final class CidadaoAnexo extends Model
         'uuid',
         'nome',
         'anexo_tipo_id',
-        'path',
-        'src',
+        'anexo',
     ];
 
     /**

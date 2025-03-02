@@ -12,13 +12,13 @@ return new class extends Migration
     {
         Schema::create('contacto_tipos', function (Blueprint $table): void {
             $table->id();
-            $table->string('nome', 100);
+            $table->string('tipo');
             $table->text('description')->nullable();
             $table->json('params')->nullable();
             $table->timestamps();
 
         });
-        DB::statement("ALTER TABLE contacto_tipos COMMENT = 'Separar emails, telefones, endereços, etc. Os params contêm arrays de parametros para o front-end (css classes)';");
+        DB::statement("COMMENT ON TABLE contacto_tipos IS 'Separar emails, telefones, endereços, etc. Os params contêm arrays de parametros para o front-end (css classes)';");
     }
 
     public function down(): void

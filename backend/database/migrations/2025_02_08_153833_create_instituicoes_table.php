@@ -13,7 +13,6 @@ return new class extends Migration
         Schema::create('instituicoes', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique()->index();
-            $table->unsignedBigInteger('republica_id')->comment('Inicio da instituição, algumas daquele regime para a frente. Ex Comissão Nacional de Eleições');
             $table->string('nome');
             $table->string('sigla')->nullable();
             $table->text('sinopse')->nullable();

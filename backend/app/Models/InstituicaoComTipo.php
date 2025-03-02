@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class InstituicaoComRamo extends Model
+final class InstituicaoComTipo extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'instituicao_com_ramos';
+    protected $table = 'instituicao_com_tipos';
 
     /**
      * The attributes that are mass assignable.
@@ -23,7 +23,7 @@ final class InstituicaoComRamo extends Model
      */
     protected $fillable = [
         'instituicao_id',
-        'instituicao_ramo_id',
+        'instituicao_tipo_id',
     ];
 
     /**
@@ -39,10 +39,10 @@ final class InstituicaoComRamo extends Model
     /**
      * Get the instituicao ramo that owns the instituicao com ramo.
      *
-     * @return BelongsTo<InstituicaoRamo, $this>
+     * @return BelongsTo<InstituicaoTipo, $this>
      */
-    public function instituicaoRamo(): BelongsTo
+    public function instituicaoTipo(): BelongsTo
     {
-        return $this->belongsTo(InstituicaoRamo::class, 'instituicao_ramo_id');
+        return $this->belongsTo(InstituicaoTipo::class, 'instituicao_tipo_id');
     }
 }

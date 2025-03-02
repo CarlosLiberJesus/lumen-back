@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('nacionalidade_id')->references('id')->on('nacionalidades');
         });
 
-        DB::statement("ALTER TABLE cidadao_nacionalidades COMMENT = 'Ou o cidadao tem o default true, ou tem de herdar multiplas nacionalidades. Tabela para associar cidadao a nacionalidades.'");
+        DB::statement("COMMENT ON TABLE cidadao_nacionalidades IS 'Ou o cidadao tem o default true, ou tem de herdar multiplas nacionalidades. Tabela para associar cidadao a nacionalidades.'");
 
     }
 

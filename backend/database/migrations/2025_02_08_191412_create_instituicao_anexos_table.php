@@ -16,15 +16,14 @@ return new class extends Migration
             $table->string('nome');
             $table->unsignedBigInteger('instituicao_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
-            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
+            $table->string('anexo', 255)->comment('Ex: O URL do anexo');
             $table->timestamps();
 
             $table->foreign('instituicao_id')->references('id')->on('instituicoes');
             $table->foreign('anexo_tipo_id')->references('id')->on('anexo_tipos');
         });
 
-        DB::statement("ALTER TABLE instituicao_anexos COMMENT = 'Documentos genéricos para Instituição; não esquecer que pode ser preferível colocar em instituicao_legislatura_anexos, que são elas que devem estar activas'");
+        DB::statement("COMMENT ON TABLE instituicao_anexos IS 'Documentos genéricos para Instituição; não esquecer que pode ser preferível colocar em instituicao_legislatura_anexos, que são elas que devem estar activas'");
 
     }
 

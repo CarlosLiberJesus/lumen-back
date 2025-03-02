@@ -14,9 +14,12 @@ return new class extends Migration
             $table->id();
             $table->string('uuid')->unique()->index();
             $table->string('name', 100);
-            $table->json('descriptions')->nullable();
+            $table->text('sinopse')->nullable();
             $table->timestamps();
         });
+
+        DB::statement("COMMENT ON TABLE concelhos IS 'Reflete a organização territorial a nível de regiões.';");
+
     }
 
     public function down(): void

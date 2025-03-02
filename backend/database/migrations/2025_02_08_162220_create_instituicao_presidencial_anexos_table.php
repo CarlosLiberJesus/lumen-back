@@ -15,8 +15,7 @@ return new class extends Migration
             $table->string('nome');
             $table->unsignedBigInteger('instituicao_presidencial_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
-            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
+            $table->string('anexo', 255)->comment('Ex: O URL do anexo');
             $table->timestamps();
 
             $table->foreign('instituicao_presidencial_id', 'fk_presidencial_id')

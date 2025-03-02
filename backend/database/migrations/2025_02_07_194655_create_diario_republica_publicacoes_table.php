@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreign('diario_republica_id')->references('id')->on('diario_republicas');
             $table->foreign('serie_id')->references('id')->on('diario_republica_series');
         });
-        DB::statement("ALTER TABLE diario_republica_publicacoes COMMENT = 'Tabela complexa, que representa uma publicacao do diário da republica, que pode ter mais de uma série. Exemplo nome: Diário da República n.º 32/2025, Série I de 2025-02-14; Exemplo src: https://diariodarepublica.pt/dr/detalhe/diario-republica/32-2025-907468769'");
+        DB::statement("COMMENT ON TABLE diario_republica_publicacoes IS 'Tabela complexa, que representa uma publicacao do diário da republica, que pode ter mais de uma série. Exemplo nome: Diário da República n.º 32/2025, Série I de 2025-02-14; Exemplo src: https://diariodarepublica.pt/dr/detalhe/diario-republica/32-2025-907468769'");
 
     }
 

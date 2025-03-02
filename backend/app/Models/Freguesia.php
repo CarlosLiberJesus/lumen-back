@@ -17,16 +17,7 @@ final class Freguesia extends Model
     protected $table = 'freguesias';
 
     protected $fillable = [
-        'uuid', 'descriptions', 'name',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'descriptions' => 'array',
+        'uuid', 'sinopse', 'name',
     ];
 
     /**
@@ -47,5 +38,15 @@ final class Freguesia extends Model
     public function concelho(): BelongsTo
     {
         return $this->belongsTo(Concelho::class, 'concelho_id');
+    }
+
+    /**
+     * Freguesia belongs to FreguesiaTipo.
+     *
+     * @return BelongsTo<FreguesiaTipo, $this>
+     */
+    public function freguesiaTipo(): BelongsTo
+    {
+        return $this->belongsTo(FreguesiaTipo::class, 'freguesia_tipo_id');
     }
 }

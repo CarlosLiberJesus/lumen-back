@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreign('lei_id')->references('id')->on('leis');
         });
 
-        DB::statement("ALTER TABLE entidade_juridica_leis COMMENT = 'Entidade Juridica é um termo legal que é coberto por definição legal. Tabela vai agregando as leis que impactam os direitos e deveres da entidade juridica.'");
+        DB::statement("COMMENT ON TABLE entidade_juridica_leis IS 'Entidade Juridica é um termo legal que é coberto por definição legal. Tabela vai agregando as leis que impactam os direitos e deveres da entidade juridica.'");
 
     }
 

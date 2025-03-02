@@ -16,15 +16,14 @@ return new class extends Migration
             $table->string('nome');
             $table->unsignedBigInteger('entidades_juridica_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
-            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
+            $table->string('anexo', 255)->comment('Ex: O URL do anexo');
             $table->timestamps();
 
             $table->foreign('entidades_juridica_id')->references('id')->on('entidade_juridicas');
             $table->foreign('anexo_tipo_id')->references('id')->on('anexo_tipos');
 
         });
-        DB::statement("ALTER TABLE entidade_juridica_anexos COMMENT = 'Atalhar as nossas procuras, lançar links externos de interesse, imagens, etc';");
+        DB::statement("COMMENT ON TABLE entidade_juridica_anexos IS 'Atalhar as nossas procuras, lançar links externos de interesse, imagens, etc';");
     }
 
     public function down(): void

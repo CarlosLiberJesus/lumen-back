@@ -16,15 +16,14 @@ return new class extends Migration
             $table->string('nome');
             $table->unsignedBigInteger('cidadao_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
-            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
+            $table->string('anexo', 255)->comment('Ex: O URL do anexo');
             $table->timestamps();
 
             $table->foreign('cidadao_id')->references('id')->on('cidadaos');
             $table->foreign('anexo_tipo_id')->references('id')->on('anexo_tipos');
         });
 
-        DB::statement("ALTER TABLE cidadao_anexos COMMENT = 'Documentos genéricos para o cidadão, como imagens ou outros links interessantes. não esquecer que deverá ser na tabela cidadao_cargo_anexos que teremos a maioria dos documentos, que são os que são específicos para cada cargo'");
+        DB::statement("COMMENT ON TABLE cidadao_anexos IS 'Documentos genéricos para o cidadão, como imagens ou outros links interessantes. não esquecer que deverá ser na tabela cidadao_cargo_anexos que teremos a maioria dos documentos, que são os que são específicos para cada cargo'");
 
     }
 

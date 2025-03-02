@@ -26,8 +26,7 @@ final class InstituicaoLegislaturaAnexo extends Model
         'nome',
         'instituicao_legislatura_id',
         'anexo_tipo_id',
-        'path',
-        'src',
+        'anexo',
     ];
 
     /**

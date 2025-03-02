@@ -31,7 +31,7 @@ final class Status extends Model
      */
     protected $fillable = [
         'uuid',
-        'name',
+        'status',
         'type',
         'params',
         'description',

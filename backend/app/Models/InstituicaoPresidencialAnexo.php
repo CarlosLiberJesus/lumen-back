@@ -26,8 +26,7 @@ final class InstituicaoPresidencialAnexo extends Model
         'nome',
         'instituicao_presidencial_id',
         'anexo_tipo_id',
-        'path',
-        'src',
+        'anexo',
     ];
 
     /**

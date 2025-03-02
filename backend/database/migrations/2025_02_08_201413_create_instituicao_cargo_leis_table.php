@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('lei_id')->references('id')->on('leis');
         });
 
-        DB::statement("ALTER TABLE instituicao_cargo_leis COMMENT = 'As instituições criam cargos, mas os cargos devem existir dentro de uma autorização legal. Tabela para associar leis que rondam os direitos e deveres dos cargos.'");
+        DB::statement("COMMENT ON TABLE instituicao_cargo_leis IS 'As instituições criam cargos, mas os cargos devem existir dentro de uma autorização legal. Tabela para associar leis que rondam os direitos e deveres dos cargos.'");
     }
 
     public function down(): void

@@ -16,15 +16,14 @@ return new class extends Migration
             $table->string('nome');
             $table->unsignedBigInteger('republica_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
-            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
+            $table->string('anexo', 255)->comment('Ex: O URL do anexo');
             $table->timestamps();
 
             $table->foreign('republica_id')->references('id')->on('republicas');
             $table->foreign('anexo_tipo_id')->references('id')->on('anexo_tipos');
 
         });
-        DB::statement("ALTER TABLE republica_anexos COMMENT = 'Atalhar as nossas procuras à Republica, lançar links externos de interesse, imagens, etc';");
+        DB::statement("COMMENT ON TABLE republica_anexos IS 'Atalhar as nossas procuras à Republica, lançar links externos de interesse, imagens, etc';");
     }
 
     public function down(): void

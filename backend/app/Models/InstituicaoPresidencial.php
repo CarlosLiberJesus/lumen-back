@@ -27,8 +27,6 @@ final class InstituicaoPresidencial extends Model
         'nome',
         'instituicao_id',
         'presidencial_id',
-        'data_inicio',
-        'data_fim',
         'sinopse',
     ];
 

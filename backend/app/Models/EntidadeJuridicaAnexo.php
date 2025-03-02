@@ -26,8 +26,7 @@ final class EntidadeJuridicaAnexo extends Model
         'nome',
         'entidades_juridica_id',
         'anexo_tipo_id',
-        'path',
-        'src',
+        'anexo',
     ];
 
     /**

@@ -14,11 +14,16 @@ return new class extends Migration
             $table->id();
             $table->string('uuid')->unique()->index();
             $table->enum('type', ['users', 'documents', 'tasks']);
-            $table->string('name', 100);
+            $table->string('status', 50);
             $table->json('params');
             $table->text('description')->nullable();
             $table->timestamps();
+
+            $table->index(['type', 'status'])->unique();
         });
+
+        DB::statement("COMMENT ON TABLE statuses IS 'Tabela de apoio para objectos que tenham de ser confirmados no work-flow.'");
+
     }
 
     public function down(): void

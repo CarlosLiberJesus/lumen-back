@@ -14,13 +14,15 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid');
             $table->string('cargo');
-            $table->unsignedBigInteger('instituicao_id');
+            $table->enum('instituicao', ['instituicao', 'instituicao_legislatura', 'instituicao_presidencial'])->comment('Cargo pode ser de uma instituição, ou dos seus filhos temporais');
+            $table->unsignedBigInteger('instituicao_id')->comment('Instituição a que pertence o cargo');
+            $table->unsignedBigInteger('cargo_responde_id')->nullable()->comment('Este cargo responde a outro cargo');
             $table->timestamps();
 
-            $table->foreign('instituicao_id')->references('id')->on('instituicoes');
+            $table->foreign('cargo_responde_id')->references('id')->on('instituicao_cargos');
         });
 
-        DB::statement("ALTER TABLE instituicao_cargos COMMENT = 'Um Presidente da República é um cargo da instituição Presidencia da República, um Primeiro Ministro é um cargo da instituição Governo, um Presidente da Assembleia da Republica é um cargo da instituição Assembleia da Republica, etc.'");
+        DB::statement("COMMENT ON TABLE instituicao_cargos IS 'Um Presidente da República é um cargo da instituição Presidencia da República, um Primeiro Ministro é um cargo da instituição Governo, um Presidente da Assembleia da Republica é um cargo da instituição Assembleia da Republica, etc.'");
 
     }
 

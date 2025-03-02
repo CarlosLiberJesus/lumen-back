@@ -18,16 +18,7 @@ final class Concelho extends Model
     protected $table = 'concelhos';
 
     protected $fillable = [
-        'uuid', 'descriptions', 'name',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'descriptions' => 'array',
+        'uuid', 'sinopse', 'name',
     ];
 
     /**

@@ -22,7 +22,7 @@ final class EntidadeJuridica extends Model
      */
     protected $fillable = [
         'nome',
-        'descricao',
+        'sinopse',
         'params',
     ];
 

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('permission_id')->references('id')->on('permissions');
         });
 
-        DB::statement("ALTER TABLE user_permissions COMMENT = 'Permissões Extra se não coberto por roles.'");
+        DB::statement("COMMENT ON TABLE user_permissions IS 'Permissões Extra se não coberto por roles.'");
 
     }
 

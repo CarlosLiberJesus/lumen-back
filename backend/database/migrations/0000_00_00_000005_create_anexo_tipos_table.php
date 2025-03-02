@@ -12,8 +12,8 @@ return new class extends Migration
     {
         Schema::create('anexo_tipos', function (Blueprint $table): void {
             $table->id();
-            $table->string('tipo', 100);
-            $table->string('description');
+            $table->string('tipo', 50)->unique()->index();
+            $table->string('descricao', 150)->nullable();
             $table->json('params')->nullable();
             $table->timestamps();
         });

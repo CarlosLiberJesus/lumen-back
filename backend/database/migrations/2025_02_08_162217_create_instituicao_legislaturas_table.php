@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('nome')->nullable();
             $table->unsignedBigInteger('instituicao_id');
             $table->unsignedBigInteger('legislatura_id');
-            $table->date('data_inicio')->nullable();
-            $table->date('data_fim')->nullable();
             $table->text('sinopse')->nullable();
             $table->timestamps();
 
@@ -25,7 +23,7 @@ return new class extends Migration
             $table->foreign('legislatura_id')->references('id')->on('legislaturas');
         });
 
-        DB::statement("ALTER TABLE instituicao_legislaturas COMMENT = 'Conceito que desmultiplica uma instituição tipo Governo, para um governo especifico, formado devido às eleições de 2023, por exemplo.'");
+        DB::statement("COMMENT ON TABLE instituicao_legislaturas IS 'Conceito que desmultiplica uma instituição tipo Governo, para um governo especifico, formado devido às eleições de 2023, por exemplo.'");
 
     }
 

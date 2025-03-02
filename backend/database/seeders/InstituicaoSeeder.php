@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Database\Seeders;
 
 use App\Models\Instituicao;
-use App\Models\InstituicaoComRamo;
+use App\Models\InstituicaoComTipo;
 use App\Models\InstituicaoLegislatura;
 use App\Models\Legislatura;
 use Illuminate\Database\Seeder;
@@ -19,17 +19,17 @@ final class InstituicaoSeeder extends Seeder
     public function run(): void
     {
         Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Presidência da República', 'instituicao_ramo_id' => 1]);
-        InstituicaoComRamo::create(['instituicao_id' => 1, 'instituicao_ramo_id' => 1]);
+        InstituicaoComTipo::create(['instituicao_id' => 1, 'instituicao_ramo_id' => 1]);
         Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Assembleia da República', 'instituicao_ramo_id' => 2]);
-        InstituicaoComRamo::create(['instituicao_id' => 2, 'instituicao_ramo_id' => 2]);
+        InstituicaoComTipo::create(['instituicao_id' => 2, 'instituicao_ramo_id' => 2]);
         Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Parlamento', 'instituicao_ramo_id' => 1, 'responde_instituicao_id' => 2]);
-        InstituicaoComRamo::create(['instituicao_id' => 3, 'instituicao_ramo_id' => 2]);
+        InstituicaoComTipo::create(['instituicao_id' => 3, 'instituicao_ramo_id' => 2]);
         Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Mesa Assembleia da República', 'instituicao_ramo_id' => 1, 'responde_instituicao_id' => 3]);
-        InstituicaoComRamo::create(['instituicao_id' => 4, 'instituicao_ramo_id' => 2]);
+        InstituicaoComTipo::create(['instituicao_id' => 4, 'instituicao_ramo_id' => 2]);
         Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Governo', 'instituicao_ramo_id' => 3, 'responde_instituicao_id' => 1]);
-        InstituicaoComRamo::create(['instituicao_id' => 5, 'instituicao_ramo_id' => 3]);
+        InstituicaoComTipo::create(['instituicao_id' => 5, 'instituicao_ramo_id' => 3]);
         Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Concelho-Ministros', 'instituicao_ramo_id' => 3, 'responde_instituicao_id' => 5]);
-        InstituicaoComRamo::create(['instituicao_id' => 6, 'instituicao_ramo_id' => 3]);
+        InstituicaoComTipo::create(['instituicao_id' => 6, 'instituicao_ramo_id' => 3]);
 
         $legislaturas = Legislatura::all();
         foreach ($legislaturas as $legislatura) {

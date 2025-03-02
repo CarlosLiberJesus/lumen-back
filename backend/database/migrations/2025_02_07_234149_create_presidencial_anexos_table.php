@@ -16,15 +16,14 @@ return new class extends Migration
             $table->string('nome');
             $table->unsignedBigInteger('presidencial_id');
             $table->unsignedBigInteger('anexo_tipo_id');
-            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
-            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
+            $table->string('anexo', 255)->comment('Ex: O URL do anexo');
             $table->timestamps();
 
             $table->foreign('presidencial_id')->references('id')->on('presidenciais');
             $table->foreign('anexo_tipo_id')->references('id')->on('anexo_tipos');
         });
 
-        DB::statement("ALTER TABLE presidencial_anexos COMMENT = 'Devido à estrutura da DB, acaba por ser os documentos do ramo do executivo mas da Presidencia da República, por presidente representado presidencial_id. Não esquecer que existe uma mais importante instituicao_presidencial_anexos.'");
+        DB::statement("COMMENT ON TABLE presidencial_anexos IS 'Devido à estrutura da DB, acaba por ser os documentos do ramo do executivo mas da Presidencia da República, por presidente representado presidencial_id. Não esquecer que existe uma mais importante instituicao_presidencial_anexos.'");
 
     }
 

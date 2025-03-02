@@ -27,8 +27,6 @@ final class InstituicaoLegislatura extends Model
         'nome',
         'instituicao_id',
         'legislatura_id',
-        'data_inicio',
-        'data_fim',
         'sinopse',
     ];
 

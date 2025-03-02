@@ -13,14 +13,14 @@ return new class extends Migration
         Schema::create('lei_emissores', function (Blueprint $table): void {
             $table->id();
             $table->unsignedBigInteger('lei_id');
-            $table->enum('emissor_tipo', ['instituicao', 'instituicao_legislatura', 'cidadao']);
+            $table->enum('emissor_tipo', ['instituicao', 'instituicao_legislatura', 'instituicao_cargo']);
             $table->unsignedBigInteger('emissor_id');
             $table->timestamps();
 
             $table->foreign('lei_id')->references('id')->on('leis');
         });
 
-        DB::statement("ALTER TABLE lei_emissores COMMENT = 'Única tabela para saber emissores; todas as outras tabelas *_leis são direitos e responsabilidade do tópico.'");
+        DB::statement("COMMENT ON TABLE lei_emissores IS 'Única tabela para saber emissores; todas as outras tabelas *_leis são direitos e responsabilidade do tópico.'");
 
     }
 

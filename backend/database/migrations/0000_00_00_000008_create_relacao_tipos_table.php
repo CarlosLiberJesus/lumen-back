@@ -13,11 +13,11 @@ return new class extends Migration
         Schema::create('relacao_tipos', function (Blueprint $table): void {
             $table->id();
             $table->enum('entre', ['cidadaos', 'instituicoes', 'instituicao_cidadao']);
-            $table->string('nome');
+            $table->string('tipo');
             $table->timestamps();
         });
 
-        DB::statement("ALTER TABLE relacao_tipos COMMENT = 'Tabela de apoio entre relação entre cidadãos e instituições, sob uma justificação.'");
+        DB::statement("COMMENT ON TABLE relacao_tipos IS 'Tabela de apoio entre relação entre cidadãos e instituições, sob uma justificação.'");
 
     }
 

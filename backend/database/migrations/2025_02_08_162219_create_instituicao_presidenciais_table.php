@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('nome')->nullable();
             $table->unsignedBigInteger('instituicao_id');
             $table->unsignedBigInteger('presidencial_id');
-            $table->date('data_inicio')->nullable();
-            $table->date('data_fim')->nullable();
             $table->text('sinopse')->nullable();
             $table->timestamps();
 
@@ -25,7 +23,7 @@ return new class extends Migration
             $table->foreign('presidencial_id')->references('id')->on('presidenciais');
         });
 
-        DB::statement("ALTER TABLE instituicao_presidenciais COMMENT = 'Como as instituicao_legislativas, algumas instituições, como o conselho de estado mudam com as eleições do presidente .'");
+        DB::statement("COMMENT ON TABLE instituicao_presidenciais IS 'Como as instituicao_legislativas, algumas instituições, como o conselho de estado mudam com as eleições do presidente .'");
 
     }
 

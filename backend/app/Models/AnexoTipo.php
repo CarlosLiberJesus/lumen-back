@@ -21,8 +21,8 @@ final class AnexoTipo extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'type',
-        'description',
+        'tipo',
+        'descricao',
         'params',
     ];
 

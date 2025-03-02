@@ -13,7 +13,7 @@ return new class extends Migration
         Schema::create('entidade_juridicas', function (Blueprint $table): void {
             $table->id();
             $table->string('nome');
-            $table->text('descricao')->nullable();
+            $table->text('sinopse')->nullable();
             $table->json('params')->nullable();
             $table->timestamps();
         });

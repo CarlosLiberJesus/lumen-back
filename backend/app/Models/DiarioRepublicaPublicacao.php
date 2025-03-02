@@ -60,4 +60,14 @@ final class DiarioRepublicaPublicacao extends Model
     {
         return $this->belongsTo(DiarioRepublicaSerie::class, 'serie_id');
     }
+
+    /**
+     * Get the anexos for the diario republica publicacao.
+     *
+     * @return HasMany<DiarioRepublicaPublicacaoAnexo, $this>
+     */
+    public function anexos(): HasMany
+    {
+        return $this->hasMany(DiarioRepublicaPublicacaoAnexo::class, 'diario_republica_publicacao_id');
+    }
 }

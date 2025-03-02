@@ -26,7 +26,6 @@ final class Instituicao extends Model
      */
     protected $fillable = [
         'uuid',
-        'republica_id',
         'nome',
         'sigla',
         'sinopse',
@@ -37,11 +36,11 @@ final class Instituicao extends Model
     /**
      * Get the instituicao carater that owns the instituicao.
      *
-     * @return HasMany<InstituicaoComRamo, $this>
+     * @return HasMany<InstituicaoComTipo, $this>
      */
     public function instituicaoRamos(): HasMany
     {
-        return $this->hasMany(InstituicaoComRamo::class, 'instituicao_id');
+        return $this->hasMany(InstituicaoComTipo::class, 'instituicao_id');
     }
 
     /**
@@ -127,11 +126,11 @@ final class Instituicao extends Model
     /**
      * Instituicao has many InstituicaoRamos.
      *
-     * @return HasMany<InstituicaoComRamo, $this>
+     * @return HasMany<InstituicaoComTipo, $this>
      */
     public function ramos(): HasMany
     {
-        return $this->hasMany(InstituicaoComRamo::class, 'instituicao_id');
+        return $this->hasMany(InstituicaoComTipo::class, 'instituicao_id');
     }
 
     /**
@@ -167,7 +166,7 @@ final class Instituicao extends Model
     }
 
     /**
-     * Instituicao has many Relaçoes.
+     * Instituicao has many Relações.
      *
      * @return HasMany<InstituicaoRelacao, $this>
      */
@@ -177,7 +176,7 @@ final class Instituicao extends Model
     }
 
     /**
-     * Instituicao has many Relaçoes.
+     * Instituicao has many Relações.
      *
      * @return HasMany<InstituicaoRelacao, $this>
      */

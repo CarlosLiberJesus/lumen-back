@@ -13,12 +13,12 @@ return new class extends Migration
         Schema::create('diario_republica_series', function (Blueprint $table): void {
             $table->id();
             $table->string('nome');
-            $table->text('sinopse');
+            $table->text('sinopse')->nullable();
             $table->unsignedBigInteger('serie_id')->nullable()->comment('As séries poderão ter suplementos, dentro de cada série, havemos de mapear também os suplementos');
             $table->timestamps();
         });
 
-        DB::statement("ALTER TABLE diario_republica_series COMMENT = 'Dentro do Dre, cada publicacao vem dentro de series. Cada serie tem um proposito diferente.'");
+        DB::statement("COMMENT ON TABLE diario_republica_series IS 'Dentro do Dre, cada publicacao vem dentro de series. Cada serie tem um proposito diferente.'");
 
     }
 

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->json('params')->nullable();
             $table->timestamps();
         });
-        DB::statement("ALTER TABLE permissions COMMENT = 'Unidade base de permissão.'");
+        DB::statement("COMMENT ON TABLE permissions IS 'Unidade base de permissão.'");
 
     }
 

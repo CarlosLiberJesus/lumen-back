@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreign('relacao_tipo_id')->references('id')->on('relacao_tipos');
         });
 
-        DB::statement("ALTER TABLE instituicao_relacoes COMMENT = 'Tabela super importante para nested search. Neste Portugal corrupto, é normal que certas instituições tenham relações de financiamento, nomeacao.'");
+        DB::statement("COMMENT ON TABLE instituicao_relacoes IS 'Tabela super importante para nested search. Neste Portugal corrupto, é normal que certas instituições tenham relações de financiamento, nomeacao.'");
 
     }
 

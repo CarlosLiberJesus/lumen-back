@@ -23,6 +23,7 @@ final class User extends Authenticatable
      */
     protected $fillable = [
         'uuid',
+        'name',
         'status_id',
         'email',
         'cidadao_id',

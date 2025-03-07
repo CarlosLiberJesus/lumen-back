@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('instituicao_presidencial_id');
             $table->unsignedBigInteger('anexo_tipo_id');
             $table->string('anexo', 255)->comment('Ex: O URL do anexo');
+            $table->string('descricao', 255)->nullable();
             $table->timestamps();
 
             $table->foreign('instituicao_presidencial_id', 'fk_presidencial_id')

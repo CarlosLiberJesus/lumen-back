@@ -20,8 +20,6 @@ return new class extends Migration
             $table->unsignedBigInteger('lei_parte_id')->nullable()->comment('Recente filtro por tipo de entidade');
             $table->text('sumario')->nullable()->comment('Resumo da lei, extraido da web');
             $table->longText('texto')->nullable()->comment('Texto da lei, extraido da web');
-            $table->string('path')->nullable()->comment('Caminho em server do arquivo');
-            $table->string('src')->nullable()->comment('URL Fonte do arquivo');
             $table->boolean('em_vigor')->default(true);
             $table->date('data_toggle')->nullable()->comment('Leis começam activas, mas mudam para outros quando são revogadas ou substituídas');
             $table->timestamps();

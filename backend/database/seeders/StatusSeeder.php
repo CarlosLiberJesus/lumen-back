@@ -17,7 +17,7 @@ final class StatusSeeder extends Seeder
     {
         Status::create([
             'uuid' => Str::uuid(),
-            'type' => 'users',
+            'tipo' => 'users',
             'status' => 'Activo',
             'params' => json_encode([
                 'color' => [
@@ -28,7 +28,7 @@ final class StatusSeeder extends Seeder
         ]);
         Status::create([
             'uuid' => Str::uuid(),
-            'type' => 'users',
+            'tipo' => 'users',
             'status' => 'Registado',
             'params' => json_encode([
                 'color' => [
@@ -39,7 +39,7 @@ final class StatusSeeder extends Seeder
         ]);
         Status::create([
             'uuid' => Str::uuid(),
-            'type' => 'users',
+            'tipo' => 'users',
             'status' => 'Suspenso',
             'params' => json_encode([
                 'color' => [
@@ -50,7 +50,7 @@ final class StatusSeeder extends Seeder
         ]);
         Status::create([
             'uuid' => Str::uuid(),
-            'type' => 'users',
+            'tipo' => 'users',
             'status' => 'Inactivo',
             'params' => json_encode([
                 'color' => [
@@ -61,7 +61,7 @@ final class StatusSeeder extends Seeder
         ]);
         Status::create([
             'uuid' => Str::uuid(),
-            'type' => 'users',
+            'tipo' => 'users',
             'status' => 'Apagado',
             'params' => json_encode([
                 'color' => [

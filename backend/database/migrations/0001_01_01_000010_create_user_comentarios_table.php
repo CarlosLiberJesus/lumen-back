@@ -13,7 +13,7 @@ return new class extends Migration
         Schema::create('user_comentarios', function (Blueprint $table): void {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->enum('em', ['users', 'instituicoes', 'cidadaos', 'cidadao_cargos', 'instituicao_legislaturas', 'instituicao_presidenciais']);
+            $table->enum('em', ['users', 'instituicoes', 'cidadaos', 'cidadao_cargos', 'instituicao_legislaturas', 'instituicao_presidencial', 'instituicao_cargo', 'instituicao_governo']);
             $table->unsignedBigInteger('comentario_id');
             $table->text('comentario');
             $table->timestamps();

@@ -21,7 +21,6 @@ final class Nacionalidade extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'uuid',
         'nacionalidade',
         'pais',
         'params',

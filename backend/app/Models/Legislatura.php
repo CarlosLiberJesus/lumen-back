@@ -25,7 +25,7 @@ final class Legislatura extends Model
     protected $fillable = [
         'uuid',
         'nome',
-        'code',
+        'sigla',
         'republica_id',
         'eleicoes',
         'formacao',

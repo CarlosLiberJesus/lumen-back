@@ -27,6 +27,7 @@ final class PresidencialAnexo extends Model
         'presidencial_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

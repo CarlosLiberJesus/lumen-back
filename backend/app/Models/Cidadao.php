@@ -9,6 +9,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
+/**
+ * @property string $uuid
+ * @property string $nome
+ * @property \Illuminate\Database\Eloquent\Collection<int, CidadaoCargo> $cargos
+ */
 final class Cidadao extends Model
 {
     /**
@@ -26,11 +31,13 @@ final class Cidadao extends Model
     protected $fillable = [
         'uuid',
         'nome',
+        'nome_completo',
         'data_nascimento',
         'data_falecimento',
         'genero',
         'freguesia_id',
         'nacional',
+        'sinopse',
     ];
 
     /**

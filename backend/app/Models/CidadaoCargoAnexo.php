@@ -27,6 +27,7 @@ final class CidadaoCargoAnexo extends Model
         'cidadao_cargo_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

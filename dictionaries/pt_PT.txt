@@ -10,3 +10,4 @@ mutado
 objectos
 orgãos
 projecto
+rgpd

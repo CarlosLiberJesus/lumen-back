@@ -31,6 +31,7 @@ final class Instituicao extends Model
         'sinopse',
         'responde_instituicao_id',
         'entidade_juridicas_id',
+        'params',
     ];
 
     /**

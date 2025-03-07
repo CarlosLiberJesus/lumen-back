@@ -24,9 +24,10 @@ final class InstituicaoAnexo extends Model
     protected $fillable = [
         'instituicao_id',
         'uuid',
-        'name',
+        'nome',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

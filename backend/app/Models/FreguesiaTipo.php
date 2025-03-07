@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 final class FreguesiaTipo extends Model
 {
@@ -24,4 +25,14 @@ final class FreguesiaTipo extends Model
         'tipo',
         'descricao',
     ];
+
+    /**
+     * FreguesiaTipo has many Freguesia.
+     *
+     * @return HasMany<Freguesia, $this>
+     */
+    public function freguesias(): HasMany
+    {
+        return $this->hasMany(Freguesia::class, 'freguesia_tipo_id');
+    }
 }

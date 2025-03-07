@@ -21,7 +21,7 @@ final class CidadaoMorada extends Model
      *
      * @var list<string>
      */
-    protected $fillable = ['concelho_id', 'morada', 'codigo_postal', 'localidade'];
+    protected $fillable = ['concelho_id', 'morada', 'codigo_postal', 'localidade', 'cidadao_id'];
 
     /**
      * Morada Belong to Concelho.

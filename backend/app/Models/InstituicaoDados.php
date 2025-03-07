@@ -27,17 +27,7 @@ final class InstituicaoDados extends Model
         'instituicao_id',
         'sinopse',
         'fundacao',
-        'dissolução',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'fundacao' => 'date',
-        'dissolução' => 'date',
+        'dissolucao',
     ];
 
     /**

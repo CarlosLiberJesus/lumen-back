@@ -25,9 +25,9 @@ final class CidadaoCargo extends Model
     protected $fillable = [
         'cidadao_id',
         'cargo_id',
+        'instituicao_id',
         'inicio',
         'fim',
-        'src',
         'sinopse',
     ];
 

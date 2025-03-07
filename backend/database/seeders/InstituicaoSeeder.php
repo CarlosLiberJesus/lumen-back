@@ -6,9 +6,9 @@ namespace Database\Seeders;
 
 use App\Models\Instituicao;
 use App\Models\InstituicaoComTipo;
-use App\Models\InstituicaoLegislatura;
-use App\Models\Legislatura;
+use App\Models\InstituicaoDados;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 final class InstituicaoSeeder extends Seeder
@@ -18,47 +18,116 @@ final class InstituicaoSeeder extends Seeder
      */
     public function run(): void
     {
-        Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Presidência da República', 'instituicao_ramo_id' => 1]);
-        InstituicaoComTipo::create(['instituicao_id' => 1, 'instituicao_ramo_id' => 1]);
-        Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Assembleia da República', 'instituicao_ramo_id' => 2]);
-        InstituicaoComTipo::create(['instituicao_id' => 2, 'instituicao_ramo_id' => 2]);
-        Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Parlamento', 'instituicao_ramo_id' => 1, 'responde_instituicao_id' => 2]);
-        InstituicaoComTipo::create(['instituicao_id' => 3, 'instituicao_ramo_id' => 2]);
-        Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Mesa Assembleia da República', 'instituicao_ramo_id' => 1, 'responde_instituicao_id' => 3]);
-        InstituicaoComTipo::create(['instituicao_id' => 4, 'instituicao_ramo_id' => 2]);
-        Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Governo', 'instituicao_ramo_id' => 3, 'responde_instituicao_id' => 1]);
-        InstituicaoComTipo::create(['instituicao_id' => 5, 'instituicao_ramo_id' => 3]);
-        Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Concelho-Ministros', 'instituicao_ramo_id' => 3, 'responde_instituicao_id' => 5]);
-        InstituicaoComTipo::create(['instituicao_id' => 6, 'instituicao_ramo_id' => 3]);
+        $instituicoes = [
+            // Monarquia Absoluta (1736 – 1822) -> República 1
+            [
+                'republica_id' => 1,
+                'instituicoes' => [
+                    ['nome' => 'Secretaria de Estado dos Negócios Interiores do Reino', 'fundacao' => 1736, 'dissolucao' => 1822],
+                    ['nome' => 'Secretaria de Estado dos Negócios Estrangeiros e da Guerra', 'fundacao' => 1736, 'dissolucao' => 1822],
+                    ['nome' => 'Secretaria de Estado dos Negócios da Marinha e Domínios Ultramarinos', 'fundacao' => 1736, 'dissolucao' => 1822],
+                    ['nome' => 'Secretaria de Estado dos Negócios da Fazenda', 'fundacao' => 1801, 'dissolucao' => 1822],
+                    ['nome' => 'Secretaria de Estado dos Negócios Eclesiásticos e da Justiça', 'fundacao' => 1821, 'dissolucao' => 1822],
+                ],
+            ],
+            // Monarquia Constitucional (1822 – 1910) -> República 2
+            [
+                'republica_id' => 2,
+                'instituicoes' => [
+                    ['nome' => 'Ministério do Reino', 'fundacao' => 1822, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério da Marinha e Ultramar', 'fundacao' => 1822, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério dos Negócios Estrangeiros', 'fundacao' => 1822, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério da Guerra', 'fundacao' => 1822, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério dos Negócios Eclesiásticos e da Justiça', 'fundacao' => 1822, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério da Fazenda', 'fundacao' => 1822, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério das Obras Públicas, Comércio e Indústria', 'fundacao' => 1852, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério da Instrução Pública', 'fundacao' => 1870, 'dissolucao' => 1870],
+                    ['nome' => 'Ministério da Instrução Pública e Belas Artes', 'fundacao' => 1890, 'dissolucao' => 1898],
+                ],
+            ],
+            // Primeira República (1910 – 1926), Ditadura Militar (1926 – 1928) e Ditadura Nacional (1928 – 1933) -> República 3
+            [
+                'republica_id' => 3,
+                'instituicoes' => [
+                    ['nome' => 'Ministério do Interior', 'fundacao' => 1910, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério da Marinha e Colónias', 'fundacao' => 1910, 'dissolucao' => 1911],
+                    ['nome' => 'Ministério da Marinha', 'fundacao' => 1911, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério das Colónias', 'fundacao' => 1911, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério dos Negócios Estrangeiros', 'fundacao' => 1910, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério da Guerra', 'fundacao' => 1910, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério da Justiça', 'fundacao' => 1910, 'dissolucao' => 1914],
+                    ['nome' => 'Ministério da Justiça e dos Cultos', 'fundacao' => 1914, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério da Fazenda', 'fundacao' => 1910, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério das Finanças', 'fundacao' => 1910, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério das Obras Públicas, Comércio e Indústria', 'fundacao' => 1910, 'dissolucao' => 1910],
+                    ['nome' => 'Ministério do Fomento', 'fundacao' => 1910, 'dissolucao' => 1917],
+                    ['nome' => 'Ministério do Comércio', 'fundacao' => 1917, 'dissolucao' => 1919],
+                    ['nome' => 'Ministério do Comércio e Comunicações', 'fundacao' => 1919, 'dissolucao' => 1932],
+                    ['nome' => 'Ministério da Agricultura', 'fundacao' => 1918, 'dissolucao' => 1932],
+                    ['nome' => 'Ministério das Subsistências e Transportes', 'fundacao' => 1918, 'dissolucao' => 1918],
+                    ['nome' => 'Ministério dos Abastecimentos', 'fundacao' => 1918, 'dissolucao' => 1919],
+                    ['nome' => 'Ministério do Comércio, Indústria e Agricultura', 'fundacao' => 1932, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério das Obras Públicas e Comunicações', 'fundacao' => 1932, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério da Instrução Pública', 'fundacao' => 1913, 'dissolucao' => 1933],
+                    ['nome' => 'Ministério do Trabalho e Previdência Social', 'fundacao' => 1916, 'dissolucao' => 1917],
+                    ['nome' => 'Ministério do Trabalho', 'fundacao' => 1917, 'dissolucao' => 1925],
+                ],
+            ],
+            // Estado Novo (Ditadura Política) (1933 – 1974) -> República 4
+            [
+                'republica_id' => 4,
+                'instituicoes' => [
+                    ['nome' => 'Presidência do Conselho de Ministros', 'fundacao' => 1933, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério do Interior', 'fundacao' => 1933, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério da Marinha', 'fundacao' => 1933, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério das Colónias', 'fundacao' => 1933, 'dissolucao' => 1950],
+                    ['nome' => 'Ministério do Ultramar', 'fundacao' => 1950, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério dos Negócios Estrangeiros', 'fundacao' => 1933, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério da Justiça e dos Cultos', 'fundacao' => 1933, 'dissolucao' => 1934],
+                    ['nome' => 'Ministério da Justiça', 'fundacao' => 1934, 'dissolucao' => 1934],
+                    ['nome' => 'Ministério das Finanças', 'fundacao' => 1933, 'dissolucao' => 1934],
+                    ['nome' => 'Ministério das Finanças e da Coordenação Económica', 'fundacao' => 1974, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério da Guerra', 'fundacao' => 1933, 'dissolucao' => 1950],
+                    ['nome' => 'Ministério do Exército', 'fundacao' => 1950, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério da Defesa Nacional', 'fundacao' => 1950, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério do Comércio e Indústria', 'fundacao' => 1933, 'dissolucao' => 1940],
+                    ['nome' => 'Ministério da Agricultura', 'fundacao' => 1933, 'dissolucao' => 1940],
+                    ['nome' => 'Ministério da Economia', 'fundacao' => 1940, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério da Agricultura e Comércio', 'fundacao' => 1974, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério da Indústria e Energia', 'fundacao' => 1974, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério das Obras Públicas e Comunicações', 'fundacao' => 1933, 'dissolucao' => 1946],
+                    ['nome' => 'Ministério das Obras Públicas', 'fundacao' => 1946, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério das Comunicações', 'fundacao' => 1946, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério da Instrução Pública', 'fundacao' => 1933, 'dissolucao' => 1936],
+                    ['nome' => 'Ministério da Educação Nacional', 'fundacao' => 1936, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério das Corporações e Previdência Social', 'fundacao' => 1950, 'dissolucao' => 1973],
+                    ['nome' => 'Ministério das Corporações e Segurança Social', 'fundacao' => 1973, 'dissolucao' => 1974],
+                    ['nome' => 'Ministério da Saúde e Assistência', 'fundacao' => 1961, 'dissolucao' => 1973],
+                    ['nome' => 'Ministério da Saúde', 'fundacao' => 1973, 'dissolucao' => 1974],
+                ],
+            ],
+        ];
 
-        $legislaturas = Legislatura::all();
-        foreach ($legislaturas as $legislatura) {
-            InstituicaoLegislatura::create([
-                'uuid' => Str::uuid(),
-                'instituicao_id' => 2,
-                'legislatura_id' => $legislatura['id'],
-                'nome' => $legislatura['code'] === '-' ? $legislatura['nome'] : $legislatura['code'].' '.$legislatura['nome'],
-                'data_inicio' => $legislatura['formacao'],
-                'data_fim' => $legislatura['dissolucao'],
-            ]);
-
-        }
-
-        InstituicaoLegislatura::create(['uuid' => Str::uuid(), 'instituicao_id' => 5, 'legislatura_id' => 16, 'nome' => 'XXIV Governo Constitucional', 'data_inicio' => '2024-04-02']);
-        InstituicaoLegislatura::create(['uuid' => Str::uuid(), 'instituicao_id' => 5, 'legislatura_id' => 15, 'nome' => 'XXIII Governo Constitucional', 'data_inicio' => '2022-03-30', 'data_fim' => '2024-04-02']);
-        InstituicaoLegislatura::create(['uuid' => Str::uuid(), 'instituicao_id' => 5, 'legislatura_id' => 14, 'nome' => 'XXII Governo Constitucional', 'data_inicio' => '2019-10-26', 'data_fim' => '2022-03-30']);
-        InstituicaoLegislatura::create(['uuid' => Str::uuid(), 'instituicao_id' => 5, 'legislatura_id' => 13, 'nome' => 'XXI Governo Constitucional', 'data_inicio' => '2015-11-26', 'data_fim' => '2019-10-26']);
-        InstituicaoLegislatura::create(['uuid' => Str::uuid(), 'instituicao_id' => 5, 'legislatura_id' => 12, 'nome' => 'XX Governo Constitucional', 'data_inicio' => '2015-10-30', 'data_fim' => '2015-11-26']);
-        InstituicaoLegislatura::create(['uuid' => Str::uuid(), 'instituicao_id' => 5, 'legislatura_id' => 11, 'nome' => 'XIX Governo Constitucional', 'data_inicio' => '2011-06-20', 'data_fim' => '2015-10-30']);
-
-        InstituicaoCargo::create(['uuid' => Str::uuid(), 'instituicao_id' => 1, 'cargo' => 'Presidente da República']);
-        InstituicaoCargo::create(['uuid' => Str::uuid(), 'instituicao_id' => 5, 'cargo' => 'Primeiro-Ministro']);
-        InstituicaoCargo::create(['uuid' => Str::uuid(), 'instituicao_id' => 5, 'cargo' => 'Secretário de Estado Adjunto do Primeiro-Ministro']);
-
-        Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Marcelo Rebelo de Sousa']);
-        CidadaoCargo::create(['cidadao_id' => 1, 'cargo_id' => 1, 'inicio' => '2016-03-09']);
-        Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'António Costa']);
-        CidadaoCargo::create(['cidadao_id' => 2, 'cargo_id' => 2, 'inicio' => '2015-11-26', 'fim' => '2019-10-26']);
-
+        DB::transaction(function () use ($instituicoes): void {
+            foreach ($instituicoes as $periodo) {
+                foreach ($periodo['instituicoes'] as $instituicaoData) {
+                    $instituicao = Instituicao::create([
+                        'uuid' => Str::uuid(),
+                        'republica_id' => $periodo['republica_id'],
+                        'nome' => $instituicaoData['nome'],
+                        'extinta' => (bool) $instituicaoData['dissolucao'],
+                    ]);
+                    InstituicaoComTipo::create([
+                        'instituicao_id' => $instituicao->id,
+                        'instituicao_tipo_id' => 2,
+                    ]);
+                    InstituicaoDados::create([
+                        'instituicao_id' => $instituicao->id,
+                        'fundacao' => $instituicaoData['fundacao'] ?? null,
+                        'dissolucao' => $instituicaoData['dissolucao'] ?? null,
+                    ]);
+                }
+            }
+        });
     }
 }

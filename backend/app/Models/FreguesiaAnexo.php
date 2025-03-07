@@ -27,6 +27,7 @@ final class FreguesiaAnexo extends Model
         'freguesia_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

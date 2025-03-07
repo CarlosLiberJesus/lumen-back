@@ -17,7 +17,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        DB::statement("COMMENT ON TABLE freguesias IS 'Houve historicamente uma união de freguesia, marca o seu periodo';");
+        DB::statement("COMMENT ON TABLE freguesia_tipos IS 'Houve historicamente uma união de freguesia, marca o seu periodo';");
 
     }
 

@@ -14,7 +14,7 @@ final class ConselhoMinistros extends Model
      *
      * @var string
      */
-    protected $table = 'conselho_ministroses';
+    protected $table = 'conselho_ministros';
 
     /**
      * The attributes that are mass assignable.
@@ -22,20 +22,19 @@ final class ConselhoMinistros extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'uuid',
-        'legislatura_id',
+        'instituicao_governo_id',
         'cargo_id',
         'cidadao_id',
     ];
 
     /**
-     * Get the legislatura that owns the ConselhoMinistros.
+     * Get the Governo that owns the ConselhoMinistros.
      *
-     * @return BelongsTo<Legislatura, $this>
+     * @return BelongsTo<InstituicaoGoverno, $this>
      */
-    public function legislatura(): BelongsTo
+    public function instituicaoGoverno(): BelongsTo
     {
-        return $this->belongsTo(Legislatura::class);
+        return $this->belongsTo(InstituicaoGoverno::class);
     }
 
     /**

@@ -22,9 +22,7 @@ final class EntidadeJuridicaLei extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'uuid',
-        'nome',
-        'entidades_juridica_id',
+        'entidade_juridica_id',
         'lei_id',
     ];
 
@@ -35,7 +33,7 @@ final class EntidadeJuridicaLei extends Model
      */
     public function entidadeJuridica(): BelongsTo
     {
-        return $this->belongsTo(EntidadeJuridica::class, 'entidades_juridica_id');
+        return $this->belongsTo(EntidadeJuridica::class, 'entidade_juridica_id');
     }
 
     /**

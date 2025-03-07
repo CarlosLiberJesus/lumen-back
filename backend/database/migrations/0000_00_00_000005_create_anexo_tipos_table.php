@@ -17,6 +17,9 @@ return new class extends Migration
             $table->json('params')->nullable();
             $table->timestamps();
         });
+
+        DB::statement("COMMENT ON TABLE anexo_tipos IS 'Organização de Anexos, de links paths em server ou base64';");
+
     }
 
     public function down(): void

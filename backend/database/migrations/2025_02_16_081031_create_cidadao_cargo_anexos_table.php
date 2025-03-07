@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('cidadao_cargo_id');
             $table->unsignedBigInteger('anexo_tipo_id');
             $table->string('anexo', 255)->comment('Ex: O URL do anexo');
+            $table->string('descricao', 255)->nullable();
             $table->timestamps();
 
             $table->foreign('cidadao_cargo_id')->references('id')->on('cidadao_cargos');

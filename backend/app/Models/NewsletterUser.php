@@ -17,6 +17,6 @@ final class NewsletterUser extends Model
         'name',
         'email',
         'phone',
-        'token',
+        'hash',
     ];
 }

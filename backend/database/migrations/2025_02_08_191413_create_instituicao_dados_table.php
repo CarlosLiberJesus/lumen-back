@@ -16,8 +16,8 @@ return new class extends Migration
             $table->text('certidao_permanente')->nullable();
             $table->unsignedBigInteger('instituicao_id');
             $table->text('sinopse')->nullable();
-            $table->date('fundacao')->nullable();
-            $table->date('dissolução')->nullable();
+            $table->integer('fundacao')->nullable();
+            $table->integer('dissolucao')->nullable();
             /**
              * TODO: temos de um fast way do board members... talvez metodo count() no model para cargos
              * $table->string('duracao_mandato')->nullable();

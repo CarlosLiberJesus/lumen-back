@@ -13,8 +13,8 @@ return new class extends Migration
         Schema::create('legislaturas', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique();
+            $table->char('sigla', 6)->nullable();
             $table->string('nome');
-            $table->char('code', 6);
             $table->unsignedBigInteger('republica_id');
             $table->date('eleicoes')->nullable();
             $table->date('formacao');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('sinopse')->nullable();
             $table->timestamps();
 
-            $table->unique(['republica_id', 'code']);
+            $table->unique(['republica_id', 'sigla']);
 
             $table->foreign('republica_id')->references('id')->on('republicas');
         });

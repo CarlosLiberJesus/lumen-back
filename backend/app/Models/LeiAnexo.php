@@ -23,10 +23,11 @@ final class LeiAnexo extends Model
      */
     protected $fillable = [
         'uuid',
-        'name',
+        'nome',
         'lei_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

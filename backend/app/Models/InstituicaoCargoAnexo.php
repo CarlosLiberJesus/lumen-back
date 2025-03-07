@@ -27,6 +27,7 @@ final class InstituicaoCargoAnexo extends Model
         'instituicao_cargo_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

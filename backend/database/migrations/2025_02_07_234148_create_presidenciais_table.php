@@ -13,6 +13,8 @@ return new class extends Migration
         Schema::create('presidenciais', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique();
+            $table->char('sigla', 6)->nullable();
+            $table->string('nome');
             $table->unsignedBigInteger('republica_id');
             $table->date('eleicoes')->nullable();
             $table->date('posse');

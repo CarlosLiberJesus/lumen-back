@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\API\APIController;
+use App\Http\Controllers\API\CidadaoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('user', fn (Request $request) => $request->user())->middleware('auth:sanctum');
+Route::get('homepage', [APIController::class, 'homepage']);
+Route::get('cidadaos', [CidadaoController::class, 'index']);
+Route::get('cidadao/{uuid}', [CidadaoController::class, 'show']);

@@ -24,7 +24,6 @@ final class InstituicaoPresidencial extends Model
      */
     protected $fillable = [
         'uuid',
-        'nome',
         'instituicao_id',
         'presidencial_id',
         'sinopse',

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->unsignedBigInteger('cidadao_id');
             $table->unsignedBigInteger('com_cidadao_id');
             $table->unsignedBigInteger('relacao_tipo_id');
-            $table->enum('onde', ['instituicoes', 'instituicao_legislatura', 'instituicao_presidenciais'])->nullable()->comment('Onde se passa a relação');
+            $table->enum('onde', ['instituicao', 'instituicao_legislatura', 'instituicao_presidencial', 'instituicao_governo'])->nullable()->comment('Onde se passa a relação');
             $table->string('onde_id')->nullable()->comment('ID da relação');
             $table->timestamps();
 

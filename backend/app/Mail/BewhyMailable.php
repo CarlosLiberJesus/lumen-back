@@ -15,11 +15,6 @@ final class BewhyMailable extends Mailable
     use Queueable;
     use SerializesModels;
 
-    /**
-     * Why all-ways erasing comment?
-     *
-     * @param  array<string, mixed>  $details
-     */
     public function __construct(public array $details) {}
 
     public function build(): self

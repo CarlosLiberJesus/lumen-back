@@ -13,13 +13,13 @@ return new class extends Migration
         Schema::create('statuses', function (Blueprint $table): void {
             $table->id();
             $table->string('uuid')->unique()->index();
-            $table->enum('type', ['users', 'documents', 'tasks']);
+            $table->enum('tipo', ['users', 'documents', 'tasks']);
             $table->string('status', 50);
             $table->json('params');
-            $table->text('description')->nullable();
+            $table->text('descricao')->nullable();
             $table->timestamps();
 
-            $table->index(['type', 'status'])->unique();
+            $table->index(['tipo', 'status'])->unique();
         });
 
         DB::statement("COMMENT ON TABLE statuses IS 'Tabela de apoio para objectos que tenham de ser confirmados no work-flow.'");

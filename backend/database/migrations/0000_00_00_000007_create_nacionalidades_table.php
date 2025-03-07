@@ -12,7 +12,6 @@ return new class extends Migration
     {
         Schema::create('nacionalidades', function (Blueprint $table): void {
             $table->id();
-            $table->string('uuid')->unique()->index();
             $table->string('nacionalidade');
             $table->string('pais');
             $table->json('params')->nullable()->comment('Como outras, será classes de css para as bandeiras');

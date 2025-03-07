@@ -27,6 +27,7 @@ final class LegislaturaAnexo extends Model
         'legislatura_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

@@ -13,7 +13,7 @@ return new class extends Migration
         Schema::create('concelhos', function (Blueprint $table): void {
             $table->id();
             $table->string('uuid')->unique()->index();
-            $table->string('name', 100);
+            $table->string('nome', 100);
             $table->text('sinopse')->nullable();
             $table->unsignedBigInteger('distrito_id');
             $table->timestamps();

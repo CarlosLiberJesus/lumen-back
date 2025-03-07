@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 final class Freguesia extends Model
 {
@@ -17,7 +18,7 @@ final class Freguesia extends Model
     protected $table = 'freguesias';
 
     protected $fillable = [
-        'uuid', 'sinopse', 'name',
+        'uuid', 'sinopse', 'nome', 'distrito_id', 'concelho_id', 'freguesia_tipo_id',
     ];
 
     /**
@@ -48,5 +49,15 @@ final class Freguesia extends Model
     public function freguesiaTipo(): BelongsTo
     {
         return $this->belongsTo(FreguesiaTipo::class, 'freguesia_tipo_id');
+    }
+
+    /**
+     * Concelho has many Anexos.
+     *
+     * @return HasMany<FreguesiaAnexo, $this>
+     */
+    public function anexos(): HasMany
+    {
+        return $this->hasMany(FreguesiaAnexo::class, 'freguesia_id');
     }
 }

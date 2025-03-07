@@ -18,7 +18,7 @@ final class Concelho extends Model
     protected $table = 'concelhos';
 
     protected $fillable = [
-        'uuid', 'sinopse', 'name',
+        'uuid', 'sinopse', 'nome', 'distrito_id',
     ];
 
     /**
@@ -48,6 +48,6 @@ final class Concelho extends Model
      */
     public function anexos(): HasMany
     {
-        return $this->hasMany(ConcelhoAnexo::class, 'cidadao_id');
+        return $this->hasMany(ConcelhoAnexo::class, 'concelho_id');
     }
 }

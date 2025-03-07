@@ -13,7 +13,7 @@ return new class extends Migration
         Schema::create('lei_emissores', function (Blueprint $table): void {
             $table->id();
             $table->unsignedBigInteger('lei_id');
-            $table->enum('emissor_tipo', ['instituicao', 'instituicao_legislatura', 'instituicao_cargo']);
+            $table->enum('emissor_tipo', ['instituicao', 'instituicao_legislatura', 'instituicao_presidencial', 'instituicao_cargo', 'instituicao_governo']);
             $table->unsignedBigInteger('emissor_id');
             $table->timestamps();
 

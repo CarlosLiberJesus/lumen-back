@@ -27,6 +27,7 @@ final class DistritoAnexo extends Model
         'distrito_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

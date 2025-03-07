@@ -17,6 +17,7 @@ final class DeploySeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(AplicacoesSeeder::class);
         $this->call(FreguesiaTiposSeeder::class);
         $this->call(GeografiaSeeder::class);
         $this->call(NacionalidadesSeeder::class);
@@ -24,7 +25,6 @@ final class DeploySeeder extends Seeder
         $this->call(RoleSeeder::class);
         $this->call(AnexoTiposSeeder::class);
         $this->call(ContactoTiposSeeder::class);
-        $this->call(AnexoTiposSeeder::class);
         $this->call(EntidadeJuridicasSeeder::class);
         $this->call(RelacaoTiposSeeder::class);
 
@@ -32,14 +32,16 @@ final class DeploySeeder extends Seeder
         UserRole::create(['user_id' => 1, 'role_id' => 1]);
 
         $this->call(RepublicaSeeder::class);
-        $this->call(PresidenciaisSeeder::class);
         $this->call(LegislaturaSeeder::class);
+        $this->call(GovernosSeeder::class);
         $this->call(InstituicaoTiposSeeder::class);
         $this->call(LeiTiposSeeder::class);
         $this->call(LeiPartesSeeder::class);
+        $this->call(PresidenciaisSeeder::class);
+        $this->call(InstituicaoSeeder::class);
+        $this->call(GovernoDemoSeeder::class);
         $this->call(DiarioRepublicaSeriesSeeder::class);
         // $this->call(DiarioRepublicaGlossariosSeeder::class);
-        // $this->call(InstituicaoSeeder::class);
         // $this->call(LeisSeeder::class);
     }
 }

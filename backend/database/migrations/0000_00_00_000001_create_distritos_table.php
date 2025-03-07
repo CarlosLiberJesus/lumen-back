@@ -13,12 +13,12 @@ return new class extends Migration
         Schema::create('distritos', function (Blueprint $table): void {
             $table->id();
             $table->string('uuid')->unique()->index();
-            $table->string('name', 100);
+            $table->string('nome', 100);
             $table->text('sinopse')->nullable();
             $table->timestamps();
         });
 
-        DB::statement("COMMENT ON TABLE concelhos IS 'Reflete a organização territorial a nível de regiões.';");
+        DB::statement("COMMENT ON TABLE distritos IS 'Reflete a organização territorial a nível de regiões.';");
 
     }
 

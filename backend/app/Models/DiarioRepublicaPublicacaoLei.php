@@ -22,7 +22,7 @@ final class DiarioRepublicaPublicacaoLei extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'diario_republica_publicacao_id',
+        'dr_publicacao_id',
         'lei_id',
         'src',
         'paginas',
@@ -35,7 +35,7 @@ final class DiarioRepublicaPublicacaoLei extends Model
      */
     public function diarioRepublicaPublicacao(): BelongsTo
     {
-        return $this->belongsTo(DiarioRepublicaPublicacao::class, 'diario_republica_publicacao_id');
+        return $this->belongsTo(DiarioRepublicaPublicacao::class, 'dr_publicacao_id');
     }
 
     /**

@@ -24,13 +24,12 @@ final class Lei extends Model
      */
     protected $fillable = [
         'uuid',
-        'nome',
+        'lei_parte_id',
         'codigo',
+        'nome_completo',
         'proponente',
         'sumario',
         'texto',
-        'path',
-        'src',
         'em_vigor',
         'data_toggle',
         'lei_tipo_id',

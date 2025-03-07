@@ -27,6 +27,7 @@ final class RepublicaAnexo extends Model
         'republica_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

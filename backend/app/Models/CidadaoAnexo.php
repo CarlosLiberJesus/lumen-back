@@ -27,6 +27,7 @@ final class CidadaoAnexo extends Model
         'nome',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

@@ -27,6 +27,7 @@ final class ConcelhoAnexo extends Model
         'concelho_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

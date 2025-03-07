@@ -18,10 +18,10 @@ final class AnexoTiposSeeder extends Seeder
         AnexoTipo::create(['tipo' => 'image', 'descricao' => 'Imagens em geral, referências em tabela Própria']);
         AnexoTipo::create(['tipo' => 'url', 'descricao' => 'Url da Internet']);
         AnexoTipo::create(['tipo' => 'path', 'descricao' => 'Path do servidor']);
+        AnexoTipo::create(['tipo' => 'document', 'descricao' => 'Documento Remoto']);
         AnexoTipo::create(['tipo' => 'base64', 'descricao' => 'Encode Base64']);
         AnexoTipo::create(['tipo' => 'video', 'descricao' => 'Vídeo']);
         AnexoTipo::create(['tipo' => 'audio', 'descricao' => 'Áudio']);
-        AnexoTipo::create(['tipo' => 'document', 'descricao' => 'Documento']);
-        AnexoTipo::create(['tipo' => 'other', 'description' => 'Outro']);
+        AnexoTipo::create(['tipo' => 'other', 'descricao' => 'Outro']);
     }
 }

@@ -17,7 +17,7 @@ final class Distrito extends Model
     protected $table = 'distritos';
 
     protected $fillable = [
-        'uuid', 'sinopse', 'name',
+        'uuid', 'sinopse', 'nome',
     ];
 
     /**
@@ -28,5 +28,25 @@ final class Distrito extends Model
     public function concelhos(): HasMany
     {
         return $this->hasMany(Concelho::class);
+    }
+
+    /**
+     * Districto has many Freguesias.
+     *
+     * @return HasMany<Freguesia, $this>
+     */
+    public function freguesias(): HasMany
+    {
+        return $this->hasMany(Freguesia::class);
+    }
+
+    /**
+     * Distrito has Many DistritoAnexos.
+     *
+     * @return HasMany<DistritoAnexo, $this>
+     */
+    public function anexos(): HasMany
+    {
+        return $this->hasMany(DistritoAnexo::class, 'distrito_id');
     }
 }

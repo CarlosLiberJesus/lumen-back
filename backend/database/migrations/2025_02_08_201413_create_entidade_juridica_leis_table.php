@@ -12,8 +12,6 @@ return new class extends Migration
     {
         Schema::create('entidade_juridica_leis', function (Blueprint $table): void {
             $table->id();
-            $table->string('uuid')->unique()->index();
-            $table->string('nome')->nullable();
             $table->unsignedBigInteger('entidade_juridica_id');
             $table->unsignedBigInteger('lei_id');
             $table->timestamps();

@@ -27,6 +27,7 @@ final class DiarioRepublicaPublicacaoAnexo extends Model
         'diario_republica_publicacao_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

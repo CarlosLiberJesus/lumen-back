@@ -7,6 +7,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * @property string $instituicao_uuid
+ * @property string $instituicao_nome
+ * @property string $governo_uuid
+ * @property string $sigla
+ * @property string $governo_nome
+ */
 final class InstituicaoCargo extends Model
 {
     /**
@@ -22,18 +29,22 @@ final class InstituicaoCargo extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'cargo',
         'uuid',
+        'cargo',
+        'tipo',
         'instituicao_id',
+        'cargo_responde_id',
+        'sinopse',
+        'params',
     ];
 
     /**
-     * Get the instituicao that owns the cargo.
+     * Cargo que responde a este cargo
      *
-     * @return BelongsTo<Instituicao, $this>
+     * @return BelongsTo<InstituicaoCargo, $this>
      */
-    public function instituicao(): BelongsTo
+    public function cargoResponde(): BelongsTo
     {
-        return $this->belongsTo(Instituicao::class, 'instituicao_id');
+        return $this->belongsTo(self::class, 'cargo_responde_id');
     }
 }

@@ -24,6 +24,8 @@ final class Presidencial extends Model
      */
     protected $fillable = [
         'uuid',
+        'nome',
+        'sigla',
         'republica_id',
         'eleicoes',
         'posse',

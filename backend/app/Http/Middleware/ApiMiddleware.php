@@ -31,7 +31,7 @@ final class ApiMiddleware
                 ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization, App-Uuid');
         }
 
-        if (!$this->checkIncomingRequest($request)) {
+        if (! $this->checkIncomingRequest($request)) {
             if ($environment === 'local') {
                 error_log('##################################'.PHP_EOL.'######### Check App_Key ##########'.PHP_EOL.'##################################');
             }
@@ -148,16 +148,16 @@ final class ApiMiddleware
     private function checkIncomingRequest(Request $request): bool
     {
         $valid = true;
-        if (!$request->header('Content-Type') || $request->header('Content-Type') !== 'application/json') {
+        if (! $request->header('Content-Type') || $request->header('Content-Type') !== 'application/json') {
             $valid = false;
         }
 
-        if (!$request->header('App-Uuid')) {
+        if (! $request->header('App-Uuid')) {
             $valid = false;
         }
 
         $application = Aplicacao::where('uuid', $request->header('App-Uuid'))->first();
-        if (!$application) {
+        if (! $application) {
             return false;
         }
 

@@ -115,16 +115,6 @@ final class Instituicao extends Model
     }
 
     /**
-     * Instituicao BelongsTo Republica.
-     *
-     * @return BelongsTo<Republica, $this>
-     */
-    public function republica(): BelongsTo
-    {
-        return $this->belongsTo(Republica::class, 'republica_id');
-    }
-
-    /**
      * Instituicao has many InstituicaoRamos.
      *
      * @return HasMany<InstituicaoComTipo, $this>

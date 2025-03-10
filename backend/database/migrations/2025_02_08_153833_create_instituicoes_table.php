@@ -13,7 +13,6 @@ return new class extends Migration
         Schema::create('instituicoes', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique()->index();
-            $table->unsignedBigInteger('republica_id');
             $table->string('nome');
             $table->string('sigla')->nullable();
             $table->text('sinopse')->nullable()->comment('Descrição da instituição');
@@ -26,7 +25,6 @@ return new class extends Migration
 
             $table->foreign('responde_instituicao_id')->references('id')->on('instituicoes');
             $table->foreign('entidade_juridica_id')->references('id')->on('entidade_juridicas');
-            $table->foreign('republica_id')->references('id')->on('republicas');
         });
     }
 

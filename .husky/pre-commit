@@ -33,12 +33,12 @@ if [ -n "$STAGED_FILES" ]; then
   echo "$STAGED_FILES" | xargs ./backend/vendor/bin/rector process
   if [ $? -ne 0 ]; then exit 1; fi
 
-  echo "$STAGED_FILES" | xargs ./backend/vendor/bin/duster lint
-  if [ $? -ne 0 ]; then exit 1; fi
 
   echo "$STAGED_FILES" | xargs ./backend/vendor/bin/duster fix
   if [ $? -ne 0 ]; then exit 1; fi
   
+  echo "$STAGED_FILES" | xargs ./backend/vendor/bin/duster lint
+  if [ $? -ne 0 ]; then exit 1; fi
 fi
 
 # Run lint-staged for js|json files

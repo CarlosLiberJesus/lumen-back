@@ -40,16 +40,6 @@ final class Republica extends Model
     }
 
     /**
-     * Republica has many Instituicoes.
-     *
-     * @return HasMany<Instituicao, $this>
-     */
-    public function instituicoes(): HasMany
-    {
-        return $this->hasMany(Instituicao::class, 'republica_id');
-    }
-
-    /**
      * Republica has many Anexos.
      *
      * @return HasMany<RepublicaAnexo, $this>

@@ -18,6 +18,7 @@ final class InstituicaoSeeder extends Seeder
      */
     public function run(): void
     {
+        // https://pt.wikipedia.org/wiki/Lista_de_minist%C3%A9rios_de_Portugal
         $instituicoes = [
             // Monarquia Absoluta (1736 – 1822) -> República 1
             [
@@ -113,7 +114,6 @@ final class InstituicaoSeeder extends Seeder
                 foreach ($periodo['instituicoes'] as $instituicaoData) {
                     $instituicao = Instituicao::create([
                         'uuid' => Str::uuid(),
-                        'republica_id' => $periodo['republica_id'],
                         'nome' => $instituicaoData['nome'],
                         'extinta' => (bool) $instituicaoData['dissolucao'],
                     ]);

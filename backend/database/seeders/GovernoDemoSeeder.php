@@ -24,16 +24,15 @@ final class GovernoDemoSeeder extends Seeder
     public function run(): void
     {
 
-        $governo = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Conselho de Ministros']);
-        InstituicaoComTipo::create(['instituicao_id' => $governo->id, 'instituicao_tipo_id' => 2]);
+        $governo = Instituicao::where('nome', 'Conselho de Ministros')->firstOfFail();
 
-        $assembleia = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Assembleia da República']);
+        $assembleia = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Assembleia da República']);
         InstituicaoComTipo::create(['instituicao_id' => $assembleia->id, 'instituicao_tipo_id' => 3]);
 
-        $instituicao = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Mesa Assembleia da República', 'responde_instituicao_id' => $assembleia->id]);
+        $instituicao = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Mesa Assembleia da República', 'responde_instituicao_id' => $assembleia->id]);
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 3]);
 
-        $instituicao = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Parlamento', 'responde_instituicao_id' => $assembleia->id]);
+        $instituicao = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Parlamento', 'responde_instituicao_id' => $assembleia->id]);
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 3]);
 
         foreach (range(1, 6) as $governoId) {
@@ -90,7 +89,7 @@ final class GovernoDemoSeeder extends Seeder
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Manuel Tito de Morais']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1978-01-23']);
 
-        $minDefesaNacional = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério da Defesa Nacional', 'responde_instituicao_id' => $governo->id]);
+        $minDefesaNacional = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério da Defesa Nacional', 'responde_instituicao_id' => $governo->id]);
         $instituicao = $minDefesaNacional;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1974]);
@@ -100,7 +99,7 @@ final class GovernoDemoSeeder extends Seeder
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-23', 'fim' => '1978-01-23']);
         ConselhoMinistros::create(['instituicao_governo_id' => 7, 'cargo_id' => $instituicaoCargo->id, 'cidadao_id' => $cidadao->id]);
 
-        $minPlanoCoordenacaoEcon = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério do Plano e Coordenação Económica', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minPlanoCoordenacaoEcon = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério do Plano e Coordenação Económica', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minPlanoCoordenacaoEcon;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1974, 'dissolucao' => 1978]);
@@ -118,7 +117,7 @@ final class GovernoDemoSeeder extends Seeder
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1977-09-09']);
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado da Coordenação Económica', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $ministroPlanoCoordenacaoEcon->id]);
         CidadaoCargo::create(['cidadao_id' => $cidadaoCarlosMelancia->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1977-03-25', 'fim' => '1978-01-23']);
-        $minAdminInterna = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'sigla' => 'MAI', 'nome' => 'Ministério da Administração Interna', 'responde_instituicao_id' => $governo->id, 'sinopse' => '<p><span>O Ministério da Administração Interna (MAI) é o departamento do Governo de Portugal, responsável pela execução das políticas de segurança pública, de proteção e socorro, de imigração e asilo, de prevenção e segurança rodoviária e pela administração dos assuntos eleitorais. Criado em 1736, como Secretaria de Estado dos Negócios Interiores do Reino é o ministério português mais antigo continuamente em existência. No século XIX, passou a ser conhecido por Ministério do Reino e após a implantação da república em 1910 teve a sua designação oficial alterada para Ministério do Interior que manteve até 1974.</span></p>']);
+        $minAdminInterna = Instituicao::create(['uuid' => Str::uuid(), 'sigla' => 'MAI', 'nome' => 'Ministério da Administração Interna', 'responde_instituicao_id' => $governo->id, 'sinopse' => '<p><span>O Ministério da Administração Interna (MAI) é o departamento do Governo de Portugal, responsável pela execução das políticas de segurança pública, de proteção e socorro, de imigração e asilo, de prevenção e segurança rodoviária e pela administração dos assuntos eleitorais. Criado em 1736, como Secretaria de Estado dos Negócios Interiores do Reino é o ministério português mais antigo continuamente em existência. No século XIX, passou a ser conhecido por Ministério do Reino e após a implantação da república em 1910 teve a sua designação oficial alterada para Ministério do Interior que manteve até 1974.</span></p>']);
         $instituicao = $minAdminInterna;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1974]);
@@ -143,7 +142,7 @@ final class GovernoDemoSeeder extends Seeder
             }
         });
 
-        $minJustica = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério da Justiça', 'responde_instituicao_id' => $governo->id]);
+        $minJustica = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério da Justiça', 'responde_instituicao_id' => $governo->id]);
         $instituicao = $minJustica;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1974]);
@@ -157,7 +156,7 @@ final class GovernoDemoSeeder extends Seeder
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'José Santos Pais']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1977-03-25']);
 
-        $minFinancas = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério das Finanças', 'responde_instituicao_id' => $governo->id]);
+        $minFinancas = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério das Finanças', 'responde_instituicao_id' => $governo->id]);
         $instituicao = $minFinancas;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1974]);
@@ -187,7 +186,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Subsecretário de Estado do Orçamento', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $instituicaoCargo->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Ludovico Cândido']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1977-03-25', 'fim' => '1978-01-23']);
-        $minNegEstrangeiros = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério dos Negócios Estrangeiros', 'responde_instituicao_id' => $governo->id]);
+        $minNegEstrangeiros = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério dos Negócios Estrangeiros', 'responde_instituicao_id' => $governo->id]);
         $instituicao = $minNegEstrangeiros;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1974]);
@@ -201,7 +200,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado da Emigração', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $ministroNegEstrangeiros->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'João Vieira de Lima']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1978-01-23']);
-        $minAgriculturaPescas = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério da Agricultura e Pescas', 'responde_instituicao_id' => $governo->id]);
+        $minAgriculturaPescas = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério da Agricultura e Pescas', 'responde_instituicao_id' => $governo->id]);
         $instituicao = $minAgriculturaPescas;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1975]);
@@ -234,7 +233,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado das Pescas', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $ministroAgriculturaPescas->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Pedro Coelho']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1978-01-23']);
-        $minIndustriaTecnologia = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério da Indústria e Tecnologia', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minIndustriaTecnologia = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério da Indústria e Tecnologia', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minIndustriaTecnologia;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1975, 'dissolucao' => 1979]);
@@ -264,7 +263,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado da Indústria Ligeira e Pesada', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $ministroIndustriaTecnologia->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Fernando Santos Martins']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1977-03-26', 'fim' => '1978-01-23']);
-        $minComercioTurismo = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério do Comércio e Turismo', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minComercioTurismo = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério do Comércio e Turismo', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minComercioTurismo;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1976, 'dissolucao' => 1995]);
@@ -285,7 +284,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado do Turismo', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $ministerioComercioTurismo->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Luís Filipe Madeira']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1978-01-23']);
-        $minTrabalho = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério do Trabalho', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minTrabalho = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério do Trabalho', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minTrabalho;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1974, 'dissolucao' => 1983]);
@@ -305,7 +304,7 @@ final class GovernoDemoSeeder extends Seeder
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1978-03-25']);
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado do Trabalho', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $instituicaoCargo->id]);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-03-26', 'fim' => '1978-01-23']);
-        $minEdInvCien = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério da Educação e Investigação Científica', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minEdInvCien = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério da Educação e Investigação Científica', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minEdInvCien;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1975, 'dissolucao' => 1979]);
@@ -330,7 +329,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado da Orientação Pedagógica', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $ministroEdInvCien->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Joaquim Romero de Magalhães']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1978-01-23']);
-        $minAssuntosSociais = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério dos Assuntos Sociais', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minAssuntosSociais = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério dos Assuntos Sociais', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minAssuntosSociais;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1974, 'dissolucao' => 1983]);
@@ -346,7 +345,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado da Saúde', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $ministroAssuntosSociais->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Paulo Mendo']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1977-06-06']);
-        $minTransportesComunicacao = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério dos Transportes e Comunicações', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minTransportesComunicacao = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério dos Transportes e Comunicações', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minTransportesComunicacao;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1975, 'dissolucao' => 1981]);
@@ -362,7 +361,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Secretário de Estado da Marinha Mercante', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $ministroTransportesComunicacao->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'António Crisóstomo Teixeira']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1976-07-28', 'fim' => '1978-01-23']);
-        $minHabitacaoUrbConst = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério da Habitação, Urbanismo e Construção', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minHabitacaoUrbConst = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério da Habitação, Urbanismo e Construção', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minHabitacaoUrbConst;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1975, 'dissolucao' => 1978]);
@@ -381,7 +380,7 @@ final class GovernoDemoSeeder extends Seeder
         $instituicaoCargo = InstituicaoCargo::create(['uuid' => Str::uuid(), 'tipo' => 'instituicao_governo', 'cargo' => 'Subsecretário de Estado da Habitação, Urbanismo e Construção', 'instituicao_id' => $instituicaoGoverno->id, 'cargo_responde_id' => $instituicaoCargo->id]);
         $cidadao = Cidadao::create(['uuid' => Str::uuid(), 'nome' => 'Albérico Santos Machado']);
         CidadaoCargo::create(['cidadao_id' => $cidadao->id, 'cargo_id' => $instituicaoCargo->id, 'inicio' => '1977-03-26', 'fim' => '1978-01-23']);
-        $minObrasPublicas = Instituicao::create(['uuid' => Str::uuid(), 'republica_id' => 5, 'nome' => 'Ministério das Obras Públicas', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
+        $minObrasPublicas = Instituicao::create(['uuid' => Str::uuid(), 'nome' => 'Ministério das Obras Públicas', 'responde_instituicao_id' => $governo->id, 'extinta' => true]);
         $instituicao = $minObrasPublicas;
         InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => 2]);
         InstituicaoDados::create(['instituicao_id' => $instituicao->id, 'fundacao' => 1975, 'dissolucao' => 1978]);

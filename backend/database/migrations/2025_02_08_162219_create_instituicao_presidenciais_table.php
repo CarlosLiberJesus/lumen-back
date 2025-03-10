@@ -13,6 +13,7 @@ return new class extends Migration
         Schema::create('instituicao_presidenciais', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique()->index();
+            $table->string('nome')->nullable()->comment('Caso necessário nomear excepções ao nome da instituição');
             $table->unsignedBigInteger('instituicao_id');
             $table->unsignedBigInteger('presidencial_id');
             $table->text('sinopse')->nullable();

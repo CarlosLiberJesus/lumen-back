@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\UserRole;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -31,11 +32,16 @@ final class DeploySeeder extends Seeder
         User::create(['uuid' => Str::uuid(), 'name' => 'Operadores', 'status_id' => 1, 'rgpd' => true, 'email' => 'deployuser@bewhy.org', 'password' => Hash::make('1234')]);
         UserRole::create(['user_id' => 1, 'role_id' => 1]);
 
-        $this->call(RepublicaSeeder::class);
-        $this->call(LegislaturaSeeder::class);
         $this->call(InstituicaoTiposSeeder::class);
         $this->call(LeiTiposSeeder::class);
         $this->call(LeiPartesSeeder::class);
+
+        // Chama o comando scrape:republicas
+        Artisan::call('scrape:republicas');
+
+        /*
+        $this->call(RepublicaSeeder::class);
+        $this->call(LegislaturaSeeder::class);
         $this->call(PresidenciaisSeeder::class);
         $this->call(GovernosSeeder::class);
         $this->call(InstituicaoSeeder::class);
@@ -43,5 +49,6 @@ final class DeploySeeder extends Seeder
         $this->call(DiarioRepublicaSeriesSeeder::class);
         // $this->call(DiarioRepublicaGlossariosSeeder::class);
         // $this->call(LeisSeeder::class);
+        */
     }
 }

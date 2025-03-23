@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 final class InstituicaoTipo extends Model
 {
@@ -29,12 +29,12 @@ final class InstituicaoTipo extends Model
     ];
 
     /**
-     * Get the instituicoes for the instituicao carater.
+     * Get the instituicoes for the instituicao tipo.
      *
-     * @return HasMany<Instituicao, $this>
+     * @return BelongsToMany<Instituicao, $this>
      */
-    public function instituicoes(): HasMany
+    public function instituicoes(): BelongsToMany
     {
-        return $this->hasMany(Instituicao::class, 'instituicao_tipo_id');
+        return $this->belongsToMany(Instituicao::class, 'instituicao_com_tipos', 'instituicao_tipo_id', 'instituicao_id');
     }
 }

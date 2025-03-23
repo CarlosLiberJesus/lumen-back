@@ -4967,13 +4967,13 @@ final class GeografiaSeeder extends Seeder
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Revoreda e Nogueira', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 1]);
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Sapardos', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 2]);
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Sopo', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 2]);
-        Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Vila Nova de Cerveira e Lovelhe', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesiatipo_id' => 1]);
+        Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Vila Nova de Cerveira e Lovelhe', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 1]);
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Campos', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 3]);
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Vila Meã', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 3]);
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Candemil', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 3]);
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Gondar', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 3]);
-        Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Lovelhe', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesiatipo_id' => 3]);
-        Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Vila Nova de Cerveira', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesiatipo_id' => 3]);
+        Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Lovelhe', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 3]);
+        Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Vila Nova de Cerveira', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 3]);
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Revoreda', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 3]);
         Freguesia::create(['uuid' => Str::uuid(), 'nome' => 'Nogueira', 'distrito_id' => $viana->id, 'concelho_id' => $concelho->id, 'freguesia_tipo_id' => 3]);
 

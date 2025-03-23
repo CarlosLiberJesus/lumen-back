@@ -14,8 +14,8 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->unique();
             $table->string('nome', 100);
-            $table->smallInteger('ano_inicio');
-            $table->smallInteger('ano_fim')->nullable();
+            $table->date('inicio');
+            $table->date('fim')->nullable();
             $table->text('sinopse')->nullable();
             $table->timestamps();
         });

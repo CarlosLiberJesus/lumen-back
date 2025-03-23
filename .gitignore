@@ -4,3 +4,4 @@
 pre-check.sh
 local_lumen.session.sql
 /python/venv
+.qodo

@@ -24,9 +24,14 @@ final class Republica extends Model
     protected $fillable = [
         'uuid',
         'nome',
-        'ano_inicio',
-        'ano_fim',
+        'inicio',
+        'fim',
         'sinopse',
+    ];
+
+    protected $casts = [
+        'inicio' => 'date',
+        'fim' => 'date',
     ];
 
     /**

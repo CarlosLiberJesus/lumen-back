@@ -7,14 +7,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-final class InstituicaoDados extends Model
+final class InstituicaoEntidadeJuridica extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'instituicao_dados';
+    protected $table = 'instituicao_entidade_juridicas';
 
     /**
      * The attributes that are mass assignable.
@@ -22,26 +22,27 @@ final class InstituicaoDados extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'nif',
-        'certidao_permanente',
         'instituicao_id',
-        'sinopse',
-        'fundacao',
-        'dissolucao',
-    ];
-
-    protected $casts = [
-        'formacao' => 'date',
-        'dissolucao' => 'date',
+        'entidade_juridica_id',
     ];
 
     /**
-     * Get the instituicao that owns the dado.
+     * Get the instituicao that owns the instituicao entidade juridica.
      *
      * @return BelongsTo<Instituicao, $this>
      */
     public function instituicao(): BelongsTo
     {
         return $this->belongsTo(Instituicao::class, 'instituicao_id');
+    }
+
+    /**
+     * Get the entidade juridica that owns the instituicao entidade juridica.
+     *
+     * @return BelongsTo<EntidadeJuridica, $this>
+     */
+    public function entidadeJuridica(): BelongsTo
+    {
+        return $this->belongsTo(EntidadeJuridica::class, 'entidade_juridica_id');
     }
 }

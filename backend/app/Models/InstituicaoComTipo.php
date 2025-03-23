@@ -27,7 +27,7 @@ final class InstituicaoComTipo extends Model
     ];
 
     /**
-     * Get the instituicao that owns the instituicao com ramo.
+     * Get the instituicao that owns the instituicao com tipo.
      *
      * @return BelongsTo<Instituicao, $this>
      */
@@ -37,7 +37,7 @@ final class InstituicaoComTipo extends Model
     }
 
     /**
-     * Get the instituicao ramo that owns the instituicao com ramo.
+     * Get the instituicao tipo that owns the instituicao com tipo.
      *
      * @return BelongsTo<InstituicaoTipo, $this>
      */

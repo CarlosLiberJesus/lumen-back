@@ -47,6 +47,8 @@ final class Cidadao extends Model
      */
     protected $casts = [
         'nacional' => 'boolean',
+        'data_nascimento' => 'date',
+        'data_falecimento' => 'date',
     ];
 
     /**

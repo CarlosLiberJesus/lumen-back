@@ -33,6 +33,11 @@ final class Governo extends Model
         'sinopse',
     ];
 
+    protected $casts = [
+        'formacao' => 'date',
+        'dissolucao' => 'date',
+    ];
+
     /**
      * Get the republica that owns the governo.
      *

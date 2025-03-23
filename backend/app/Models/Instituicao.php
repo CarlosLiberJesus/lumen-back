@@ -29,20 +29,11 @@ final class Instituicao extends Model
         'nome',
         'sigla',
         'sinopse',
+        'nacional',
+        'extinta',
         'responde_instituicao_id',
-        'entidade_juridicas_id',
         'params',
     ];
-
-    /**
-     * Get the instituicao carater that owns the instituicao.
-     *
-     * @return HasMany<InstituicaoComTipo, $this>
-     */
-    public function instituicaoRamos(): HasMany
-    {
-        return $this->hasMany(InstituicaoComTipo::class, 'instituicao_id');
-    }
 
     /**
      * Get the instituicao that this instituicao responds to.
@@ -105,23 +96,23 @@ final class Instituicao extends Model
     }
 
     /**
-     * Instituicao HasOne EntidadeJuridica.
+     * Get the entidade juridicas for the instituicao.
      *
-     * @return HasOne<EntidadeJuridica, $this>
+     * @return BelongsToMany<EntidadeJuridica, $this>
      */
-    public function entidadeJuridica(): HasOne
+    public function entidadeJuridicas(): BelongsToMany
     {
-        return $this->hasOne(EntidadeJuridica::class, 'id', 'entidade_juridicas_id');
+        return $this->belongsToMany(EntidadeJuridica::class, 'instituicao_entidade_juridicas', 'instituicao_id', 'entidade_juridica_id');
     }
 
     /**
-     * Instituicao has many InstituicaoRamos.
+     * Get the instituicao tipos for the instituicao.
      *
-     * @return HasMany<InstituicaoComTipo, $this>
+     * @return BelongsToMany<InstituicaoTipo, $this>
      */
-    public function ramos(): HasMany
+    public function tipos(): BelongsToMany
     {
-        return $this->hasMany(InstituicaoComTipo::class, 'instituicao_id');
+        return $this->belongsToMany(InstituicaoTipo::class, 'instituicao_com_tipos', 'instituicao_id', 'instituicao_tipo_id');
     }
 
     /**

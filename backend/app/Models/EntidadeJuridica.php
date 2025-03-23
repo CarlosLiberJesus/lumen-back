@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 final class EntidadeJuridica extends Model
 {
@@ -34,4 +35,14 @@ final class EntidadeJuridica extends Model
     protected $casts = [
         'params' => 'array',
     ];
+
+    /**
+     * Get the instituicoes for the entidade juridica.
+     *
+     * @return BelongsToMany<Instituicao, $this>
+     */
+    public function instituicoes(): BelongsToMany
+    {
+        return $this->belongsToMany(Instituicao::class, 'instituicao_entidade_juridicas', 'entidade_juridica_id', 'instituicao_id');
+    }
 }

@@ -58,13 +58,12 @@ The inner folder, might seem redundant, but can be use as dev-ops safe-guards an
 7. Dont forget to run migrations:
    ```sh
    php artisan migrate
-   ...
+   php artisan db:seed --class=DeploySeeder
    ```
 
-### php script
+### scripts
 
-- php artisan iseed relacao_tipos --exclude=created_at,updated_at
-- todo: não já há um artisan:task ?
+- pg_dump -U local_user -s -h localhost lumen_db > dump.sql
 
 ## Python Scripts
 
@@ -85,3 +84,4 @@ python extract_text.py   # Edit the paths to file first
 - Dec 23, 2024 - Laravel v11.36.1 (PHP v8.4.1) Native
 - Jan 04, 2025 - Newsletter Test Page
 - Fev 10, 2025 - Including Python
+- Mar 22, 2025 - Folder Docs To AI support

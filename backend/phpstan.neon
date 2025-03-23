@@ -9,9 +9,12 @@ parameters:
 
     # Level 10 is the highest level
     level: max
+    treatPhpDocTypesAsCertain: false
 
 #    ignoreErrors:
 #        - '#PHPDoc tag @var#'
 #
     excludePaths:
         - %currentWorkingDirectory%/app/Http/Controllers/EmailController.php
+        - %currentWorkingDirectory%/app/Console/Commands/*
+

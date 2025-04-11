@@ -36,8 +36,14 @@ final class DeploySeeder extends Seeder
         $this->call(LeiTiposSeeder::class);
         $this->call(LeiPartesSeeder::class);
 
+        $this->call(RepublicasGovernosSeeder::class);
+        $this->call(InstituicoesSeeder::class);
+        $this->call(GovernosInstituicoesCargosSeeder::class);
+        // $this->call(InstituicaoDadosTableSeeder::class);
+        // $this->call(InstituicaoComTiposTableSeeder::class);
+
         // Chama o comando scrape:republicas
-        Artisan::call('scrape:republicas');
+        // Artisan::call('scrape:republicas');
 
         /*
         $this->call(RepublicaSeeder::class);

@@ -22,7 +22,7 @@ final class ConselhoMinistros extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'instituicao_governo_id',
+        'governo_id',
         'cargo_id',
         'cidadao_id',
     ];
@@ -30,11 +30,11 @@ final class ConselhoMinistros extends Model
     /**
      * Get the Governo that owns the ConselhoMinistros.
      *
-     * @return BelongsTo<InstituicaoGoverno, $this>
+     * @return BelongsTo<Governo, $this>
      */
-    public function instituicaoGoverno(): BelongsTo
+    public function governo(): BelongsTo
     {
-        return $this->belongsTo(InstituicaoGoverno::class);
+        return $this->belongsTo(Governo::class);
     }
 
     /**

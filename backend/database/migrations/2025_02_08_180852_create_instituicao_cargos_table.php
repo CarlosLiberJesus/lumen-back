@@ -12,7 +12,7 @@ return new class extends Migration
     {
         Schema::create('instituicao_cargos', function (Blueprint $table): void {
             $table->id();
-            $table->uuid('uuid');
+            $table->uuid('uuid')->unique()->index();
             $table->string('cargo');
             $table->enum('tipo', ['instituicao', 'instituicao_legislatura', 'instituicao_presidencial', 'instituicao_governo'])->comment('Cargo pode ser de uma instituição, ou dos seus filhos temporais');
             $table->unsignedBigInteger('instituicao_id')->comment('Instituição a que pertence o cargo');

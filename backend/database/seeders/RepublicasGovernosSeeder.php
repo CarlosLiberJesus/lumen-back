@@ -2,23 +2,22 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands;
+namespace Database\Seeders;
 
 use App\Models\AnexoTipo;
 use App\Models\Governo;
+use App\Models\GovernoAnexo;
 use App\Models\Republica;
 use App\Models\RepublicaAnexo;
-use Exception;
-use Illuminate\Console\Command;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
-final class ScrapeRepublicas extends Command
+final class RepublicasGovernosSeeder extends Seeder
 {
-    protected $signature = 'scrape:republicas';
-
-    protected $description = 'Scrape republic data from Wikipedia';
-
-    public function handle(): void
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
     {
         try {
             $republicas = [
@@ -73,7 +72,7 @@ final class ScrapeRepublicas extends Command
                             'inicio' => '1801-01-06',
                             'fim' => '1804-04-15',
                             'sinopse' => '<p><span>O 1.º governo da regência do Príncipe D. João, constituído a 6 de Janeiro de 1801 e exonerado a 15 de Abril de 1804, foi presidido pelo Duque de Lafões, na qualidade de ministro assistente ao despacho (se bem que o cargo de chefe de governo não estava ainda definido), sendo o executivo encabeçado pelo próprio D. João, Príncipe Regente, que exercia a regência por incapacidade da rainha D. Maria I.</span></p>
-<p><span>A 6 de Janeiro de 1801, as secretarias de Estado dos Negócios da Guerra e a dos Negócios Estrangeiros foram separadas, mas logo se voltaram a unir em 23 de Julho de 1801.</span></p>',
+                                        <p><span>A 6 de Janeiro de 1801, as secretarias de Estado dos Negócios da Guerra e a dos Negócios Estrangeiros foram separadas, mas logo se voltaram a unir em 23 de Julho de 1801.</span></p>',
                         ],
                         [
                             'sigla' => 'II',
@@ -86,13 +85,25 @@ final class ScrapeRepublicas extends Command
                             'nome' => 'Conselho de Regência de 1807',
                             'inicio' => '1807-11-26',
                             'fim' => '1808-02-01',
-                            'sinopse' => '<p><span>O Conselho de Regência de 1807 é a designação pela qual ficou conhecido o Conselho de Regência ordenado pelo Príncipe Regente D. João a 26 de Novembro de 1807, três dias antes da transferência da corte para o Brasil. Este Conselho da Regência governou o país entre 29 de Novembro de 1807 e 1 de Fevereiro de 1808, data em que foi extinto pelo General francês Junot. Após a expulsão dos franceses em 15 de Setembro de 1808, embora com algumas variantes, voltou a ser restabelecido.</span></p>',
+                            'sinopse' => '<p><span>O Conselho de Regência de 1807 é a designação pela qual ficou conhecido o Conselho de Regência ordenado pelo Príncipe Regente D. João a 26 de Novembro de 1807, três dias antes da transferência da corte para o Brasil.</span></p>',
                         ],
                         [
-                            'nome' => 'Junta Provisional do Governo Supremo',
+                            'nome' => 'Governo Napoleónico',
                             'inicio' => '1808-02-01',
+                            'fim' => '1808-08-30',
+                            'sinopse' => '<p><span>O Conselho de Governo de 1808, constituído a 1 de Fevereiro de 1808 e exonerado a 30 de Agosto de 1808 (Convenção de Sintra), foi presidido pelo General Jean-Andoche Junot, na qualidade de General-em-Chefe do Exército Francês em Portugal, em nome de Napoleão Bonaparte, Imperador dos Franceses e Rei da Itália.</span></p>',
+                        ],
+                        [
+                            'nome' => 'Junta Provisional',
+                            'inicio' => '1808-08-30',
                             'fim' => '1808-09-26',
                             'sinopse' => '<p><span>A Junta Provisional do Governo Supremo foi o órgão, sediado no Porto, que que administrou Portugal entre 19 de Junho e 26 de Setembro de 1808, enquanto o Conselho de Regência não se encontrava restabelecido em Lisboa após a intervenção inglesa durante a primeira invasão francesa de Portugal.</span></p>',
+                        ],
+                        [
+                            'nome' => 'Conselho de Regência de 1809',
+                            'inicio' => '1809-01-02',
+                            'fim' => '1820-08-24',
+                            'sinopse' => '<p><span>Este novo conselho, indigitado em 2 de Janeiro de 1809, no Palácio do Rio de Janeiro, no Brasil para Portugal. Por decreto de 24 de Maio de 1810, o Príncipe Regente aceita a demissão do Marquês das Minas e indigita, para além dos Governadores já existentes.</span></p>',
                         ],
                         [
                             'sigla' => 'III',
@@ -115,23 +126,23 @@ final class ScrapeRepublicas extends Command
                     'inicio' => '1822-09-24',
                     'fim' => '1828-02-26',
                     'sinopse' => '<p><span>Em 1807, com as invasões francesas, a família real portuguesa exilou-se no Brasil, e a Grã-Bretanha passou a exercer uma forte influência sobre Portugal, nomeadamente por oficiais britânicos, como o marechal Beresford que assumiu o comando das tropas portuguesas. Isso gerou descontentamento entre os portugueses, levando à criação de movimentos de oposição, como a conspiração de 1817, liderada por Gomes Freire de Andrade, que acabou por ser descoberto e executado, tornando-se um símbolo dos ideais liberais.</span></p>
-<p><span>O movimento também teve reflexos nas sociedades secretas como o Sinédrio , que, em 1820, protagonizou a Revolução que levou à instauração de um regime constitucional.</span></p>
-<p><span>O Vintismo caracteriza-se por ser um período político que durou em Portugal entre 1820 e 1823, marcado pelo radicalismo das soluções liberais e pelo predomínio das Cortes Constituintes, influenciado pela Constituição Espanhola de Cádis.</span></p>
-<p><span>Este movimento iniciou-se com o pronunciamento militar do Porto, em agosto de 1820. O objetivo central do Vintismo era a regeneração do país, promovendo uma aliança entre o rei e as forças sociais representadas nas Cortes, na expectativa de criar uma constituição que garantisse uma melhor governação. Assim, o movimento Vintista visava o fim do absolutismo e o estabelecimento de um regime constitucional. No entanto, a independência do Brasil em 1822 foi um golpe para o regime, enfraquecendo a economia portuguesa e provocando uma reação negativa entre os vintistas.</span></p>
-<p><span>O Vintismo terminou com a Vilafrancada quando o infante D.Miguel liderou uma sublevação militar que resultou na abolição da Constituição de 1822 e no restabelecimento dos ideais do Antigo Regime, ainda que de forma mitigada.</span></p>',
+                                    <p><span>O movimento também teve reflexos nas sociedades secretas como o Sinédrio , que, em 1820, protagonizou a Revolução que levou à instauração de um regime constitucional.</span></p>
+                                    <p><span>O Vintismo caracteriza-se por ser um período político que durou em Portugal entre 1820 e 1823, marcado pelo radicalismo das soluções liberais e pelo predomínio das Cortes Constituintes, influenciado pela Constituição Espanhola de Cádis.</span></p>
+                                    <p><span>Este movimento iniciou-se com o pronunciamento militar do Porto, em agosto de 1820. O objetivo central do Vintismo era a regeneração do país, promovendo uma aliança entre o rei e as forças sociais representadas nas Cortes, na expectativa de criar uma constituição que garantisse uma melhor governação. Assim, o movimento Vintista visava o fim do absolutismo e o estabelecimento de um regime constitucional. No entanto, a independência do Brasil em 1822 foi um golpe para o regime, enfraquecendo a economia portuguesa e provocando uma reação negativa entre os vintistas.</span></p>
+                                    <p><span>O Vintismo terminou com a Vilafrancada quando o infante D.Miguel liderou uma sublevação militar que resultou na abolição da Constituição de 1822 e no restabelecimento dos ideais do Antigo Regime, ainda que de forma mitigada.</span></p>',
                     'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1200px-Flag_of_Portugal.svg.png',
                     'governos' => [
                         [
-                            'nome' => 'Revolução liberal do Porto',
+                            'nome' => 'Revoluções liberais do Porto e Lisboa',
                             'inicio' => '1820-08-24',
                             'fim' => '1820-09-28',
                             'sinopse' => '<p><span>A Revolução do Porto, também referida como Revolução Liberal do Porto, foi um movimento de cunho liberal que eclodiu a 24 de agosto de 1820 na cidade do Porto e teve repercussões tanto na História de Portugal quanto na História do Brasil. O movimento resultou no retorno (1821) da Corte Portuguesa, que se transferira para o Brasil durante a Guerra Peninsular, e no fim do absolutismo em Portugal, com a ratificação e implementação da primeira Constituição portuguesa (1822).</span></p>
                             <p><span>A revolução espalhou-se rapidamente, sem resistências, para outros centros urbanos do país, consolidando-se com a adesão de Lisboa.</span></p>
-<p><span>Aqui, a 15 de setembro de 1820, um movimento de oficiais subalternos, desencadeado pelo tenente Aurélio José de Moraes, com o apoio da burguesia e de populares, depôs os Regentes e constituiu um governo interino.</span></p>
-<p><span>Finalmente, a 28 de setembro, ambos os governos, do Porto e de Lisboa, uniram-se numa única "Junta Provisional do Supremo Governo do Reino", com o encargo de organizar as eleições para as Cortes Constituintes.</span></p>',
+                            <p><span>Aqui, a 15 de setembro de 1820, um movimento de oficiais subalternos, desencadeado pelo tenente Aurélio José de Moraes, com o apoio da burguesia e de populares, depôs os Regentes e constituiu um governo interino.</span></p>
+                            <p><span>Finalmente, a 28 de setembro, ambos os governos, do Porto e de Lisboa, uniram-se numa única "Junta Provisional do Supremo Governo do Reino", com o encargo de organizar as eleições para as Cortes Constituintes.</span></p>',
                         ],
                         [
-                            'nome' => 'Junta Provisional do Governo Supremo do Reino',
+                            'nome' => 'Junta Provisional do Governo',
                             'inicio' => '1820-09-28',
                             'fim' => '1821-01-30',
                             'sinopse' => '<p><span>A Junta Provisional do Governo Supremo do Reino foi o governo que administrou Portugal após a Revolução liberal do Porto a 24 de Agosto de 1820. Esta junta era composta por dois órgãos: Junta Provisional do Governo Supremo do Reino e Junta Preparatória das Cortes</span></p>',
@@ -267,13 +278,13 @@ final class ScrapeRepublicas extends Command
                         [
                             'nome' => 'Governo da Regência',
                             'inicio' => '1830-03-15',
-                            'fim' => '1834-09-29',
+                            'fim' => '1834-09-24',
                             'sinopse' => '<p><span>O Governo da Regência de D. Pedro, nomeado a 15 de março de 1830, na Terceira, Açores, e exonerado a 29 de setembro de 1834, foi o governo português do lado liberal chefiado por D. Pedro, Duque de Bragança (que era regente) em defesa do direito ao trono português por parte da sua filha D. Maria II, durante a Guerra Civil Portuguesa de 1828–1834, e opondo-se à usurpação deste pelo seu irmão D. Miguel.</span></p>',
                         ],
                         [
                             'sigla' => 'I',
                             'nome' => 'Governo da Monarquia Constitucional',
-                            'inicio' => '1834-09-29',
+                            'inicio' => '1834-09-24',
                             'fim' => '1835-05-27',
                             'sinopse' => '<p><span>O 1.º governo da Monarquia Constitucional, ou 1.º governo do Devorismo, nomeado a 24 de setembro de 1834 e exonerado a 27 de maio de 1835, foi liderado pelo duque de Palmela, e posteriormente pelo conde de Linhares. Foi o primeiro governo português a ter efetivamente um chefe de governo entre os seus membros, apesar de este cargo não estar juridicamente definido. Entre os dias 28 de abril e 4 de maio de 1835, a totalidade deste executivo serviu como chefe de governo de Portugal, por ausência de um presidente do Conselho de Ministros. Era constituído por conservadores (palmelistas), e por seguidores de D. Pedro IV pertencentes ao Grande Oriente Lusitano (chamorros).</span></p>',
                         ],
@@ -794,7 +805,8 @@ final class ScrapeRepublicas extends Command
                             'nome' => 'Junta Constitucional de 1915',
                             'inicio' => '1915-05-14',
                             'fim' => '1915-05-17',
-                            'sinopse' => '<p><span>A Junta Constitucional de 1915, também conhecida como Junta Revolucionária foi um órgão provisório formado após o golpe militar de 14 de Maio de 1915, que destituiu o governo do general Joaquim Pimenta de Castro. Um dos objectivos do golpe era forçar a participação de Portugal na Grande Guerra, o que foi conseguido. Governou apenas três dias, até 17 de Maio, já que cessou funções com a tomada de posse do ministério presidido interinamente por José de Castro (o presidente do Ministério nomeado era João Chagas, que foi impedido de tomar posse após sofrer um atentado), que mais tarde viria a ocupar efetivamente o cargo. Neste curto período, a Junta foi encarregada de supervisionar todos os departamentos governamentais, até à tomada de posse dos respetivos ministros do 10.º governo republicano.</span></p>',
+                            'sinopse' => '<p><span>A Junta Constitucional de 1915, também conhecida como Junta Revolucionária foi um órgão provisório formado após o golpe militar de 14 de Maio de 1915, que destituiu o governo do general Joaquim Pimenta de Castro. Um dos objectivos do golpe era forçar a participação de Portugal na Grande Guerra, o que foi conseguido. Governou apenas três dias, até 17 de Maio, já que cessou funções com a tomada de posse do ministério presidido interinamente por José de Castro (o presidente do Ministério nomeado era João Chagas, que foi impedido de tomar posse após sofrer um atentado), que mais tarde viria a ocupar efetivamente o cargo. Neste curto período, a Junta foi encarregada de supervisionar todos os departamentos governamentais, até à tomada de posse dos respetivos ministros do 10.º governo republicano.</span></p>
+                                            <p><span>Os membros da Junta Constitucional estavam ligados ao agrupamento Jovem Turquia, que coorganizou o movimento de 14 de Maio de 1915. Jovem Turquia foi um grupo de oficiais do Exército Português liderados por Álvaro de Castro e afectos ao Partido Democrático. Este grupo organizou-se em torno da loja maçónica Jovem Turquia, da qual adoptou o nome. Os jovens turcos, como eram conhecidos, tiveram um papel relevante nos acontecimentos revolucionários de 1915 e na cadeia de eventos que levou Portugal a declarar guerra à Alemanha e a entrar na Primeira Guerra Mundial.</span></p>',
                         ],
                         [
                             'sigla' => 'X',
@@ -1161,57 +1173,63 @@ final class ScrapeRepublicas extends Command
                     'nome' => 'Terceira República',
                     'inicio' => '1974-04-25',
                     'fim' => null,
-                    'sinopse' => 'Atual regime democrático parlamentar de Portugal, iniciado após a Revolução dos Cravos.',
+                    'sinopse' => '<p><span>Atual regime democrático parlamentar de Portugal, iniciado após a Revolução dos Cravos.</span></p>',
                     'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1200px-Flag_of_Portugal.svg.png',
                     'governos' => [
                         [
+                            'nome' => 'Junta de Salvação Nacional',
+                            'inicio' => '1974-04-26',
+                            'fim' => '1974-05-16',
+                            'sinopse' => '<p><span>A Junta de Salvação Nacional (JSN) foi um grupo de militares designados para sustentar o governo do Estado Português em 25 Abril de 1974, após o golpe de estado que derrubou o Estado Novo. Esta Junta esteve em funcionamento desde o comunicado do presidente António de Spínola, emitido às 01h30 do dia 26 de Abril de 1974, até à tomada de posse do Governo Provisório, ocorrida a 16 de Maio do mesmo ano. Embora com características diferentes, sem poder executivo directo, manteve-se até ser extinta após os acontecimentos de 11 de Março de 1975, sendo substituída pelo Conselho da Revolução instituído a 14 de Março de 1975 pela Assembleia do Movimento das Forças Armadas.</span></p>',
+                        ],
+                        [
                             'sigla' => 'I',
                             'nome' => 'Governo Provisório',
-                            'republica_id' => 5,
                             'inicio' => '1974-05-16',
                             'fim' => '1974-07-18',
-                            'sinopse' => '<p><span>O Governo Provisório foi o primeiro governo português após a Revolução dos Cravos, que derrubou o regime do Estado Novo. Foi formado a 15 de maio de 1974, com o objetivo de preparar o país para a realização de eleições livres e democráticas. O seu primeiro Presidente do Conselho de Ministros foi o general António de Spínola, que foi substituído por Adelino da Palma Carlos a 18 de julho de 1974. O Governo Provisório foi dissolvido a 18 de julho de 1974, após a realização das eleições para a Assembleia Constituinte.</span></p>',
+                            'sinopse' => '<p><span>O I Governo Provisório de Portugal tomou posse a 16 de Maio de 1974, menos de 1 mês após o 25 de Abril de 1974, presidido por um democrata moderado, o advogado Adelino da Palma Carlos. Integrando representantes das principais forças políticas da oposição — da esfera comunista à democrata liberal — mas dominado nas suas pastas-chave, pelos representantes ligados à área socialista, este governo viria a ser presa da sua própria heterogeneidade ideológica, espelho de uma dinâmica que se afirmava de forma crescente no seio da sociedade portuguesa e que viria a precipitar a queda deste governo em Julho de 1974.</span></p>
+                            <p><span>O Governo cai menos de dois meses depois, a 11 de Julho de 1974, na sequência de uma proposta apresentada pelo Primeiro-Ministro de realização em Outubro de 1974 das eleições presidenciais e, simultaneamente, de um referendo a uma Constituição Provisória. As presidenciais ocorreriam, portanto, antes das eleições constituintes, relegando estas últimas para finais de 1976. Tal proposta, que viria a ser chamada "Plano Palma Carlos" ou mesmo "Golpe Palma Carlos", contrariava o Programa do MFA e constituía uma forma de reforçar o poder do Presidente da República, António de Spínola.</span></p>',
                         ],
                         [
                             'sigla' => 'II',
                             'nome' => 'Governo Provisório',
-                            'republica_id' => 5,
                             'inicio' => '1974-07-18',
                             'fim' => '1974-09-30',
-                            'sinopse' => '<p><span>Ainda em estudo o tipo de presidencia, se o francês como defendido por Spinola. Aldelino da Palma Carlos demite-se porque o MFA apresentou desagrado de ser civil de tendencia federalista (conforme o Livro "Portugal e o Futuro" de Spinola). A saída forçada, obriga a nomeação de Vasco Gonçalves, militar definido pelo MFA, começando o PREC.</span></p>',
+                            'sinopse' => '<p><span>Ainda em estudo o tipo de presidencia, se o francês como defendido por Spinola. Aldelino da Palma Carlos demite-se porque o MFA apresentou desagrado de ser civil de tendencia federalista (conforme o Livro "Portugal e o Futuro" de Spinola). A saída forçada, obriga a nomeação de Vasco Gonçalves, militar definido pelo MFA, começando o PREC.</span></p>
+                            <p><span>O II Governo Provisório de Portugal resultou do pedido de demissão do primeiro-ministro Palma Carlos a 9 de Julho de 1974 por, alegadamente, não ter condições políticas para governar, numa clara alusão ao peso da influência do MFA. Com ele solidarizaram-se alguns ministros do seu gabinete, entre eles Francisco Sá Carneiro. A 12 de Julho, Vasco Gonçalves, um homem do MFA, foi indigitado pelo presidente da República, António de Spínola, para o cargo de primeiro-ministro. O II Governo Provisório tomou posse a 18 de Julho e caiu a 30 de Setembro do mesmo ano.</span></p>',
                         ],
                         [
                             'sigla' => 'III',
                             'nome' => 'Governo Provisório',
-                            'republica_id' => 5,
+                            'sinopse' => '<p><span>O III Governo Provisório de Portugal foi chefiado por Vasco Gonçalves, o qual tomou posse a 30 de Setembro de 1974, tendo terminado o seu mandato a 26 de Março de 1975.</span></p>
+<p><span>A 12 de Março de 1975 são extintos a Junta de Salvação Nacional e o Conselho de Estado e em sua substituição é criado o Conselho da Revolução. O Governo dá início à execução de um grande plano de nacionalizações (nomeadamente, a Banca, Seguros, e Transportes).</span></p>',
                             'inicio' => '1974-09-30',
                             'fim' => '1975-03-26',
                         ],
                         [
                             'sigla' => 'IV',
                             'nome' => 'Governo Provisório',
-                            'republica_id' => 5,
+                            'sinopse' => '<p><span>O IV Governo Provisório de Portugal foi chefiado por Vasco Gonçalves, cuja tomada de posse se deu a 26 de Março de 1975, tendo o Governo caído a 8 de Agosto de 1975, altura do Verão Quente.</span></p>',
                             'inicio' => '1975-03-26',
                             'fim' => '1975-08-08',
                         ],
                         [
                             'sigla' => 'V',
                             'nome' => 'Governo Provisório',
-                            'republica_id' => 5,
+                            'sinopse' => '<p><span>O V Governo Provisório de Portugal, chefiado por Vasco Gonçalves, cuja tomada de posse se deu a 8 de Agosto de 1975, viria a cair a 19 de Setembro de 1975.</span></p>',
                             'inicio' => '1975-08-08',
                             'fim' => '1975-09-19',
                         ],
                         [
                             'sigla' => 'VI',
                             'nome' => 'Governo Provisório',
-                            'republica_id' => 5,
+                            'sinopse' => '<p><span>O VI Governo Provisório de Portugal (e último dos governos provisórios da Terceira República Portuguesa), foi chefiado por Pinheiro de Azevedo, cuja tomada de posse se deu a 19 de setembro de 1975, e que seria substituído a 23 de junho de 1976, de forma interina, devido a um problema de saúde, por Almeida e Costa. A 23 de julho de 1976 entra em funções o I Governo Constitucional, constituído após a eleição e tomada de posse do Presidente da República António Ramalho Eanes.</span></p>',
                             'inicio' => '1975-09-19',
                             'fim' => '1976-07-23',
                         ],
                         [
                             'sigla' => 'I',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1976-07-23',
                             'fim' => '1978-01-23',
                             'anexos' => [
@@ -1235,161 +1253,138 @@ final class ScrapeRepublicas extends Command
                         [
                             'sigla' => 'II',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1978-01-23',
                             'fim' => '1978-08-29',
                         ],
                         [
                             'sigla' => 'III',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1978-08-29',
                             'fim' => '1978-11-22',
                         ],
                         [
                             'sigla' => 'IV',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1978-11-22',
                             'fim' => '1979-07-07',
                         ],
                         [
                             'sigla' => 'V',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1979-08-01',
                             'fim' => '1980-01-03',
                         ],
                         [
                             'sigla' => 'VI',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1980-01-03',
                             'fim' => '1981-01-09',
                         ],
                         [
                             'sigla' => 'VII',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1981-01-09',
                             'fim' => '1981-09-04',
                         ],
                         [
                             'sigla' => 'VIII',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1981-09-04',
                             'fim' => '1983-07-09',
                         ],
                         [
                             'sigla' => 'IX',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1983-07-09',
                             'fim' => '1985-11-06',
                         ],
                         [
                             'sigla' => 'X',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1985-11-06',
                             'fim' => '1987-08-17',
                         ],
                         [
                             'sigla' => 'XI',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1987-08-17',
                             'fim' => '1991-10-31',
                         ],
                         [
                             'sigla' => 'XII',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1991-10-31',
                             'fim' => '1995-10-25',
                         ],
                         [
                             'sigla' => 'XIII',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1995-10-28',
                             'fim' => '1999-10-25',
                         ],
                         [
                             'sigla' => 'XIV',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '1999-10-25',
                             'fim' => '2002-04-06',
                         ],
                         [
                             'sigla' => 'XV',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2002-04-06',
                             'fim' => '2004-07-17',
                         ],
                         [
                             'sigla' => 'XVI',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2004-07-17',
                             'fim' => '2005-03-12',
                         ],
                         [
                             'sigla' => 'XVII',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2005-03-12',
                             'fim' => '2009-10-26',
                         ],
                         [
                             'sigla' => 'XVIII',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2009-10-26',
                             'fim' => '2011-06-20',
                         ],
                         [
                             'sigla' => 'XIX',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2011-06-20',
                             'fim' => '2015-10-30',
                         ],
                         [
                             'sigla' => 'XX',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2015-10-30',
                             'fim' => '2015-11-26',
                         ],
                         [
                             'sigla' => 'XXI',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2015-11-26',
                             'fim' => '2019-10-26',
                         ],
                         [
                             'sigla' => 'XXII',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2019-10-26',
                             'fim' => '2022-03-30',
                         ],
                         [
                             'sigla' => 'XXIII',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2022-03-30',
                             'fim' => '2024-04-02',
                         ],
                         [
                             'sigla' => 'XXIV',
                             'nome' => 'Governo Constitucional',
-                            'republica_id' => 5,
                             'inicio' => '2024-04-02',
                             'fim' => null,
                         ],
@@ -1402,9 +1397,9 @@ final class ScrapeRepublicas extends Command
 
             foreach ($republicas as $republicaData) {
                 $republica = Republica::firstOrCreate(
-                    ['nome' => $republicaData['nome']],
                     [
                         'uuid' => Str::uuid(),
+                        'nome' => $republicaData['nome'],
                         'inicio' => $republicaData['inicio'],
                         'fim' => $republicaData['fim'],
                         'sinopse' => $republicaData['sinopse'],
@@ -1413,18 +1408,16 @@ final class ScrapeRepublicas extends Command
 
                 RepublicaAnexo::firstOrCreate(
                     [
+                        'uuid' => Str::uuid(),
                         'republica_id' => $republica->id,
                         'anexo' => $republicaData['image_url'],
-                    ],
-                    [
-                        'uuid' => Str::uuid(),
                         'anexo_tipo_id' => $anexoTipoWikipedia->id,
                         'nome' => 'Bandeira da '.$republicaData['nome'],
                         'descricao' => 'Bandeira ou símbolo da '.$republicaData['nome'],
                     ]
                 );
 
-                $this->info(sprintf('Inserted república: %s (%s–%s)', $republicaData['nome'], $republicaData['inicio'], $republicaData['fim']));
+                // $this->info(sprintf('Inserted república: %s (%s–%s)', $republicaData['nome'], $republicaData['inicio'], $republicaData['fim']));
 
                 foreach ($republicaData['governos'] as $governoData) {
                     $governo = Governo::firstOrCreate(
@@ -1440,9 +1433,9 @@ final class ScrapeRepublicas extends Command
                     );
                     if (isset($governoData['anexos'])) {
                         foreach ($governoData['anexos'] as $anexoData) {
-                            $anexo = RepublicaAnexo::firstOrCreate(
+                            $anexo = GovernoAnexo::firstOrCreate(
                                 [
-                                    'republica_id' => $republica->id,
+                                    'governo_id' => $governo->id,
                                     'anexo' => $anexoData['anexo'],
                                     'uuid' => Str::uuid(),
                                     'anexo_tipo_id' => $anexoTipoWikipedia->id,
@@ -1455,10 +1448,11 @@ final class ScrapeRepublicas extends Command
                 }
             }
 
-            $this->info('Completed scraping repúblicas.');
+            // $this->info('Completed scraping repúblicas.');
 
         } catch (Exception $exception) {
             $this->error('Error occurred: '.$exception->getMessage());
         }
+
     }
 }

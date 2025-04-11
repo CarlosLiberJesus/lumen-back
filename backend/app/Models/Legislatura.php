@@ -55,6 +55,16 @@ final class Legislatura extends Model
     }
 
     /**
+     * Governo has many InstituicaoGoverno.
+     *
+     * @return HasMany<InstituicaoLegislatura, $this>
+     */
+    public function instituicoes(): HasMany
+    {
+        return $this->hasMany(InstituicaoLegislatura::class, 'legislatura_id');
+    }
+
+    /**
      * Legislatura has many Anexos.
      *
      * @return HasMany<InstituicaoAnexo, $this>

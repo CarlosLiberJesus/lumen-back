@@ -22,6 +22,7 @@ final class InstituicaoTiposSeeder extends Seeder
         InstituicaoTipo::create(['uuid' => Str::uuid(), 'tipo' => 'Independente', 'sinopse' => 'São estabelecidas para operar autonomamente do governo e da Assembleia da República. Têm funções de fiscalização, regulação ou supervisão, garantindo imparcialidade e objetividade']);
         InstituicaoTipo::create(['uuid' => Str::uuid(), 'tipo' => 'Externo', 'sinopse' => 'São organizações que interagem com a Assembleia da República, mas que não fazem parte da sua estrutura interna. Incluem agências governamentais, instituições públicas (como universidades) e organizações internacionais.']);
         InstituicaoTipo::create(['uuid' => Str::uuid(), 'tipo' => 'Partido', 'sinopse' => 'Outros de estatuto especial (in)controlado']);
+        InstituicaoTipo::create(['uuid' => Str::uuid(), 'tipo' => 'Ministério', 'codigo' => 'MIN', 'sinopse' => 'Órgão governamental responsável por uma área específica da administração pública']);
 
         // Tirado do INE
         // Lista de entidades que integram as Administrações Públicas

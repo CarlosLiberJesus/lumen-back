@@ -27,7 +27,6 @@ final class Governo extends Model
         'nome',
         'sigla',
         'republica_id',
-        'legislatura_id',
         'formacao',
         'dissolucao',
         'sinopse',
@@ -46,16 +45,6 @@ final class Governo extends Model
     public function republica(): BelongsTo
     {
         return $this->belongsTo(Republica::class);
-    }
-
-    /**
-     * Get the legislatura that owns the governo.
-     *
-     * @return BelongsTo<Legislatura, $this>
-     */
-    public function legislatura(): BelongsTo
-    {
-        return $this->belongsTo(Legislatura::class);
     }
 
     /**

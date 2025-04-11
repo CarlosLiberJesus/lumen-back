@@ -85,3 +85,9 @@ python extract_text.py   # Edit the paths to file first
 - Jan 04, 2025 - Newsletter Test Page
 - Fev 10, 2025 - Including Python
 - Mar 22, 2025 - Folder Docs To AI support
+
+# Cline Ai
+
+- `best_practices.md`
+- `/docs/project_structure.md`
+- `/docs/ai_context_guide.md`

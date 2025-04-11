@@ -12,12 +12,12 @@ return new class extends Migration
     {
         Schema::create('conselho_ministros', function (Blueprint $table): void {
             $table->id();
-            $table->unsignedBigInteger('instituicao_governo_id')->comment('Vai directamente à replica filho da Instituicao Governo');
+            $table->unsignedBigInteger('governo_id')->comment('O governo a que pertence o conselho de ministros.');
             $table->unsignedBigInteger('cargo_id')->comment('O cargo que o cidadao ocupa na instituicao_governo principalmente.');
             $table->unsignedBigInteger('cidadao_id');
             $table->timestamps();
 
-            $table->foreign('instituicao_governo_id')->references('id')->on('instituicao_governos');
+            $table->foreign('governo_id')->references('id')->on('governos');
             $table->foreign('cargo_id')->references('id')->on('instituicao_cargos');
             $table->foreign('cidadao_id')->references('id')->on('cidadaos');
         });

@@ -27,6 +27,7 @@ final class GovernoAnexo extends Model
         'governo_id',
         'anexo_tipo_id',
         'anexo',
+        'descricao',
     ];
 
     /**

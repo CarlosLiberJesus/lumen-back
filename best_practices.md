@@ -32,3 +32,12 @@
 - **Data Flow**: Fetch → Normalize (e.g., dates to `YYYY-MM-DD`) → Insert.
 - **Images**: Link to Commons URLs (e.g., `https://commons.wikimedia.org/wiki/File:X.jpg`) in `anexo`.
 - **Order**: Respect FKs—e.g., `republicas` before `presidenciais`.
+
+## Test Generations
+
+- Don't delete any previous written test
+
+## Continue Documentation
+
+- `/docs/project_structure.md`
+- `/docs/ai_context_guide.md`

@@ -28683,7 +28683,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         [
                                             'uuid' => Str::uuid(),
                                             'nome_completo' => isset($cidadaoData['nome_completo']) ?
-                                                mb_trim($cidadaoData['nome_completo']) : mb_trim($cidadaoData['nome']),
+                                                mb_trim($cidadaoData['nome_completo']) : null,
                                         ]
                                     );
 
@@ -28731,7 +28731,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                                 [
                                                     'uuid' => Str::uuid(),
                                                     'nome_completo' => isset($cidadaoData['nome_completo']) ?
-                                                        mb_trim($cidadaoData['nome_completo']) : mb_trim($cidadaoData['nome']),
+                                                        mb_trim($cidadaoData['nome_completo']) : null,
                                                 ]
                                             );
 

@@ -1482,7 +1482,7 @@ final class InstituicoesSeeder extends Seeder
                 ],
             ],
             [
-                'nome' => 'Ministério da Qualificação e do Emprego',
+                'nome' => 'Ministério para a Qualificação e o Emprego',
                 'sigla' => 'MQE',
                 'sinopse' => '<p><span>O Ministério para a Qualificação e Emprego foi a designação de um departamento do XIII Governo Constitucional de Portugal. A única ministra a titular a pasta foi Maria João Rodrigues.</span></p>',
                 'extinta' => true,

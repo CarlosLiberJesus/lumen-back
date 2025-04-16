@@ -29,7 +29,7 @@ final class DeploySeeder extends Seeder
         $this->call(EntidadeJuridicasSeeder::class);
         $this->call(RelacaoTiposSeeder::class);
 
-        User::create(['uuid' => Str::uuid(), 'name' => 'Operadores', 'status_id' => 1, 'rgpd' => true, 'email' => 'deployuser@bewhy.org', 'password' => Hash::make('1234')]);
+        User::create(['uuid' => Str::uuid(), 'name' => 'Operadores AI', 'status_id' => 1, 'rgpd' => true, 'email' => 'deployuser@bewhy.org', 'password' => Hash::make('1234')]);
         UserRole::create(['user_id' => 1, 'role_id' => 1]);
 
         $this->call(InstituicaoTiposSeeder::class);
@@ -39,6 +39,7 @@ final class DeploySeeder extends Seeder
         $this->call(RepublicasGovernosSeeder::class);
         $this->call(InstituicoesSeeder::class);
         $this->call(GovernosInstituicoesCargosSeeder::class);
+        $this->call(GovernosPosAbrilSeeder::class);
         // $this->call(InstituicaoDadosTableSeeder::class);
         // $this->call(InstituicaoComTiposTableSeeder::class);
 

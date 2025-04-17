@@ -13,7 +13,7 @@ return new class extends Migration
         Schema::create('governos', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->char('sigla', 8)->nullable();
+            $table->string('sigla', 8)->nullable();
             $table->string('nome');
             $table->unsignedBigInteger('republica_id');
             $table->date('formacao');

@@ -44,5 +44,31 @@ final class ContactoTiposSeeder extends Seeder
                 'icon' => 'fa fa-facebook',
             ]),
         ]);
+        ContactoTipo::create(['tipo' => 'Instagram', 'description' => 'Instagram',
+            'params' => json_encode([
+                'background' => [
+                    'hex' => '#E4405F',
+                    'bootstrap' => 'instagram',
+                ],
+                'color' => [
+                    'hex' => '#FFFFFF',
+                    'bootstrap' => 'white',
+                ],
+                'icon' => 'fa fa-instagram',
+            ]),
+        ]);
+        ContactoTipo::create(['tipo' => 'Youtube', 'description' => 'Youtube',
+            'params' => json_encode([
+                'background' => [
+                    'hex' => '#FF0000',
+                    'bootstrap' => 'Youtube',
+                ],
+                'color' => [
+                    'hex' => '#FFFFFF',
+                    'bootstrap' => 'white',
+                ],
+                'icon' => 'fa fa-youtube',
+            ]),
+        ]);
     }
 }

@@ -8,9 +8,11 @@ use App\Models\Cidadao;
 use App\Models\CidadaoCargo;
 use App\Models\ConselhoMinistros;
 use App\Models\Governo;
+use App\Models\GovernoAnexo;
 use App\Models\Instituicao;
 use App\Models\InstituicaoCargo;
 use App\Models\InstituicaoGoverno;
+use App\Models\InstituicaoGovernoAnexo;
 use App\Models\Republica;
 use Exception;
 use Illuminate\Database\Seeder;
@@ -980,6 +982,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc01.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc01/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464012/GC01.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470127/TomadaPosseGC01.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc01/lei-organica/lei-organica-i-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/I_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'notas' => 'Diário da República nº: 213/76 Série I 1º Suplemento; Decreto n.º 683-A/76, de 10 de setembro',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'II',
@@ -1637,6 +1678,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc02.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc02/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464015/GC02.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470132/TomadaPosseGC02.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc02/lei-organica/lei-organica-ii-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/II_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Publicado no Diário da República nº 55/78 Série I 1º Suplemento; Decreto-Lei n.º 41-A/78, de 7 de março',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'III',
@@ -2198,6 +2278,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc03.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc03/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464018/GC03.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470137/TomadaPosseGC03.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc03/lei-organica/lei-organica-iii-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/III_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Publicado no Diário da República nº: 226/78 Série I 1º Suplemento; Decreto-Lei n.º 300-A/78, de 30 de setembro',
                             ],
                         ],
                     ],
@@ -2829,6 +2948,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc04.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc04/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464021/GC04.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470142/TomadaPosseGC04.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc04/lei-organica/lei-organica-iv-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/IV_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Publicado no Diário da República nº: 299/78 SérieI 5º Suplemento; Decreto-Lei n.º 448/78, de 30 de dezembro',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'V',
@@ -3446,6 +3604,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc05.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc05/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464024/GC05.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470152/TomadaPosseGC05.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc05/lei-organica/lei-organica-governo-constitucional-5.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/V_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Publicada no Diário da República nº: 217/79 Série I; Decreto-Lei n.º 386/79, de 19 de setembro',
                             ],
                         ],
                     ],
@@ -4095,6 +4292,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc06.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc06/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464027/GC06.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470157/TomadaPosseGC06.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc06/lei-organica/lei-organica-do-vi-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/VI_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 32/80 Série I-2; Decreto-Lei n.º 3/80, de 7 de fevereiro',
                             ],
                         ],
                     ],
@@ -4835,6 +5071,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc07.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc07/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464069/GC07.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470162/TomadaPosseGC07.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc07/lei-organica/lei-organica-do-vii-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/VII_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 36/81 Série I; Decreto-Lei n.º 28/81, de 12 de fevereiro',
                             ],
                         ],
                     ],
@@ -5667,6 +5942,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc08.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc08/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464030/GC08.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470167/TomadaPosseGC08.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc08.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/VIII_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 236/81 Série I; Decreto-Lei n.º 290/81, de 14 de outubro',
                             ],
                         ],
                     ],
@@ -6525,6 +6839,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc09.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc09/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464033/GC09.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470172/TomadaPosseGC09.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc09/lei-organica/lei-organica-do-ix-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/IX_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 169/83 Série I 1º Suplemento; Decreto-Lei n.º 344-A/83, de 25 de julho',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'X',
@@ -7132,6 +7485,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc10.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc10/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464036/GC10.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470177/TomadaPosseGC10.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc10/lei-organica/lei-organica-do-x-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/X_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 290/85 Série I; Decreto-Lei n.º 497/85, de 17 de dezembro',
                             ],
                         ],
                     ],
@@ -8154,6 +8546,45 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc11.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc11/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464039/GC11.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470182/TomadaPosseGC11.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc11/lei-organica/lei-organica-do-xi-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XI_Governo_Constitucional_de_Portugal',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 219/87 Série I 1º Suplemento; Decreto-Lei n.º 329/87, de 23 de setembro',
                             ],
                         ],
                     ],
@@ -9357,6 +9788,570 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464042/GC12.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470187/TomadaPosseGC12.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/lei-organica/lei-organica-do-xii-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XII_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Dezembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931223.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Dezembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931216.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Dezembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931209.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Novembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931125.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Novembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931118.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Novembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931104.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Outubro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931028.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Outubro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931021.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Outubro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19931014.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Setembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930930.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Setembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930923.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Setembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930916.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Setembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930909.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Setembro de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930902.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Agosto de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930826.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Agosto de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930805.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Julho de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930729.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Julho de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930722.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Julho de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930715.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Julho de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930708.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Julho de 1993',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1993/19930701.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Dezembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941229.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Dezembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941222.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Dezembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941215.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Dezembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941209.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Dezembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941202.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Novembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941124.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Novembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941117.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Novembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941110.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Novembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941103.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Outubro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941027.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Outubro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941020.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Outubro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941013.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Outubro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19941006.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Setembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940929.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Setembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940922.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Setembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940915.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Setembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940908.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Setembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940901.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Agosto de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940825.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Agosto de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940804.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Julho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940728.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Julho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940721.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Julho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940714.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Julho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940707.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Junho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940630.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Junho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940623.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Junho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940616.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Junho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940609.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Junho de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940603.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Maio de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940526.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Maio de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940519.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Maio de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940512.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Maio de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940505.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Abril de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940428.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Abril de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940421.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Abril de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940414.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Abril de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940407.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 31 de Mar\u00e7o de 1994",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940331.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 24 de Mar\u00e7o de 1994",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940324.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 17 de Mar\u00e7o de 1994",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940317.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 10 de Mar\u00e7o de 1994",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940410.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 3 de Mar\u00e7o de 1994",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940303.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Fevereiro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940224.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Fevereiro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940217.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Fevereiro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940210.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Fevereiro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940203.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Janeiro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940127.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Janeiro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940120.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Janeiro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940113.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Janeiro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1994/19940106.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Outubro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19951012.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Setembro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950908.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Setembro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950914.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Setembro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950921.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Setembro de 1994',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950928.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Agosto de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950824.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Agosto de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950831.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Julho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950706.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Julho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950713.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Julho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950720.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Julho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950727.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Junho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950601.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Junho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950608.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Junho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950614.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Junho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950623.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Junho de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950629.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Maio de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950504.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Maio de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950511.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Maio de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950518.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Maio de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950525.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Abril de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950406.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Abril de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950413.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 2 de Mar\u00e7o de 1995",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950302.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 9 de Mar\u00e7o de 1995",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950309.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 16 de Mar\u00e7o de 1995",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950316.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Fevereiro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950323.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 30 de Mar\u00e7o de 1995",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950330.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Fevereiro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950209.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Fevereiro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950216.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Fevereiro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950223.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Janeiro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950105.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Janeiro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950112.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Janeiro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950119.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Janeiro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc12/comunicados-cm/cm-1995/19950126.aspx',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 279/91 Série I-A 1º Suplemento; Diploma: Decreto-lei nº 451/91',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'XIII',
@@ -10513,6 +11508,480 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464045/GC13.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470192/TomadaPosseGC13.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/lei-organica/lei-organica-do-xiii-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XIII_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Dezembro de 1995',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1995/19951213.aspx',
+                            ],
+                            [
+                                'nome' => '19951123',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1995/19951123.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Dezembro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19961206.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Novembro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19961121.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Outubro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19961010.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Outubro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19961017.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Outubro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19961024.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Setembro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960905.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Setembro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960926.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho do Ministros de 22 de Agosto de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960822.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Julho de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960703.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Julho de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960718.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Junho de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960605.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Junho de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960620.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Maio de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960509.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Maio de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960520.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho do Ministros de 18 de Abril de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960418.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 7 de Mar\u00e7o de 1996",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960307.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 12 de Mar\u00e7o de 1996",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960312.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 22 de Mar\u00e7o de 1996",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960322.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Janeiro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960104.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Janeiro de 1996',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1996/19960110.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Dezembro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19971230.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Dezembro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19971220.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Dezembro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19971211.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Novembro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19971120.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Novembro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19971113.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Novembro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19971105.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Outubro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19971009.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Outubro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19971003.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Setembro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970911.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Agosto de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970821.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Agosto de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970807.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Julho de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970717.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Julho de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970710.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Julho de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970703.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Junho de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970611.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Maio de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970515.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Maio de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970508.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Abril de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970423.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Abril de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970417.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Abril de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970410.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Fevereiro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970227.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Fevereiro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970220.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Fevereiro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970213.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Fevereiro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970206.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Fevereiro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970123.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Janeiro de 1997',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1997/19970116.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Novembro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19981125.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Novembro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19981119.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Novembro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19981113.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Outubro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19981022.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Setembro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980924.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Setembro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980917.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Agosto de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980806.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Julho de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980716.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Junho de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980625.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Junho de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980617.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Junho de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980604.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Maio de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980519.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Maio de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980507.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Abril de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980423.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Abril de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19989416.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Abril de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980402.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 26 de Mar\u00e7o de 1998",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980326.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 11 de Mar\u00e7o de 1998",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980311.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 5 de Mar\u00e7o de 1998",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980305.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Fevereiro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980212.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Fevereiro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980205.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Janeiro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980122.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Janeiro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980115.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Janeiro de 1998',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1998/19980108.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Outubro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19991008.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Setembro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990916.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Agosto de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990818.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Agosto de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990812.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Julho de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990729.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Julho de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990715.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Julho de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990708.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Maio de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990527.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Abril de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990429.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 18 de Mar\u00e7o de 1999",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990318.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 11 de Mar\u00e7o de 1999",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990311.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Fevereiro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990225.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Fevereiro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990219.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Fevereiro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990204.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Janeiro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc13/comunicados-cm/cm-1999/19990115.aspx',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 266/95 Série I-A 1º Suplemento; Decreto-Lei n.º 296-A/95, de 17 de novembro',
                             ],
                         ],
                     ],
@@ -11762,6 +13231,295 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464048/GC14.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/470197/TomadaPosseGC14.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/lei-organica/lei-organica-do-xiv-governo-constitucional.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XIV_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Dezembro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-1999/19991222.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Novembro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-1999/19991130.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Novembro de 1999',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-1999/19991105.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Dezembro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20001206.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Dezembro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20001214.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Novembro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20001109.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Novembro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20001130.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Setembro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000908.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Outubro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20001012.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Setembro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000914.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Agosto de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000810.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Agosto de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000831.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Junho de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000601.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Junho de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000608.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de junho de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000629.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Maio de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000503.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Abril de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000406.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Abril de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000413.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Fevereiro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000203.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Fevereiro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000218.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Janeiro de 2000',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2000/20000106.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Dezembro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20011219.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Janeiro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20011210.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Novembro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20011122.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Novembro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20011121.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Novembro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20011115.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Outubro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20011031.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Outubro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20011004.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Setembro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010913.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Agosto de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010830.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Agosto de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010823.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Agosto de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010809.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Julho de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010726.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Julho de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010712.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Julho de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010705.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Junho de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010621.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Junho de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010608.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Junho de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010601.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Maio de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010517.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Abril de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010412.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 30 de Mar\u00e7o de 2001",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010330.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 21 de Mar\u00e7o de 2001",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010321.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 15 de Mar\u00e7o de 2001",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010315.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Fevereiro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010215.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Fevereiro de 2001',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2001/20010207.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 28 de Mar\u00e7o de 2002",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2002/20020328.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Fevereiro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2002/20020214.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Janeiro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2002/20020131.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Janeiro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2002/20020123.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Janeiro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc14/comunicados-cm/cm-2002/20020117.aspx',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Diário da República nº: 260/99 Série I-A 1º Suplemento; Decreto-Lei n.º 474-A/99, de 8 de novembro',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'XV',
@@ -12564,6 +14322,489 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464051/GC15.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/469030/tomadapossegc15.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => null,
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XV_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Dezembro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021211.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Dezembro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021204.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Novembro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021127.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Novembro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021120.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Novembro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021112.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Novembro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021107.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Outubro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021031.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Outubro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021022.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Outubro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20021011.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Setembro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020925.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Setembro de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020912.aspx',
+                            ],
+                            [
+                                'nome' => '20020905',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020905.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Agosto de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020822.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Agosto de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020806.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Agosto de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020801.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Julho de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020724.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Julho de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020711.aspx',
+                            ],
+                            [
+                                'nome' => '20020627',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020627.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Junho de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020619.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Junho de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020612.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Junho de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020606.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Maio de 2002',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2002/20020529.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Dezembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031223.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Dezembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031217.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Dezembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031211.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho de Ministros de 3 de Dezembro',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031203.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Novembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031127.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Novembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031119.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Novembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031112.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Novembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031106.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho de Ministros de 31 de Outubro',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031031.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Outubro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031023.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Outubro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031014.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Outubro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031010.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho de Ministros de 2 de Outubro',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20031002.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Setembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030925.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Setembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030918.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Setembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030911.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Setembro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030904.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Agosto de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030821.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Agosto de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030814.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Agosto de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030807.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Agosto de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030804.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministos de 31 de Julho de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030731.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Julho de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030724.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Julho de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030716.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Julho de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030710.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Junho de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030618.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Maio de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030527.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Maio de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030520.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Maio de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030514.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Maio de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030509.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Maio de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030502.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Abril de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030403.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 27 de Mar\u00e7o de 2003",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030327.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 19 de Mar\u00e7o de 2003",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030319.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Fevereiro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030228.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 6 de Mar\u00e7o de 2003",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030306.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Fevereiro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030225.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Fevereiro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030220.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Fevereiro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030207.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Janeiro de 2003',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2003/20030129.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Julho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040715.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Julho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040708.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Julho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040701.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Junho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040624.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Junho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040615.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Junho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040609.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Junho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040603.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Maio de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040527.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Maio de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040517.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Maio de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040512.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Maio de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040506.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Abril de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040426.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Abril de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040422.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Abril de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040415.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Abril de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040406.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Abril de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040401.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 24 de Mar\u00e7o de 2004",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040324.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 18 de Mar\u00e7o de 2004",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040318.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 11 de Mar\u00e7o de 2004",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040311.aspx',
+                            ],
+                            [
+                                'nome' => "Comunicado do Conselho de Ministros de 4 de Mar\u00e7o de 2004",
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040304.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Fevereiro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040226.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Fevereiro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040218.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Fevereiro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040211.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Fevereiro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040204.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Janeiro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040128.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Janeiro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040122.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Janeiro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040117.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Janeiro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/comunicados-cm/cm-2004/20040107.aspx',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'XVI',
@@ -13299,6 +15540,175 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464054/GC16.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/469035/tomadapossegc16.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/lei-organica/lei-organica-do-governo-constitucional-16.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XVI_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Dezembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041223.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Dezembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041207.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Dezembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041202.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Novembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041125.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Novembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041116.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Novembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041111.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Novembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041104.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Outubro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041028.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Outubro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041021.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Outubro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041014.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Outubro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20041007.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Setembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040930.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Setembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040924.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Setembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040916.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Setembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040910.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Setembro de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040902.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Agosto de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040827.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Agosto de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040819.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Agosto de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040805.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Julho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040730.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Julho de 2004',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2004/20040723.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Fevereiro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2005/20050202.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Janeiro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2005/20050127.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Janeiro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2005/20050120.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Janeiro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2005/20050113.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Janeiro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc16/comunicados-cm/cm-2005/20050106.aspx',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'n.º 2 do artigo 198.º da Constituição',
                             ],
                         ],
                     ],
@@ -14154,6 +16564,1249 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc15/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/464060/GC17.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => null,
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/lei-organica/lei-organica-do-governo-constitucional-17.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XVII_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Março de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050317.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Março de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050324.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Março de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050331.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 5 de Abril de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050405.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Abril de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050407.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Abril de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050414.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Abril de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050421.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Abril de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050428.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 30 de Abril de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050430.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Maio de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050505.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Maio de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050512.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Maio de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050519.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 24 de Maio de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050524.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 30 de Maio de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050530.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Junho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050602.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 5 de Junho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050605.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Junho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050608.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Junho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050615.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Junho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050623.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Junho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050630.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Julho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050708.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Julho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050714.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Julho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050722.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Julho de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050729.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Agosto de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050802.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Agosto de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050812.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Agosto de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050818.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Agosto de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050825.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Setembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050901.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Setembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050908.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Setembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050915.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Setembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20050922.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Outubro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051006.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Outubro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051013.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Outubro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051020.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Outubro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051026.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 29 de Outubro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051029.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Novembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051103.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Novembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051117.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Novembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051124.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Dezembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051205.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Dezembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051207.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Dezembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051215.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Dezembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051222.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Dezembro de 2005',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2005/20051229.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Dezembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061206.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Dezembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061214.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Dezembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061221.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Dezembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061228.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Novembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061102.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Novembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061109.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Novembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061116.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Novembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061123.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Novembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061130.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Outubro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061004.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho de Ministros informal de 7 de Outubro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061007.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Outubro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061012.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Outubro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061019.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Outubro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20061026.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Setembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060907.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Setembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060913.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Setembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060921.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Setembro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060928.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Agosto de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060803.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Agosto de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060810.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Agosto de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060817.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Agosto de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060824.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Agosto de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060831.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Julho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060706.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Julho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060713.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Julho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060720.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Julho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060727.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Junho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060601.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Junho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060608.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Junho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060614.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Junho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060622.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Junho de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060629.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Maio de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060504.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Maio de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060511.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Maio de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060518.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Maio de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060525.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Abril de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060406.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Abril de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060413.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Abril de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060420.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Abril de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060427.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Março de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060302.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Março de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060308.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Março de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060316.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Março de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060323.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Março de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060330.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Fevereiro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060202.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Fevereiro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060209.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Fevereiro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060216.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Fevereiro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060223.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Janeiro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060105.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Janeiro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060112.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Janeiro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060119.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Janeiro de 2006',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2006/20060126.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Dezembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071227.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Dezembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071220.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Dezembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071212.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Dezembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071206.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Novembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071129.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Novembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071122.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Novembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071114.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Novembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071108.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Outubro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071031.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Outubro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071025.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Outubro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071017.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Outubro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071011.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Outubro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20071003.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Setembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070927.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Setembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070920.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Setembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070913.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Setembro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070906.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Agosto de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070830.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Agosto de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070823.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Agosto de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070816.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Agosto de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070809.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Agosto de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070802.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Julho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070726.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Julho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070719.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Julho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070712.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Julho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070705.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070628.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070621.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070614.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070607.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070601.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Maio de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070524.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Maio de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070517.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Maio de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070510.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Maio de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070505.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Maio de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070503.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Abril de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070426.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Abril de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070419.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Abril de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070412.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Abril de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070405.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Março de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070329.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Março de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070322.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Março de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070315.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Março de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070308.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Março de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070301.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Fevereiro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070222.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Fevereiro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070215.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Fevereiro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070208.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Fevereiro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070201.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Janeiro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070125.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Janeiro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070118.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Janeiro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070111.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Janeiro de 2007',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2007/20070104.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Janeiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080103.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Janeiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080110.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Janeiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080117.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Janeiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080124.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Janeiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080131.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Fevereiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080207.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Fevereiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080214.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Fevereiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080221.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Fevereiro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080228.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Março de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080306.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Março de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080312.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Março de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080320.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Março de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080327.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Abril de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080403.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Abril de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080410.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Abril de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080417.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Abril de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080424.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Abril de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080430.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Maio de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080508.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Maio de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080515.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Maio de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080523.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Maio de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080528.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Junho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080605.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Junho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080612.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Junho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080619.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Junho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080626.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Julho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080703.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Julho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080710.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Julho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080716.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Julho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080724.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Julho de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080731.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Agosto de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080807.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Agosto de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080814.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Agosto de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080828.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Setembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080904.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Setembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080911.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Setembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080918.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Setembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20080925.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Outubro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081002.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Outubro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081009.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Outubro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081012.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Outubro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081013.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Outubro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081016.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Outubro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081023.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Outubro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081030.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Novembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081107.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Novembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081113.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Novembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081120.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Novembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081127.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Dezembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081204.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Dezembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081211.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Dezembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081217.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Dezembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081223.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Dezembro de 2008',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2008/20081230.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Janeiro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090108.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Janeiro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090115.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Janeiro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090121.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Janeiro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090129.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Fevereiro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090205.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Fevereiro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090212.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Fevereiro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090219.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Fevereiro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090226.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Março de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090305.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Março de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090311.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Março de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090319.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Março de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090326.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Abril de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090402.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Abril de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090409.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Abril de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090416.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Abril de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090423.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Abril de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090430.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Maio de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090507.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Maio de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090514.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Maio de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090521.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Maio de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090528.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Junho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090605.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Junho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090609.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Junho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090618.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Junho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090625.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Julho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090701.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Julho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090709.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Julho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090716.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Julho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090723.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Julho de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090730.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Agosto de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090805.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Agosto de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090813.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Agosto de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090820.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Agosto de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090827.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Setembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090903.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Setembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090910.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Setembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc17/comunicados-cm/cm-2009/20090917.aspx',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'XVIII',
@@ -14840,6 +18493,490 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         ],
                                     ],
                                 ],
+                            ],
+                        ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/468569/gc18.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/471123/tomadapossegc18.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/lei-organica/lei-organica-do-governo-constitucional-18.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XVIII_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Novembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2009/20091112.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Novembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2009/20091119.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Novembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2009/20091126.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Dezembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2009/20091210.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Dezembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2009/20091203.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Dezembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2009/20091217.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Dezembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2009/20091223.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Dezembro de 2009',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2009/20091230.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Janeiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100107.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Janeiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100114.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Janeiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100121.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho de Ministros de 25 de Janeiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100125.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Janeiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100128.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 1 de Fevereiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100201.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Fevereiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100204.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Fevereiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100212.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros extraordinário de 22 de Fevereiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100222.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Fevereiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100225.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Fevereiro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100228.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Março de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100304.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho de Ministros extraordinário de 6 de Março de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100306.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Março de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100311.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho de Ministros de 13 de Março de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100313.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Março de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100318.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Março de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100325.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Abril de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100401.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Abril de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100408.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Abril de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100422.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Abril de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100429.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Maio de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100506.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Maio de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100513.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Maio de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100520.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Maio de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100527.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Junho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100601.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Junho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100608.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Junho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100617.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 18 de Junho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100618.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Junho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100624.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Julho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100701.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Julho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100708.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Julho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100716.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Julho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100722.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Julho de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100729.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Agosto de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100805.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Agosto de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100812.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Agosto de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100819.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Agosto de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100826.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Setembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100902.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Setembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100909.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de Setembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100916.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Setembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100923.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho de Ministros de 29 de Setembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20100929.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Outubro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101008.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Outubro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101014.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Outubro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101021.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Outubro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101028.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Novembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101104.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Novembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101111.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Novembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101118.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Novembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101125.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Dezembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101202.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Dezembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101209.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Dezembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101215.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de Dezembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101223.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Dezembro de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20101230.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Abril de 2010',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2010/20120415.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de Maio de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110626.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Janeiro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110106.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Junho de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110602.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Fevereiro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110217.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Janeiro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110113.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de Maio de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110519.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Janeiro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110127.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Fevereiro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110210.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Fevereiro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110203.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de Maio de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110512.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Janeiro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110120.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Maio de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110505.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Fevereiro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110224.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Março de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110303.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Abril de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110428.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Abril de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110421.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de Março de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110310.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Abril de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110414.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Março de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110317.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Março de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110320.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Abril de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110407.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Março de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110324.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de Março de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc18/comunicados-cm/cm-2011/20110331.aspx',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Decreto-Lei n.º 321/2009, de 11 de dezembro',
                             ],
                         ],
                     ],
@@ -15944,6 +20081,1375 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/130538/programa_gc19.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => null,
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/lei-organica/lei-organica-do-governo-constitucional-18.aspx',
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XIX_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 30 de Dezembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111230-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunidado do Conselho de Ministros de 29 de Dezembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111229-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de Dezembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111222-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Dezembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111215-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Dezembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111207-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Dezembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111202-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de Novembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111124-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Novembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111117-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de Novembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111109-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de Novembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111103-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Outubro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111027-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Outubro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111020-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Outubro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111013-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros Extraordinário de 10 de Outubro',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111010-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de Outubro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20111006-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de Setembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110929-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de Setembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110915-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de Setembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110908-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Setembro de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110901-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de Agosto de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110830-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de Agosto de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110825-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de Agosto de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110818-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de Agosto de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110811-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de Agosto de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110804-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de Julho de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110728-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de Julho de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110721-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de Julho de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110720-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Julho de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110714-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Julho de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110707-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de Julho de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110705-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de Junho de 2011',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2011/20110627-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de dezembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121227-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de dezembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121220-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de dezembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121211-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de dezembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121206-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de novembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121129-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de novembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121122-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de novembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121115-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de novembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121108-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de outubro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121031-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de outubro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121025-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de outubro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121018-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de outubro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121010-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de outubro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20121004-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de setembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120927-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de setembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120920-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de Setembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120913-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de setembro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120906-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de agosto de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120830-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de agosto de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120823-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de agosto de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120816-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de Agosto de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120802-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de julho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120726-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de julho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120718-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de julho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120712-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de julho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120705-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120628-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120621-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120614-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de junho de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120606-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de maio de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120531-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de maio de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120524-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de Maio de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120517-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de maio de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120510-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de maio de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120503-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de abril de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120430-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de abril de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120426-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de abril de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120419-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de abril de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120412-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de abril de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120405-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de março de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120329-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de março de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120322-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de março de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120315-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de março de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120307-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de março de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120301-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de fevereiro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120222-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de fevereiro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120216-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de fevereiro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120209-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de fevereiro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120202-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de janeiro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120126-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de janeiro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120119-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de janeiro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120112-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de janeiro de 2012',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2012/20120105-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de dezembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131226-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de dezembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131219-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de dezembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131212-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de dezembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131205-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de novembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131128-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de novembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131121-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de novembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131114-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de novembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131107-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de outubro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131030-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de outubro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131024-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de outubro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131017-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de outubro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131013-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de outubro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131010-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de outubro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20131003-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de setembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130926-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros 19 de setembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130919-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros 12 de setembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130912-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de setembro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130905-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de agosto de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130829-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de agosto de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130822-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de agosto de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130814-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de agosto de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130808-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de Agosto de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130801-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de julho de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130725-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de julho de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130718-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de julho de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130711-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de julho de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130704-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de junho de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130627-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de junho de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130619-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de junho de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130613-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministro de 6 de junho de 2013 (continuação)',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130606-cm-comunicado-2.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de junho de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130606-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de maio de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130530-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de maio de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130523-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de maio de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130516-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de maio de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130509-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de maio de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130502-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de abril de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130430-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de abril de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130426-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros extraordinário de 23 de abril de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130423-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de abril de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130418-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de abril de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130411-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de abril de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130404-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de março de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130327-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de março de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130321-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de março de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130313-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de março de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130307-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de fevereiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130228-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de fevereiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130221-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de fevereiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130214-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de fevereiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130209-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de janeiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130131-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de janeiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130124-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de janeiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130117-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de janeiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130110-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de janeiro de 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2013/20130103-comunicado-cm.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de dezembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141231-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de dezembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141223-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de dezembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141218-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de dezembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141211-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de dezembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141204-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de novembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141127-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de novembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141120-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de novembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141113-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de novembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141105-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de outubro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141023-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de outubro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141016-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de outubro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141011-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de outubro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141008-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de outubro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20141002-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de setembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140925-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de setembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140918-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de setembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140911-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 setembro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140904-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 agosto de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140828-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 agosto de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140826-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 agosto de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140821-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 agosto de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140814-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 31 de julho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140731-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de julho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140724-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de julho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140717-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de julho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140710-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de julho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140703-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de junho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140626-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de junho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140619-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de junho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140612-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de junho de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140605-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de maio de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140529-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de maio de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140522-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de maio de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140515-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de maio de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140508-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de abril de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140428-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de abril de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140424-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de abril de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140417-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de abril de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140410-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de abril de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140403-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de março de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140327-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de março de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140320-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de março de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140313-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de março de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140305-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de fevereiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140227-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 20 de fevereiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140220-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de fevereiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140213-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 6 de fevereiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140206-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de janeiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140130-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de janeiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140123-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de janeiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140116-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de janeiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140109-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de janeiro de 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2014/20140102-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 1 de outubro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20151001-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 24 de setembro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150924-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 17 de setembro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150917-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 10 de setembro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150910-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 3 de setembro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150903-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 27 de agosto de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150827-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 13 de agosto de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150813-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de julho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150730-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de julho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150723-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de julho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150716-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de julho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150709-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de julho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150702-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 25 de junho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150625-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 18 de junho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150618-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 11 de junho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150611-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 4 de junho de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150604-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 28 de maio de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150528-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 21 de maio de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150521-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 14 de Maio de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150514-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 7 de Maio de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150507-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de abril de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150430-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 23 de abril de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150423-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 16 de abril de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150416-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 9 de abril de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150409-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 2 de abril de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150402-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de março de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150326-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de março de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150319-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de março de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150312-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de março de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150305-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 26 de fevereiro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150226-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de fevereiro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150219-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de fevereiro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150212-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de fevereiro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150205-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 29 de janeiro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150129-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 22 de janeiro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150122-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 15 de janeiro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150115-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 8 de janeiro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/comunicados-cm/2015/20150108-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Relatório sobre a Lusofonia Económica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20150615-pm-rel-lusofonia-economica.aspx',
+                            ],
+                            [
+                                'nome' => 'Rumo a uma arquitectura reforçada para a área do euro => Aumentar a confiança, Fomentar a convergência',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20150603-pm-zona-euro.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Nacional de Reformas 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20150429-programa-reformas.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa de Estabilidade 2015-2019',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20150429-programa-estabilidade.aspx',
+                            ],
+                            [
+                                'nome' => 'Proposta de Programa Nacional de Reformas 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20150417-programa-reformas.aspx',
+                            ],
+                            [
+                                'nome' => 'Proposta de Programa de Estabilidade 2015-2019',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20150417-programa-estabilidade.aspx',
+                            ],
+                            [
+                                'nome' => 'Relatório Anual de Segurança Interna 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20150331-rasi-2014.aspx',
+                            ],
+                            [
+                                'nome' => 'Documentação enviada ao Tribunal Constitucional sobre a Lei do Orçamento do Estado para 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20140603-tc-oe-2014.aspx',
+                            ],
+                            [
+                                'nome' => 'Caminho para o Crescimento => Um estratégia de reforma de médio prazo para Portugal',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20140517-estrategia-medio-prazo.aspx',
+                            ],
+                            [
+                                'nome' => 'Relatório Anual de Segurança Interna 2013',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/documentos-oficiais/20140401-rasi-2013.aspx',
+                            ],
+                            [
+                                'nome' => '4 anos de credibilidade e mudança',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20150721-quatro-anos/20150721-quatro-anos.aspx',
+                            ],
+                            [
+                                'nome' => 'Privatização da TAP',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20150116-tap/tap.aspx',
+                            ],
+                            [
+                                'nome' => 'Orçamento Cidadão 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20150114-orcamento-cidadao/orcamento-cidadao-2015.aspx',
+                            ],
+                            [
+                                'nome' => 'A evolução da despesa do Estado entre 2010 e 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20141022-evolucao-despesa-estado/20141022-evolucao-despesa-estado.aspx',
+                            ],
+                            [
+                                'nome' => 'Orçamento de Estado para 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20141016-oe2015/20141016-oe2015.aspx',
+                            ],
+                            [
+                                'nome' => 'Promoção do diálogo social',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20141003-dialogo-social/20141003-dialogo-social.aspx',
+                            ],
+                            [
+                                'nome' => 'Tabela Única de Suplementos',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20141002-tabela-unica-suplementos-ap/20141002-tabela-unica-suplementos-ap.aspx',
+                            ],
+                            [
+                                'nome' => 'Levantamento de amianto em edifícios públicos',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20140730-amianto/20140730-amianto.aspx',
+                            ],
+                            [
+                                'nome' => 'Como vão ficar as pensões a partir de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/pensoes2015/pensoes2015.aspx',
+                            ],
+                            [
+                                'nome' => 'Evolução da despesa do Estado entre 2010 e 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/despesa-estado/despesa-estado.aspx',
+                            ],
+                            [
+                                'nome' => 'Exportações em Portugal',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/exportacoes/exportacoes.aspx',
+                            ],
+                            [
+                                'nome' => 'Combate à desigualdade social',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/20140408-igualdade-social/20140408-igualdade-social.aspx',
+                            ],
+                            [
+                                'nome' => 'Documentos do Programa de Assistência Económica e Financeira',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/memorandos/memorandos.aspx',
+                            ],
+                            [
+                                'nome' => 'Repartição equitativa dos sacrifícios',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/reparticao-sacrificios/reparticao-sacrificios.aspx',
+                            ],
+                            [
+                                'nome' => 'Contribuição Extraordinária de Solidariedade em 2014',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/pensoes/pensoes.aspx',
+                            ],
+                            [
+                                'nome' => 'Arrendamento e reabilitação urbana',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/arrendamento-e-reabilitacao-urbana/arrendamento-e-reabilitacao-urbana.aspx',
+                            ],
+                            [
+                                'nome' => 'Concorrência',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/concorrencia/concorrencia.aspx',
+                            ],
+                            [
+                                'nome' => 'Crescimento',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/crescimento/o-crescimento.aspx',
+                            ],
+                            [
+                                'nome' => 'Emprego',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/emprego/o-emprego.aspx',
+                            ],
+                            [
+                                'nome' => 'Escola',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/escola/a-escola.aspx',
+                            ],
+                            [
+                                'nome' => 'Europa',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/europa/a-europa.aspx',
+                            ],
+                            [
+                                'nome' => 'Reforma da Administração Local',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/reforma-administracao-local/reforma-administracao-local.aspx',
+                            ],
+                            [
+                                'nome' => 'Saúde',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/saude/a-saude.aspx',
+                            ],
+                            [
+                                'nome' => 'Solidariedade',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/solidariedade/a-solidariedade.aspx',
+                            ],
+                            [
+                                'nome' => 'Cultura',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/cultura/cultura.aspx',
+                            ],
+                            [
+                                'nome' => 'RTP: Novo Contrato de Concessão',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-temas/concessao-rtp/contrato-concessao-rtp.aspx',
+                            ],
+                            [
+                                'nome' => 'Entraves burocráticos à atividade económica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc19/os-ministerios/madr/mantenha-se-atualizado/20131127-madr-inquerito-burocracia.aspx',
+                            ],
+                        ],
+                        'leis' => [
+                            [
+                                'nome' => 'Lei Orgânica',
+                                'anexo' => 'Decreto-Lei n.º 321/2009, de 11 de dezembro',
+                            ],
+                        ],
                     ],
                     [
                         'sigla' => 'XX',
@@ -16560,6 +22066,119 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 ],
                             ],
                         ],
+                        'contactos' => [
+                            [
+                                'contacto_tipo_id' => 1,
+                                'contacto' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20.aspx',
+                            ],
+                        ],
+                        'anexos' => [
+                            [
+                                'nome' => 'Composição Governo',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/composicao.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Governo',
+                                'anexo_tipo_id' => 5,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/media/18167052/20151106-programa-governo.pdf',
+                            ],
+                            [
+                                'nome' => 'Tomada de posse',
+                                'anexo_tipo_id' => 2,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/ImageGen.ashx?image=/media/18104107/20151030-pm-posse-01.jpg',
+                            ],
+                            [
+                                'nome' => 'Lei Organica',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => null,
+                            ],
+                            [
+                                'nome' => 'Revisão da Wikipedia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://pt.wikipedia.org/wiki/XX_Governo_Constitucional_de_Portugal',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 19 de novembro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/comunicados-cm/2015/20151119-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 5 de novembro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/comunicados-cm/2015/20151105-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 30 de outubro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/comunicados-cm/2015/20151030-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Comunicado do Conselho de Ministros de 12 de novembro de 2015',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/comunicados-cm/2015/20151112-cm-comunicado.aspx',
+                            ],
+                            [
+                                'nome' => 'Principais medidas da Reforma do IRS',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/20141024-reforma-irs/20141024-reforma-irs.aspx',
+                            ],
+                            [
+                                'nome' => 'Garantia Jovem',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/20141007-garantia-jovem/20141007-garantia-jovem.aspx',
+                            ],
+                            [
+                                'nome' => 'Tarifa social de eletricidade e gás natural',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/20141006-tarifa-social-eletricidade/20141006-tarifa-social-eletricidade.aspx',
+                            ],
+                            [
+                                'nome' => 'Compromisso para o Crescimento Verde',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/20150605-compromisso-crescimento-verde/20150605-compromisso-crescimento-verde-1.aspx',
+                            ],
+                            [
+                                'nome' => 'Programa Aproximar',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/20140925-aproximar/aproximar.aspx',
+                            ],
+                            [
+                                'nome' => 'Novo Código Fiscal do Investimento',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/20140529-codigo-fiscal-investimento/20140529-codigo-fiscal-investimento.aspx',
+                            ],
+                            [
+                                'nome' => 'Um Estado responsável e transparente',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/20140527-estado-responsavel-transparente/20140527-estado-responsavel-transparente.aspx',
+                            ],
+                            [
+                                'nome' => 'Plano Estratégico de Transportes e Infraestruturas (PETI3+)',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/peti3mais/peti3mais.aspx',
+                            ],
+                            [
+                                'nome' => 'Reforma judiciária - novo mapa judiciário',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/reforma-judiciaria/novo-mapa-judiciario.aspx',
+                            ],
+                            [
+                                'nome' => 'Plataforma sobre negociações comerciais',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/plataforma-de-comercio-portugues/plataforma.aspx',
+                            ],
+                            [
+                                'nome' => 'Portugal 2020',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/portugal-2020/portugal-2020.aspx',
+                            ],
+                            [
+                                'nome' => 'Conselho Estratégico de Internacionalização da Economia',
+                                'anexo_tipo_id' => 3,
+                                'anexo' => 'https =>//www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc20/os-temas/conselho-estrategico-de-internacionalizacao-da-economia-ceie/conselho-estrategico-de-internacionalizacao-da-economia-ceie.aspx',
+                            ],
+                        ],
                     ],
 
                 ],
@@ -16605,8 +22224,11 @@ final class GovernosPosAbrilSeeder extends Seeder
                     }
                 }
 
+                DB::commit();
                 $governoIndex = 0;
                 foreach ($republicaData['governos'] as $governoData) {
+
+                    DB::beginTransaction();
                     // Find governo with strict matching but trimmed values
                     $sigla = isset($governoData['sigla']) ? mb_trim($governoData['sigla']) : null;
 
@@ -16633,24 +22255,6 @@ final class GovernosPosAbrilSeeder extends Seeder
                         $governo->update(['sinopse' => mb_trim($governoData['sinopse'])]);
                     }
 
-                    // Handle governo anexos
-                    if (isset($governoData['anexos'])) {
-                        foreach ($governoData['anexos'] as $anexoData) {
-                            GovernoAnexo::firstOrCreate(
-                                [
-                                    'governo_id' => $governo->id,
-                                    'anexo' => mb_trim($anexoData['anexo']),
-                                    'uuid' => Str::uuid(),
-                                    'anexo_tipo_id' => $anexoTipoWikipedia->id,
-                                ],
-                                [
-                                    'nome' => mb_trim($anexoData['nome']),
-                                    'descricao' => isset($anexoData['descricao']) ? mb_trim($anexoData['descricao']) : null,
-                                ]
-                            );
-                        }
-                    }
-
                     if (! isset($governoData['instituicoes'])) {
                         $this->command->error('Undefined array key instituicoes');
                         $this->command->line('Government data structure: '.print_r($governoData, true));
@@ -16658,8 +22262,12 @@ final class GovernosPosAbrilSeeder extends Seeder
                         DB::rollBack();
                         throw $e;
                     }
+                    DB::commit();
 
+                    $this->command->info('Treating instituicoes para: '.$governo->sigla.' - '.$governo->nome);
                     foreach ($governoData['instituicoes'] as $instituicaoData) {
+
+                        DB::beginTransaction();
 
                         $searchName = mb_trim($instituicaoData['nome']);
 
@@ -16879,12 +22487,62 @@ final class GovernosPosAbrilSeeder extends Seeder
                             DB::rollBack();
                             throw $e;
                         }
+
+                        DB::commit();
+                    }
+
+                    $anexoIndex = 0;
+
+                    $this->command->info('Treating anexos para: '.$governo->sigla.' - '.$governo->nome);
+                    foreach ($governoData['anexos'] as $anexoData) {
+
+                        DB::beginTransaction();
+
+                        if ($anexoIndex < 5) {
+                            if (isset($anexoData['anexo'])) {
+                                GovernoAnexo::firstOrCreate(
+                                    [
+                                        'governo_id' => $governo->id,
+                                        'anexo' => mb_trim($anexoData['anexo']),
+                                        'uuid' => Str::uuid(),
+                                        'anexo_tipo_id' => $anexoData['anexo_tipo_id'],
+                                    ],
+                                    [
+                                        'nome' => mb_trim($anexoData['nome']),
+                                    ]
+                                );
+                            }
+
+                        } else {
+                            $governoInstituicao = InstituicaoGoverno::where('governo_id', $governo->id)->where('instituicao_id', 7)->first();
+                            if (! $governoInstituicao) {
+                                $this->command->error('Missing instituicao_governo for governo: '.$governo->nome);
+                                DB::rollBack();
+                                throw $e;
+                            }
+                            if (isset($anexoData['anexo'])) {
+                                InstituicaoGovernoAnexo::firstOrCreate(
+                                    [
+                                        'instituicao_governo_id' => $governoInstituicao->id,
+                                        'anexo' => mb_trim($anexoData['anexo']),
+                                        'uuid' => Str::uuid(),
+                                        'anexo_tipo_id' => $anexoData['anexo_tipo_id'],
+                                    ],
+                                    [
+                                        'nome' => mb_trim($anexoData['nome']),
+                                    ]
+                                );
+                            }
+                        }
+                        $anexoIndex++;
+                        DB::commit();
+
                     }
 
                     $governoIndex++;
                 }
 
-                DB::commit();
+                // DB::commit();
                 $this->command->info('Successfully processed república: '.$republicaData['nome']);
 
             } catch (Exception $e) {

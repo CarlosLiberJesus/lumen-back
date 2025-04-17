@@ -7,7 +7,6 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\UserRole;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -35,27 +34,18 @@ final class DeploySeeder extends Seeder
         $this->call(InstituicaoTiposSeeder::class);
         $this->call(LeiTiposSeeder::class);
         $this->call(LeiPartesSeeder::class);
+        $this->call(DiarioRepublicaSeriesSeeder::class);
 
+        $this->call(EleicoesSeeder::class);
         $this->call(RepublicasGovernosSeeder::class);
         $this->call(InstituicoesSeeder::class);
         $this->call(GovernosInstituicoesCargosSeeder::class);
         $this->call(GovernosPosAbrilSeeder::class);
-        // $this->call(InstituicaoDadosTableSeeder::class);
-        // $this->call(InstituicaoComTiposTableSeeder::class);
-
-        // Chama o comando scrape:republicas
-        // Artisan::call('scrape:republicas');
+        $this->call(PartidosSeeder::class);
 
         /*
-        $this->call(RepublicaSeeder::class);
-        $this->call(LegislaturaSeeder::class);
-        $this->call(PresidenciaisSeeder::class);
-        $this->call(GovernosSeeder::class);
-        $this->call(InstituicaoSeeder::class);
-        $this->call(GovernoDemoSeeder::class);
-        $this->call(DiarioRepublicaSeriesSeeder::class);
-        // $this->call(DiarioRepublicaGlossariosSeeder::class);
-        // $this->call(LeisSeeder::class);
+         $this->call(DiarioRepublicaGlossariosSeeder::class);
+         $this->call(LeisSeeder::class);
         */
     }
 }

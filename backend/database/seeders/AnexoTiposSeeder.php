@@ -15,7 +15,7 @@ final class AnexoTiposSeeder extends Seeder
     public function run(): void
     {
         AnexoTipo::create(['tipo' => 'profile', 'descricao' => 'Imagem minima para procurar para preencher front-end']);
-        AnexoTipo::create(['tipo' => 'image', 'descricao' => 'Imagens em geral, referências em tabela Própria']);
+        AnexoTipo::create(['tipo' => 'image', 'descricao' => 'Imagens em geral']);
         AnexoTipo::create(['tipo' => 'url', 'descricao' => 'Url da Internet']);
         AnexoTipo::create(['tipo' => 'path', 'descricao' => 'Path do servidor']);
         AnexoTipo::create(['tipo' => 'document', 'descricao' => 'Documento Remoto']);

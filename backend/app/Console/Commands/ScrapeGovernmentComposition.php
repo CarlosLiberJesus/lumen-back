@@ -43,7 +43,7 @@ final class ScrapeGovernmentComposition extends Command
                 $this->info(sprintf('Fetching composition for date: %s', $link['date']));
 
                 // If link is relative, make it absolute
-                $compositionUrl = str_starts_with($link['link'], 'http')
+                $compositionUrl = str_starts_with((string) $link['link'], 'http')
                     ? $link['link']
                     : self::BASE_URL.$link['link'];
 
@@ -82,28 +82,24 @@ final class ScrapeGovernmentComposition extends Command
                         [
                             'sigla' => $finalData['sigla'],
                             'nome' => $finalData['nome'],
-                            'instituicoes' => array_map(function ($ministerio) {
-                                return [
-                                    'nome' => $ministerio['nome'],
-                                    'cargos' => array_map(function ($cargo) {
-                                        $cargoData = [
-                                            'nome' => $cargo['nome'],
-                                            'cidadaos' => $cargo['cidadaos'],
-                                        ];
+                            'instituicoes' => array_map(fn (array $ministerio): array => [
+                                'nome' => $ministerio['nome'],
+                                'cargos' => array_map(function ($cargo): array {
+                                    $cargoData = [
+                                        'nome' => $cargo['nome'],
+                                        'cidadaos' => $cargo['cidadaos'],
+                                    ];
 
-                                        if (isset($cargo['subcargos'])) {
-                                            $cargoData['subcargos'] = array_map(function ($subcargo) {
-                                                return [
-                                                    'nome' => $subcargo['nome'],
-                                                    'cidadaos' => $subcargo['cidadaos'],
-                                                ];
-                                            }, $cargo['subcargos']);
-                                        }
+                                    if (isset($cargo['subcargos'])) {
+                                        $cargoData['subcargos'] = array_map(fn (array $subcargo): array => [
+                                            'nome' => $subcargo['nome'],
+                                            'cidadaos' => $subcargo['cidadaos'],
+                                        ], $cargo['subcargos']);
+                                    }
 
-                                        return $cargoData;
-                                    }, $ministerio['cargos']),
-                                ];
-                            }, array_slice($finalData, 2)), // Skip sigla and nome keys
+                                    return $cargoData;
+                                }, $ministerio['cargos']),
+                            ], array_slice($finalData, 2)), // Skip sigla and nome keys
                         ],
                     ],
                 ],
@@ -114,8 +110,8 @@ final class ScrapeGovernmentComposition extends Command
             $this->info(sprintf('Composition data saved to: %s', $outputPath));
 
             return Command::SUCCESS;
-        } catch (Exception $e) {
-            $this->error('Error fetching data: '.$e->getMessage());
+        } catch (Exception $exception) {
+            $this->error('Error fetching data: '.$exception->getMessage());
 
             return Command::FAILURE;
         }
@@ -125,11 +121,11 @@ final class ScrapeGovernmentComposition extends Command
     {
         $links = [];
 
-        $crawler->filter('.aside')->each(function (Crawler $aside) use (&$links) {
+        $crawler->filter('.aside')->each(function (Crawler $aside) use (&$links): void {
             // $this->info('Found aside element:');
             // $this->line($aside->html());
 
-            $aside->filter('a')->each(function (Crawler $link) use (&$links) {
+            $aside->filter('a')->each(function (Crawler $link) use (&$links): void {
                 $href = $link->attr('href');
 
                 if (preg_match('/date=(\d{4}-\d{2}-\d{2})/', $href, $matches)) {
@@ -138,7 +134,7 @@ final class ScrapeGovernmentComposition extends Command
                     try {
                         $dateText = mb_trim($link->text());
                         $date = Carbon::createFromFormat('d/m/Y', $dateText)->format('Y-m-d');
-                    } catch (Exception $e) {
+                    } catch (Exception) {
                         $this->warn(sprintf('Could not parse date from text: %s', $dateText));
 
                         return;
@@ -152,7 +148,7 @@ final class ScrapeGovernmentComposition extends Command
             });
         });
 
-        usort($links, fn ($a, $b) => $a['date'] <=> $b['date']);
+        usort($links, fn ($a, $b): int => $a['date'] <=> $b['date']);
 
         return $links;
     }
@@ -162,7 +158,7 @@ final class ScrapeGovernmentComposition extends Command
         $composition = [];
 
         // First handle the special case of Primeiro-Ministro in firstHistory
-        $crawler->filter('.firstHistory')->each(function (Crawler $section) use (&$composition) {
+        $crawler->filter('.firstHistory')->each(function (Crawler $section) use (&$composition): void {
             $pmName = mb_trim($section->filter('span')->first()->text());
             $pmCargo = mb_trim($section->filter('h3')->first()->text());
 
@@ -176,7 +172,7 @@ final class ScrapeGovernmentComposition extends Command
             ];
 
             // Handle any Secretários within firstHistory (they report to PM)
-            $section->filter('ul li')->each(function (Crawler $li) use (&$composition, $pmCargo) {
+            $section->filter('ul li')->each(function (Crawler $li) use (&$composition, $pmCargo): void {
                 $name = mb_trim($li->filter('span')->first()->text());
                 $cargo = mb_trim($li->filter('h3')->first()->text());
 
@@ -196,7 +192,7 @@ final class ScrapeGovernmentComposition extends Command
         $currentMinisterCargo = null;
 
         // Then handle all other ministers/secretaries
-        $crawler->filter('ul.historico > li')->each(function (Crawler $li) use (&$composition, &$currentMinister, &$currentMinisterCargo) {
+        $crawler->filter('ul.historico > li')->each(function (Crawler $li) use (&$composition, &$currentMinister, &$currentMinisterCargo): void {
             $name = mb_trim($li->filter('span')->first()->text());
             $cargo = mb_trim($li->filter('h3')->first()->text());
 
@@ -211,7 +207,7 @@ final class ScrapeGovernmentComposition extends Command
             ];
 
             // Check for nested secretaries
-            $li->filter('ul li')->each(function (Crawler $secretaryLi) use (&$composition, $cargo) {
+            $li->filter('ul li')->each(function (Crawler $secretaryLi) use (&$composition, $cargo): void {
                 $secretaryName = mb_trim($secretaryLi->filter('span')->first()->text());
                 $secretaryCargo = mb_trim($secretaryLi->filter('h3')->first()->text());
 
@@ -226,7 +222,7 @@ final class ScrapeGovernmentComposition extends Command
             });
         });
 
-        $crawler->filter('ul.historico > li')->each(function (Crawler $li) use (&$composition, &$currentMinister, &$currentMinisterCargo) {
+        $crawler->filter('ul.historico > li')->each(function (Crawler $li) use (&$composition, &$currentMinister, &$currentMinisterCargo): void {
             $name = mb_trim($li->filter('span')->first()->text());
             $cargo = mb_trim($li->filter('h3')->first()->text());
 
@@ -241,7 +237,7 @@ final class ScrapeGovernmentComposition extends Command
             ];
 
             // Check for nested secretaries
-            $li->filter('ul li')->each(function (Crawler $secretaryLi) use (&$composition, $cargo) {
+            $li->filter('ul li')->each(function (Crawler $secretaryLi) use (&$composition, $cargo): void {
                 $secretaryName = mb_trim($secretaryLi->filter('span')->first()->text());
                 $secretaryCargo = mb_trim($secretaryLi->filter('h3')->first()->text());
 
@@ -269,7 +265,7 @@ final class ScrapeGovernmentComposition extends Command
         $ministerios = [];
 
         foreach ($scrapedData as $date => $composition) {
-            $this->info("Processing composition for date: $date");
+            $this->info('Processing composition for date: '.$date);
 
             foreach ($composition as $cargoNome => $cargoData) {
                 // $this->info("Processing cargo: $cargoNome");
@@ -331,6 +327,7 @@ final class ScrapeGovernmentComposition extends Command
                                                 'data_fim' => '',
                                             ];
                                         }
+
                                         break;
                                     }
                                 }
@@ -347,6 +344,7 @@ final class ScrapeGovernmentComposition extends Command
                                 }
                             }
                         }
+
                         break;
                     }
                 }

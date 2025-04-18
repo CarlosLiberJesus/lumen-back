@@ -13,16 +13,16 @@ return new class extends Migration
         Schema::create('presidenciais', function (Blueprint $table): void {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->char('sigla', 6)->nullable();
-            $table->string('nome');
             $table->unsignedBigInteger('republica_id');
-            $table->date('eleicoes')->nullable();
+            $table->unsignedBigInteger('eleicao_id')->nullable();
             $table->date('posse');
             $table->date('termino')->nullable();
             $table->text('sinopse')->nullable();
             $table->timestamps();
 
             $table->foreign('republica_id')->references('id')->on('republicas');
+            $table->foreign('eleicao_id')->references('id')->on('eleicoes');
+
         });
         DB::statement("COMMENT ON TABLE presidenciais IS 'Representa os ciclos das eleições de Presidente da Republica Republica. Vai funcionar excelente para a actualidade pós 1974, republicas.id = 4, talvez pós 1910, republicas.id > 2.'");
 

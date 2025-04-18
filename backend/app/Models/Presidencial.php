@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 final class Presidencial extends Model
 {
@@ -24,10 +25,8 @@ final class Presidencial extends Model
      */
     protected $fillable = [
         'uuid',
-        'nome',
-        'sigla',
         'republica_id',
-        'eleicoes',
+        'eleicao_id',
         'posse',
         'termino',
         'sinopse',
@@ -39,7 +38,6 @@ final class Presidencial extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'eleicoes' => 'date',
         'posse' => 'date',
         'termino' => 'date',
     ];
@@ -55,12 +53,22 @@ final class Presidencial extends Model
     }
 
     /**
+     * Get the republica that owns the governo.
+     *
+     * @return HasOne<Eleicao, $this>
+     */
+    public function eleicao(): HasOne
+    {
+        return $this->hasOne(Eleicao::class);
+    }
+
+    /**
      * Presidencial anexos.
      *
      * @return HasMany<PresidencialAnexo, $this>
      */
     public function anexos(): HasMany
     {
-        return $this->hasMany(PresidencialAnexo::class, 'instituicao_legislatura_id');
+        return $this->hasMany(PresidencialAnexo::class, 'presidencial_id');
     }
 }

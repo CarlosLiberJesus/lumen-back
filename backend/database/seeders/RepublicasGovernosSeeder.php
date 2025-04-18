@@ -33,24 +33,21 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo de João V de Portugal',
                             'inicio' => '1736-06-28',
                             'fim' => '1750-08-02',
-                            'sinopse' => '<p><span>O 1.º governo de João V de Portugal constituído a 28 de Julho de 1736 e exonerado a 2 de Agosto de 1750, foi presidido pelo Padre Pedro da Mota, na qualidade de secretário de Estado dos Negócios Interiores do Reino (se bem que o cargo de chefe de governo não estava ainda definido), sendo o executivo encabeçado pelo próprio D. João V.</span></p>
-<p><span>Foi o primeiro gabinete constituído após a reforma da administração central, criada por Alvará de 28 de Julho de 1736 de D. João V, que organizou o executivo na moderna forma de divisão em ministérios especializados num determinado sector governativo. Até então, o governo era constituído por dois secretários de Estado, o da Assinatura de Documentos Régios e o das Mercês, além do escrivão da puridade. Estes órgãos não eram especializados em nenhum assunto governativo específico, actuando em todas as áreas.</span></p>',
+                            'sinopse' => '<p><span>O 1.º governo de João V de Portugal constituído a 28 de Julho de 1736 e exonerado a 2 de Agosto de 1750, foi presidido pelo Padre Pedro da Mota, na qualidade de secretário de Estado dos Negócios Interiores do Reino (se bem que o cargo de chefe de governo não estava ainda definido), sendo o executivo encabeçado pelo próprio D. João V.</span></p><p><span>Foi o primeiro gabinete constituído após a reforma da administração central, criada por Alvará de 28 de Julho de 1736 de D. João V, que organizou o executivo na moderna forma de divisão em ministérios especializados num determinado sector governativo. Até então, o governo era constituído por dois secretários de Estado, o da Assinatura de Documentos Régios e o das Mercês, além do escrivão da puridade. Estes órgãos não eram especializados em nenhum assunto governativo específico, actuando em todas as áreas.</span></p>',
                         ],
                         [
                             'sigla' => 'I',
                             'nome' => 'Governo de José I de Portugal',
                             'inicio' => '1750-08-02',
                             'fim' => '1756-05-06',
-                            'sinopse' => '<p><span>O 1.º governo de José I de Portugal constituído a 2 de Agosto de 1750, foi presidido pelo Padre Pedro da Mota, na qualidade de secretário de Estado dos Negócios Interiores do Reino (se bem que o cargo de chefe de governo não estava ainda definido), sendo o executivo encabeçado pelo próprio D. José I.</span></p>
-<p><span>Pedro da Mota e Silva faleceu na sequência do Terramoto de 1755, tendo o cargo ficado vago mas, na prática, sido preenchido por Sebastião José de Carvalho e Melo, que apenas viria a tomar posse oficialmente em 1756.</span></p>',
+                            'sinopse' => '<p><span>O 1.º governo de José I de Portugal constituído a 2 de Agosto de 1750, foi presidido pelo Padre Pedro da Mota, na qualidade de secretário de Estado dos Negócios Interiores do Reino (se bem que o cargo de chefe de governo não estava ainda definido), sendo o executivo encabeçado pelo próprio D. José I.</span></p><p><span>Pedro da Mota e Silva faleceu na sequência do Terramoto de 1755, tendo o cargo ficado vago mas, na prática, sido preenchido por Sebastião José de Carvalho e Melo, que apenas viria a tomar posse oficialmente em 1756.</span></p>',
                         ],
                         [
                             'sigla' => 'II',
                             'nome' => 'Governo de José I de Portugal',
                             'inicio' => '1756-05-06',
                             'fim' => '1777-03-14',
-                            'sinopse' => '<p><span>O 2.º governo de José I de Portugal, constituído a 6 de Maio de 1756 e substituído a 14 de Março de 1777, foi presidido por Sebastião José de Carvalho e Melo (subsequentemente elevado aos títulos de Conde de Oeiras e, mais tarde, Marquês de Pombal, durante a incumbência do cargo), na qualidade de secretário de Estado dos Negócios Interiores do Reino (se bem que o cargo de chefe de governo não estava ainda definido), sendo o executivo encabeçado pelo próprio D. José I.</span></p>
-<p><span>Após a morte de D. José, em 1777, o Marquês de Pombal apresentou a sua demissão, que foi aceite por D. Maria por decreto de 4 de Março de 1777. Os secretários de Estado da Marinha e dos Negócios Estrangeiros haviam de ser reconduzidos no cargo durante o próximo governo.</span></p>',
+                            'sinopse' => '<p><span>O 2.º governo de José I de Portugal, constituído a 6 de Maio de 1756 e substituído a 14 de Março de 1777, foi presidido por Sebastião José de Carvalho e Melo (subsequentemente elevado aos títulos de Conde de Oeiras e, mais tarde, Marquês de Pombal, durante a incumbência do cargo), na qualidade de secretário de Estado dos Negócios Interiores do Reino (se bem que o cargo de chefe de governo não estava ainda definido), sendo o executivo encabeçado pelo próprio D. José I.</span></p><p><span>Após a morte de D. José, em 1777, o Marquês de Pombal apresentou a sua demissão, que foi aceite por D. Maria por decreto de 4 de Março de 1777. Os secretários de Estado da Marinha e dos Negócios Estrangeiros haviam de ser reconduzidos no cargo durante o próximo governo.</span></p>',
                         ],
                         [
                             'sigla' => 'I',
@@ -125,21 +122,14 @@ final class RepublicasGovernosSeeder extends Seeder
                     'nome' => 'Primeiro Liberalismo (Vintismo)',
                     'inicio' => '1822-09-24',
                     'fim' => '1828-02-26',
-                    'sinopse' => '<p><span>Em 1807, com as invasões francesas, a família real portuguesa exilou-se no Brasil, e a Grã-Bretanha passou a exercer uma forte influência sobre Portugal, nomeadamente por oficiais britânicos, como o marechal Beresford que assumiu o comando das tropas portuguesas. Isso gerou descontentamento entre os portugueses, levando à criação de movimentos de oposição, como a conspiração de 1817, liderada por Gomes Freire de Andrade, que acabou por ser descoberto e executado, tornando-se um símbolo dos ideais liberais.</span></p>
-                                    <p><span>O movimento também teve reflexos nas sociedades secretas como o Sinédrio , que, em 1820, protagonizou a Revolução que levou à instauração de um regime constitucional.</span></p>
-                                    <p><span>O Vintismo caracteriza-se por ser um período político que durou em Portugal entre 1820 e 1823, marcado pelo radicalismo das soluções liberais e pelo predomínio das Cortes Constituintes, influenciado pela Constituição Espanhola de Cádis.</span></p>
-                                    <p><span>Este movimento iniciou-se com o pronunciamento militar do Porto, em agosto de 1820. O objetivo central do Vintismo era a regeneração do país, promovendo uma aliança entre o rei e as forças sociais representadas nas Cortes, na expectativa de criar uma constituição que garantisse uma melhor governação. Assim, o movimento Vintista visava o fim do absolutismo e o estabelecimento de um regime constitucional. No entanto, a independência do Brasil em 1822 foi um golpe para o regime, enfraquecendo a economia portuguesa e provocando uma reação negativa entre os vintistas.</span></p>
-                                    <p><span>O Vintismo terminou com a Vilafrancada quando o infante D.Miguel liderou uma sublevação militar que resultou na abolição da Constituição de 1822 e no restabelecimento dos ideais do Antigo Regime, ainda que de forma mitigada.</span></p>',
+                    'sinopse' => '<p><span>Em 1807, com as invasões francesas, a família real portuguesa exilou-se no Brasil, e a Grã-Bretanha passou a exercer uma forte influência sobre Portugal, nomeadamente por oficiais britânicos, como o marechal Beresford que assumiu o comando das tropas portuguesas. Isso gerou descontentamento entre os portugueses, levando à criação de movimentos de oposição, como a conspiração de 1817, liderada por Gomes Freire de Andrade, que acabou por ser descoberto e executado, tornando-se um símbolo dos ideais liberais.</span></p><p><span>O movimento também teve reflexos nas sociedades secretas como o Sinédrio , que, em 1820, protagonizou a Revolução que levou à instauração de um regime constitucional.</span></p><p><span>O Vintismo caracteriza-se por ser um período político que durou em Portugal entre 1820 e 1823, marcado pelo radicalismo das soluções liberais e pelo predomínio das Cortes Constituintes, influenciado pela Constituição Espanhola de Cádis.</span></p><p><span>Este movimento iniciou-se com o pronunciamento militar do Porto, em agosto de 1820. O objetivo central do Vintismo era a regeneração do país, promovendo uma aliança entre o rei e as forças sociais representadas nas Cortes, na expectativa de criar uma constituição que garantisse uma melhor governação. Assim, o movimento Vintista visava o fim do absolutismo e o estabelecimento de um regime constitucional. No entanto, a independência do Brasil em 1822 foi um golpe para o regime, enfraquecendo a economia portuguesa e provocando uma reação negativa entre os vintistas.</span></p><p><span>O Vintismo terminou com a Vilafrancada quando o infante D.Miguel liderou uma sublevação militar que resultou na abolição da Constituição de 1822 e no restabelecimento dos ideais do Antigo Regime, ainda que de forma mitigada.</span></p>',
                     'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1200px-Flag_of_Portugal.svg.png',
                     'governos' => [
                         [
                             'nome' => 'Revoluções liberais do Porto e Lisboa',
                             'inicio' => '1820-08-24',
                             'fim' => '1820-09-28',
-                            'sinopse' => '<p><span>A Revolução do Porto, também referida como Revolução Liberal do Porto, foi um movimento de cunho liberal que eclodiu a 24 de agosto de 1820 na cidade do Porto e teve repercussões tanto na História de Portugal quanto na História do Brasil. O movimento resultou no retorno (1821) da Corte Portuguesa, que se transferira para o Brasil durante a Guerra Peninsular, e no fim do absolutismo em Portugal, com a ratificação e implementação da primeira Constituição portuguesa (1822).</span></p>
-                            <p><span>A revolução espalhou-se rapidamente, sem resistências, para outros centros urbanos do país, consolidando-se com a adesão de Lisboa.</span></p>
-                            <p><span>Aqui, a 15 de setembro de 1820, um movimento de oficiais subalternos, desencadeado pelo tenente Aurélio José de Moraes, com o apoio da burguesia e de populares, depôs os Regentes e constituiu um governo interino.</span></p>
-                            <p><span>Finalmente, a 28 de setembro, ambos os governos, do Porto e de Lisboa, uniram-se numa única "Junta Provisional do Supremo Governo do Reino", com o encargo de organizar as eleições para as Cortes Constituintes.</span></p>',
+                            'sinopse' => '<p><span>A Revolução do Porto, também referida como Revolução Liberal do Porto, foi um movimento de cunho liberal que eclodiu a 24 de agosto de 1820 na cidade do Porto e teve repercussões tanto na História de Portugal quanto na História do Brasil. O movimento resultou no retorno (1821) da Corte Portuguesa, que se transferira para o Brasil durante a Guerra Peninsular, e no fim do absolutismo em Portugal, com a ratificação e implementação da primeira Constituição portuguesa (1822).</span></p><p><span>A revolução espalhou-se rapidamente, sem resistências, para outros centros urbanos do país, consolidando-se com a adesão de Lisboa.</span></p><p><span>Aqui, a 15 de setembro de 1820, um movimento de oficiais subalternos, desencadeado pelo tenente Aurélio José de Moraes, com o apoio da burguesia e de populares, depôs os Regentes e constituiu um governo interino.</span></p><p><span>Finalmente, a 28 de setembro, ambos os governos, do Porto e de Lisboa, uniram-se numa única "Junta Provisional do Supremo Governo do Reino", com o encargo de organizar as eleições para as Cortes Constituintes.</span></p>',
                         ],
                         [
                             'nome' => 'Junta Provisional do Governo',
@@ -172,6 +162,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo do Vintismo',
                             'inicio' => '1823-05-27',
                             'fim' => '1823-06-01',
+                            'eleicao_id' => 2,
                             'sinopse' => '<p><span>O 3.º governo do Vintismo, nomeado a 28 de Maio e exonerado a 1 de Junho de 1823, no contexto das convulsões políticas da Vilafrancada, foi inicialmente dominado por José António Faria de Carvalho, na qualidade de Ministro e Secretário de Estado dos Negócios do Reino, tendo este sido substituido por Marciano de Azevedo quando desertou (juntamente com os ministros da Guerra e dos Negócios Estrangeiros, José Maria das Neves Costa e Hermano José Braamcamp do Sobral) para o lado de D. Miguel em Santarém.</span></p>',
                         ],
                         [
@@ -229,10 +220,7 @@ final class RepublicasGovernosSeeder extends Seeder
                     'nome' => 'Miguelismo (Monarquia Tradicional)',
                     'inicio' => '1828-02-26',
                     'fim' => '1834-05-26',
-                    'sinopse' => '<p><span>Miguelista é, na historiografia portuguesa, um apoiante do chamado Miguelismo, nomeadamente os que lutaram pela legitimidade permanente do Rei Miguel I de Portugal na linha de sucessão ao trono português e que vieram depois a fundar o Partido Legitimista e o Partido Realista que nele se integrou. Estes eram conservadores e portanto partidários duma monarquia tradicional, como forma de governo, em oposição à monarquia constitucional que era proposta pelos liberais portugueses seus opositores (então denominados "malhados").</span></p>
-<p><span>Muito do seu pensamento, já a meados do século XX, em Portugal, foi proposto pelo movimento Integralismo Lusitano e pela Causa Monárquica.</span></p>
-<p><span>Como forma de combater a Maçonaria, a aparente conspiradora aliada do pensamento liberal e ponto de reunião contra os ideais tradicionalistas, os Miguelistas fundaram igualmente uma organização secreta com a designação Ordem Equestre e Militar de São Miguel da Ala, mas, que pouco depois foi encerrada ao ser desautorizada por vontade do Papa.</span></p>
-<p><span>Em 2004, um pretendente do ramo Miguelista, Duarte Pio de Bragança, deslocou-se à sede do Grande Oriente Lusitano (GOL), da Maçonaria Portuguesa, no que constituiu a primeira visita de um descendente da extinta Casa de Bragança a esta instituição maçónica. O grão-mestre António Arnaut declarou publicamente que: "Não há hoje nenhum contencioso entre a Maçonaria e a Casa de Bragança" e acrescentou que a "reconciliação da Maçonaria Portuguesa com a Casa de Bragança" deu-se na ocasião dessa mesma visita de Duarte Pio. António Arnaut também recordou, por exemplo, que o próprio Francisco Correia de Herédia, 1.º Visconde da Ribeira Brava, trisavô de Isabel de Herédia, a esposa de Duarte Pio, integrou o fracassado movimento de 28 de Janeiro de 1908, quatro dias antes do Regicídio, que visava assassinar o rei D. Carlos I e alcançar o derrube da monarquia em Portugal. Muitos tradicionalistas enxergaram as atitudes de Duarte Pio como uma traição à dita causa legitimista.</span></p>',
+                    'sinopse' => '<p><span>Miguelista é, na historiografia portuguesa, um apoiante do chamado Miguelismo, nomeadamente os que lutaram pela legitimidade permanente do Rei Miguel I de Portugal na linha de sucessão ao trono português e que vieram depois a fundar o Partido Legitimista e o Partido Realista que nele se integrou. Estes eram conservadores e portanto partidários duma monarquia tradicional, como forma de governo, em oposição à monarquia constitucional que era proposta pelos liberais portugueses seus opositores (então denominados "malhados").</span></p><p><span>Muito do seu pensamento, já a meados do século XX, em Portugal, foi proposto pelo movimento Integralismo Lusitano e pela Causa Monárquica.</span></p><p><span>Como forma de combater a Maçonaria, a aparente conspiradora aliada do pensamento liberal e ponto de reunião contra os ideais tradicionalistas, os Miguelistas fundaram igualmente uma organização secreta com a designação Ordem Equestre e Militar de São Miguel da Ala, mas, que pouco depois foi encerrada ao ser desautorizada por vontade do Papa.</span></p><p><span>Em 2004, um pretendente do ramo Miguelista, Duarte Pio de Bragança, deslocou-se à sede do Grande Oriente Lusitano (GOL), da Maçonaria Portuguesa, no que constituiu a primeira visita de um descendente da extinta Casa de Bragança a esta instituição maçónica. O grão-mestre António Arnaut declarou publicamente que: "Não há hoje nenhum contencioso entre a Maçonaria e a Casa de Bragança" e acrescentou que a "reconciliação da Maçonaria Portuguesa com a Casa de Bragança" deu-se na ocasião dessa mesma visita de Duarte Pio. António Arnaut também recordou, por exemplo, que o próprio Francisco Correia de Herédia, 1.º Visconde da Ribeira Brava, trisavô de Isabel de Herédia, a esposa de Duarte Pio, integrou o fracassado movimento de 28 de Janeiro de 1908, quatro dias antes do Regicídio, que visava assassinar o rei D. Carlos I e alcançar o derrube da monarquia em Portugal. Muitos tradicionalistas enxergaram as atitudes de Duarte Pio como uma traição à dita causa legitimista.</span></p>',
                     'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1200px-Flag_of_Portugal.svg.png',
                     'governos' => [
                         [
@@ -247,17 +235,14 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo de D. Miguel I',
                             'inicio' => '1831-06-01',
                             'fim' => '1833-09-22',
-                            'sinopse' => '<p><span>O 2.º governo do Miguelismo, nomeado a no final de julho de 1831 e exonerado a 22 de setembro de 1833, não teve presidente, ficando extinta a pasta de Ministro Assistente ao Despacho com a demissão do Duque de Cadaval, sendo o executivo encabeçado por D. Miguel I de Portugal.</span></p>
-<p><span>Após a tomada de Lisboa pelos liberais a 24 de julho de 1833, o governo vê-se obrigado a estar constantemente em movimento. Por isso, e por os decretos de nomeação e exoneração não terem sido publicados na Gazeta de Lisboa, a sua constituição é de alguma forma imprecisa, com várias dúvidas sobre alguns dos titulares e das datas em que exerceram.</span></p>',
+                            'sinopse' => '<p><span>O 2.º governo do Miguelismo, nomeado a no final de julho de 1831 e exonerado a 22 de setembro de 1833, não teve presidente, ficando extinta a pasta de Ministro Assistente ao Despacho com a demissão do Duque de Cadaval, sendo o executivo encabeçado por D. Miguel I de Portugal.</span></p><p><span>Após a tomada de Lisboa pelos liberais a 24 de julho de 1833, o governo vê-se obrigado a estar constantemente em movimento. Por isso, e por os decretos de nomeação e exoneração não terem sido publicados na Gazeta de Lisboa, a sua constituição é de alguma forma imprecisa, com várias dúvidas sobre alguns dos titulares e das datas em que exerceram.</span></p>',
                         ],
                         [
                             'sigla' => 'III',
                             'nome' => 'Governo de D. Miguel I',
                             'inicio' => '1833-09-22',
                             'fim' => '1834-05-26',
-                            'sinopse' => '<p><span>O 3.º governo do Miguelismo, nomeado a 22 de setembro de 1833 e exonerado a 26 de maio de 1834 na sequência da Concessão de Evoramonte.</span></p>
-<p><span>Não teve presidente, dada a extinção da função de Ministro Assistente ao Despacho a 1 de Julho de 1831, sendo o executivo encabeçado por D. Miguel I de Portugal.</span></p>
-<p><span>Após a tomada de Lisboa pelos liberais a 24 de julho de 1833, o governo vê-se obrigado a estar constantemente em movimento. Por isso, e por os decretos de nomeação e exoneração não terem sido publicados na Gazeta de Lisboa, a sua constituição é de alguma forma imprecisa, com várias dúvidas sobre alguns dos titulares e das datas em que exerceram.</span></p>',
+                            'sinopse' => '<p><span>O 3.º governo do Miguelismo, nomeado a 22 de setembro de 1833 e exonerado a 26 de maio de 1834 na sequência da Concessão de Evoramonte.</span></p><p><span>Não teve presidente, dada a extinção da função de Ministro Assistente ao Despacho a 1 de Julho de 1831, sendo o executivo encabeçado por D. Miguel I de Portugal.</span></p><p><span>Após a tomada de Lisboa pelos liberais a 24 de julho de 1833, o governo vê-se obrigado a estar constantemente em movimento. Por isso, e por os decretos de nomeação e exoneração não terem sido publicados na Gazeta de Lisboa, a sua constituição é de alguma forma imprecisa, com várias dúvidas sobre alguns dos titulares e das datas em que exerceram.</span></p>',
                         ],
                     ],
                 ],
@@ -265,14 +250,7 @@ final class RepublicasGovernosSeeder extends Seeder
                     'nome' => 'Segundo Liberalismo (Monarquia Constitucional)',
                     'inicio' => '1834-05-26',
                     'fim' => '1910-10-05',
-                    'sinopse' => '<p><span>A aprovação da Constituição Política da Monarquia Portuguesa de 1822, pelas Cortes Gerais e Extraordinárias da Nação Portuguesa, foi resultado direto da Revolução Liberal de 1820 e marcou o início da Monarquia Constitucional no Reino Unido de Portugal, Brasil e Algarves. Esse período deu início ao conhecido como o Primeiro Liberalismo e ficou conhecido como Vintismo.</span></p>
-<p><span>Contudo, a Constituição de 1822 tinha um caráter radical, o que gerou descontentamento entre setores mais conservadores da sociedade, com a Vilafrancada, deu-se fim a Constituição de 1822 e ao Vintismo. Com a morte de D. João VI, surgiu um conflito sucessório. O seu filho mais velho, D. Pedro I do Brasil (anteriormente D. Pedro IV de Portugal), já havia declarado a independência do Brasil em 1822 e tornando-se Imperador do Brasil, das consequências da independência formaria o Império do Brasil e o regresso do Reino de Portugal e dos Algarves. Para garantir um regime liberal em Portugal sem abdicar do trono brasileiro, D. Pedro IV promulgou a Carta Constitucional da Monarquia Portuguesa de 1826 para o Reino de Portugal e dos Algarves, criando um sistema bicameral: Câmara dos Digníssimos Pares do Reino e a Câmara dos Senhores Deputados da Nação Portugueza, este período ficou conhecido como o Cartismo. Chamou então o seu irmão, D. Miguel I, que estava exilado, para governar como regente e jurar a Constituição.</span></p>
-<p><span>No entanto, D. Miguel I não respeitou o compromisso assumido: retornou a Portugal, colocou fim ao Primeiro Liberalismo, restaurou a monarquia absoluta e assumiu o trono como rei absoluto. Este golpe levou à eclosão da Guerra Civil Portuguesa (1832-1834), um conflito entre os liberais, que defendiam a monarquia constitucional e a Carta de 1826, apoiando D. Pedro IV e sua filha, D. Maria II, e os absolutistas, que apoiavam D. Miguel I e a sua mãe D. Carlota, já falecida em 1830, e a monarquia tradicional.</span></p>
-<p><span>Os liberais saíram vitoriosos, dando início ao Segundo Liberalismo, com D. Maria II como rainha de Portugal. Durante esse período, a instabilidade política levou à adoção de uma nova Constituição Política da Monarquia Portuguesa de 1838, com inspiração mais progressista e redução dos poderes da coroa, ficando conhecida como a Constituição Setembrista. A Constituição de 1838 foi o resultado da Revolução de Setembro, que, em 1836, foi uma tentativa de reforma radical promovida por um movimento progressista dentro do Partido Liberal, conhecido os antigos Vintistas e depois Setembristas. Esse movimento conseguiu depor o governo moderado do Duque da Terceira, implementando um regime mais centralizado e democrático, mas ao mesmo tempo gerou divisões internas.</span></p>
-<p><span>A situação política continuava instável, e em 1842, um golpe liderado por Costa Cabral, um político moderado, restaurou a Carta Constitucional de 1826, consolidando o poder da monarquia constitucional de caráter mais conservador, conhecido por Cabralismo. Esse golpe e a subsequente restauração da Carta representaram um retorno ao equilíbrio entre os poderes da coroa e do parlamento, mas também reforçaram as tensões internas entre liberais progressistas e moderados.</span></p>
-<p><span>Durante esse período, Portugal atravessou vários momentos de conflito político, como a Revolução da Maria da Fonte e a Guerra da Patuleia (1846-1847), um confronto armado entre facções liberais moderadas, os cartistas, e progressistas, os setembristas, apoiadas por diferentes setores da sociedade. A guerra teve repercussões significativas para a estabilidade política do país, culminando em uma intervenção estrangeira para restaurar a ordem. Após isso houve um insurreição militar em 1 de maio de 1851 e deu inicio á Regeneração.</span></p>
-<p><span>Durante o resto do século XIX, Portugal atravessou diversas crises políticas e económicas, alternando entre governos mais autoritários e tentativas de maior liberalização. O Partido Regenerador e o Partido Progressista revezaram-se no poder, com ambos os lados tentando modernizar o país e estabilizar o regime. No entanto, a crescente instabilidade e os problemas econômicos do país minaram a confiança no sistema monárquico.</span></p>
-<p><span>O sistema monárquico, no entanto, entrou em declínio no final do século XIX e início do século XX. A situação agravou-se com o Regicídio de 1908, de D. Carlos I, quando o rei e o seu filho mais velho, o príncipe herdeiro D. Luís Filipe, foram assassinados. Dois anos depois, em 5 de outubro de 1910, com a ajuda do Partido Republicano, foi proclamada a Implantação da República Portuguesa, pondo fim à monarquia em Portugal.</span></p>',
+                    'sinopse' => '<p><span>A aprovação da Constituição Política da Monarquia Portuguesa de 1822, pelas Cortes Gerais e Extraordinárias da Nação Portuguesa, foi resultado direto da Revolução Liberal de 1820 e marcou o início da Monarquia Constitucional no Reino Unido de Portugal, Brasil e Algarves. Esse período deu início ao conhecido como o Primeiro Liberalismo e ficou conhecido como Vintismo.</span></p><p><span>Contudo, a Constituição de 1822 tinha um caráter radical, o que gerou descontentamento entre setores mais conservadores da sociedade, com a Vilafrancada, deu-se fim a Constituição de 1822 e ao Vintismo. Com a morte de D. João VI, surgiu um conflito sucessório. O seu filho mais velho, D. Pedro I do Brasil (anteriormente D. Pedro IV de Portugal), já havia declarado a independência do Brasil em 1822 e tornando-se Imperador do Brasil, das consequências da independência formaria o Império do Brasil e o regresso do Reino de Portugal e dos Algarves. Para garantir um regime liberal em Portugal sem abdicar do trono brasileiro, D. Pedro IV promulgou a Carta Constitucional da Monarquia Portuguesa de 1826 para o Reino de Portugal e dos Algarves, criando um sistema bicameral: Câmara dos Digníssimos Pares do Reino e a Câmara dos Senhores Deputados da Nação Portugueza, este período ficou conhecido como o Cartismo. Chamou então o seu irmão, D. Miguel I, que estava exilado, para governar como regente e jurar a Constituição.</span></p><p><span>No entanto, D. Miguel I não respeitou o compromisso assumido: retornou a Portugal, colocou fim ao Primeiro Liberalismo, restaurou a monarquia absoluta e assumiu o trono como rei absoluto. Este golpe levou à eclosão da Guerra Civil Portuguesa (1832-1834), um conflito entre os liberais, que defendiam a monarquia constitucional e a Carta de 1826, apoiando D. Pedro IV e sua filha, D. Maria II, e os absolutistas, que apoiavam D. Miguel I e a sua mãe D. Carlota, já falecida em 1830, e a monarquia tradicional.</span></p><p><span>Os liberais saíram vitoriosos, dando início ao Segundo Liberalismo, com D. Maria II como rainha de Portugal. Durante esse período, a instabilidade política levou à adoção de uma nova Constituição Política da Monarquia Portuguesa de 1838, com inspiração mais progressista e redução dos poderes da coroa, ficando conhecida como a Constituição Setembrista. A Constituição de 1838 foi o resultado da Revolução de Setembro, que, em 1836, foi uma tentativa de reforma radical promovida por um movimento progressista dentro do Partido Liberal, conhecido os antigos Vintistas e depois Setembristas. Esse movimento conseguiu depor o governo moderado do Duque da Terceira, implementando um regime mais centralizado e democrático, mas ao mesmo tempo gerou divisões internas.</span></p><p><span>A situação política continuava instável, e em 1842, um golpe liderado por Costa Cabral, um político moderado, restaurou a Carta Constitucional de 1826, consolidando o poder da monarquia constitucional de caráter mais conservador, conhecido por Cabralismo. Esse golpe e a subsequente restauração da Carta representaram um retorno ao equilíbrio entre os poderes da coroa e do parlamento, mas também reforçaram as tensões internas entre liberais progressistas e moderados.</span></p><p><span>Durante esse período, Portugal atravessou vários momentos de conflito político, como a Revolução da Maria da Fonte e a Guerra da Patuleia (1846-1847), um confronto armado entre facções liberais moderadas, os cartistas, e progressistas, os setembristas, apoiadas por diferentes setores da sociedade. A guerra teve repercussões significativas para a estabilidade política do país, culminando em uma intervenção estrangeira para restaurar a ordem. Após isso houve um insurreição militar em 1 de maio de 1851 e deu inicio á Regeneração.</span></p><p><span>Durante o resto do século XIX, Portugal atravessou diversas crises políticas e económicas, alternando entre governos mais autoritários e tentativas de maior liberalização. O Partido Regenerador e o Partido Progressista revezaram-se no poder, com ambos os lados tentando modernizar o país e estabilizar o regime. No entanto, a crescente instabilidade e os problemas econômicos do país minaram a confiança no sistema monárquico.</span></p><p><span>O sistema monárquico, no entanto, entrou em declínio no final do século XIX e início do século XX. A situação agravou-se com o Regicídio de 1908, de D. Carlos I, quando o rei e o seu filho mais velho, o príncipe herdeiro D. Luís Filipe, foram assassinados. Dois anos depois, em 5 de outubro de 1910, com a ajuda do Partido Republicano, foi proclamada a Implantação da República Portuguesa, pondo fim à monarquia em Portugal.</span></p>',
                     'image_url' => 'https://pt.wikipedia.org/wiki/Ficheiro:Bras%C3%A3o_de_armas_do_reino_de_Portugal.svg#/media/Ficheiro:Bras%C3%A3o_de_armas_do_reino_de_Portugal.svg',
                     'governos' => [
                         [
@@ -438,20 +416,20 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1851-05-22',
                             'fim' => '1856-06-06',
-                            'sinopse' => '<p><span>O 21.º governo da Monarquia Constitucional, também conhecido como a segunda parte do 1.º governo da Regeneração, nomeado a 22 de maio de 1851 e exonerado a 6 de junho de 1856, foi presidido pelo duque de Saldanha. Numa primeira fase, entre 22 de maio de 1851 e 31 de dezembro de 1852, o governo foi efetuado em ditadura. A partir do Ato Adicional de 5 de julho de 1852, que definia que a nomeação dos deputados seria feita por eleição direta, o governo passa a efetuar eleições.</span></p>
-<p><span>Em Fevereiro de 1856, o Partido Histórico põe a correr no país uma forte propaganda contra os novos impostos anunciados pelo Ministro da Fazenda, Fontes Pereira de Melo, recolhendo 50 mil assinaturas. Saldanha pede ao rei D. Pedro V, que havia subido ao trono meses antes, a nomeação de doze Pares. Tendo o rei recusado, Saldanha apresentou a demissão do ministério a 2 de junho.</span></p>',
+                            'sinopse' => '<p><span>O 21.º governo da Monarquia Constitucional, também conhecido como a segunda parte do 1.º governo da Regeneração, nomeado a 22 de maio de 1851 e exonerado a 6 de junho de 1856, foi presidido pelo duque de Saldanha. Numa primeira fase, entre 22 de maio de 1851 e 31 de dezembro de 1852, o governo foi efetuado em ditadura. A partir do Ato Adicional de 5 de julho de 1852, que definia que a nomeação dos deputados seria feita por eleição direta, o governo passa a efetuar eleições.</span></p><p><span>Em Fevereiro de 1856, o Partido Histórico põe a correr no país uma forte propaganda contra os novos impostos anunciados pelo Ministro da Fazenda, Fontes Pereira de Melo, recolhendo 50 mil assinaturas. Saldanha pede ao rei D. Pedro V, que havia subido ao trono meses antes, a nomeação de doze Pares. Tendo o rei recusado, Saldanha apresentou a demissão do ministério a 2 de junho.</span></p>',
                         ],
                         [
                             'sigla' => 'XXII',
                             'nome' => 'Governo da Monarquia Constitucional',
+                            'eleicao_id' => 14,
                             'inicio' => '1856-06-06',
                             'fim' => '1859-03-16',
-                            'sinopse' => '<p><span>O 22.º governo da Monarquia Constitucional, ou 2.º governo da Regeneração, nomeado a 6 de junho de 1856 e exonerado a 16 de março de 1859, foi presidido pelo marquês de Loulé.</span></p>
-<p><span>Logo na sua estreia parlamentar, o governo tido como de Esquerda, declarou a intenção de prosseguir a mesma política do seu antecessor Regenerador, elegendo como principal prioridade do seu programa os melhoramentos técnicos e materiais do país. Este estado de coisas pôs a descoberto uma fractura dentro do Partido Histórico, entre uma tendência inclinada à colaboração com a Direita (a "unha branca") e uma tendência mais radical que insistia na afirmação da autonomia da Esquerda (a "unha negra").</span></p>',
+                            'sinopse' => '<p><span>O 22.º governo da Monarquia Constitucional, ou 2.º governo da Regeneração, nomeado a 6 de junho de 1856 e exonerado a 16 de março de 1859, foi presidido pelo marquês de Loulé.</span></p><p><span>Logo na sua estreia parlamentar, o governo tido como de Esquerda, declarou a intenção de prosseguir a mesma política do seu antecessor Regenerador, elegendo como principal prioridade do seu programa os melhoramentos técnicos e materiais do país. Este estado de coisas pôs a descoberto uma fractura dentro do Partido Histórico, entre uma tendência inclinada à colaboração com a Direita (a "unha branca") e uma tendência mais radical que insistia na afirmação da autonomia da Esquerda (a "unha negra").</span></p>',
                         ],
                         [
                             'sigla' => 'XXIII',
                             'nome' => 'Governo da Monarquia Constitucional',
+                            'eleicao_id' => 15,
                             'inicio' => '1859-03-16',
                             'fim' => '1860-05-01',
                             'sinopse' => '<p><span>O 23.º governo da Monarquia Constitucional, também conhecido como a primeira parte do 3.º governo da Regeneração, nomeado a 16 de março de 1859 e exonerado a 1 de maio de 1860, foi presidido inicialmente pelo duque da Terceira, até à sua morte a 26 de abril de 1860. Entre 26 de abril e 1 de maio, não houve presidente do Conselho de Ministros, sendo este coletivamente liderado pela totalidade do Conselho de Ministros (composto na altura por Fontes Pereira de Melo, Martens Ferrão, Casal Ribeiro e António Serpa).</span></p>',
@@ -461,6 +439,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1860-05-01',
                             'fim' => '1860-07-04',
+                            'eleicao_id' => 16,
                             'sinopse' => '<p><span>O 24.º governo da Monarquia Constitucional, também conhecido como a segunda parte do 3.º governo da Regeneração, nomeado a 1 de maio de 1860 e exonerado a 4 de julho de 1860, foi presidido por Joaquim António de Aguiar.</span></p>',
                         ],
                         [
@@ -468,6 +447,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1860-07-04',
                             'fim' => '1865-04-17',
+                            'eleicao_id' => 17,
                             'sinopse' => '<p><span>O 25.º governo da Monarquia Constitucional, ou 4.º governo da Regeneração, nomeado a 4 de julho de 1860 e exonerado a 17 de abril de 1865, foi presidido pelo marquês de Loulé, sendo interrompido pela presidência interina do visconde de Sá da Bandeira de 12 de setembro a 6 de outubro de 1862. A partir de 3 de outubro de 1862, foi atribuído o título ducal a Loulé.</span></p>',
                         ],
                         [
@@ -475,20 +455,21 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1865-04-17',
                             'fim' => '1865-09-04',
+                            'eleicao_id' => 18,
                             'sinopse' => '<p><span>O 26.º governo da Monarquia Constitucional, ou 5.º governo da Regeneração, nomeado a 17 de abril de 1865 e exonerado a 4 de setembro do mesmo ano, foi presidido pelo marquês de Sá da Bandeira.</span></p>',
                         ],
                         [
                             'sigla' => 'XXVII',
                             'nome' => 'Governo da Monarquia Constitucional',
+                            'eleicao_id' => 19,
                             'inicio' => '1865-09-04',
                             'fim' => '1868-01-04',
-                            'sinopse' => '<p><span>O 27.º governo da Monarquia Constitucional, ou 6.º governo da Regeneração, mais conhecido por governo da Fusão por juntar regeneradores e históricos, é a designação dada ao executivo de coligação nomeado a 4 de setembro de 1865 e exonerado a 4 de janeiro de 1868, e presidido por Joaquim António de Aguiar.</span></p>
-<p><span>Facto marcante deste governo foi a abolição da pena de morte para os crimes civis, em 1 de julho de 1867, através da promulgação do novo Código Civil.</span></p>
-<p><span>Este governo acabaria por cair no início do ano de 1868 na revolta a que se chamou Janeirinha, que tinha por base o protesto contra as leis que criavam o imposto de consumo e procediam à reforma administrativa do território.</span></p>',
+                            'sinopse' => '<p><span>O 27.º governo da Monarquia Constitucional, ou 6.º governo da Regeneração, mais conhecido por governo da Fusão por juntar regeneradores e históricos, é a designação dada ao executivo de coligação nomeado a 4 de setembro de 1865 e exonerado a 4 de janeiro de 1868, e presidido por Joaquim António de Aguiar.</span></p><p><span>Facto marcante deste governo foi a abolição da pena de morte para os crimes civis, em 1 de julho de 1867, através da promulgação do novo Código Civil.</span></p><p><span>Este governo acabaria por cair no início do ano de 1868 na revolta a que se chamou Janeirinha, que tinha por base o protesto contra as leis que criavam o imposto de consumo e procediam à reforma administrativa do território.</span></p>',
                         ],
                         [
                             'sigla' => 'XXVIII',
                             'nome' => 'Governo da Monarquia Constitucional',
+                            'eleicao_id' => 20,
                             'inicio' => '1868-01-04',
                             'fim' => '1868-07-22',
                             'sinopse' => '<p><span>O 28.º governo da Monarquia Constitucional, ou 7.º governo da Regeneração, nomeado a 4 de janeiro de 1868 e exonerado a 22 de julho do mesmo ano, foi presidido pelo conde de Ávila. De 14 de janeiro a 19 de março, este governo exerceu o seu poder em ditadura, apenas efetuando eleições a 22 de março. Nestas, o partido do governo em atuação ganhou com grande vantagem. Uma das primeiras medidas foi a revogação da lei sobre o consumo que tinha dado origem à Janeirinha.</span></p>',
@@ -498,6 +479,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1868-07-22',
                             'fim' => '1869-08-11',
+                            'eleicao_id' => 21,
                             'sinopse' => '<p><span>O 29.º governo da Monarquia Constitucional, ou 8.º governo da Regeneração, nomeado a 22 de julho de 1868 e exonerado a 11 de agosto de 1869, foi presidido pelo marquês de Sá da Bandeira. De 10 de novembro de 1868 a 24 de abril de 1869, data de eleições, o governo foi feito em ditadura. É considerado o primeiro governo reformista pela medidas tomadas na administração, nomeadamente na saúde e obras públicas. Uma das medidas mais marcantes, foi a abolição da escravatura em 23 de fevereiro de 1869.</span></p>',
                         ],
                         [
@@ -505,6 +487,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1869-08-11',
                             'fim' => '1870-05-19',
+                            'eleicao_id' => 22,
                             'sinopse' => '<p><span>O 30.º governo da Monarquia Constitucional, ou 9.º governo da Regeneração, nomeado a 11 de agosto de 1869 e exonerado parcialmente a 19 de maio de 1870 (alguns ministros foram exonerados no dia 20), foi presidido pelo duque de Loulé. Foi derrubado pelo golpe de Estado que ficou conhecido por Saldanhada, e que deu início a um novo governo, chefiado pelo duque de Saldanha, apoiado por todas as forças oposicionistas ao governo histórico de Loulé.</span></p>',
                         ],
                         [
@@ -512,6 +495,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1870-05-19',
                             'fim' => '1870-08-29',
+                            'eleicao_id' => 23,
                             'sinopse' => '<p><span>O 31.º governo da Monarquia Constitucional, ou 10.º governo da Regeneração, nomeado a 19 de maio de 1870 (alguns ministros foram apenas nomeados no dia 20) e exonerado a 29 de agosto do mesmo ano, foi presidido pelo duque de Saldanha. Foi um governo exercido em ditadura.</span></p>',
                         ],
                         [
@@ -526,6 +510,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1870-10-29',
                             'fim' => '1871-09-13',
+                            'eleicao_id' => 24,
                             'sinopse' => '<p><span>O 33.º governo da Monarquia Constitucional, ou 12.º governo da Regeneração, nomeado a 29 de outubro de 1870 e exonerado a 13 de setembro de 1871, foi presidido pelo marquês de Ávila.</span></p>',
                         ],
                         [
@@ -533,8 +518,8 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1871-09-13',
                             'fim' => '1877-03-05',
-                            'sinopse' => '<p><span>O 34.º governo da Monarquia Constitucional, ou 1.º governo do Fontismo, e 13.º governo desde a Regeneração, nomeado a 13 de setembro de 1871 e exonerado a 5 de março de 1877, foi presidido por António Maria de Fontes Pereira de Melo.</span></p>
-<p><span>Foi um governo que iniciou um novo ciclo político de estabilidade e desenvolvimento, que duraria cerca de cinco anos e meio. Foram efetuadas eleições em 12 de julho de 1874. É um período de novas ideias e movimentos, em que surge a Associação Católica do Porto, o Partido Socialista Português e o Partido Progressista, resultado da fusão do Partido Histórico com o Partido Reformista. É eleito o Directório do Partido Republicano Português. Também neste novo período, é fundada a Sociedade de Geografia de Lisboa, em 1876, e a Caixa Geral de Depósitos.</span></p>',
+                            'eleicao_id' => 25,
+                            'sinopse' => '<p><span>O 34.º governo da Monarquia Constitucional, ou 1.º governo do Fontismo, e 13.º governo desde a Regeneração, nomeado a 13 de setembro de 1871 e exonerado a 5 de março de 1877, foi presidido por António Maria de Fontes Pereira de Melo.</span></p><p><span>Foi um governo que iniciou um novo ciclo político de estabilidade e desenvolvimento, que duraria cerca de cinco anos e meio. Foram efetuadas eleições em 12 de julho de 1874. É um período de novas ideias e movimentos, em que surge a Associação Católica do Porto, o Partido Socialista Português e o Partido Progressista, resultado da fusão do Partido Histórico com o Partido Reformista. É eleito o Directório do Partido Republicano Português. Também neste novo período, é fundada a Sociedade de Geografia de Lisboa, em 1876, e a Caixa Geral de Depósitos.</span></p>',
                         ],
                         [
                             'sigla' => 'XXXV',
@@ -548,17 +533,14 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1878-01-29',
                             'fim' => '1879-06-01',
-                            'sinopse' => '<p><span>O 36.º governo da Monarquia Constitucional, 2.º governo do Rotativismo e 2.º governo do Fontismo, e o 15.º desde a Regeneração, nomeado a 29 de janeiro de 1878 e exonerado a 1 de junho de 1879, foi presidido por António Maria de Fontes Pereira de Melo.</span></p>
-<p><span>São realizadas eleições em 13 de novembro de 1878.</span></p>
-<p><span>O governo fez várias reformas das quais se destacam a da lei eleitoral, um novo código administrativo e a reforma da Câmara dos Pares. Em 1879, foi assinado um acordo polémico, o Tratado de Lourenço Marques, o qual permitia a presença da marinha britânica nas águas territoriais moçambicanas e o desembarque das suas tropas no porto de Lourenço Marques. A contestação a este tratado, foi uma das causas para a queda do governo.</span></p>',
+                            'sinopse' => '<p><span>O 36.º governo da Monarquia Constitucional, 2.º governo do Rotativismo e 2.º governo do Fontismo, e o 15.º desde a Regeneração, nomeado a 29 de janeiro de 1878 e exonerado a 1 de junho de 1879, foi presidido por António Maria de Fontes Pereira de Melo.</span></p><p><span>São realizadas eleições em 13 de novembro de 1878.</span></p><p><span>O governo fez várias reformas das quais se destacam a da lei eleitoral, um novo código administrativo e a reforma da Câmara dos Pares. Em 1879, foi assinado um acordo polémico, o Tratado de Lourenço Marques, o qual permitia a presença da marinha britânica nas águas territoriais moçambicanas e o desembarque das suas tropas no porto de Lourenço Marques. A contestação a este tratado, foi uma das causas para a queda do governo.</span></p>',
                         ],
                         [
                             'sigla' => 'XXXVII',
                             'nome' => 'Governo da Monarquia Constitucional',
                             'inicio' => '1879-06-01',
                             'fim' => '1881-03-25',
-                            'sinopse' => '<p><span>O 37.º governo da Monarquia Constitucional, 3.º governo do Rotativismo, e o 16.º desde a Regeneração, nomeado a 1 de junho de 1879 e exonerado a 25 de março de 1881, foi presidido por Anselmo José Braamcamp.</span></p>
-<p><span>São realizadas eleições em 19 de outubro de 1879.</span></p>',
+                            'sinopse' => '<p><span>O 37.º governo da Monarquia Constitucional, 3.º governo do Rotativismo, e o 16.º desde a Regeneração, nomeado a 1 de junho de 1879 e exonerado a 25 de março de 1881, foi presidido por Anselmo José Braamcamp.</span></p><p><span>São realizadas eleições em 19 de outubro de 1879.</span></p>',
                         ],
                         [
                             'sigla' => 'XXXVIII',
@@ -570,6 +552,7 @@ final class RepublicasGovernosSeeder extends Seeder
                         [
                             'sigla' => 'XXXIX',
                             'nome' => 'Governo da Monarquia Constitucional',
+                            'eleicao_id' => 29,
                             'inicio' => '1881-11-14',
                             'fim' => '1883-10-24',
                             'sinopse' => '<p><span>O 39.º governo da Monarquia Constitucional, também conhecido como a segunda fase do 4.º governo do Rotativismo, do 3.º governo do Fontismo e do 17.º desde a Regeneração, nomeado a 14 de novembro de 1881, foi presidido por António Maria de Fontes Pereira de Melo.</span></p>',
@@ -703,14 +686,14 @@ final class RepublicasGovernosSeeder extends Seeder
                         [
                             'sigla' => 'LVIII',
                             'nome' => 'Governo da Monarquia Constitucional',
-                            'inicio' => '1908-04-11',
+                            'inicio' => '1909-04-11',
                             'fim' => '1909-05-14',
                             'sinopse' => '<p><span>O 58.º governo da Monarquia Constitucional e 30.º governo desde a Regeneração, nomeado a 11 de abril de 1909 e exonerado a 14 de maio do mesmo ano, foi presidido por Sebastião Teles.</span></p>',
                         ],
                         [
                             'sigla' => 'LVIX',
                             'nome' => 'Governo da Monarquia Constitucional',
-                            'inicio' => '1908-05-14',
+                            'inicio' => '1909-05-14',
                             'fim' => '1909-12-22',
                             'sinopse' => '<p><span>O 59.º governo da Monarquia Constitucional e 31.º governo desde a Regeneração, nomeado a 14 de maio de 1909 e exonerado a 22 de dezembro do mesmo ano, foi presidido por Venceslau de Lima.</span></p>',
                         ],
@@ -741,16 +724,15 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Provisório da República Portuguesa',
                             'inicio' => '1910-10-05',
                             'fim' => '1911-09-04',
-                            'sinopse' => '<p><span>O Governo Provisório da República Portuguesa foi o directório que, após a proclamação da República Portuguesa em 5 de Outubro de 1910, ficou encarregado de dirigir superiormente a Nação até que fosse aprovada uma nova Lei fundamental. O Governo Provisório manteve-se em funções até à aprovação da nova constituição (a Constituição de 1911), em 24 de Agosto de 1911, dando por encerrados os seus trabalhos e auto-dissolvendo-se a 4 de Setembro, quando deu lugar ao primeiro governo constitucional, chefiado por João Chagas.</span></p>
-<p><span>Também se chamaram de Governos Provisórios da República Portuguesa os primeiros seis governos empossados pelos presidentes da República nomeados pela Junta de Salvação Nacional, organismo que vinha previsto no programa do Movimento das Forças Armadas para o exercício político, até à formação de um governo civil, para precaver a destituição imediata do Presidente da República (o almirante Américo Thomaz) e Governo, dissolução da Assembleia Nacional e do Conselho de Estado, promulgando a Lei Constitucional n.º 1/74, de 25 de Abril e, após os acontecimentos de 11 de Março de 1975 e de a JSN ter sido extinta, pelo Conselho da Revolução.</span></p>',
+                            'sinopse' => '<p><span>O Governo Provisório da República Portuguesa foi o directório que, após a proclamação da República Portuguesa em 5 de Outubro de 1910, ficou encarregado de dirigir superiormente a Nação até que fosse aprovada uma nova Lei fundamental. O Governo Provisório manteve-se em funções até à aprovação da nova constituição (a Constituição de 1911), em 24 de Agosto de 1911, dando por encerrados os seus trabalhos e auto-dissolvendo-se a 4 de Setembro, quando deu lugar ao primeiro governo constitucional, chefiado por João Chagas.</span></p><p><span>Também se chamaram de Governos Provisórios da República Portuguesa os primeiros seis governos empossados pelos presidentes da República nomeados pela Junta de Salvação Nacional, organismo que vinha previsto no programa do Movimento das Forças Armadas para o exercício político, até à formação de um governo civil, para precaver a destituição imediata do Presidente da República (o almirante Américo Thomaz) e Governo, dissolução da Assembleia Nacional e do Conselho de Estado, promulgando a Lei Constitucional n.º 1/74, de 25 de Abril e, após os acontecimentos de 11 de Março de 1975 e de a JSN ter sido extinta, pelo Conselho da Revolução.</span></p>',
                         ],
                         [
                             'sigla' => 'II',
                             'nome' => 'Governo Republicano',
                             'inicio' => '1911-09-04',
                             'fim' => '1911-11-12',
-                            'sinopse' => '<p><span>O Governo Provisório da República Portuguesa foi o directório que, após a proclamação da República Portuguesa em 5 de Outubro de 1910, ficou encarregado de dirigir superiormente a Nação até que fosse aprovada uma nova Lei fundamental. O Governo Provisório manteve-se em funções até à aprovação da nova constituição (a Constituição de 1911), em 24 de Agosto de 1911, dando por encerrados os seus trabalhos e auto-dissolvendo-se a 4 de Setembro, quando deu lugar ao primeiro governo constitucional, chefiado por João Chagas.</span></p>
-<p><span>Também se chamaram de Governos Provisórios da República Portuguesa os primeiros seis governos empossados pelos presidentes da República nomeados pela Junta de Salvação Nacional, organismo que vinha previsto no programa do Movimento das Forças Armadas para o exercício político, até à formação de um governo civil, para precaver a destituição imediata do Presidente da República (o almirante Américo Thomaz) e Governo, dissolução da Assembleia Nacional e do Conselho de Estado, promulgando a Lei Constitucional n.º 1/74, de 25 de Abril e, após os acontecimentos de 11 de Março de 1975 e de a JSN ter sido extinta, pelo Conselho da Revolução.</span></p>',
+                            'eleicao_id' => 47,
+                            'sinopse' => '<p><span>O Governo Provisório da República Portuguesa foi o directório que, após a proclamação da República Portuguesa em 5 de Outubro de 1910, ficou encarregado de dirigir superiormente a Nação até que fosse aprovada uma nova Lei fundamental. O Governo Provisório manteve-se em funções até à aprovação da nova constituição (a Constituição de 1911), em 24 de Agosto de 1911, dando por encerrados os seus trabalhos e auto-dissolvendo-se a 4 de Setembro, quando deu lugar ao primeiro governo constitucional, chefiado por João Chagas.</span></p><p><span>Também se chamaram de Governos Provisórios da República Portuguesa os primeiros seis governos empossados pelos presidentes da República nomeados pela Junta de Salvação Nacional, organismo que vinha previsto no programa do Movimento das Forças Armadas para o exercício político, até à formação de um governo civil, para precaver a destituição imediata do Presidente da República (o almirante Américo Thomaz) e Governo, dissolução da Assembleia Nacional e do Conselho de Estado, promulgando a Lei Constitucional n.º 1/74, de 25 de Abril e, após os acontecimentos de 11 de Março de 1975 e de a JSN ter sido extinta, pelo Conselho da Revolução.</span></p>',
                         ],
                         [
                             'sigla' => 'III',
@@ -778,6 +760,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1914-02-09',
                             'fim' => '1914-06-23',
+                            'eleicao_id' => 48,
                             'sinopse' => '<p><span>O 6.º governo da Primeira República Portuguesa, nomeado a 9 de fevereiro de 1914 e exonerado a 23 de junho de 1914, foi liderado por Bernardino Machado. Seguiu-se-lhe um novo governo de Bernardino Machado, que durou de 23 de junho a 12 de dezembro de 1914.</span></p>',
                         ],
                         [
@@ -805,8 +788,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Junta Constitucional de 1915',
                             'inicio' => '1915-05-14',
                             'fim' => '1915-05-17',
-                            'sinopse' => '<p><span>A Junta Constitucional de 1915, também conhecida como Junta Revolucionária foi um órgão provisório formado após o golpe militar de 14 de Maio de 1915, que destituiu o governo do general Joaquim Pimenta de Castro. Um dos objectivos do golpe era forçar a participação de Portugal na Grande Guerra, o que foi conseguido. Governou apenas três dias, até 17 de Maio, já que cessou funções com a tomada de posse do ministério presidido interinamente por José de Castro (o presidente do Ministério nomeado era João Chagas, que foi impedido de tomar posse após sofrer um atentado), que mais tarde viria a ocupar efetivamente o cargo. Neste curto período, a Junta foi encarregada de supervisionar todos os departamentos governamentais, até à tomada de posse dos respetivos ministros do 10.º governo republicano.</span></p>
-                                            <p><span>Os membros da Junta Constitucional estavam ligados ao agrupamento Jovem Turquia, que coorganizou o movimento de 14 de Maio de 1915. Jovem Turquia foi um grupo de oficiais do Exército Português liderados por Álvaro de Castro e afectos ao Partido Democrático. Este grupo organizou-se em torno da loja maçónica Jovem Turquia, da qual adoptou o nome. Os jovens turcos, como eram conhecidos, tiveram um papel relevante nos acontecimentos revolucionários de 1915 e na cadeia de eventos que levou Portugal a declarar guerra à Alemanha e a entrar na Primeira Guerra Mundial.</span></p>',
+                            'sinopse' => '<p><span>A Junta Constitucional de 1915, também conhecida como Junta Revolucionária foi um órgão provisório formado após o golpe militar de 14 de Maio de 1915, que destituiu o governo do general Joaquim Pimenta de Castro. Um dos objectivos do golpe era forçar a participação de Portugal na Grande Guerra, o que foi conseguido. Governou apenas três dias, até 17 de Maio, já que cessou funções com a tomada de posse do ministério presidido interinamente por José de Castro (o presidente do Ministério nomeado era João Chagas, que foi impedido de tomar posse após sofrer um atentado), que mais tarde viria a ocupar efetivamente o cargo. Neste curto período, a Junta foi encarregada de supervisionar todos os departamentos governamentais, até à tomada de posse dos respetivos ministros do 10.º governo republicano.</span></p><p><span>Os membros da Junta Constitucional estavam ligados ao agrupamento Jovem Turquia, que coorganizou o movimento de 14 de Maio de 1915. Jovem Turquia foi um grupo de oficiais do Exército Português liderados por Álvaro de Castro e afectos ao Partido Democrático. Este grupo organizou-se em torno da loja maçónica Jovem Turquia, da qual adoptou o nome. Os jovens turcos, como eram conhecidos, tiveram um papel relevante nos acontecimentos revolucionários de 1915 e na cadeia de eventos que levou Portugal a declarar guerra à Alemanha e a entrar na Primeira Guerra Mundial.</span></p>',
                         ],
                         [
                             'sigla' => 'X',
@@ -820,6 +802,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1915-07-19',
                             'fim' => '1915-11-29',
+                            'eleicao_id' => 49,
                             'sinopse' => '<p><span>O 11.º governo da Primeira República Portuguesa, nomeado a 19 de junho de 1915 e exonerado a 29 de novembro do mesmo ano, foi liderado por José de Castro. No anterior governo, José de Castro servira como presidente interino do Ministério, em substituição de João Chagas que sofrera um atentado impossibilitando-o de tomar posse.</span></p>',
                         ],
                         [
@@ -834,8 +817,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1916-03-15',
                             'fim' => '1917-04-25',
-                            'sinopse' => '<p><span>O 13.º governo da Primeira República Portuguesa, também conhecido como Ministério da União Sagrada, ou simplesmente União Sagrada, nomeado a 15 de março de 1916 e exonerado a 25 de abril de 1917, foi liderado por António José de Almeida. Para fazer face à participação portuguesa na I Guerra Mundial, tinha, por base, a união de todos os partidos políticos portugueses como resposta à nova conjuntura imposta pelos alemães. Na prática, apenas dois partidos se uniram: o Partido Democrático, liderado por Afonso Costa, e o Partido Republicano Evolucionista, de António José de Almeida. Seria este último o seu presidente.</span></p>
-<p><span>Esta união durou até 25 de Abril de 1917, constituindo um dos governos que mais tempo esteve em funções (cerca de 406 dias), durante a Primeira República Portuguesa.</span></p>',
+                            'sinopse' => '<p><span>O 13.º governo da Primeira República Portuguesa, também conhecido como Ministério da União Sagrada, ou simplesmente União Sagrada, nomeado a 15 de março de 1916 e exonerado a 25 de abril de 1917, foi liderado por António José de Almeida. Para fazer face à participação portuguesa na I Guerra Mundial, tinha, por base, a união de todos os partidos políticos portugueses como resposta à nova conjuntura imposta pelos alemães. Na prática, apenas dois partidos se uniram: o Partido Democrático, liderado por Afonso Costa, e o Partido Republicano Evolucionista, de António José de Almeida. Seria este último o seu presidente.</span></p><p><span>Esta união durou até 25 de Abril de 1917, constituindo um dos governos que mais tempo esteve em funções (cerca de 406 dias), durante a Primeira República Portuguesa.</span></p>',
                         ],
                         [
                             'sigla' => 'XIV',
@@ -862,6 +844,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1918-05-15',
                             'fim' => '1918-12-23',
+                            'eleicao_id' => 50,
                             'sinopse' => '<p><span>O 16.º governo da Primeira República Portuguesa, nomeado a 15 de maio de 1918 e exonerado a 23 de dezembro de 1918, foi liderado por Sidónio Pais (na sua capacidade de presidente da República). Neste governo, ao invés do cargo de ministros, os seus membros foram oficialmente designados secretários de Estado. Após o assassinato de Sidónio Pais a 14 de dezembro de 1918, o Ministério investiu-se na totalidade do poder executivo e elegeu para seu novo presidente o até ao momento secretário de Estado da Marinha, João do Canto e Castro, a 15 de dezembro. Entre 14 e 15 de dezembro, a totalidade do Ministério serviu como chefe de Estado e de governo. Entre 15 e 16 de dezembro, Canto e Castro foi chefe de Estado ex officio por inerência do cargo de presidente do Ministério, tendo a 16 sido eleito presidente da República, abandonando o primeiro,[1] não tendo, contudo, sido exonerado do mesmo (tal como havia sucedido com Sidónio Pais quando foi investido no cargo de presidente da República).</span></p>',
                         ],
                         [
@@ -897,6 +880,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1919-06-29',
                             'fim' => '1920-01-21',
+                            'eleicao_id' => 51,
                             'sinopse' => '<p><span>O 21.º governo da Primeira República Portuguesa foi nomeado a 29 de junho de 1919 e exonerado a 15 de janeiro de 1920, sendo no mesmo dia reempossado devido à queda do governo de Francisco Fernandes Costa que havia sido nomeado e exonerado nesse dia sem tomar posse. O 21.º governo republicano manteve-se sempre em funções, tendo a sua exoneração de 15 de janeiro sido anulada, sendo apenas efetivamente exonerado a 21 de janeiro de 1920, cinco dias depois. Foi liderado por Alfredo de Sá Cardoso.</span></p>',
                         ],
                         [
@@ -904,9 +888,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1920-01-15',
                             'fim' => '1920-01-15',
-                            'sinopse' => '<p><span>O 22.º governo da Primeira República Portuguesa, nomeado a 15 de janeiro de 1920 e exonerado no mesmo dia sem tomar posse, foi liderado por Francisco Fernandes Costa. Ficou conhecido como o Governo dos Cinco Minutos.</span></p>
-<p><span>O governo não chega a tomar posse, face a uma manifestação de rua, comandada pela ala radical do Partido Democrático, a chamada Formiga Branca, que havia sido organizada pelo antigo governador civil de Lisboa, Daniel Rodrigues. Os nomeados ministros, antes de tomar posse estavam reunidos no edifício da Junta de Crédito Público e foram alvo de uma manifestação hostil. Fernandes Costa logo desistiu. No mesmo dia há uma tentativa de assalto ao jornal A Luta, tendo o indigitado ministro do interior, António Granjo, que defender o jornal de pistola na mão. O mesmo Granjo segue depois para defender o jornal A República.</span></p>
-<p><span>Foi imediatamente reconduzido o anterior gabinete de Sá Cardoso.</span></p>',
+                            'sinopse' => '<p><span>O 22.º governo da Primeira República Portuguesa, nomeado a 15 de janeiro de 1920 e exonerado no mesmo dia sem tomar posse, foi liderado por Francisco Fernandes Costa. Ficou conhecido como o Governo dos Cinco Minutos.</span></p><p><span>O governo não chega a tomar posse, face a uma manifestação de rua, comandada pela ala radical do Partido Democrático, a chamada Formiga Branca, que havia sido organizada pelo antigo governador civil de Lisboa, Daniel Rodrigues. Os nomeados ministros, antes de tomar posse estavam reunidos no edifício da Junta de Crédito Público e foram alvo de uma manifestação hostil. Fernandes Costa logo desistiu. No mesmo dia há uma tentativa de assalto ao jornal A Luta, tendo o indigitado ministro do interior, António Granjo, que defender o jornal de pistola na mão. O mesmo Granjo segue depois para defender o jornal A República.</span></p><p><span>Foi imediatamente reconduzido o anterior gabinete de Sá Cardoso.</span></p>',
                         ],
                         [
                             'sigla' => 'XXIII',
@@ -969,6 +951,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1921-08-30',
                             'fim' => '1921-10-19',
+                            'eleicao_id' => 52,
                             'sinopse' => '<p><span>O 31.º governo da Primeira República Portuguesa nomeado a 30 de agosto de 1921 e exonerado a 19 de outubro de 1921, foi liderado por António Granjo, tendo este sido assassinado nessa mesma data.</span></p>',
                         ],
                         [
@@ -997,6 +980,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1922-02-06',
                             'fim' => '1922-11-30',
+                            'eleicao_id' => 53,
                             'sinopse' => '<p><span>O 35.º governo da Primeira República Portuguesa nomeado a 6 de fevereiro de 1922 e exonerado a 30 de novembro do mesmo ano, foi liderado por António Maria da Silva.</span></p>',
                         ],
                         [
@@ -1067,6 +1051,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Republicano',
                             'inicio' => '1925-12-17',
                             'fim' => '1926-05-30',
+                            'eleicao_id' => 54,
                             'sinopse' => '<p><span>O 45.º e último governo da Primeira República Portuguesa nomeado a 17 de dezembro de 1925 e exonerado a 30 de maio de 1926, após o golpe militar de 28 de maio de 1926, foi liderado por António Maria da Silva.</span></p>',
                         ],
                     ],
@@ -1090,17 +1075,14 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Militar',
                             'inicio' => '1926-06-17',
                             'fim' => '1926-07-09',
-                            'sinopse' => '<p><span>O 2.º governo da Ditadura portuguesa, nomeado a 17 de junho de 1926 e exonerado a 9 de julho do mesmo ano, foi liderado por Manuel Gomes da Costa. Inicialmente, Gomes da Costa assume todas as pastas; a 18 de junho entra António Claro para a pasta do Interior; a 19 de julho e a 6 de julho ocorrem novas alterações.</span></p>
-<p><span>A totalidade do governo serviu como chefe de Estado de Portugal entre 17 e 29 de junho de 1926, na falta de um presidente da República ou de um presidente do Ministério com as prerrogativas de chefe de Estado. Essas prerrogativas seriam atribuídas ao presidente do Ministério Manuel Gomes da Costa a 29 de junho.</span></p>',
+                            'sinopse' => '<p><span>O 2.º governo da Ditadura portuguesa, nomeado a 17 de junho de 1926 e exonerado a 9 de julho do mesmo ano, foi liderado por Manuel Gomes da Costa. Inicialmente, Gomes da Costa assume todas as pastas; a 18 de junho entra António Claro para a pasta do Interior; a 19 de julho e a 6 de julho ocorrem novas alterações.</span></p><p><span>A totalidade do governo serviu como chefe de Estado de Portugal entre 17 e 29 de junho de 1926, na falta de um presidente da República ou de um presidente do Ministério com as prerrogativas de chefe de Estado. Essas prerrogativas seriam atribuídas ao presidente do Ministério Manuel Gomes da Costa a 29 de junho.</span></p>',
                         ],
                         [
                             'sigla' => 'III',
                             'nome' => 'Governo Militar',
                             'inicio' => '1926-07-09',
                             'fim' => '1928-04-18',
-                            'sinopse' => '<p><span>O 3.º governo da Ditadura portuguesa, nomeado a 9 de julho de 1926 e exonerado a 18 de abril de 1928, foi liderado por Óscar Carmona.</span></p>
-<p><span>Durante este governo é estabelecido o modelo de eleição presidencial por sufrágio universal directo em decreto datado de 24 de fevereiro de 1928. Desta forma, Carmona é eleito presidente da República, no dia 25 de março de 1928. Após a tomada de posse, em 15 de abril, Carmona nomeia o coronel José Vicente de Freitas para presidir ao novo governo, que teria início a 18 de abril.</span></p>
-<p><span>Entre 9 de julho e 29 de novembro de 1926, a totalidade do governo serviu como chefe de Estado de Portugal, por falta de um presidente da República ou presidente do Ministério com as prerrogativas de chefe de Estado. Essas prerrogativas seriam atribuídas ao presidente do Ministério Óscar Carmona, sendo este nomeado presidente da República interino por decreto. Em 1928 seria eleito presidente da República efetivo.</span></p>',
+                            'sinopse' => '<p><span>O 3.º governo da Ditadura portuguesa, nomeado a 9 de julho de 1926 e exonerado a 18 de abril de 1928, foi liderado por Óscar Carmona.</span></p><p><span>Durante este governo é estabelecido o modelo de eleição presidencial por sufrágio universal directo em decreto datado de 24 de fevereiro de 1928. Desta forma, Carmona é eleito presidente da República, no dia 25 de março de 1928. Após a tomada de posse, em 15 de abril, Carmona nomeia o coronel José Vicente de Freitas para presidir ao novo governo, que teria início a 18 de abril.</span></p><p><span>Entre 9 de julho e 29 de novembro de 1926, a totalidade do governo serviu como chefe de Estado de Portugal, por falta de um presidente da República ou presidente do Ministério com as prerrogativas de chefe de Estado. Essas prerrogativas seriam atribuídas ao presidente do Ministério Óscar Carmona, sendo este nomeado presidente da República interino por decreto. Em 1928 seria eleito presidente da República efetivo.</span></p>',
                         ],
                         [
                             'sigla' => 'IV',
@@ -1201,8 +1183,7 @@ final class RepublicasGovernosSeeder extends Seeder
                         [
                             'sigla' => 'III',
                             'nome' => 'Governo Provisório',
-                            'sinopse' => '<p><span>O III Governo Provisório de Portugal foi chefiado por Vasco Gonçalves, o qual tomou posse a 30 de Setembro de 1974, tendo terminado o seu mandato a 26 de Março de 1975.</span></p>
-<p><span>A 12 de Março de 1975 são extintos a Junta de Salvação Nacional e o Conselho de Estado e em sua substituição é criado o Conselho da Revolução. O Governo dá início à execução de um grande plano de nacionalizações (nomeadamente, a Banca, Seguros, e Transportes).</span></p>',
+                            'sinopse' => '<p><span>O III Governo Provisório de Portugal foi chefiado por Vasco Gonçalves, o qual tomou posse a 30 de Setembro de 1974, tendo terminado o seu mandato a 26 de Março de 1975.</span></p><p><span>A 12 de Março de 1975 são extintos a Junta de Salvação Nacional e o Conselho de Estado e em sua substituição é criado o Conselho da Revolução. O Governo dá início à execução de um grande plano de nacionalizações (nomeadamente, a Banca, Seguros, e Transportes).</span></p>',
                             'inicio' => '1974-09-30',
                             'fim' => '1975-03-26',
                         ],
@@ -1224,6 +1205,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'sigla' => 'VI',
                             'nome' => 'Governo Provisório',
                             'sinopse' => '<p><span>O VI Governo Provisório de Portugal (e último dos governos provisórios da Terceira República Portuguesa), foi chefiado por Pinheiro de Azevedo, cuja tomada de posse se deu a 19 de setembro de 1975, e que seria substituído a 23 de junho de 1976, de forma interina, devido a um problema de saúde, por Almeida e Costa. A 23 de julho de 1976 entra em funções o I Governo Constitucional, constituído após a eleição e tomada de posse do Presidente da República António Ramalho Eanes.</span></p>',
+                            'eleicao_id' => 66,
                             'inicio' => '1975-09-19',
                             'fim' => '1976-07-23',
                         ],
@@ -1232,23 +1214,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1976-07-23',
                             'fim' => '1978-01-23',
-                            'anexos' => [
-                                [
-                                    'nome' => 'Composição Governo',
-                                    'anexo_tipo_id' => 3,
-                                    'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc01/composicao.aspx',
-                                ],
-                                [
-                                    'nome' => 'Programa Governo',
-                                    'anexo_tipo_id' => 5,
-                                    'anexo' => 'https://www.historico.portugal.gov.pt/media/464012/GC01.pdf',
-                                ],
-                                [
-                                    'nome' => 'Lei Organica',
-                                    'anexo_tipo_id' => 3,
-                                    'anexo' => 'https://www.historico.portugal.gov.pt/pt/o-governo/arquivo-historico/governos-constitucionais/gc01/lei-organica/lei-organica-i-governo-constitucional.aspx',
-                                ],
-                            ],
+                            'eleicao_id' => 67,
                         ],
                         [
                             'sigla' => 'II',
@@ -1260,18 +1226,18 @@ final class RepublicasGovernosSeeder extends Seeder
                             'sigla' => 'III',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1978-08-29',
-                            'fim' => '1978-11-22',
+                            'fim' => '1978-11-21',
                         ],
                         [
                             'sigla' => 'IV',
                             'nome' => 'Governo Constitucional',
-                            'inicio' => '1978-11-22',
-                            'fim' => '1979-07-07',
+                            'inicio' => '1978-11-21',
+                            'fim' => '1979-07-31',
                         ],
                         [
                             'sigla' => 'V',
                             'nome' => 'Governo Constitucional',
-                            'inicio' => '1979-08-01',
+                            'inicio' => '1979-07-31',
                             'fim' => '1980-01-03',
                         ],
                         [
@@ -1279,12 +1245,14 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1980-01-03',
                             'fim' => '1981-01-09',
+                            'eleicao_id' => 68,
                         ],
                         [
                             'sigla' => 'VII',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1981-01-09',
                             'fim' => '1981-09-04',
+                            'eleicao_id' => 69,
                         ],
                         [
                             'sigla' => 'VIII',
@@ -1297,42 +1265,49 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1983-07-09',
                             'fim' => '1985-11-06',
+                            'eleicao_id' => 70,
                         ],
                         [
                             'sigla' => 'X',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1985-11-06',
                             'fim' => '1987-08-17',
+                            'eleicao_id' => 71,
                         ],
                         [
                             'sigla' => 'XI',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1987-08-17',
                             'fim' => '1991-10-31',
+                            'eleicao_id' => 72,
                         ],
                         [
                             'sigla' => 'XII',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1991-10-31',
                             'fim' => '1995-10-25',
+                            'eleicao_id' => 73,
                         ],
                         [
                             'sigla' => 'XIII',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1995-10-28',
                             'fim' => '1999-10-25',
+                            'eleicao_id' => 74,
                         ],
                         [
                             'sigla' => 'XIV',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '1999-10-25',
                             'fim' => '2002-04-06',
+                            'eleicao_id' => 75,
                         ],
                         [
                             'sigla' => 'XV',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '2002-04-06',
                             'fim' => '2004-07-17',
+                            'eleicao_id' => 76,
                         ],
                         [
                             'sigla' => 'XVI',
@@ -1345,24 +1320,28 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Constitucional',
                             'inicio' => '2005-03-12',
                             'fim' => '2009-10-26',
+                            'eleicao_id' => 77,
                         ],
                         [
                             'sigla' => 'XVIII',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '2009-10-26',
                             'fim' => '2011-06-20',
+                            'eleicao_id' => 78,
                         ],
                         [
                             'sigla' => 'XIX',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '2011-06-20',
                             'fim' => '2015-10-30',
+                            'eleicao_id' => 79,
                         ],
                         [
                             'sigla' => 'XX',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '2015-10-30',
                             'fim' => '2015-11-26',
+                            'eleicao_id' => 80,
                         ],
                         [
                             'sigla' => 'XXI',
@@ -1375,18 +1354,21 @@ final class RepublicasGovernosSeeder extends Seeder
                             'nome' => 'Governo Constitucional',
                             'inicio' => '2019-10-26',
                             'fim' => '2022-03-30',
+                            'eleicao_id' => 81,
                         ],
                         [
                             'sigla' => 'XXIII',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '2022-03-30',
                             'fim' => '2024-04-02',
+                            'eleicao_id' => 82,
                         ],
                         [
                             'sigla' => 'XXIV',
                             'nome' => 'Governo Constitucional',
                             'inicio' => '2024-04-02',
                             'fim' => null,
+                            'eleicao_id' => 83,
                         ],
                     ],
                 ],
@@ -1426,6 +1408,7 @@ final class RepublicasGovernosSeeder extends Seeder
                             'sigla' => $governoData['sigla'] ?? null,
                             'nome' => $governoData['nome'],
                             'republica_id' => $republica->id,
+                            'eleicao_id' => $governoData['eleicao_id'] ?? null,
                             'formacao' => $governoData['inicio'],
                             'dissolucao' => $governoData['fim'],
                             'sinopse' => $governoData['sinopse'] ?? null,

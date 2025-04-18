@@ -40,6 +40,7 @@ final class DeploySeeder extends Seeder
         $this->call(RepublicasGovernosSeeder::class);
         $this->call(InstituicoesSeeder::class);
         $this->call(GovernosInstituicoesCargosSeeder::class);
+        $this->call(PresidencialSeeder::class);
         $this->call(GovernosPosAbrilSeeder::class);
         $this->call(PartidosSeeder::class);
 

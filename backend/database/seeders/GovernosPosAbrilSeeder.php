@@ -13,6 +13,7 @@ use App\Models\Instituicao;
 use App\Models\InstituicaoCargo;
 use App\Models\InstituicaoGoverno;
 use App\Models\InstituicaoGovernoAnexo;
+use App\Models\InstituicaoComTipo;
 use App\Models\Republica;
 use Exception;
 use Illuminate\Database\Seeder;
@@ -44,6 +45,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Mário Soares',
+                                                'nome_completo' => 'Mário Alberto Nobre Lopes Soares',
                                                 'data_inicio' => '1976-07-23',
                                                 'data_fim' => '1978-01-23',
                                             ],
@@ -757,6 +759,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'Mário Soares',
+                                                'nome_completo' => 'Mário Alberto Nobre Lopes Soares',
                                                 'data_inicio' => '1977-10-12',
                                                 'data_fim' => '1978-01-23',
                                             ],
@@ -1034,6 +1037,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Mário Soares',
+                                                'nome_completo' => 'Mário Alberto Nobre Lopes Soares',
                                                 'data_inicio' => '1978-01-23',
                                                 'data_fim' => '1978-08-28',
                                             ],
@@ -4044,6 +4048,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Aníbal Cavaco Silva',
+                                                'nome_completo' => 'Aníbal António da Costa Cavaco Silva',
                                                 'data_inicio' => '1980-01-03',
                                                 'data_fim' => '1981-01-09',
                                             ],
@@ -5155,6 +5160,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                                 'cidadaos' => [
                                                     [
                                                         'nome' => 'Marcelo Rebelo de Sousa',
+                                                        'nome_completo' => 'Marcelo Nuno Duarte Rebelo de Sousa',
                                                         'data_inicio' => '1981-09-04',
                                                         'data_fim' => '1982-06-12',
                                                     ],
@@ -5219,6 +5225,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Marcelo Rebelo de Sousa',
+                                                'nome_completo' => 'Marcelo Nuno Duarte Rebelo de Sousa',
                                                 'data_inicio' => '1982-06-12',
                                                 'data_fim' => '1983-06-09',
                                             ],
@@ -5996,6 +6003,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Mário Soares',
+                                                'nome_completo' => 'Mário Alberto Nobre Lopes Soares',
                                                 'data_inicio' => '1983-06-09',
                                                 'data_fim' => '1985-11-06',
                                             ],
@@ -6891,6 +6899,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Aníbal Cavaco Silva',
+                                                'nome_completo' => 'Aníbal António da Costa Cavaco Silva',
                                                 'data_inicio' => '1985-11-06',
                                                 'data_fim' => '1987-08-17',
                                             ],
@@ -7539,6 +7548,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Aníbal Cavaco Silva',
+                                                'nome_completo' => 'Aníbal António da Costa Cavaco Silva',
                                                 'data_inicio' => '1987-08-17',
                                                 'data_fim' => '1991-10-31',
                                             ],
@@ -8600,6 +8610,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Aníbal Cavaco Silva',
+                                                'nome_completo' => 'Aníbal António da Costa Cavaco Silva',
                                                 'data_inicio' => '1991-10-31',
                                                 'data_fim' => '1995-10-28',
                                             ],
@@ -22280,6 +22291,11 @@ final class GovernosPosAbrilSeeder extends Seeder
                             throw $e;
                         }
 
+                        InstituicaoComTipo::create([
+                            'instituicao_id' => $instituicao->id,
+                            'instituicao_tipo_id' => 8,
+                        ]);
+
                         // Create instituicao_governo with validation
                         $instituicaoGoverno = InstituicaoGoverno::firstOrCreate(
                             [
@@ -22337,6 +22353,8 @@ final class GovernosPosAbrilSeeder extends Seeder
                                     $cidadao = Cidadao::firstOrCreate(
                                         [
                                             'nome' => mb_trim($cidadaoData['nome']),
+                                            'nome_completo' => isset($cidadaoData['nome_completo']) ?
+                                                mb_trim($cidadaoData['nome_completo']) : null,
                                         ],
                                         [
                                             'uuid' => Str::uuid(),
@@ -22395,6 +22413,8 @@ final class GovernosPosAbrilSeeder extends Seeder
                                             $cidadao = Cidadao::firstOrCreate(
                                                 [
                                                     'nome' => mb_trim($cidadaoData['nome']),
+                                                    'nome_completo' => isset($cidadaoData['nome_completo']) ?
+                                                        mb_trim($cidadaoData['nome_completo']) : null,
                                                 ],
                                                 [
                                                     'uuid' => Str::uuid(),
@@ -22449,6 +22469,8 @@ final class GovernosPosAbrilSeeder extends Seeder
                                                 $cidadao = Cidadao::firstOrCreate(
                                                     [
                                                         'nome' => mb_trim($cidadaoData['nome']),
+                                                        'nome_completo' => isset($cidadaoData['nome_completo']) ?
+                                                            mb_trim($cidadaoData['nome_completo']) : null,
                                                     ],
                                                     [
                                                         'uuid' => Str::uuid(),

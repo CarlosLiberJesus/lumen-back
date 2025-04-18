@@ -51,6 +51,26 @@ final class Eleicao extends Model
     }
 
     /**
+     * Get the eleições for that tipo
+     *
+     * @return BelongsTo<Governo, $this>
+     */
+    public function governo(): BelongsTo
+    {
+        return $this->belongsTo(Governo::class);
+    }
+
+    /**
+     * Get the eleições for that tipo
+     *
+     * @return BelongsTo<Presidencial, $this>
+     */
+    public function presidente(): BelongsTo
+    {
+        return $this->belongsTo(Presidencial::class);
+    }
+
+    /**
      * Get the formatted date or unknown date description.
      *
      * @return string

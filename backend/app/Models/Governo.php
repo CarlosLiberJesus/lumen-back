@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 final class Governo extends Model
 {
@@ -27,6 +28,7 @@ final class Governo extends Model
         'nome',
         'sigla',
         'republica_id',
+        'eleicao_id',
         'formacao',
         'dissolucao',
         'sinopse',
@@ -45,6 +47,16 @@ final class Governo extends Model
     public function republica(): BelongsTo
     {
         return $this->belongsTo(Republica::class);
+    }
+
+    /**
+     * Get the republica that owns the governo.
+     *
+     * @return HasOne<Eleicao, $this>
+     */
+    public function eleicao(): HasOne
+    {
+        return $this->hasOne(Eleicao::class);
     }
 
     /**

@@ -12,7 +12,6 @@ use App\Models\InstituicaoComTipo;
 use App\Models\InstituicaoContacto;
 use App\Models\InstituicaoDados;
 use App\Models\InstituicaoMorada;
-use App\Models\InstituicaoTipo;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -1192,7 +1191,7 @@ final class PartidosSeeder extends Seeder
             ],
         ];
 
-        $instituicaoTipo = InstituicaoTipo::create(['uuid' => Str::uuid(), 'tipo' => 'Partido Político']);
+        $instituicaoTipo = 7;
         foreach ($partidos as $partidoData) {
             $instituicao = Instituicao::create([
                 'uuid' => Str::uuid(),
@@ -1201,7 +1200,7 @@ final class PartidosSeeder extends Seeder
                 'sinopse' => $partidoData['sinopse'],
                 'extinta' => $partidoData['extinta'],
             ]);
-            InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => $instituicaoTipo->id]);
+            InstituicaoComTipo::create(['instituicao_id' => $instituicao->id, 'instituicao_tipo_id' => $instituicaoTipo]);
 
             if (isset($partidoData['dados'])) {
                 InstituicaoDados::create([
@@ -1301,6 +1300,10 @@ final class PartidosSeeder extends Seeder
             'anexo_tipo_id' => 1,
             'nome' => 'Logotipo',
             'descricao' => null,
+        ]);
+        InstituicaoComTipo::create([
+            'instituicao_id' => $instituicao->id,
+            'instituicao_tipo_id' => 5,
         ]);
 
         $anexos = [
@@ -1640,6 +1643,9 @@ final class PartidosSeeder extends Seeder
             ],
         ];
 
+        /**
+         * TODO: Adicionar as constituicoes que temos em /leis/
+         */
         foreach ($anexos as $anexoData) {
             InstituicaoAnexo::create([
                 'instituicao_id' => $instituicao->id,

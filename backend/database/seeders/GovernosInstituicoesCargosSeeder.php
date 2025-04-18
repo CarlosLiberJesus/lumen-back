@@ -11,6 +11,7 @@ use App\Models\Governo;
 use App\Models\Instituicao;
 use App\Models\InstituicaoCargo;
 use App\Models\InstituicaoGoverno;
+use App\Models\InstituicaoComTipo;
 use App\Models\Republica;
 use Exception;
 use Illuminate\Database\Seeder;
@@ -10371,6 +10372,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1893-02-22',
                                                 'data_fim' => '1893-12-20',
                                             ],
@@ -12303,6 +12305,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Teófilo Braga',
+                                                'nome_completo' => 'Joaquim Teófilo Fernandes Braga',
                                                 'data_inicio' => '1910-10-05',
                                                 'data_fim' => '1911-09-04',
                                             ],
@@ -12323,6 +12326,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1910-12-13',
                                                 'data_fim' => '1910-12-21',
                                             ],
@@ -12343,11 +12347,13 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1911-03-14',
                                                 'data_fim' => '1911-04-04',
                                             ],
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1911-05-18',
                                                 'data_fim' => '1911-07-26',
                                             ],
@@ -12423,6 +12429,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1910-10-05',
                                                 'data_fim' => '1911-09-04',
                                             ],
@@ -12594,6 +12601,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Sidónio Pais',
+                                                'nome_completo' => 'Sidónio Bernardino Cardoso da Silva Pais',
                                                 'data_inicio' => '1911-09-03',
                                                 'data_fim' => '1911-11-12',
                                             ],
@@ -12680,6 +12688,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Sidónio Pais',
+                                                'nome_completo' => 'Sidónio Bernardino Cardoso da Silva Pais',
                                                 'data_inicio' => '1911-11-12',
                                                 'data_fim' => '1912-06-16',
                                             ],
@@ -13118,6 +13127,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1914-02-09',
                                                 'data_fim' => '1914-06-23',
                                             ],
@@ -13133,6 +13143,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1914-02-09',
                                                 'data_fim' => '1914-06-23',
                                             ],
@@ -13208,6 +13219,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1914-02-09',
                                                 'data_fim' => '1914-05-23',
                                             ],
@@ -13279,6 +13291,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1914-06-23',
                                                 'data_fim' => '1914-12-12',
                                             ],
@@ -13294,6 +13307,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1914-06-23',
                                                 'data_fim' => '1914-12-12',
                                             ],
@@ -14968,6 +14982,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Sidónio Pais',
+                                                'nome_completo' => 'Sidónio Bernardino Cardoso da Silva Pais',
                                                 'data_inicio' => '1917-12-05',
                                                 'data_fim' => '1917-12-08',
                                             ],
@@ -15004,6 +15019,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Sidónio Pais',
+                                                'nome_completo' => 'Sidónio Bernardino Cardoso da Silva Pais',
                                                 'data_inicio' => '1917-12-11',
                                                 'data_fim' => '1918-05-09',
                                             ],
@@ -15079,6 +15095,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Sidónio Pais',
+                                                'nome_completo' => 'Sidónio Bernardino Cardoso da Silva Pais',
                                                 'data_inicio' => '1917-12-11',
                                                 'data_fim' => '1918-05-09',
                                             ],
@@ -15124,6 +15141,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Sidónio Pais',
+                                                'nome_completo' => 'Sidónio Bernardino Cardoso da Silva Pais',
                                                 'data_inicio' => '1917-12-11',
                                                 'data_fim' => '1918-05-09',
                                             ],
@@ -15250,6 +15268,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'João do Canto e Castro',
+                                                'nome_completo' => 'João do Canto e Castro Silva Antunes Júnior',
                                                 'data_inicio' => '1918-12-15',
                                                 'data_fim' => '1918-12-16',
                                             ],
@@ -15360,6 +15379,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'João do Canto e Castro',
+                                                'nome_completo' => 'João do Canto e Castro Silva Antunes Júnior',
                                                 'data_inicio' => '1918-09-07',
                                                 'data_fim' => '1918-12-17',
                                             ],
@@ -15390,6 +15410,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'João do Canto e Castro',
+                                                'nome_completo' => 'João do Canto e Castro Silva Antunes Júnior',
                                                 'data_inicio' => '1918-12-04',
                                                 'data_fim' => '1918-12-15',
                                             ],
@@ -18055,6 +18076,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1921-03-02',
                                                 'data_fim' => '1921-05-23',
                                             ],
@@ -18070,6 +18092,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'data_inicio' => '1921-03-02',
                                                 'data_fim' => '1921-05-23',
                                             ],
@@ -18220,6 +18243,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1921-03-02',
                                                 'data_fim' => '1921-05-04',
@@ -18231,6 +18255,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'Bernardino Machado',
+                                                'nome_completo' => 'Bernardino Luís Machado Guimarães',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1921-05-19',
                                                 'data_fim' => '1921-05-23',
@@ -20024,6 +20049,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Óscar Carmona',
+                                                'nome_completo' => 'António Óscar de Fragoso Carmona',
                                                 'data_inicio' => '1923-11-15',
                                                 'data_fim' => '1923-12-18',
                                             ],
@@ -21553,6 +21579,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-17',
                                             ],
@@ -21568,6 +21595,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'não empossado; interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
@@ -21580,6 +21608,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-06-03',
                                                 'data_fim' => '1926-06-17',
@@ -21596,12 +21625,14 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
                                             ],
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'data_inicio' => '1926-06-01',
                                                 'data_fim' => '1926-06-03',
                                             ],
@@ -21622,12 +21653,14 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
                                             ],
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'data_inicio' => '1926-06-01',
                                                 'data_fim' => '1926-06-03',
                                             ],
@@ -21648,18 +21681,21 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
                                             ],
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'observacao' => 'não empossado',
                                                 'data_inicio' => '1926-06-01',
                                                 'data_fim' => '1926-06-03',
                                             ],
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'data_inicio' => '1926-06-03',
                                                 'data_fim' => '1926-06-17',
                                             ],
@@ -21675,6 +21711,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-03',
                                             ],
@@ -21695,6 +21732,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
@@ -21707,6 +21745,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'Óscar Carmona',
+                                                'nome_completo' => 'António Óscar de Fragoso Carmona',
                                                 'data_inicio' => '1926-06-03',
                                                 'data_fim' => '1926-06-17',
                                             ],
@@ -21722,12 +21761,14 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
                                             ],
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'data_inicio' => '1926-06-01',
                                                 'data_fim' => '1926-06-03',
                                             ],
@@ -21760,18 +21801,21 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
                                             ],
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'observacao' => 'não empossado',
                                                 'data_inicio' => '1926-06-01',
                                                 'data_fim' => '1926-06-03',
                                             ],
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-06-03',
                                                 'data_fim' => '1926-06-17',
@@ -21788,6 +21832,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
@@ -21815,12 +21860,14 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'José Mendes Cabeçadas',
+                                                'nome_completo' => 'José Mendes Cabeçadas Júnior',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-05-30',
                                                 'data_fim' => '1926-06-01',
                                             ],
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'observacao' => 'não empossado',
                                                 'data_inicio' => '1926-06-01',
                                                 'data_fim' => '1926-06-03',
@@ -21854,6 +21901,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'data_inicio' => '1926-06-17',
                                                 'data_fim' => '1926-07-09',
                                             ],
@@ -21869,6 +21917,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'data_inicio' => '1926-06-17',
                                                 'data_fim' => '1926-06-18',
                                             ],
@@ -21879,6 +21928,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-07-06',
                                                 'data_fim' => '1926-07-09',
@@ -21930,6 +21980,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'data_inicio' => '1926-06-17',
                                                 'data_fim' => '1926-07-09',
                                             ],
@@ -21960,6 +22011,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Óscar Carmona',
+                                                'nome_completo' => 'António Óscar de Fragoso Carmona',
                                                 'data_inicio' => '1926-06-17',
                                                 'data_fim' => '1926-07-06',
                                             ],
@@ -21995,6 +22047,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Manuel Gomes da Costa',
+                                                'nome_completo' => 'Manuel de Oliveira Gomes da Costa',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-06-17',
                                                 'data_fim' => '1926-06-19',
@@ -22062,6 +22115,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Óscar Carmona',
+                                                'nome_completo' => 'António Óscar de Fragoso Carmona',
                                                 'data_inicio' => '1926-07-09',
                                                 'data_fim' => '1928-04-18',
                                             ],
@@ -22194,6 +22248,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Óscar Carmona',
+                                                'nome_completo' => 'António Óscar de Fragoso Carmona',
                                                 'data_inicio' => '1926-07-09',
                                                 'data_fim' => '1926-11-29',
                                             ],
@@ -22263,6 +22318,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'Óscar Carmona',
+                                                'nome_completo' => 'António Óscar de Fragoso Carmona',
                                                 'observacao' => 'interino',
                                                 'data_inicio' => '1926-09-04',
                                                 'data_fim' => '1926-09-24',
@@ -25471,6 +25527,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Mário Soares',
+                                                'nome_completo' => 'Mário Alberto Nobre Lopes Soares',
                                                 'data_inicio' => '1974-05-16',
                                                 'data_fim' => '1974-07-17',
                                             ],
@@ -25971,6 +26028,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Mário Soares',
+                                                'nome_completo' => 'Mário Alberto Nobre Lopes Soares',
                                                 'data_inicio' => '1974-07-17',
                                                 'data_fim' => '1974-09-30',
                                             ],
@@ -26504,6 +26562,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         'cidadaos' => [
                                             [
                                                 'nome' => 'Mário Soares',
+                                                'nome_completo' => 'Mário Alberto Nobre Lopes Soares',
                                                 'data_inicio' => '1974-07-17',
                                                 'data_fim' => '1974-09-30',
                                             ],
@@ -26792,6 +26851,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             ],
                                             [
                                                 'nome' => 'Mário Soares',
+                                                'nome_completo' => 'Mário Alberto Nobre Lopes Soares',
                                                 'data_inicio' => '1975-03-26',
                                                 'data_fim' => '1975-08-08',
                                             ],
@@ -27630,906 +27690,6 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                             ],
                         ],
                     ],
-                    /*
-                    [
-                        'sigla' => 'I',
-                        'nome' => 'Governo Constitucional',
-                        [
-                            'nome' => 'Presidência do Conselho de Ministros',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Primeiro-Ministro',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Mário Soares',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado Adjunto do Primeiro-Ministro',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Vitor Cunha Rego',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado Adjunto do Primeiro-Ministro para os Assuntos Administrativos',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Antero Monteiro Dinis',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado Adjunto do Primeiro-Ministro para os Assuntos Políticos',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Manuel Alegre',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Subsecretário de Estado Adjunto do Primeiro-Ministro',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Antero Monteiro Dinis',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                    ]
-                                ],
-                                [
-                                    'nome' => 'Ministro de Estado',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Henrique de Barros',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                ]
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério sem Pasta',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro sem Pasta',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Jorge Campinos',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado da Comunicação Social',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Manuel Alegre',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Subsecretário de Estado da Comunicação Social',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'João Soares Louro',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado do Ambiente',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Manuel Gomes Guerreiro',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Cultura',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'David Mourão Ferreira',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado para a População e Emprego',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Manuel Tito de Morais',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ]
-                                ]
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério da Defesa Nacional',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro da Defesa Nacional',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Mário Firmino Miguel',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                ]
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério do Plano e Coordenação Económica',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro do Plano e Coordenação Económica',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'António Sousa Gomes',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado da Coordenação Económica',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Carlos Oliveira Cruz',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                                [
-                                                    'nome' => 'Carlos Melancia',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado do Planeamento',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Manuela Silva',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                    ]
-                                ]
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério da Administração Interna',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro da Administração Interna',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Manuel da Costa Brás',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Subsecretário de Estado da Administração Interna',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Hugo Gonçalves Rocha',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Administração Pública',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Mário de Aguiar',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'José Santos Pais',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Administração Regional e Local',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Manuel Ferreira Lima',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Integração Administrativa',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'João Cristóvão Moreira',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ]
-                                ]
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério da Justiça',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro da Justiça',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'António de Almeida Santos',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado da Justiça',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'José Santos Pais',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ]
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério das Finanças',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro das Finanças',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Henrique Medina Carreira',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado do Tesouro',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'António Palmeiro Ribeiro',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                                [
-                                                    'nome' => 'Manuela Morgado',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Subsecretário de Estado do Tesouro',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'José Achando Cabral',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Subsecretário de Estado das Finanças',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Manuela Morgado',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                                [
-                                                    'nome' => 'Eurico Ferreira Nunes',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Subsecretário de Estado do Orçamento',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Alberto Ramalheira',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                                [
-                                                    'nome' => 'Ludovico Cândido',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado das Finanças',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Manuela Morgado',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado do Orçamento',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Alberto Ramalheira',
-                                                    'data_inicio' => '1976-11-05',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério dos Negócios Estrangeiros',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro dos Negócios Estrangeiros',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'José Medeiros Ferreira',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '',
-                                        ],
-                                        [
-                                            'nome' => 'Mário Soares',
-                                            'data_inicio' => '',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado da Emigração',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'João Vieira de Lima',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério da Agricultura e Pescas',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro da Agricultura e Pescas',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'António Lopes Cardoso',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1976-11-05',
-                                        ],
-                                        [
-                                            'nome' => 'António Barreto',
-                                            'data_inicio' => '1976-11-05',
-                                            'data_fim' => '',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado do Comércio e Indústrias Agrícolas',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Carlos Antunes Filipe',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Estruturação Agrária',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Joaquim Castro Guerra',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1976-11-05',
-                                                ],
-                                                [
-                                                    'nome' => 'Carlos Martins Portas',
-                                                    'data_inicio' => '1976-11-05',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado das Florestas',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'António Azevedo Gomes',
-                                                    'data_inicio' => '1976-11-05',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Subsecretário de Estado das Florestas',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'António Azevedo Gomes',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1976-11-05',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado do Fomento Agrário',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Reinaldo Vital Rodrigues',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1976-11-05',
-                                                ],
-                                                [
-                                                    'nome' => 'António Campos',
-                                                    'data_inicio' => '1976-11-05',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado das Pescas',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Pedro Coelho',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ]
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministro da Indústria e Tecnologia',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro da Indústria e Tecnologia',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Walter Rosa',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1977-01-07',
-                                        ],
-                                        [
-                                            'nome' => 'António Sousa Gomes',
-                                            'data_inicio' => '1977-01-07',
-                                            'data_fim' => '',
-                                        ],
-                                        [
-                                            'nome' => 'Alfredo Nobre da Costa',
-                                            'data_inicio' => '',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado da Energia e Minas',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Joaquim Rocha Cabral',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                                [
-                                                    'nome' => 'Ricardo Bayão Horta',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1977-01-07',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Indústria Ligeira',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'José Rabaça',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1977-01-07',
-                                                ],
-                                                [
-                                                    'nome' => 'José Trigo de Morais',
-                                                    'data_inicio' => '1977-01-07',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Indústria Pesada',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Carlos Melancia',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Indústria Ligeira e Pesada',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Fernando Santos Martins',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1977-01-07',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministro do Comércio e Turismo',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro do Comércio e Turismo',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'António Barreto',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado do Comércio Interno',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'António Escaja Gonçalves',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado do Comércio Externo',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'António Celeste',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado do Turismo',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Luís Filipe Madeira',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ]
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério do Trabalho',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro do Trabalho',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Francisco Marcelo Curto',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '',
-                                        ],
-                                        [
-                                            'nome' => 'António Maldonado Gonelha',
-                                            'data_inicio' => '',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado do Trabalho',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'António Maldonado Gonelha',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '',
-                                                ],
-                                                [
-                                                    'nome' => 'Custódio Simões',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Subsecretário de Estado do Trabalho',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Custódio Simões',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministro da Educação e Investigação Científica',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro da Educação e Investigação Científica',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Mário Sottomayor Cardia',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado da Administração e Equipamento Escolar',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Almerindo Marques',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado do Ensino Superior',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Joaquim Cruz e Silva',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Investigação Científica',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'José Tiago Oliveira',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Juventude e Desportos',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Joaquim Barros de Sousa',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Orientação Pedagógica',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Joaquim Romero de Magalhães',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministro dos Assuntos Sociais',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro dos Assuntos Sociais',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Armando Bacelar',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado da Segurança Social',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Vítor Vasques',
-                                                    'data_inicio' => '1976-07-23',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Saúde',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Paulo Mendo',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério dos Transportes e Comunicações',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro dos Transportes e Comunicações',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Emílio Rui Vilar',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado dos Transportes e Comunicações',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'António Machado Rodrigues',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Marinha Mercante',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'António Crisóstomo Teixeira',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério da Habitação, Urbanismo e Construção',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro da Habitação, Urbanismo e Construção',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'Eduardo Pereira',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado da Construção Civil',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Armando Esteves Pereira',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado da Habitação e Urbanismo',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Álvaro Pinto Correia',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Subsecretário de Estado da Habitação, Urbanismo e Construção',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Albérico Santos Machado',
-                                                    'data_inicio' => '',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                        [
-                            'nome' => 'Ministério das Obras Públicas',
-                            'cargos' => [
-                                [
-                                    'nome' => 'Ministro das Obras Públicas',
-                                    'cidadaos' => [
-                                        [
-                                            'nome' => 'João Almeida Pina',
-                                            'data_inicio' => '1976-07-23',
-                                            'data_fim' => '1978-01-23',
-                                        ],
-                                    ],
-                                    'subcargos' => [
-                                        [
-                                            'nome' => 'Secretário de Estado das Obras Públicas',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Mário de Azevedo',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                        [
-                                            'nome' => 'Secretário de Estado das Recursos Hídricos e Saneamento Básico',
-                                            'cidadaos' => [
-                                                [
-                                                    'nome' => 'Baltazar Morais Barroco',
-                                                    'data_inicio' => '1976-07-28',
-                                                    'data_fim' => '1978-01-23',
-                                                ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                    ],
-                    */
                 ],
             ],
         ];
@@ -28638,6 +27798,11 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                             throw $e;
                         }
 
+                        InstituicaoComTipo::create([
+                            'instituicao_id' => $instituicao->id,
+                            'instituicao_tipo_id' => 8,
+                        ]);
+
                         // Create instituicao_governo with validation
                         $instituicaoGoverno = InstituicaoGoverno::firstOrCreate(
                             [
@@ -28679,6 +27844,8 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                     $cidadao = Cidadao::firstOrCreate(
                                         [
                                             'nome' => mb_trim($cidadaoData['nome']),
+                                            'nome_completo' => isset($cidadaoData['nome_completo']) ?
+                                                mb_trim($cidadaoData['nome_completo']) : null,
                                         ],
                                         [
                                             'uuid' => Str::uuid(),
@@ -28727,6 +27894,8 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                             $cidadao = Cidadao::firstOrCreate(
                                                 [
                                                     'nome' => mb_trim($cidadaoData['nome']),
+                                                    'nome_completo' => isset($cidadaoData['nome_completo']) ?
+                                                        mb_trim($cidadaoData['nome_completo']) : null,
                                                 ],
                                                 [
                                                     'uuid' => Str::uuid(),

@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 final class Legislatura extends Model
 {
@@ -27,7 +28,7 @@ final class Legislatura extends Model
         'nome',
         'sigla',
         'republica_id',
-        'eleicoes',
+        'eleicao_id',
         'formacao',
         'dissolucao',
         'sinopse',
@@ -39,7 +40,6 @@ final class Legislatura extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'eleicoes' => 'date',
         'formacao' => 'date',
         'dissolucao' => 'date',
     ];
@@ -52,6 +52,16 @@ final class Legislatura extends Model
     public function republica(): BelongsTo
     {
         return $this->belongsTo(Republica::class, 'republica_id');
+    }
+
+    /**
+     * Get the republica that owns the governo.
+     *
+     * @return HasOne<Eleicao, $this>
+     */
+    public function eleicao(): HasOne
+    {
+        return $this->hasOne(Eleicao::class);
     }
 
     /**

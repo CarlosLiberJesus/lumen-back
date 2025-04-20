@@ -24,7 +24,6 @@ final class InstituicaoLegislatura extends Model
      */
     protected $fillable = [
         'uuid',
-        'nome',
         'instituicao_id',
         'legislatura_id',
         'sinopse',
@@ -78,5 +77,26 @@ final class InstituicaoLegislatura extends Model
     public function leis(): HasMany
     {
         return $this->hasMany(InstituicaoLei::class, 'instituicao_legislatura_id');
+    }
+
+    /**
+     * Todo na volta ainda podemos ter melhor refinamento nestas querry
+     * Comissao representa a comissões existentes nesta legislatura
+     *
+     * @return HasMany<Comissao, $this>
+     */
+    public function parlamentoComissoes(): HasMany
+    {
+        return $this->hasMany(Comissao::class, 'comissao_id');
+    }
+
+    /**
+     * Conferencia representa a comissões existentes nesta legislatura
+     *
+     * @return HasMany<Conferencia, $this>
+     */
+    public function parlamentoConferencia(): HasMany
+    {
+        return $this->hasMany(Conferencia::class, 'conferencia_id');
     }
 }

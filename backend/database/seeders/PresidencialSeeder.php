@@ -11,8 +11,8 @@ use App\Models\ContactoTipo;
 use App\Models\Instituicao;
 use App\Models\InstituicaoAnexo;
 use App\Models\InstituicaoCargo;
-use App\Models\InstituicaoContacto;
 use App\Models\InstituicaoComTipo;
+use App\Models\InstituicaoContacto;
 use App\Models\InstituicaoMorada;
 use App\Models\InstituicaoPresidencial;
 use App\Models\Presidencial;
@@ -284,7 +284,7 @@ final class PresidencialSeeder extends Seeder
         ];
 
         $casaPresidenciaId = 19;
-        InstituicaoComTipo::create(['instituicao_id' => $casaPresidenciaId , 'instituicao_tipo_id' => 1]);
+        InstituicaoComTipo::create(['instituicao_id' => $casaPresidenciaId, 'instituicao_tipo_id' => 1]);
 
         InstituicaoContacto::create([
             'instituicao_id' => $casaPresidenciaId,
@@ -333,16 +333,56 @@ final class PresidencialSeeder extends Seeder
                 'instituicao_id' => $instPres->id,
             ]);
 
-            $cidadao = Cidadao::firstOrCreate([
-                'nome' => mb_trim($presidente['nome']),
-                'nome_completo' => isset($presidente['nome_completo']) ?
-                    mb_trim($presidente['nome_completo']) : null,
-            ],
-                [
+            $nome = mb_trim($presidente['nome']);
+            $nome_completo = isset($presidente['nome_completo']) ? mb_trim($presidente['nome_completo']) : null;
+
+            // First, try to find ALL existing citizens with this name
+            $existingCidadaos = Cidadao::where('nome', $nome)->get();
+
+            if ($existingCidadaos->isEmpty()) {
+                // Case 1: No existing citizen with this name - create new
+                $cidadao = Cidadao::create([
                     'uuid' => Str::uuid(),
-                    'nome_completo' => isset($presidente['nome_completo']) ?
-                        mb_trim($presidente['nome_completo']) : null,
+                    'nome' => $nome,
+                    'nome_completo' => $nome_completo,
                 ]);
+            } else {
+                $foundMatch = false;
+
+                // Check if we have an exact match (including nome_completo)
+                foreach ($existingCidadaos as $existing) {
+                    if ($nome_completo && $existing->nome_completo === $nome_completo) {
+                        $cidadao = $existing;
+                        $foundMatch = true;
+                        break;
+                    }
+                }
+
+                if (!$foundMatch) {
+                    // Look for a record without nome_completo that we can update
+                    $existingWithoutNomeCompleto = $existingCidadaos->first(function ($existing) {
+                        return $existing->nome_completo === null;
+                    });
+
+                    if ($existingWithoutNomeCompleto && $nome_completo) {
+                        $existingWithoutNomeCompleto->nome_completo = $nome_completo;
+                        $existingWithoutNomeCompleto->save();
+                        $cidadao = $existingWithoutNomeCompleto;
+                    } else {
+                        // Create new if no match and no updateable record found
+                        if ($existingCidadaos[0]->nome === $nome) {
+                            $cidadao = $existingCidadaos[0];
+                        } else {
+                            // Create new if no match and no updateable record found
+                            $cidadao = Cidadao::create([
+                                'uuid' => Str::uuid(),
+                                'nome' => $nome,
+                                'nome_completo' => $nome_completo,
+                            ]);
+                        }
+                    }
+                }
+            }
 
             CidadaoCargo::create([
                 'cidadao_id' => $cidadao->id,
@@ -355,12 +395,26 @@ final class PresidencialSeeder extends Seeder
 
         $inst = Instituicao::create([
             'uuid' => Str::uuid(),
+            'nome' => 'Secretaria-Geral da Presidência da República',
+            'responde_instituicao_id' => $casaPresidenciaId,
+            'nacional' => true,
+            'extinta' => false,
+        ]);
+        InstituicaoComTipo::create(['instituicao_id' => $inst->id, 'instituicao_tipo_id' => 1]);
+        InstituicaoContacto::create([
+            'instituicao_id' => $casaPresidenciaId,
+            'contacto' => 'https://www.sg.presidencia.pt/pag/homepage.aspx',
+            'contacto_tipo_id' => ContactoTipo::where('tipo', 'Website')->first()->id,
+        ]);
+
+        $inst = Instituicao::create([
+            'uuid' => Str::uuid(),
             'nome' => 'Conselho de Estado',
             'responde_instituicao_id' => $casaPresidenciaId,
             'nacional' => true,
             'extinta' => false,
         ]);
-        InstituicaoComTipo::create(['instituicao_id' => $inst->id , 'instituicao_tipo_id' => 1]);
+        InstituicaoComTipo::create(['instituicao_id' => $inst->id, 'instituicao_tipo_id' => 1]);
 
         Instituicao::create([
             'uuid' => Str::uuid(),
@@ -369,7 +423,7 @@ final class PresidencialSeeder extends Seeder
             'nacional' => true,
             'extinta' => false,
         ]);
-        InstituicaoComTipo::create(['instituicao_id' => $inst->id , 'instituicao_tipo_id' => 1]);
+        InstituicaoComTipo::create(['instituicao_id' => $inst->id, 'instituicao_tipo_id' => 1]);
 
         Instituicao::create([
             'uuid' => Str::uuid(),
@@ -378,8 +432,7 @@ final class PresidencialSeeder extends Seeder
             'nacional' => true,
             'extinta' => false,
         ]);
-        InstituicaoComTipo::create(['instituicao_id' => $inst->id , 'instituicao_tipo_id' => 1]);
-
+        InstituicaoComTipo::create(['instituicao_id' => $inst->id, 'instituicao_tipo_id' => 1]);
 
     }
 }

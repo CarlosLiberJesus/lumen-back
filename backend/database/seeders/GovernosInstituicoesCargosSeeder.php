@@ -10,12 +10,13 @@ use App\Models\ConselhoMinistros;
 use App\Models\Governo;
 use App\Models\Instituicao;
 use App\Models\InstituicaoCargo;
-use App\Models\InstituicaoGoverno;
 use App\Models\InstituicaoComTipo;
+use App\Models\InstituicaoGoverno;
 use App\Models\Republica;
 use Exception;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 final class GovernosInstituicoesCargosSeeder extends Seeder
@@ -27696,7 +27697,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
 
         foreach ($republicas as $republicaData) {
             try {
-                DB::beginTransaction();
+                // DB::beginTransaction();
 
                 // Find república with strict matching but trimmed values
                 try {
@@ -27704,7 +27705,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                         ->firstOrFail();
                 } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
                     $this->command->error(sprintf("República not found: '%s'", $republicaData['nome']));
-                    DB::rollBack();
+                    // DB::rollBack();
                     throw $e;
                 }
 
@@ -27743,14 +27744,14 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                             ->where('nome', mb_trim($governoData['nome']))
                             ->firstOrFail();
                     } catch (Exception $e) {
-                        if (! isset($governoData['nome'])) {
+                        if (!isset($governoData['nome'])) {
                             $this->command->error(sprintf("Missing 'nome' key in governo at index %d for república: %s", $governoIndex, $republicaData['nome']));
                             $this->command->line('Government data structure: '.print_r($governoData, true));
                         } else {
                             $this->command->error(sprintf("Governo not found: '%s' with sigla '%s'", $governoData['nome'], $sigla));
                         }
 
-                        DB::rollBack();
+                        // DB::rollBack();
                         throw $e;
                     }
 
@@ -27777,11 +27778,11 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                         }
                     }
 
-                    if (! isset($governoData['instituicoes'])) {
+                    if (!isset($governoData['instituicoes'])) {
                         $this->command->error('Undefined array key instituicoes');
                         $this->command->line('Government data structure: '.print_r($governoData, true));
 
-                        DB::rollBack();
+                        // DB::rollBack();
                         throw $e;
                     }
 
@@ -27794,7 +27795,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                             $instituicao = Instituicao::where('nome', $searchName)->firstOrFail();
                         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
                             $this->command->error(sprintf("Institution not found: '%s'", $searchName));
-                            DB::rollBack();
+                            // DB::rollBack();
                             throw $e;
                         }
 
@@ -27818,10 +27819,10 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                         if (isset($instituicaoData['cargos'])) {
                             foreach ($instituicaoData['cargos'] as $cargoData) {
 
-                                if (! isset($cargoData['nome'])) {
+                                if (!isset($cargoData['nome'])) {
                                     $this->command->error("Missing 'nome' key in cargo data for instituicao: ".$instituicaoData['nome']);
                                     $this->command->line('Government data structure: '.print_r($cargoData, true));
-                                    DB::rollBack();
+                                    // DB::rollBack();
                                     throw $e;
                                 }
 
@@ -27840,19 +27841,77 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                 );
 
                                 foreach ($cargoData['cidadaos'] as $cidadaoData) {
-                                    // Create or find cidadao with trimmed names
-                                    $cidadao = Cidadao::firstOrCreate(
-                                        [
-                                            'nome' => mb_trim($cidadaoData['nome']),
-                                            'nome_completo' => isset($cidadaoData['nome_completo']) ?
-                                                mb_trim($cidadaoData['nome_completo']) : null,
-                                        ],
-                                        [
+
+                                    $nome = mb_trim($cidadaoData['nome']);
+                                    $nome_completo = isset($cidadaoData['nome_completo']) ? mb_trim($cidadaoData['nome_completo']) : null;
+
+                                    // First, try to find ALL existing citizens with this name
+                                    $existingCidadaos = Cidadao::where('nome', $nome)->get();
+
+                                    if ($existingCidadaos->isEmpty()) {
+                                        Log::debug('No existing citizen with this name:', [
+                                            'new' => $nome.' '.$nome_completo,
+                                        ]);
+                                        // Case 1: No existing citizen with this name - create new
+                                        $cidadao = Cidadao::create([
                                             'uuid' => Str::uuid(),
-                                            'nome_completo' => isset($cidadaoData['nome_completo']) ?
-                                                mb_trim($cidadaoData['nome_completo']) : null,
-                                        ]
-                                    );
+                                            'nome' => $nome,
+                                            'nome_completo' => $nome_completo,
+                                        ]);
+                                    } else {
+                                        $foundMatch = false;
+
+                                        // Check if we have an exact match (including nome_completo)
+                                        foreach ($existingCidadaos as $existing) {
+                                            if ($nome_completo && $existing->nome_completo === $nome_completo) {
+                                                Log::debug('Found exact match for citizen with this name:', [
+                                                    'citizen' => $nome.' '.$nome_completo,
+                                                ]);
+                                                $cidadao = $existing;
+                                                $foundMatch = true;
+                                                break;
+                                            }
+                                        }
+
+                                        if (!$foundMatch) {
+                                            // Look for a record without nome_completo that we can update
+                                            $existingWithoutNomeCompleto = $existingCidadaos->first(function ($existing) {
+                                                return $existing->nome_completo === null;
+                                            });
+
+                                            if ($existingWithoutNomeCompleto) {
+                                                Log::debug('Found record without nome_completo:', [
+                                                    'citizen' => $existingWithoutNomeCompleto->nome.' '.$nome_completo,
+                                                ]);
+                                            }
+
+                                            if ($existingWithoutNomeCompleto && $nome_completo) {
+                                                Log::debug('Updating record without nome_completo:', [
+                                                    'citizen' => $existingWithoutNomeCompleto->nome.' '.$nome_completo,
+                                                ]);
+                                                $existingWithoutNomeCompleto->nome_completo = $nome_completo;
+                                                $existingWithoutNomeCompleto->save();
+                                                $cidadao = $existingWithoutNomeCompleto;
+                                            } else {
+
+                                                Log::debug('Comparing:', [
+                                                    'existing' => $existingCidadaos[0]->nome,
+                                                    'new' => $nome,
+                                                    'comparison' => $existingCidadaos[0]->nome === $nome,
+                                                ]);
+                                                if ($existingCidadaos[0]->nome === $nome) {
+                                                    $cidadao = $existingCidadaos[0];
+                                                } else {
+                                                    // Create new if no match and no updateable record found
+                                                    $cidadao = Cidadao::create([
+                                                        'uuid' => Str::uuid(),
+                                                        'nome' => $nome,
+                                                        'nome_completo' => $nome_completo,
+                                                    ]);
+                                                }
+                                            }
+                                        }
+                                    }
 
                                     // Create cargo relationship with date validation
                                     CidadaoCargo::create([
@@ -27868,10 +27927,10 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                 // Handle subcargos if they exist
                                 if (isset($cargoData['subcargos'])) {
                                     foreach ($cargoData['subcargos'] as $subcargoData) {
-                                        if (! isset($subcargoData['nome'])) {
+                                        if (!isset($subcargoData['nome'])) {
                                             $this->command->error("Missing 'nome' key in subcargo data for instituicao: ".$instituicaoData['nome']);
                                             $this->command->line('Government data structure: '.print_r($subcargoData, true));
-                                            DB::rollBack();
+                                            // DB::rollBack();
                                             throw $e;
                                         }
 
@@ -27890,19 +27949,56 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                                         );
 
                                         foreach ($subcargoData['cidadaos'] as $cidadaoData) {
-                                            // Create or find cidadao with trimmed names
-                                            $cidadao = Cidadao::firstOrCreate(
-                                                [
-                                                    'nome' => mb_trim($cidadaoData['nome']),
-                                                    'nome_completo' => isset($cidadaoData['nome_completo']) ?
-                                                        mb_trim($cidadaoData['nome_completo']) : null,
-                                                ],
-                                                [
+                                            $nome = mb_trim($cidadaoData['nome']);
+                                            $nome_completo = isset($cidadaoData['nome_completo']) ? mb_trim($cidadaoData['nome_completo']) : null;
+
+                                            // First, try to find ALL existing citizens with this name
+                                            $existingCidadaos = Cidadao::where('nome', $nome)->get();
+
+                                            if ($existingCidadaos->isEmpty()) {
+                                                // Case 1: No existing citizen with this name - create new
+                                                $cidadao = Cidadao::create([
                                                     'uuid' => Str::uuid(),
-                                                    'nome_completo' => isset($cidadaoData['nome_completo']) ?
-                                                        mb_trim($cidadaoData['nome_completo']) : null,
-                                                ]
-                                            );
+                                                    'nome' => $nome,
+                                                    'nome_completo' => $nome_completo,
+                                                ]);
+                                            } else {
+                                                $foundMatch = false;
+
+                                                // Check if we have an exact match (including nome_completo)
+                                                foreach ($existingCidadaos as $existing) {
+                                                    if ($nome_completo && $existing->nome_completo === $nome_completo) {
+                                                        $cidadao = $existing;
+                                                        $foundMatch = true;
+                                                        break;
+                                                    }
+                                                }
+
+                                                if (!$foundMatch) {
+                                                    // Look for a record without nome_completo that we can update
+                                                    $existingWithoutNomeCompleto = $existingCidadaos->first(function ($existing) {
+                                                        return $existing->nome_completo === null;
+                                                    });
+
+                                                    if ($existingWithoutNomeCompleto && $nome_completo) {
+                                                        $existingWithoutNomeCompleto->nome_completo = $nome_completo;
+                                                        $existingWithoutNomeCompleto->save();
+                                                        $cidadao = $existingWithoutNomeCompleto;
+                                                    } else {
+                                                        // Create new if no match and no updateable record found
+                                                        if ($existingCidadaos[0]->nome === $nome) {
+                                                            $cidadao = $existingCidadaos[0];
+                                                        } else {
+                                                            // Create new if no match and no updateable record found
+                                                            $cidadao = Cidadao::create([
+                                                                'uuid' => Str::uuid(),
+                                                                'nome' => $nome,
+                                                                'nome_completo' => $nome_completo,
+                                                            ]);
+                                                        }
+                                                    }
+                                                }
+                                            }
 
                                             // Create cargo relationship with date validation
                                             CidadaoCargo::create([
@@ -27932,7 +28028,7 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                             $this->command->error(sprintf("Missing 'cargos' key in governo at index %d for república: %s", $governoIndex, $republicaData['nome']));
                             $this->command->line('Government data structure: '.print_r($instituicaoData, true));
 
-                            DB::rollBack();
+                            // DB::rollBack();
                             throw $e;
                         }
                     }
@@ -27940,11 +28036,11 @@ final class GovernosInstituicoesCargosSeeder extends Seeder
                     $governoIndex++;
                 }
 
-                DB::commit();
+                // DB::commit();
                 $this->command->info('Successfully processed república: '.$republicaData['nome']);
 
             } catch (Exception $e) {
-                DB::rollBack();
+                // DB::rollBack();
                 $this->command->error(sprintf('Failed processing república %s: ', $republicaData['nome']).$e->getMessage());
 
                 // Optional: throw to stop entire seeder or continue with next república

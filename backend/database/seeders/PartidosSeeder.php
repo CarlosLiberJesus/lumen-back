@@ -638,6 +638,22 @@ final class PartidosSeeder extends Seeder
                 ],
             ],
             [
+                'nome' => 'Movimento Democrático Português - Comissão Democrática Eleitoral',
+                'sinopse' => '<p><span>O Movimento Democrático Português/Comissão Democrática Eleitoral foi uma das mais importantes organizações políticas da Oposição Democrática ao regime do Estado Novo em Portugal, antes do 25 de Abril. Foi fundado em 1969, actuando através de comissões democráticas eleitorais, para concorrer às eleições legislativas.</span></p><p><span>Em 1973 participou no Congresso Democrático de Aveiro.</span></p><p><span>Depois do 25 de Abril constitui-se como partido político, fazendo parte de todos os Governos Provisórios, com excepção do VI. Concorreu à eleição para a Assembleia Constituinte de 1975 sozinho e, a partir de 1976, em coligação com o PCP, formando a APU. Em 1987, e em consequência da ruptura com o PCP em 1986, já não participou na coligação eleitoral CDU, apresentando-se às eleições com listas próprias. Nessa mesma data, alguns militantes dissidentes formaram a Intervenção Democrática (ID), que até hoje continua a integrar, como independente, as listas da CDU, junto com o PCP e o Partido Ecologista "Os Verdes" (PEV).</span></p><p><span>Em 1994 fundiu-se com o conjunto editor da revista "Manifesto", dando lugar lugar ao movimento Política XXI, que veio a ser uma das correntes fundadoras do Bloco de Esquerda.</span></p>',
+                'sigla' => 'MDP/CDE',
+                'extinta' => true,
+                'dados' => [
+                    'fundacao' => '1969-09-01',
+                    'dissolucao' => '1994-03-28',
+                ],
+                'anexos' => [
+                    [
+                        'nome' => 'Logotipo',
+                        'anexo' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/S%C3%ADmbolo_do_MDP-CDE.png/250px-S%C3%ADmbolo_do_MDP-CDE.png',
+                    ],
+                ],
+            ],
+            [
                 'nome' => 'Aliança Povo Unido',
                 'sinopse' => '<p><span>Coligação de esquerda formada pelo PCP e pelo MDP/CDE. Concorreu às eleições intercalares de 1979 e às eleições legislativas de 1980, 1983 e 1985. Estes dois partidos políticos haviam já constituído a coligação FEPU nessa altura com a participação da FSP que acabou por não integrar a APU.</span></p>',
                 'sigla' => 'APU',
@@ -658,18 +674,6 @@ final class PartidosSeeder extends Seeder
                     [
                         'nome' => 'Logotipo',
                         'anexo' => 'https://www.cne.pt/sites/default/files/partido29_0.png',
-                    ],
-                ],
-            ],
-            [
-                'nome' => 'Centro Democrático de Macau',
-                'sinopse' => '<p><span>Associação política de cariz conservador, fundada por Senna Fernandes, que tinha como principal opositor político o Centro Democrático de Macau (CDM).</span></p><p><span>Na eleição para a Assembleia Constituinte de 1975 consegue eleger um deputado, Diamantino de Oliveira Ferreira, pelo círculo eleitoral de Macau.</span></p>',
-                'sigla' => 'CDM',
-                'extinta' => true,
-                'anexos' => [
-                    [
-                        'nome' => 'Logotipo',
-                        'anexo' => 'https://www.cne.pt/sites/default/files/partido30_0.png',
                     ],
                 ],
             ],

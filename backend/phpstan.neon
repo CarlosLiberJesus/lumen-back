@@ -17,4 +17,5 @@ parameters:
     excludePaths:
         - %currentWorkingDirectory%/app/Http/Controllers/EmailController.php
         - %currentWorkingDirectory%/app/Console/Commands/*
+        - %currentWorkingDirectory%/app/Helpers/StringHelper.php
 

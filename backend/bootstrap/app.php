@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 use App\Http\Middleware\ApiMiddleware;
 use App\Models\Log;
+use App\Services\QueryLogger;
+use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -22,21 +24,22 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $environment = config('app.env');
-        if ($environment === 'local') {
-            error_log('--- CATCH APP-Exception ---');
-            error_log(json_encode($exceptions, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-            error_log('###########################');
-        }
 
         $exceptions->render(function (Throwable $e, $request) {
-            $start_time = microtime(true); // Captura o tempo inicial
+            $start_time = microtime(true);
             $environment = config('app.env');
             $url = '/'.$request->path();
 
+            // Enhanced exception data
             $exceptionData = [
                 'message' => $e->getMessage(),
+                'code' => $e->getCode(),
                 'file' => basename($e->getFile()),
                 'line' => $e->getLine(),
+                'class' => $e::class,
+                'sql' => $e instanceof QueryException ? $e->getSql() : null,
+                'bindings' => $e instanceof QueryException ? $e->getBindings() : null,
+                'trace' => $environment === 'local' ? array_slice($e->getTrace(), 0, 3) : null,
             ];
 
             $response = [
@@ -45,7 +48,7 @@ return Application::configure(basePath: dirname(__DIR__))
                 'data' => null,
             ];
 
-            // Log do erro
+            // Enhanced logging
             $logRequest = [
                 'user_id' => auth()->user()?->getAuthIdentifier(),
                 'aplicacao_id' => $request->header('App-Uuid'),
@@ -56,12 +59,16 @@ return Application::configure(basePath: dirname(__DIR__))
                 'params' => json_encode($request->except('password')),
                 'reply' => json_encode($exceptionData),
                 'time' => round((microtime(true) - $start_time) * 1000),
+                'query_log' => QueryLogger::getQueries(), // Add recent queries
             ];
+
             Log::create($logRequest);
 
             if ($environment === 'local') {
                 error_log('--- CATCH APP-Exception ---');
                 error_log(json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+                error_log('--- Recent Queries ---');
+                error_log(json_encode(QueryLogger::getSummary(), JSON_PRETTY_PRINT));
                 error_log('###########################');
             }
 

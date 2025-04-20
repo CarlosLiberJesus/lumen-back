@@ -105,7 +105,7 @@ final class ScrapeParlamentoOrgaosV2 extends Command
                 if (isset($deputado['depSituacao']['pt_ar_wsgode_objectos_DadosSituacaoDeputado'])) {
                     $situacoes = $deputado['depSituacao']['pt_ar_wsgode_objectos_DadosSituacaoDeputado'];
                     // Handle both single situation and array of situations
-                    if (!isset($situacoes[0])) {
+                    if (! isset($situacoes[0])) {
                         $situacoes = [$situacoes];
                     }
 
@@ -156,7 +156,7 @@ final class ScrapeParlamentoOrgaosV2 extends Command
 
         // Handle GP (partido) data - both array and single object formats
         $gp = $deputado['DepGP'] ?? $deputado['depGP'] ?? [];
-        if (!empty($gp)) {
+        if (! empty($gp)) {
             // Convert to array if single object
             $gpArray = isset($gp[0]) ? $gp : [$gp];
             $cleanedDeputado['depGP'] = array_map(fn ($partido): array => [
@@ -169,7 +169,7 @@ final class ScrapeParlamentoOrgaosV2 extends Command
 
         // Handle Situacao data - both array and single object formats
         $situacoes = $deputado['DepSituacao'] ?? $deputado['depSituacao'] ?? [];
-        if (!empty($situacoes)) {
+        if (! empty($situacoes)) {
             // Convert to array if single object
             $situacoesArray = isset($situacoes[0]) ? $situacoes : [$situacoes];
             $cleanedDeputado['depSituacao'] = array_map(fn ($situacao): array => [
@@ -186,7 +186,7 @@ final class ScrapeParlamentoOrgaosV2 extends Command
     {
         $this->info('Cleaning Comissoes...');
 
-        if (!isset($data['Orgao'])) {
+        if (! isset($data['Orgao'])) {
             $this->warn('No Orgao data found in Comissoes');
 
             return [];
@@ -236,7 +236,7 @@ final class ScrapeParlamentoOrgaosV2 extends Command
                 'Inline' => 'true',
             ]);
 
-        if (!$response->successful()) {
+        if (! $response->successful()) {
             throw new Exception('Failed to fetch data: '.$response->status());
         }
 

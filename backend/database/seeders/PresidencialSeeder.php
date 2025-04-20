@@ -358,7 +358,7 @@ final class PresidencialSeeder extends Seeder
                     }
                 }
 
-                if (!$foundMatch) {
+                if (! $foundMatch) {
                     // Look for a record without nome_completo that we can update
                     $existingWithoutNomeCompleto = $existingCidadaos->first(function ($existing) {
                         return $existing->nome_completo === null;

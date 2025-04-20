@@ -20,7 +20,7 @@ final class AnalyzeQueryLogs extends Command
         $logDir = storage_path('logs');
 
         // Create logs directory if it doesn't exist
-        if (!File::exists($logDir)) {
+        if (! File::exists($logDir)) {
             File::makeDirectory($logDir, 0755, true);
         }
 

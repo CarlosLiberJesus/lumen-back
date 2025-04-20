@@ -30,7 +30,7 @@ final class ScrapeParlamentoOrgaosBck extends Command
                     'Inline' => 'true',
                 ]);
 
-            if (!$response->successful()) {
+            if (! $response->successful()) {
                 throw new Exception('Failed to fetch data: '.$response->status());
             }
 
@@ -42,7 +42,7 @@ final class ScrapeParlamentoOrgaosBck extends Command
 
             // Get the actual data from inside OrganizacaoAR
             $orgData = $data['OrganizacaoAR'] ?? null;
-            if (!$orgData) {
+            if (! $orgData) {
                 throw new Exception('Missing OrganizacaoAR in response data');
             }
 
@@ -294,7 +294,7 @@ final class ScrapeParlamentoOrgaosBck extends Command
         $field = $composicaoFields[$orgaoName] ?? $composicaoFields['default'];
 
         // If the field doesn't exist or is a string (empty in XML), return null
-        if (!isset($orgaoData[$field]) || is_string($orgaoData[$field])) {
+        if (! isset($orgaoData[$field]) || is_string($orgaoData[$field])) {
             return null;
         }
 

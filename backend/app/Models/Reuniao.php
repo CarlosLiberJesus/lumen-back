@@ -82,7 +82,7 @@ final class Reuniao extends Model
      */
     public function getDuracaoAttribute(): ?float
     {
-        if (!$this->termino) {
+        if (! $this->termino) {
             return null;
         }
 

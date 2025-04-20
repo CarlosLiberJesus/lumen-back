@@ -22249,7 +22249,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                             ->where('nome', mb_trim($governoData['nome']))
                             ->firstOrFail();
                     } catch (Exception $e) {
-                        if (!isset($governoData['nome'])) {
+                        if (! isset($governoData['nome'])) {
                             $this->command->error(sprintf("Missing 'nome' key in governo at index %d for república: %s", $governoIndex, $republicaData['nome']));
                             $this->command->line('Government data structure: '.print_r($governoData, true));
                         } else {
@@ -22265,7 +22265,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                         $governo->update(['sinopse' => mb_trim($governoData['sinopse'])]);
                     }
 
-                    if (!isset($governoData['instituicoes'])) {
+                    if (! isset($governoData['instituicoes'])) {
                         $this->command->error('Undefined array key instituicoes');
                         $this->command->line('Government data structure: '.print_r($governoData, true));
 
@@ -22310,7 +22310,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                         if (isset($instituicaoData['cargos'])) {
                             foreach ($instituicaoData['cargos'] as $cargoData) {
 
-                                if (!isset($cargoData['nome'])) {
+                                if (! isset($cargoData['nome'])) {
                                     $this->command->error("Missing 'nome' key in cargo data for instituicao: ".$instituicaoData['nome']);
                                     $this->command->line('Government data structure: '.print_r($cargoData, true));
                                     // BD::rollBack();
@@ -22330,7 +22330,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         'uuid' => Str::uuid(),
                                     ]
                                 );
-                                if (!isset($cargoData['cidadaos'])) {
+                                if (! isset($cargoData['cidadaos'])) {
                                     $this->command->error("Missing 'cidadaos' key in cargo data for instituicao: ".$instituicaoData['nome']);
                                     $this->command->error('In Governo: '.$governoData['sigla']);
 
@@ -22341,7 +22341,7 @@ final class GovernosPosAbrilSeeder extends Seeder
 
                                 foreach ($cargoData['cidadaos'] as $cidadaoData) {
 
-                                    if (!isset($cidadaoData['nome'])) {
+                                    if (! isset($cidadaoData['nome'])) {
                                         $this->command->error("Missing 'nome' key in cidadao data for cargo: ".$cargoData['nome']);
                                         $this->command->line('Government data structure: '.print_r($cidadaoData, true));
                                         // BD::rollBack();
@@ -22373,7 +22373,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                             }
                                         }
 
-                                        if (!$foundMatch) {
+                                        if (! $foundMatch) {
                                             // Look for a record without nome_completo that we can update
                                             $existingWithoutNomeCompleto = $existingCidadaos->first(function ($existing) {
                                                 return $existing->nome_completo === null;
@@ -22413,7 +22413,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                 // Handle subcargos if they exist
                                 if (isset($cargoData['subcargos'])) {
                                     foreach ($cargoData['subcargos'] as $subcargoData) {
-                                        if (!isset($subcargoData['nome'])) {
+                                        if (! isset($subcargoData['nome'])) {
                                             $this->command->error("Missing 'nome' key in subcargo data for instituicao: ".$instituicaoData['nome']);
                                             $this->command->line('Government data structure: '.print_r($subcargoData, true));
                                             // BD::rollBack();
@@ -22435,7 +22435,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                         );
 
                                         foreach ($subcargoData['cidadaos'] as $cidadaoData) {
-                                            if (!isset($cidadaoData['nome'])) {
+                                            if (! isset($cidadaoData['nome'])) {
 
                                                 $this->command->line('Cidadao data structure: '.print_r($cidadaoData, true));
                                                 $this->command->line('subcargoData data structure: '.print_r($subcargoData, true));
@@ -22470,7 +22470,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                                     }
                                                 }
 
-                                                if (!$foundMatch) {
+                                                if (! $foundMatch) {
                                                     // Look for a record without nome_completo that we can update
                                                     $existingWithoutNomeCompleto = $existingCidadaos->first(function ($existing) {
                                                         return $existing->nome_completo === null;
@@ -22509,7 +22509,7 @@ final class GovernosPosAbrilSeeder extends Seeder
 
                                         if (isset($subcargoData['subcargos'])) {
                                             foreach ($subcargoData['subcargos'] as $subsubcargoData) {
-                                                if (!isset($subsubcargoData['nome'])) {
+                                                if (! isset($subsubcargoData['nome'])) {
                                                     $this->command->error("Missing 'nome' key in subsubcargoData data for subcargoData: ".$subcargoData['nome']);
                                                     $this->command->line('Government data structure: '.print_r($subcargoData, true));
                                                     // BD::rollBack();
@@ -22532,7 +22532,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                             );
 
                                             foreach ($subsubcargoData['cidadaos'] as $cidadaoData) {
-                                                if (!isset($cidadaoData['nome'])) {
+                                                if (! isset($cidadaoData['nome'])) {
                                                     $this->command->error("Missing 'nome' key in cidadao data for subsubcargo: ".$subsubcargoData['nome']);
                                                     $this->command->line('Government data structure: '.print_r($subsubcargoData, true));
                                                     // BD::rollBack();
@@ -22568,7 +22568,7 @@ final class GovernosPosAbrilSeeder extends Seeder
                                                         }
                                                     }
 
-                                                    if (!$foundMatch) {
+                                                    if (! $foundMatch) {
                                                         // Look for a record without nome_completo that we can update
                                                         $existingWithoutNomeCompleto = $existingCidadaos->first(function ($existing) {
                                                             return $existing->nome_completo === null;
@@ -22653,7 +22653,7 @@ final class GovernosPosAbrilSeeder extends Seeder
 
                         } else {
                             $governoInstituicao = InstituicaoGoverno::where('governo_id', $governo->id)->where('instituicao_id', 7)->first();
-                            if (!$governoInstituicao) {
+                            if (! $governoInstituicao) {
                                 $this->command->error('Missing instituicao_governo for governo: '.$governo->nome);
                                 // BD::rollBack();
                                 throw $e;

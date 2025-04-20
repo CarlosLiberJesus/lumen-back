@@ -28,12 +28,12 @@ final class ScrapeParlamentoOrgaosDeprecated extends Command
                     'Inline' => 'true',
                 ]);
 
-            if (!$response->successful()) {
+            if (! $response->successful()) {
                 throw new Exception('Failed to fetch data: '.$response->status());
             }
 
             $data = $response->json();
-            if (!isset($data['OrganizacaoAR'])) {
+            if (! isset($data['OrganizacaoAR'])) {
                 throw new Exception('Missing OrganizacaoAR in response data');
             }
 
@@ -168,7 +168,7 @@ final class ScrapeParlamentoOrgaosDeprecated extends Command
         // Track non-null fields
         foreach ($data as $orgaoName => $orgaoData) {
             if (is_array($orgaoData)) {
-                $nonNullFields = array_filter($orgaoData, fn ($v): bool => !is_null($v));
+                $nonNullFields = array_filter($orgaoData, fn ($v): bool => ! is_null($v));
                 $this->line($orgaoName.' has '.count($nonNullFields).' non-null fields:');
                 $this->line(json_encode(array_keys($nonNullFields), JSON_PRETTY_PRINT));
             }

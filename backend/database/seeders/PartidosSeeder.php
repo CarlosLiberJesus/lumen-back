@@ -826,6 +826,22 @@ final class PartidosSeeder extends Seeder
                 ],
             ],
             [
+                'nome' => 'Acção Social Democrata Independente',
+                'sinopse' => '<p><span>Surge com o abandono de alguns deputados do PPD/PSD em 1979, entre os quais António de Sousa Franco, Joaquim Magalhães Mota e Sérvulo Correia. Advoga uma democracia política, económica, social e cultural que promova a liberdade e a igualdade, tendo como referência os princípios do socialismo personalista e democrático. Inscreveu-se oficialmente no Supremo Tribunal de Justiça em 27/06/1980. Não obstante não se encontrar formalmente extinto o partido não desenvolve qualquer atividade política.</span></p>',
+                'sigla' => 'ASDI',
+                'extinta' => false,
+                'dados' => [
+                    'fundacao' => '1980-06-27',
+                    'dissolucao' => null,
+                ],
+                'anexos' => [
+                    [
+                        'nome' => 'Logotipo',
+                        'anexo' => 'https://www.cne.pt/sites/default/files/partido40_0.png',
+                    ],
+                ],
+            ],
+            [
                 'nome' => 'Grupos Dinamizadores da Unidade Popular',
                 'sinopse' => '<p><span>Visava a criação de uma frente popular aberta a todos os antifascistas revolucionários, na luta pelo socialismo. Inscrito oficialmente como partido político em 25/10/1976 vem a ser dissolvido pelo Tribunal Constitucional através do Acórdão 669/97, publicado em Diário da República, II Série, 18/12/1997, devido à cessação de atividade desde o ano de 1997. Durante a sua existência concorreu somente às eleições Autárquicas de 1976.</span></p>',
                 'sigla' => 'GDUP(s)',
@@ -970,22 +986,6 @@ final class PartidosSeeder extends Seeder
                 ],
             ],
             [
-                'nome' => 'Acção Social Democrata Independente',
-                'sinopse' => '<p><span>Surge com o abandono de alguns deputados do PPD/PSD em 1979, entre os quais António de Sousa Franco, Joaquim Magalhães Mota e Sérvulo Correia. Advoga uma democracia política, económica, social e cultural que promova a liberdade e a igualdade, tendo como referência os princípios do socialismo personalista e democrático. Inscreveu-se oficialmente no Supremo Tribunal de Justiça em 27/06/1980. Não obstante não se encontrar formalmente extinto o partido não desenvolve qualquer atividade política.</span></p>',
-                'sigla' => 'ASDI',
-                'extinta' => false,
-                'dados' => [
-                    'fundacao' => '1980-06-27',
-                    'dissolucao' => null,
-                ],
-                'anexos' => [
-                    [
-                        'nome' => 'Logotipo',
-                        'anexo' => 'https://www.cne.pt/sites/default/files/partido40_0.png',
-                    ],
-                ],
-            ],
-            [
                 'nome' => 'Força de Unidade Popular',
                 'sinopse' => '<p><span>Major Otelo Saraiva de Carvalho funda este partido na área do "socialismo participado", com o objectivo de promover a unidade popular em Portugal para a construção do Socialismo. Defendia nos seus estatutos a luta permanente pelos objetivos da Revolução Socialista. Revolução que só seria possível pelo recurso dos trabalhadores à violência revolucionária armada. Inscreveu-se oficialmente no Supremo Tribunal de Justiça em 28/07/1980, tendo sido decidida a sua extinção pelo Tribunal Constitucional no Acórdão 231/2004, de 31 Março 2004, publicado no Diário da República, II Série, em 30/04/2004.</span></p>',
                 'sigla' => 'FUP',
@@ -1014,6 +1014,22 @@ final class PartidosSeeder extends Seeder
                     [
                         'nome' => 'Logotipo',
                         'anexo' => 'https://www.cne.pt/sites/default/files/partido44_0.png',
+                    ],
+                ],
+            ],
+            [
+                'nome' => 'Partido Renovador Democrático',
+                'sinopse' => '<p><span>O Partido Renovador Democrático (PRD) foi um partido português criado em 1985, cuja figura mais icónica foi Ramalho Eanes, que era na época o presidente da República e depois liderado por Hermínio Martinho.</span></p>',
+                'sigla' => 'PRD',
+                'extinta' => true,
+                'dados' => [
+                    'fundacao' => '1985-07-10',
+                    'dissolucao' => '2000-04-12',
+                ],
+                'anexos' => [
+                    [
+                        'nome' => 'Logotipo',
+                        'anexo' => 'https://upload.wikimedia.org/wikipedia/pt/thumb/5/58/PRD-2.png/250px-PRD-2.png',
                     ],
                 ],
             ],

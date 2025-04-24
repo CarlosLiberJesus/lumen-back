@@ -66,19 +66,17 @@ final class ScrapeParlamentoOrgaosV2 extends Command
     private function cleanPlenario(array $data): array
     {
         $this->info('Cleaning Plenario...');
+        $cleaned = [];
 
-        // Get basic details from DetalheOrgao
-        $detalhe = $data['DetalheOrgao'] ?? [];
-        $cleaned = [
-            'idOrgao' => $detalhe['idOrgao'] ?? null,
-            'siglaOrgao' => $detalhe['siglaOrgao'] ?? null,
-            'nomeSigla' => $detalhe['nomeSigla'] ?? null,
-            'numeroOrgao' => $detalhe['numeroOrgao'] ?? null,
-            'siglaLegislatura' => $detalhe['siglaLegislatura'] ?? null,
-        ];
+        // Handle DetalheOrgao if present
+        if (isset($data['DetalheOrgao'])) {
+            $cleaned['DetalheOrgao'] = $data['DetalheOrgao'];
+        }
 
-        // Handle Composicao if it exists
-        if (isset($data['Composicao']['pt_ar_wsgode_objectos_DadosDeputadoSearch'])) {
+        // Handle Composicao format
+        if (isset($data['Composicao'])) {
+            $this->info('Processing Plenario Composicao...');
+
             $cleaned['Composicao'] = array_map(function ($deputado): array {
                 $cleanedDeputado = [
                     'depId' => $deputado['depId'] ?? null,
@@ -88,54 +86,55 @@ final class ScrapeParlamentoOrgaosV2 extends Command
                     'depCPId' => $deputado['depCPId'] ?? null,
                     'depCPDes' => $deputado['depCPDes'] ?? null,
                     'legDes' => $deputado['legDes'] ?? null,
+                    'videos' => $deputado['videos'] ?? null,
                 ];
 
-                // Clean GP (partido) data
-                if (isset($deputado['depGP']['pt_ar_wsgode_objectos_DadosSituacaoGP'])) {
-                    $gp = $deputado['depGP']['pt_ar_wsgode_objectos_DadosSituacaoGP'];
-                    $cleanedDeputado['depGP'] = [
-                        'gpId' => $gp['gpId'] ?? null,
-                        'gpSigla' => $gp['gpSigla'] ?? null,
-                        'gpDtInicio' => $gp['gpDtInicio'] ?? null,
-                        'gpDtFim' => $gp['gpDtFim'] ?? null,
-                    ];
+                if (!empty($deputado['depGP'])) {
+                    $cleanedDeputado['depGP'] = $deputado['depGP'];
                 }
 
-                // Clean Situacao data
-                if (isset($deputado['depSituacao']['pt_ar_wsgode_objectos_DadosSituacaoDeputado'])) {
-                    $situacoes = $deputado['depSituacao']['pt_ar_wsgode_objectos_DadosSituacaoDeputado'];
-                    // Handle both single situation and array of situations
-                    if (! isset($situacoes[0])) {
-                        $situacoes = [$situacoes];
-                    }
-
-                    $cleanedDeputado['depSituacao'] = array_map(fn ($situacao): array => [
-                        'sioDes' => $situacao['sioDes'] ?? null,
-                        'sioDtInicio' => $situacao['sioDtInicio'] ?? null,
-                        'sioDtFim' => $situacao['sioDtFim'] ?? null,
-                    ], $situacoes);
+                if (!empty($deputado['depSituacao'])) {
+                    $cleanedDeputado['depSituacao'] = $deputado['depSituacao'];
                 }
 
                 return $cleanedDeputado;
-            }, $data['Composicao']['pt_ar_wsgode_objectos_DadosDeputadoSearch']);
+            }, $data['Composicao']);
         }
 
-        // Handle Reunioes if they exist
-        if (isset($data['Reunioes']['ReuniaoPlenario'])) {
-            $cleaned['Reunioes'] = array_map(fn (array $reuniao): array => [
-                'reuId' => $reuniao['Reuniao']['reuId'] ?? null,
-                'reuNumero' => $reuniao['Reuniao']['reuNumero'] ?? null,
-                'reuDataHora' => $reuniao['Reuniao']['reuDataHora'] ?? null,
-                'reuTirDes' => $reuniao['Reuniao']['reuTirDes'] ?? null,
-                'legDes' => $reuniao['Reuniao']['legDes'] ?? null,
-                'selNumero' => $reuniao['Reuniao']['selNumero'] ?? null,
-                'Presencas' => [
-                    'dtReuniao' => $reuniao['Presencas']['dtReuniao'] ?? null,
-                    'tipoReuniao' => $reuniao['Presencas']['tipoReuniao'] ?? null,
-                ],
-            ], $data['Reunioes']['ReuniaoPlenario']);
+        // Handle Reunioes
+        if (isset($data['Reunioes'])) {
+            $this->info('Processing Plenario Reunioes...');
+            // $this->line(json_encode($data['Reunioes']));
+            $cleaned['Reunioes'] = array_map(function (array $reuniao): array {
+                // Debug each reuniao being processed
+                $this->line('Processing reuniao:');
+                // $this->line(json_encode($reuniao, JSON_PRETTY_PRINT));
 
-            usort($cleaned['Reunioes'], fn ($a, $b): int => ($a['reuNumero'] ?? 0) <=> ($b['reuNumero'] ?? 0));
+                $cleanedReuniao = [
+                    'Reuniao' => [
+                        'reuId' => $reuniao['Reuniao']['reuId'] ?? null,
+                        'reuNumero' => $reuniao['Reuniao']['reuNumero'] ?? null,
+                        'reuDataHora' => $reuniao['Reuniao']['reuDataHora'] ?? null,
+                        'reuTirDes' => $reuniao['Reuniao']['reuTirDes'] ?? null,
+                        'legDes' => $reuniao['Reuniao']['legDes'] ?? null,
+                        'selNumero' => $reuniao['Reuniao']['selNumero'] ?? null,
+                        'reuActa' => $reuniao['Reuniao']['reuActa'] ?? null,
+                        'reuLink' => $reuniao['Reuniao']['reuLink'] ?? null,
+                        'reuLocal' => $reuniao['Reuniao']['reuLocal'] ?? null,
+                    ],
+                    'Presencas' => [
+                        'dtReuniao' => $reuniao['Presencas']['dtReuniao'] ?? null,
+                        'tipoReuniao' => $reuniao['Presencas']['tipoReuniao'] ?? null,
+                        'presencas' => $reuniao['Presencas']['presencas'] ?? null,
+                    ],
+                ];
+
+                // Debug cleaned output
+                $this->line('Cleaned reuniao:');
+                // $this->line(json_encode($cleanedReuniao, JSON_PRETTY_PRINT));
+
+                return $cleanedReuniao;
+            }, $data['Reunioes']);
         }
 
         return $cleaned;
@@ -156,7 +155,7 @@ final class ScrapeParlamentoOrgaosV2 extends Command
 
         // Handle GP (partido) data - both array and single object formats
         $gp = $deputado['DepGP'] ?? $deputado['depGP'] ?? [];
-        if (! empty($gp)) {
+        if (!empty($gp)) {
             // Convert to array if single object
             $gpArray = isset($gp[0]) ? $gp : [$gp];
             $cleanedDeputado['depGP'] = array_map(fn ($partido): array => [
@@ -169,7 +168,7 @@ final class ScrapeParlamentoOrgaosV2 extends Command
 
         // Handle Situacao data - both array and single object formats
         $situacoes = $deputado['DepSituacao'] ?? $deputado['depSituacao'] ?? [];
-        if (! empty($situacoes)) {
+        if (!empty($situacoes)) {
             // Convert to array if single object
             $situacoesArray = isset($situacoes[0]) ? $situacoes : [$situacoes];
             $cleanedDeputado['depSituacao'] = array_map(fn ($situacao): array => [
@@ -186,14 +185,14 @@ final class ScrapeParlamentoOrgaosV2 extends Command
     {
         $this->info('Cleaning Comissoes...');
 
-        if (! isset($data['Orgao'])) {
-            $this->warn('No Orgao data found in Comissoes');
+        // New format: data is directly an array of organs
+        if ($data === []) {
+            $this->warn('No Comissoes data found');
 
             return [];
         }
 
-        $orgaos = $data['Orgao'];
-        $this->line('Found '.count($orgaos).' Orgao entries in Comissoes');
+        $this->line('Found '.count($data).' Orgao entries in Comissoes');
 
         $grouping = array_map(function ($orgao): array {
             $detalhe = $orgao['DetalheOrgao'] ?? [];
@@ -205,7 +204,7 @@ final class ScrapeParlamentoOrgaosV2 extends Command
             ];
 
             // Handle Reunioes if they exist
-            if (isset($orgao['Reunioes']['pt_ar_wsgode_objectos_DadosReuniao'])) {
+            if (!empty($orgao['Reunioes'])) {
                 $cleaned['Reunioes'] = array_map(fn ($reuniao): array => [
                     'reuId' => $reuniao['reuId'] ?? null,
                     'reuNumero' => $reuniao['reuNumero'] ?? null,
@@ -213,11 +212,16 @@ final class ScrapeParlamentoOrgaosV2 extends Command
                     'reuFinalPlenario' => $reuniao['reuFinalPlenario'] ?? null,
                     'reuTirDes' => $reuniao['reuTirDes'] ?? null,
                     'reuTarId' => $reuniao['reuTarId'] ?? null,
-                ], $orgao['Reunioes']['pt_ar_wsgode_objectos_DadosReuniao']);
+                    'reuTarDes' => $reuniao['reuTarDes'] ?? null,
+                    'reuTarSigla' => $reuniao['reuTarSigla'] ?? null,
+                    'reuActa' => $reuniao['reuActa'] ?? null,
+                    'reuLink' => $reuniao['reuLink'] ?? null,
+                    'reuLocal' => $reuniao['reuLocal'] ?? null,
+                ], $orgao['Reunioes']);
             }
 
             return $cleaned;
-        }, $orgaos);
+        }, $data);
 
         // Order by numeroOrgao ASC
         usort($grouping, fn ($a, $b): int => ($a['numeroOrgao'] ?? 0) <=> ($b['numeroOrgao'] ?? 0));
@@ -231,12 +235,12 @@ final class ScrapeParlamentoOrgaosV2 extends Command
 
         $response = Http::withoutVerifying()
             ->get(self::BASE_URL, [
-                'path' => 'IQyC2USCCcoYqqGVBpgadlxwTGRXszv6nSXtSuXGjsHb0oHIlz0lPfgHVwg8S9vffJ%2b%2bmDexWLc4j%2fl0BXfpN%2falsCs8HGx4VNbPPWOoAzpeGcJe6VHTiNewqbRgx78Bvyc1AcE8AQh%2fHD3D7OuaLIIjOgx9QDdNxVsJGsLtyM7qIESbD%2fLJd67HrtYEgbIfdXrmCjkLn5eaFmjK3edQBOuV6pyYulX9IyKrfZNSynmElmF85q%2f0uSiuio0lAAlapeW%2f4abXplN4xFSsuKtN6IrCvHkk2u8WQ%2frNQ1PNSFy1sPME%2flqW0uIT568WvMym0W2eJyn6PnwmlWDRUe5PdZMqv7WvDs11NMW1uTUUSyALSBBWBRh8JcdavHqKbjjMGeSBhmnM3ASpZgdhClUWIA%3d%3d',
+                'path' => 'yEIR3w4ocXRatF7cfDo3l3XEDrSUMVRCcyLEx6qFiKz1KDKKWhp5UsPJQl0z58UW95vZciGvaX8KBrGBBYYJV4EYNSym9CwhPtbQlHIsuhj8pXlId55feAgmkVji27ZLmHYXUY7rhV9eCyOptbADhY9Z69oKIXNqngkMK0khEu6uq212aZ%2fxWaMp5n1da5%2fh3znKpXU3jnKoziDRtn6cFbB5sHnxfO9PfkcE2SNyB0xCNHrb2f4RzWBBCyjPmW26eJjYZ1l1YoDuQwwRS8LEljKsqP7udxDz9vxvJH0JqXY64i%2fWsaz15BjMgOaW9rYGXO6RuFXS6vBI3Es9t7TmqCV2CpFatjAqHSLIvdf%2fbuGnQlNoeIGyhlzHK7LervBF',
                 'fich' => 'OrgaoComposicaoV_json.txt',
                 'Inline' => 'true',
             ]);
 
-        if (! $response->successful()) {
+        if (!$response->successful()) {
             throw new Exception('Failed to fetch data: '.$response->status());
         }
 
@@ -266,10 +270,9 @@ final class ScrapeParlamentoOrgaosV2 extends Command
             $transformed['ComissaoPermanente'] = $this->cleanOrgao($data['ComissaoPermanente']);
         }
 
-        // Handle Comissoes - both array and direct formats
+        // Handle Comissoes - now it's a direct array
         if (isset($data['Comissoes'])) {
-            $comissoes = is_array($data['Comissoes']) ? $data['Comissoes'] : [$data['Comissoes']];
-            $transformed['Comissoes'] = array_map([$this, 'cleanOrgao'], $comissoes);
+            $transformed['Comissoes'] = $this->processArrayOfOrgao($data['Comissoes'], 'Comissoes');
         }
 
         // Handle standard organs
@@ -424,9 +427,43 @@ final class ScrapeParlamentoOrgaosV2 extends Command
             return null;
         }
 
-        // Log the structure we found
-        $this->line(sprintf('Found structure for %s: ', $type).json_encode(array_keys($data)));
+        // For Comissoes, the data is already an array of organs
+        if ($type === 'Comissoes') {
+            $organs = $data;
+            $count = count($organs);
+            $this->line(sprintf('Found %d organs in %s', $count, $type));
 
+            if ($count > 0) {
+                $this->line('First organ structure: '.json_encode(array_keys($organs[0])));
+            }
+
+            return array_map(fn ($organ): array => [
+                'DetalheOrgao' => [
+                    'idOrgao' => $organ['DetalheOrgao']['idOrgao'] ?? null,
+                    'siglaOrgao' => $organ['DetalheOrgao']['siglaOrgao'] ?? null,
+                    'nomeSigla' => $organ['DetalheOrgao']['nomeSigla'] ?? null,
+                    'numeroOrgao' => $organ['DetalheOrgao']['numeroOrgao'] ?? null,
+                    'siglaLegislatura' => $organ['DetalheOrgao']['siglaLegislatura'] ?? null,
+                ],
+                'Reunioes' => isset($organ['Reunioes']) ? array_map(fn ($reuniao): array => [
+                    'reuId' => $reuniao['reuId'] ?? null,
+                    'reuNumero' => $reuniao['reuNumero'] ?? null,
+                    'reuDataHora' => $reuniao['reuDataHora'] ?? null,
+                    'reuTirDes' => $reuniao['reuTirDes'] ?? null,
+                    'reuFinalPlenario' => $reuniao['reuFinalPlenario'] ?? null,
+                    'reuTarDes' => $reuniao['reuTarDes'] ?? null,
+                    'reuTarId' => $reuniao['reuTarId'] ?? null,
+                    'reuTarSigla' => $reuniao['reuTarSigla'] ?? null,
+                    'reuActa' => $reuniao['reuActa'] ?? null,
+                    'reuLink' => $reuniao['reuLink'] ?? null,
+                    'reuLocal' => $reuniao['reuLocal'] ?? null,
+                ], $organ['Reunioes']) : [],
+                'HistoricoComposicao' => $organ['HistoricoComposicao'] ?? null,
+            ], $organs);
+
+        }
+
+        // Original code for other types that still use the old format
         if (isset($data['Orgao'])) {
             $count = is_array($data['Orgao']) ? count($data['Orgao']) : 0;
             $this->line(sprintf('Found %d organs in %s', $count, $type));
@@ -436,7 +473,6 @@ final class ScrapeParlamentoOrgaosV2 extends Command
             }
         }
 
-        // TODO: Implement specific transformation
         return $data;
     }
 
@@ -452,16 +488,39 @@ final class ScrapeParlamentoOrgaosV2 extends Command
         // Log the structure we found
         $this->line('Found structure: '.json_encode(array_keys($data)));
 
+        $cleaned = [];
+
         if (isset($data['Composicao'])) {
             $this->line('Has Composicao structure');
+            $cleaned['Composicao'] = $data['Composicao'];
         }
 
         if (isset($data['Reunioes'])) {
             $this->line('Has Reunioes structure');
+            $this->line('Reunioes raw data: '.json_encode($data['Reunioes'], JSON_PRETTY_PRINT));
+
+            // Transform Reunioes into the correct structure
+            $cleaned['Reunioes'] = array_map(fn ($reuniao): array => [
+                'Reuniao' => [
+                    'reuId' => $reuniao['reuId'] ?? null,
+                    'reuNumero' => $reuniao['reuNumero'] ?? null,
+                    'reuDataHora' => $reuniao['reuDataHora'] ?? null,
+                    'reuTirDes' => $reuniao['reuTirDes'] ?? null,
+                    'legDes' => $reuniao['legDes'] ?? null,
+                    'selNumero' => $reuniao['selNumero'] ?? null,
+                    'reuActa' => $reuniao['reuActa'] ?? null,
+                    'reuLink' => $reuniao['reuLink'] ?? null,
+                    'reuLocal' => $reuniao['reuLocal'] ?? null,
+                ],
+                'Presencas' => [
+                    'dtReuniao' => $reuniao['dtReuniao'] ?? null,
+                    'tipoReuniao' => $reuniao['tipoReuniao'] ?? null,
+                    'presencas' => $reuniao['presencas'] ?? null,
+                ],
+            ], $data['Reunioes']);
         }
 
-        // TODO: Implement specific transformation
-        return $data;
+        return $cleaned;
     }
 
     private function saveResults(string $filename, array $transformed): void

@@ -15,6 +15,7 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->skip([
         __DIR__.'/backend/vendor/*',
         __DIR__.'/backend/database/seeders/*',
+        __DIR__.'/backend/app/Console/Commands/*',
         // __DIR__ . '/backend/resources/views/*.php',
         __DIR__.'/backend/storage/*',
         __DIR__.'/backend/bootstrap/cache/*',
